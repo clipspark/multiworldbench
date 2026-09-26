@@ -76,21 +76,45 @@ def native_video(source: Path, frames: int, prefix_frames: int, output: Path) ->
 def main() -> None:
     repo = Path(__file__).resolve().parents[3]
     parser = argparse.ArgumentParser()
-    parser.add_argument("group", choices=("interaction", "revisit", "navigation/control"))
+    parser.add_argument("group", nargs="?", choices=("interaction", "revisit", "navigation/control"))
+    parser.add_argument(
+        "--source-root", type=Path,
+        help="self-contained case directory; required when no built-in group is given",
+    )
+    parser.add_argument(
+        "--case-list", type=Path,
+        help="optional newline-delimited case IDs used to create one deterministic shard",
+    )
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--case-glob", default="MWB3-*")
     parser.add_argument("--frames", required=True, type=int)
     parser.add_argument("--action-prefix-frames", type=int, default=0)
     parser.add_argument("--video-prefix-frames", type=int, default=1)
     args = parser.parse_args()
-    source_root = repo / "MultiWorldBench/v3/assets" / args.group
+    if args.source_root is not None:
+        source_root = args.source_root.resolve()
+        group_name = args.group or "navigation_visibility"
+    elif args.group is not None:
+        source_root = repo / "MultiWorldBench/v3/assets" / args.group
+        group_name = args.group
+    else:
+        parser.error("provide either group or --source-root")
     output = args.output.resolve()
     if output.exists():
         raise FileExistsError(output)
     test = output / "dataset/test"
     test.mkdir(parents=True)
     mapping = []
-    cases = sorted(path for path in source_root.glob(args.case_glob) if path.is_dir())
+    if args.case_list is not None:
+        case_ids = [line.strip() for line in args.case_list.read_text(encoding="utf-8").splitlines() if line.strip()]
+        if len(case_ids) != len(set(case_ids)):
+            raise ValueError(f"duplicate IDs in {args.case_list}")
+        cases = [source_root / case_id for case_id in case_ids]
+        missing = [str(path) for path in cases if not path.is_dir()]
+        if missing:
+            raise FileNotFoundError(f"missing case directories: {missing}")
+    else:
+        cases = sorted(path for path in source_root.glob(args.case_glob) if path.is_dir())
     if not cases:
         raise RuntimeError(f"no cases matched {source_root / args.case_glob}")
     for index, case in enumerate(cases):
@@ -113,7 +137,7 @@ def main() -> None:
             row["files_sha256"][action_out.name] = sha256(action_out)
             row["files_sha256"][video_out.name] = sha256(video_out)
         mapping.append(row)
-    dump(output / "mapping.json", {"schema_version": "mwb.v3.solaris_input.v1", "self_contained": True, "group": args.group, "frames": args.frames, "action_prefix_frames": args.action_prefix_frames, "video_prefix_frames": args.video_prefix_frames, "cases": mapping})
+    dump(output / "mapping.json", {"schema_version": "mwb.v3.solaris_input.v1", "self_contained": True, "group": group_name, "frames": args.frames, "action_prefix_frames": args.action_prefix_frames, "video_prefix_frames": args.video_prefix_frames, "cases": mapping})
     config = """defaults:
   - shared
   - device: gpu
@@ -126,7 +150,7 @@ eval_datasets:
     name: eval_mwb3
 """
     (output / "inference_mwb3.yaml").write_text(config, encoding="utf-8")
-    print(json.dumps({"group": args.group, "cases": len(mapping), "frames": args.frames, "output": str(output)}))
+    print(json.dumps({"group": group_name, "cases": len(mapping), "frames": args.frames, "output": str(output)}))
 
 
 if __name__ == "__main__":

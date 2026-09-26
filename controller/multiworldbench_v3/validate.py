@@ -76,6 +76,7 @@ def validate(project_root: Path) -> dict[str, Any]:
 
     registered = {item["id"]: item for item in METRICS}
     all_case_ids: set[str] = set()
+    case_id_sources: dict[str, Path] = {}
     counts: dict[str, int] = {}
     statuses: dict[str, str] = {}
 
@@ -93,8 +94,11 @@ def validate(project_root: Path) -> dict[str, Any]:
 
         case_path = v3 / item["case_file"]
         case_set = _load(case_path)
-        if case_set.get("metric_id") != item["id"]:
+        metric_ids = case_set.get("metric_ids")
+        if metric_ids is None and case_set.get("metric_id") != item["id"]:
             raise ValueError(f"metric mismatch in {case_path}")
+        if metric_ids is not None and item["id"] not in metric_ids:
+            raise ValueError(f"metric mismatch in shared suite {case_path}: {item['id']}")
         cases = case_set.get("cases", [])
         if len(cases) != item["case_count"] or len(cases) != case_set.get("case_count"):
             raise ValueError(f"case count mismatch in {case_path}")
@@ -109,16 +113,19 @@ def validate(project_root: Path) -> dict[str, Any]:
         if len(local_ids) != len(cases):
             raise ValueError(f"duplicate case IDs in {case_path}")
         duplicate = local_ids & all_case_ids
-        if duplicate:
-            raise ValueError(f"case IDs reused across metrics: {sorted(duplicate)}")
+        invalid_duplicate = [case_id for case_id in duplicate if case_id_sources[case_id] != case_path]
+        if invalid_duplicate:
+            raise ValueError(f"case IDs reused across different case files: {sorted(invalid_duplicate)}")
         all_case_ids |= local_ids
+        for case_id in local_ids:
+            case_id_sources.setdefault(case_id, case_path)
 
         by_id = {case["case_id"]: case for case in cases}
         for case in cases:
             case_id = case["case_id"]
             if not case_id.startswith("MWB3-") or case.get("id") != case_id:
                 raise ValueError(f"invalid or mismatched V3 case ID: {case_id}")
-            if case.get("metrics") != [item["id"]]:
+            if item["id"] not in case.get("metrics", []):
                 raise ValueError(f"case metric binding mismatch: {case_id}")
 
             group = case.get("independence_group")

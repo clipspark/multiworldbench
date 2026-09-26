@@ -273,4 +273,8 @@ async function main() {
   } finally { await rcon.end().catch(()=>{}); }
 }
 
-main().catch((error)=>{ console.error(error.stack||error.message); process.exit(1); });
+if (require.main === module) {
+  main().catch((error)=>{ console.error(error.stack||error.message); process.exit(1); });
+}
+
+module.exports = { scenes, aimPose, builder };

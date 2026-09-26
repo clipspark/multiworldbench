@@ -27,32 +27,38 @@
       "domain": "navigation",
       "name": "控制隔离度",
       "status": "implemented",
-      "case_file": "cases/navigation/control_isolation.json",
-      "case_count": 24,
+      "case_file": "cases/navigation/navigation_visibility_suite.json",
+      "case_count": 180,
       "implementation": "controller.multiworldbench_v3.metrics.control_isolation",
-      "ranking_ready": false
+      "ranking_ready": false,
+      "shared_case_suite": true,
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
     },
     {
       "id": "coordination_fairness",
       "domain": "navigation",
       "name": "协同公平性",
       "status": "implemented_diagnostic_unranked",
-      "case_file": "cases/navigation/coordination_fairness.json",
-      "case_count": 12,
+      "case_file": "cases/navigation/navigation_visibility_suite.json",
+      "case_count": 180,
       "implementation": "controller.multiworldbench_v3.metrics.coordination_fairness",
       "ranking_ready": false,
       "definition": "A/B 在同类导航动作下的移动距离、路径长度、轨迹偏离和航向变化分布一致性",
-      "relative_pose_required": false
+      "relative_pose_required": false,
+      "shared_case_suite": true,
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
     },
     {
       "id": "cross_view_motion_consistency",
       "domain": "navigation",
       "name": "跨视角运动一致性",
       "status": "diagnostic",
-      "case_file": "cases/navigation/cross_view_motion_consistency.json",
-      "case_count": 8,
+      "case_file": "cases/navigation/navigation_visibility_suite.json",
+      "case_count": 180,
       "implementation": "controller.multiworldbench_v3.metrics.cross_view_motion_consistency",
-      "ranking_ready": false
+      "ranking_ready": false,
+      "shared_case_suite": true,
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
     },
     {
       "id": "interaction_fidelity",
