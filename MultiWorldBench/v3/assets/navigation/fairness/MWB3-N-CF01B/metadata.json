@@ -1,0 +1,23 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-N-CF01B",
+  "metric": "fairness",
+  "evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "source_frame_count": 241,
+  "gamma_frame_count": 189,
+  "role_swapped_materialization": false,
+  "files_sha256": {
+    "action_0.json": "c4839ecb0fafe88463ef54c3e745ec5d33c0979b602f9116e1aeee596d802a3b",
+    "action_1.json": "9d27d42f712fb35233f2b98c0fb795fe3713a0389c19dbd4a742b7b645d04c69",
+    "alpha_actions.json": "8ef885ec5497a754afe5842e12950f592ece7fc74896374adcac7e8dd84aa1de",
+    "alpha_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+    "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+    "alpha_solaris_actions.json": "b1afd9a3839b36feea5ada68fdff0bf9fe06b5736915c021d270df0a599ec84c",
+    "bravo_actions.json": "e74e971ee05d0c6e057093cec387c9f34de8f28baa73d2145f5788373107deeb",
+    "bravo_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+    "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+    "bravo_solaris_actions.json": "f9ff8f59b7f6acec44c90f9e80cd7967b434f856227ac9fdcbd42b64155900aa",
+    "first_frame.png": "c31ed507900ee4af54a607dff28bf242b6b1735c4362ea2a63f4b41658f0af39",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

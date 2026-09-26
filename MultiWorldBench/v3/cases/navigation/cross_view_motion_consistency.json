@@ -1,0 +1,870 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "benchmark_version": "3",
+  "case_count": 8,
+  "formal_score": false,
+  "gt_collected": false,
+  "action_evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "fps": 20,
+  "timing": {
+    "action_seconds": 2,
+    "idle_seconds": 1,
+    "conditioning_frames": 1
+  },
+  "lane": {
+    "axis": "world +X",
+    "origin": [
+      256,
+      91,
+      0
+    ],
+    "unit": "one Minecraft block",
+    "length": 64,
+    "width": 7,
+    "minor_tick_blocks": 1,
+    "black_tick_blocks": 4,
+    "color_section_blocks": 8,
+    "color_order": [
+      "red",
+      "orange",
+      "yellow",
+      "lime",
+      "cyan",
+      "blue",
+      "purple",
+      "magenta"
+    ]
+  },
+  "camera": {
+    "vertical_fov_deg": 70,
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "measurement": {
+    "units": "runway blocks, not raw screen pixels",
+    "compare": [
+      "signed displacement disagreement",
+      "absolute path length disagreement",
+      "marker crossing time disagreement"
+    ],
+    "gates": [
+      "runner identity tracked",
+      "marker identity stable",
+      "adequate visibility",
+      "observer motion checked"
+    ],
+    "invalid": "unreadable or unstable reference is unevaluable; report coverage, never silently zero error",
+    "anti_freeze": "report actual action response separately",
+    "geometry": "use actual image coordinates; initial world geometry is not generated motion GT",
+    "planned_method": "VLM-assisted runner and colored-band identification, temporal tracking and grid crossing counts; unimplemented, never infer distance from planned keys"
+  },
+  "cases": [
+    {
+      "case_id": "MWB3-N-CV01A",
+      "id": "MWB3-N-CV01A",
+      "title": "低台近距观察：连续前进",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "straight",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "alpha",
+      "observer": "bravo",
+      "role_swapped": false,
+      "counter_case_of": null,
+      "round_count": 3,
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W",
+          "W"
+        ],
+        "bravo": [
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV01",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              270.5,
+              93,
+              -6.5
+            ],
+            "native_yaw_deg": 55,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV01B",
+      "id": "MWB3-N-CV01B",
+      "title": "低台近距观察：连续前进：角色互换",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "straight",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "bravo",
+      "observer": "alpha",
+      "role_swapped": true,
+      "counter_case_of": "MWB3-N-CV01A",
+      "round_count": 3,
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "schedules": {
+        "bravo": [
+          "W",
+          "W",
+          "W"
+        ],
+        "alpha": [
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV01",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              270.5,
+              93,
+              -6.5
+            ],
+            "native_yaw_deg": 55,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV02A",
+      "id": "MWB3-N-CV02A",
+      "title": "低台近距观察：前后往返",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "shuttle",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "alpha",
+      "observer": "bravo",
+      "role_swapped": false,
+      "counter_case_of": null,
+      "round_count": 4,
+      "fps": 20,
+      "num_frames": 241,
+      "valid_num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "S",
+          "W",
+          "S"
+        ],
+        "bravo": [
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV02",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              270.5,
+              93,
+              -6.5
+            ],
+            "native_yaw_deg": 55,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV02B",
+      "id": "MWB3-N-CV02B",
+      "title": "低台近距观察：前后往返：角色互换",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "shuttle",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "bravo",
+      "observer": "alpha",
+      "role_swapped": true,
+      "counter_case_of": "MWB3-N-CV02A",
+      "round_count": 4,
+      "fps": 20,
+      "num_frames": 241,
+      "valid_num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "bravo": [
+          "W",
+          "S",
+          "W",
+          "S"
+        ],
+        "alpha": [
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV02",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              270.5,
+              93,
+              -6.5
+            ],
+            "native_yaw_deg": 55,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV03A",
+      "id": "MWB3-N-CV03A",
+      "title": "低台近距观察：横向往返",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "strafe",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "alpha",
+      "observer": "bravo",
+      "role_swapped": false,
+      "counter_case_of": null,
+      "round_count": 3,
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "schedules": {
+        "alpha": [
+          "D",
+          "A",
+          "D"
+        ],
+        "bravo": [
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV03",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": 180,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              266.5,
+              93,
+              -7.5
+            ],
+            "native_yaw_deg": 37,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV03B",
+      "id": "MWB3-N-CV03B",
+      "title": "低台近距观察：横向往返：角色互换",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "strafe",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "bravo",
+      "observer": "alpha",
+      "role_swapped": true,
+      "counter_case_of": "MWB3-N-CV03A",
+      "round_count": 3,
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "schedules": {
+        "bravo": [
+          "D",
+          "A",
+          "D"
+        ],
+        "alpha": [
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "nearby_two_block_platform",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV03",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              266.5,
+              93,
+              -7.5
+            ],
+            "native_yaw_deg": 37,
+            "pitch_deg": 12,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": 180,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV04A",
+      "id": "MWB3-N-CV04A",
+      "title": "同高面对面：接近后退",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "facing_shuttle",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "alpha",
+      "observer": "bravo",
+      "role_swapped": false,
+      "counter_case_of": null,
+      "round_count": 4,
+      "fps": 20,
+      "num_frames": 241,
+      "valid_num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "S",
+          "W",
+          "S"
+        ],
+        "bravo": [
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "ground_facing",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV04",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              278.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": 90,
+            "pitch_deg": 8,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CV04B",
+      "id": "MWB3-N-CV04B",
+      "title": "同高面对面：接近后退：角色互换",
+      "metrics": [
+        "cross_view_motion_consistency"
+      ],
+      "template": "facing_shuttle",
+      "scene": "ordinary_block_runway_v3",
+      "actor": "bravo",
+      "observer": "alpha",
+      "role_swapped": true,
+      "counter_case_of": "MWB3-N-CV04A",
+      "round_count": 4,
+      "fps": 20,
+      "num_frames": 241,
+      "valid_num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "bravo": [
+          "W",
+          "S",
+          "W",
+          "S"
+        ],
+        "alpha": [
+          "-",
+          "-",
+          "-",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "expected_distance_blocks": null,
+      "initial_visibility": "mutual_visible; see native capture and visual review",
+      "observer_layout": "ground_facing",
+      "visibility_policy": "initial visibility verified, not guaranteed for all generated frames or after passing observer",
+      "independence_group": "MWB3-N-CV04",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              278.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": 90,
+            "pitch_deg": 8,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              260.5,
+              91,
+              0.5
+            ],
+            "native_yaw_deg": -90,
+            "pitch_deg": 8,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    }
+  ],
+  "visual_reference_policy": "ordinary Minecraft blocks only; no text/display entities, signs or post-hoc image overlays",
+  "metric_id": "cross_view_motion_consistency",
+  "ranking_ready": false,
+  "status": "diagnostic",
+  "headline_component": "observed_self_agreement"
+}

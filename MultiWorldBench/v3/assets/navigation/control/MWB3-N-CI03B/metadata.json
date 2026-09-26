@@ -1,0 +1,19 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-N-CI03B",
+  "metric": "control",
+  "evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "source_frame_count": 181,
+  "gamma_frame_count": 189,
+  "role_swapped_materialization": true,
+  "files_sha256": {
+    "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+    "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+    "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+    "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+    "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+    "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+    "first_frame.png": "4530b8f99dbcd915125129e60358c8dac5a1f2ccafafd43054cf22d78c690020",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

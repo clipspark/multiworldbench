@@ -1,0 +1,1497 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "benchmark_version": "3",
+  "formal_score": false,
+  "gt_collected": false,
+  "fps": 20,
+  "design": "matched_condition_full_role_swap_distribution",
+  "timing": {
+    "conditioning_frames": 1,
+    "action_frames": 40,
+    "idle_frames": 20,
+    "action_seconds": 2,
+    "idle_seconds": 1,
+    "round_counts": [
+      4,
+      6
+    ]
+  },
+  "camera_units": "per-frame radians; positive yaw turns left in Mineflayer convention",
+  "templates": {
+    "alternating_forward": {
+      "title": "轮流前进与角色对等性",
+      "alpha": [
+        "W",
+        "-",
+        "W",
+        "-"
+      ],
+      "bravo": [
+        "-",
+        "W",
+        "-",
+        "W"
+      ]
+    },
+    "paired_dogleg": {
+      "title": "同步前进与左右折线",
+      "alpha": [
+        "W",
+        "W+A",
+        "W",
+        "W+D",
+        "W",
+        "W"
+      ],
+      "bravo": [
+        "W",
+        "W+A",
+        "W",
+        "W+D",
+        "W",
+        "W"
+      ]
+    },
+    "opposed_arcs": {
+      "title": "反向弧线与转向后的前进",
+      "alpha": [
+        "W",
+        "W+YAW+30",
+        "W",
+        "W+YAW-60",
+        "W",
+        "W+YAW+30"
+      ],
+      "bravo": [
+        "W",
+        "W+YAW-30",
+        "W",
+        "W+YAW+60",
+        "W",
+        "W+YAW-30"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "case_id": "MWB3-N-CF01A",
+      "id": "MWB3-N-CF01A",
+      "title": "轮流前进与角色对等性",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF01",
+      "counter_case_of": null,
+      "scene": "terraced_arch",
+      "template": "alternating_forward",
+      "role_swapped": false,
+      "round_count": 4,
+      "fps": 20,
+      "valid_num_frames": 241,
+      "num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "-",
+          "W",
+          "-"
+        ],
+        "bravo": [
+          "-",
+          "W",
+          "-",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF01B",
+      "id": "MWB3-N-CF01B",
+      "title": "轮流前进与角色对等性：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF01",
+      "counter_case_of": "MWB3-N-CF01A",
+      "scene": "terraced_arch",
+      "template": "alternating_forward",
+      "role_swapped": true,
+      "round_count": 4,
+      "fps": 20,
+      "valid_num_frames": 241,
+      "num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "-",
+          "W",
+          "-",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "-",
+          "W",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF02A",
+      "id": "MWB3-N-CF02A",
+      "title": "同步前进与左右折线",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF02",
+      "counter_case_of": null,
+      "scene": "terraced_arch",
+      "template": "paired_dogleg",
+      "role_swapped": false,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF02B",
+      "id": "MWB3-N-CF02B",
+      "title": "同步前进与左右折线：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF02",
+      "counter_case_of": "MWB3-N-CF02A",
+      "scene": "terraced_arch",
+      "template": "paired_dogleg",
+      "role_swapped": true,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF03A",
+      "id": "MWB3-N-CF03A",
+      "title": "反向弧线与转向后的前进",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF03",
+      "counter_case_of": null,
+      "scene": "terraced_arch",
+      "template": "opposed_arcs",
+      "role_swapped": false,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+YAW+30",
+          "W",
+          "W+YAW-60",
+          "W",
+          "W+YAW+30"
+        ],
+        "bravo": [
+          "W",
+          "W+YAW-30",
+          "W",
+          "W+YAW+60",
+          "W",
+          "W+YAW-30"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF03B",
+      "id": "MWB3-N-CF03B",
+      "title": "反向弧线与转向后的前进：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF03",
+      "counter_case_of": "MWB3-N-CF03A",
+      "scene": "terraced_arch",
+      "template": "opposed_arcs",
+      "role_swapped": true,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+YAW-30",
+          "W",
+          "W+YAW+60",
+          "W",
+          "W+YAW-30"
+        ],
+        "bravo": [
+          "W",
+          "W+YAW+30",
+          "W",
+          "W+YAW-60",
+          "W",
+          "W+YAW+30"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6,
+              65,
+              20
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -6,
+              66,
+              32
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF04A",
+      "id": "MWB3-N-CF04A",
+      "title": "轮流前进与角色对等性",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF04",
+      "counter_case_of": null,
+      "scene": "quarry_bridge",
+      "template": "alternating_forward",
+      "role_swapped": false,
+      "round_count": 4,
+      "fps": 20,
+      "valid_num_frames": 241,
+      "num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "-",
+          "W",
+          "-"
+        ],
+        "bravo": [
+          "-",
+          "W",
+          "-",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF04B",
+      "id": "MWB3-N-CF04B",
+      "title": "轮流前进与角色对等性：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF04",
+      "counter_case_of": "MWB3-N-CF04A",
+      "scene": "quarry_bridge",
+      "template": "alternating_forward",
+      "role_swapped": true,
+      "round_count": 4,
+      "fps": 20,
+      "valid_num_frames": 241,
+      "num_frames": 241,
+      "duration_seconds": 12.05,
+      "schedules": {
+        "alpha": [
+          "-",
+          "W",
+          "-",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "-",
+          "W",
+          "-"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF05A",
+      "id": "MWB3-N-CF05A",
+      "title": "同步前进与左右折线",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF05",
+      "counter_case_of": null,
+      "scene": "quarry_bridge",
+      "template": "paired_dogleg",
+      "role_swapped": false,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF05B",
+      "id": "MWB3-N-CF05B",
+      "title": "同步前进与左右折线：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF05",
+      "counter_case_of": "MWB3-N-CF05A",
+      "scene": "quarry_bridge",
+      "template": "paired_dogleg",
+      "role_swapped": true,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ],
+        "bravo": [
+          "W",
+          "W+A",
+          "W",
+          "W+D",
+          "W",
+          "W"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF06A",
+      "id": "MWB3-N-CF06A",
+      "title": "反向弧线与转向后的前进",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF06",
+      "counter_case_of": null,
+      "scene": "quarry_bridge",
+      "template": "opposed_arcs",
+      "role_swapped": false,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+YAW+30",
+          "W",
+          "W+YAW-60",
+          "W",
+          "W+YAW+30"
+        ],
+        "bravo": [
+          "W",
+          "W+YAW-30",
+          "W",
+          "W+YAW+60",
+          "W",
+          "W+YAW-30"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-N-CF06B",
+      "id": "MWB3-N-CF06B",
+      "title": "反向弧线与转向后的前进：角色互换",
+      "metrics": [
+        "coordination_fairness"
+      ],
+      "independence_group": "MWB3-N-CF06",
+      "counter_case_of": "MWB3-N-CF06A",
+      "scene": "quarry_bridge",
+      "template": "opposed_arcs",
+      "role_swapped": true,
+      "round_count": 6,
+      "fps": 20,
+      "valid_num_frames": 361,
+      "num_frames": 361,
+      "duration_seconds": 18.05,
+      "schedules": {
+        "alpha": [
+          "W",
+          "W+YAW-30",
+          "W",
+          "W+YAW+60",
+          "W",
+          "W+YAW-30"
+        ],
+        "bravo": [
+          "W",
+          "W+YAW+30",
+          "W",
+          "W+YAW-60",
+          "W",
+          "W+YAW+30"
+        ]
+      },
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            41
+          ],
+          "idle_range": [
+            41,
+            61
+          ]
+        },
+        {
+          "action_range": [
+            61,
+            101
+          ],
+          "idle_range": [
+            101,
+            121
+          ]
+        },
+        {
+          "action_range": [
+            121,
+            161
+          ],
+          "idle_range": [
+            161,
+            181
+          ]
+        },
+        {
+          "action_range": [
+            181,
+            221
+          ],
+          "idle_range": [
+            221,
+            241
+          ]
+        },
+        {
+          "action_range": [
+            241,
+            281
+          ],
+          "idle_range": [
+            281,
+            301
+          ]
+        },
+        {
+          "action_range": [
+            301,
+            341
+          ],
+          "idle_range": [
+            341,
+            361
+          ]
+        }
+      ],
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              4,
+              66,
+              16
+            ],
+            "native_yaw_deg": 45,
+            "pitch_deg": -3,
+            "body_name": "CameraBravo"
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              -8,
+              67,
+              28
+            ],
+            "native_yaw_deg": -135,
+            "pitch_deg": 3,
+            "body_name": "CameraAlpha"
+          }
+        }
+      }
+    }
+  ],
+  "metric_id": "coordination_fairness",
+  "ranking_ready": false,
+  "case_count": 12,
+  "status": "implemented_diagnostic_unranked",
+  "required_evidence": [
+    "alpha_dpvo_trajectory",
+    "bravo_dpvo_trajectory",
+    "per_turn_navigation_action"
+  ],
+  "metric_definition": "按导航动作类别比较 A、B 的响应分布是否一致；不需要相对位姿。",
+  "action_classes_supported": [
+    "forward",
+    "backward",
+    "strafe",
+    "turn",
+    "forward_strafe",
+    "backward_strafe",
+    "forward_turn",
+    "backward_turn"
+  ],
+  "response_features": [
+    "travel_distance",
+    "path_length",
+    "normalized_path_deviation",
+    "heading_change_deg"
+  ],
+  "distribution_distance": "normalized_1d_wasserstein",
+  "case_score_rule": "动作类别与响应特征相似度的算术平均；角色互换 family 取较低 case 分"
+}

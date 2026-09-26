@@ -1,0 +1,77 @@
+{
+  "schema_version": "mwb.v3.block_reference.v1",
+  "images": [
+    {
+      "material": "gold_block",
+      "file": "gold_block.png",
+      "source_asset": "assets/minecraft/textures/block/gold_block.png",
+      "sha256": "0e95e93559265ebc1b054c71b2bf91d975b5fabcc7fd3470e8aee4c276d68f12"
+    },
+    {
+      "material": "diamond_block",
+      "file": "diamond_block.png",
+      "source_asset": "assets/minecraft/textures/block/diamond_block.png",
+      "sha256": "f296ce74a63f88f4a6018606b20f32b7fd19f6de75c88bd69d707591def0049e"
+    },
+    {
+      "material": "red_wool",
+      "file": "red_wool.png",
+      "source_asset": "assets/minecraft/textures/block/red_wool.png",
+      "sha256": "c89e74d943e0b67f9f13f9acc85761595d35473d2d21da6494ed8db3047da077"
+    },
+    {
+      "material": "blue_wool",
+      "file": "blue_wool.png",
+      "source_asset": "assets/minecraft/textures/block/blue_wool.png",
+      "sha256": "2aed90be60d1481c2637766451741dcb532dfacc65aaa3cb2e06b61cbb0628b8"
+    },
+    {
+      "material": "emerald_block",
+      "file": "emerald_block.png",
+      "source_asset": "assets/minecraft/textures/block/emerald_block.png",
+      "sha256": "0f822c48c04dcd3fd7154d706c541eee6b48fbae4114d0716c839a8fa57cbdf9"
+    },
+    {
+      "material": "obsidian",
+      "file": "obsidian.png",
+      "source_asset": "assets/minecraft/textures/block/obsidian.png",
+      "sha256": "70d2daeca8c576b8884b92f2d9c182cb6c0959161dbba1b6cbb73314e883ff7a"
+    },
+    {
+      "material": "sandstone",
+      "file": "sandstone.png",
+      "source_asset": "assets/minecraft/textures/block/sandstone.png",
+      "sha256": "dfe7d22b88f5744c608f05943433f4df1cdd97e88d82fe61034e329738908ebd"
+    },
+    {
+      "material": "grass_block",
+      "file": "grass_block.png",
+      "source_asset": "assets/minecraft/textures/block/grass_block_top.png",
+      "sha256": "7c7b4091867ff4af734a75ab4369108bc99f0eb1125113f242d37703021abf4d"
+    },
+    {
+      "material": "copper_block",
+      "file": "copper_block.png",
+      "source_asset": "assets/minecraft/textures/block/copper_block.png",
+      "sha256": "230c2fc9aa0a1a744329a5cd181e87b217e7c2a42fe9014dc466a4af5f51c959"
+    },
+    {
+      "material": "lapis_block",
+      "file": "lapis_block.png",
+      "source_asset": "assets/minecraft/textures/block/lapis_block.png",
+      "sha256": "bd16a32029ddd71db3abecc602750217a5d0629dde4d83da1f5d9f3fc513b853"
+    },
+    {
+      "material": "quartz_block",
+      "file": "quartz_block.png",
+      "source_asset": "assets/minecraft/textures/block/quartz_block_side.png",
+      "sha256": "87b4849daf58fd7f1eed6e122ef1ed87577240059ade71867b3cd72ff3aff8fb"
+    },
+    {
+      "material": "black_wool",
+      "file": "black_wool.png",
+      "source_asset": "assets/minecraft/textures/block/black_wool.png",
+      "sha256": "b0afc31f97443a452342e2b73850f15834748009a9b192ca62d1cefdd638f1ad"
+    }
+  ]
+}

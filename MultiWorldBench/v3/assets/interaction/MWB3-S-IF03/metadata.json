@@ -1,0 +1,15 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-S-IF03",
+  "group": "interaction",
+  "self_contained": true,
+  "has_native_gt": false,
+  "files_sha256": {
+    "action_left.json": "9a53d3dd77f2c0a4af51fe06c39951dea03662e782967f5aab7d00b9188f4d7a",
+    "action_right.json": "9a53d3dd77f2c0a4af51fe06c39951dea03662e782967f5aab7d00b9188f4d7a",
+    "alpha_actions.json": "294c327ed4829e68a71992aacdf920ae16d2168cbfc08a3fab196f9b8a238548",
+    "bravo_actions.json": "294c327ed4829e68a71992aacdf920ae16d2168cbfc08a3fab196f9b8a238548",
+    "first_frame.png": "63df0c8f8768bd25dcf24533955e175f1a3c86e9f34f5f7939149043b677729d",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

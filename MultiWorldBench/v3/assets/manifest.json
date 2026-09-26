@@ -1,0 +1,451 @@
+{
+  "schema_version": "mwb.v3.assets.v1",
+  "self_contained": true,
+  "case_count": 74,
+  "cases": [
+    {
+      "case_id": "MWB3-S-IF01",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF01",
+      "metadata_sha256": "f3bacdbae1446496fb4a67c09ff5dac677fbbd6288983de3cb764274f8cf38de"
+    },
+    {
+      "case_id": "MWB3-S-IF02",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF02",
+      "metadata_sha256": "2a6697aec144942e06d7ac7def6df74a499acce102578f7f1b750df7315612d7"
+    },
+    {
+      "case_id": "MWB3-S-IF03",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF03",
+      "metadata_sha256": "dc9cd080f977ed88572fecbb59f67174d5759685a98a7a6829ce2e179f434995"
+    },
+    {
+      "case_id": "MWB3-S-IF04",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF04",
+      "metadata_sha256": "fc594812ed3ce584395df2e669af4ac278b55eae0866acf0e6647b98a750969c"
+    },
+    {
+      "case_id": "MWB3-S-IF05",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF05",
+      "metadata_sha256": "cfb67184d9b82eeab7e86bb6e3e6adc6c1ee6628946fc54bb64367ff18a4c808"
+    },
+    {
+      "case_id": "MWB3-S-IF06",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-IF06",
+      "metadata_sha256": "b4324257e27d8ff9aaaff772731efdd9b13451b8f57aa3c8564ccef152ef323c"
+    },
+    {
+      "case_id": "MWB3-N-CI01A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI01A",
+      "metadata_sha256": "b1f0e5202cb128798c466c865e28150d4ec3bdda55fead87e3bf6462fd754194"
+    },
+    {
+      "case_id": "MWB3-N-CI01B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI01B",
+      "metadata_sha256": "c75ae89217925fb4e57d06e4ecc269766f1d2bb9cb4819d7bfb690fb29ae059b"
+    },
+    {
+      "case_id": "MWB3-N-CI02A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI02A",
+      "metadata_sha256": "4e1025c6afb17e89bc6c505aa851347855cc758ba7b7d13b7dace6204db33e76"
+    },
+    {
+      "case_id": "MWB3-N-CI02B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI02B",
+      "metadata_sha256": "dd8807741d1fc337a1aeb5e5695a3b191ab11a234861beb15b611cc61e90b0bb"
+    },
+    {
+      "case_id": "MWB3-N-CI03A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI03A",
+      "metadata_sha256": "df013c6b83ee8a55dc8c114494321e5c2c2729408f4a5c55cd71c3ebf489f0db"
+    },
+    {
+      "case_id": "MWB3-N-CI03B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI03B",
+      "metadata_sha256": "2c5b0d77a4d016181ca34ceade2f13fd776399578bab4a2d937277094b984577"
+    },
+    {
+      "case_id": "MWB3-N-CI04A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI04A",
+      "metadata_sha256": "c5f8f05cf997b38427a8e97aea366d3dc51395f5d59c0fb12775c6e0aa411a9c"
+    },
+    {
+      "case_id": "MWB3-N-CI04B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI04B",
+      "metadata_sha256": "2cda270e16f8d5df4806f25388bf6dc25c8bf650fd624920cb594b28b1b7cc11"
+    },
+    {
+      "case_id": "MWB3-N-CI05A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI05A",
+      "metadata_sha256": "f7c1176063d5358be83f782a1399fd6442bb1d2d52a027a339d39e4012147066"
+    },
+    {
+      "case_id": "MWB3-N-CI05B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI05B",
+      "metadata_sha256": "51f529737ac59d5ebfb7b5c19003ae51212a7257e5a0feb4d560fe813acb5487"
+    },
+    {
+      "case_id": "MWB3-N-CI06A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI06A",
+      "metadata_sha256": "9a3ba3148cf4e19d199f493e3124ebab7246ce648d2d5aac80d352a4bba428c2"
+    },
+    {
+      "case_id": "MWB3-N-CI06B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI06B",
+      "metadata_sha256": "ff33dedfa50a2e8e93292b604a3561221963e722e8de81f11d1381182191e4b6"
+    },
+    {
+      "case_id": "MWB3-N-CI07A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI07A",
+      "metadata_sha256": "35f35c5f8ed0e6bbf5a40e4ff665d0da7eed46704194c28773145fffd7894fe2"
+    },
+    {
+      "case_id": "MWB3-N-CI07B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI07B",
+      "metadata_sha256": "0ba03dffc1d4bf964ea7f3a9091c3a3af982fd87d139fdf767b9617a2e76e479"
+    },
+    {
+      "case_id": "MWB3-N-CI08A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI08A",
+      "metadata_sha256": "cbf8360e8f572bbfb6c91a9b81033fd96cd56269635f377305750c7b08ae777f"
+    },
+    {
+      "case_id": "MWB3-N-CI08B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI08B",
+      "metadata_sha256": "5801f697c7483fcd418e62f3be395e2646bf213f8baae110e178f821a7c38040"
+    },
+    {
+      "case_id": "MWB3-N-CI09A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI09A",
+      "metadata_sha256": "41005d1d7e0865088e624c1bed18ea7e3d9e3a91a1164ab6412cfb9def54204e"
+    },
+    {
+      "case_id": "MWB3-N-CI09B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI09B",
+      "metadata_sha256": "e1313a21fba5e807129b4d8e251370b920d754a1b6c1b2d5cf6739cc8fe46275"
+    },
+    {
+      "case_id": "MWB3-N-CI10A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI10A",
+      "metadata_sha256": "b71e538b0403a0d684cbd3257ae860bf39f8a001dd6e43d71a525a16e5590c87"
+    },
+    {
+      "case_id": "MWB3-N-CI10B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI10B",
+      "metadata_sha256": "30a94dcef59abbdf0fa9ffa04d827e558418387a838402ac9b82001c5d848741"
+    },
+    {
+      "case_id": "MWB3-N-CI11A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI11A",
+      "metadata_sha256": "57b66e2c503d74921b6fc70a1b59e2c092ff2b430f9ebe9952bb51cd5ca1d97b"
+    },
+    {
+      "case_id": "MWB3-N-CI11B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI11B",
+      "metadata_sha256": "1487bb1c53a13dc15896407f62b5fc2154e7d443b428b4240e0f20584347093d"
+    },
+    {
+      "case_id": "MWB3-N-CI12A",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI12A",
+      "metadata_sha256": "5ae8211437b5ef088e6a1a73f66f9c7b3dac2959c040b211d4cfea111d4c9d8f"
+    },
+    {
+      "case_id": "MWB3-N-CI12B",
+      "group": "navigation/control",
+      "directory": "assets/navigation/control/MWB3-N-CI12B",
+      "metadata_sha256": "ab60ab9c8f877ab542a78dbae635bbb29bd863933ab2bd9439e5f6cd13af7d39"
+    },
+    {
+      "case_id": "MWB3-N-CF01A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF01A",
+      "metadata_sha256": "c3f0ac93d4cdb5623e12cf24873067b74af1836064bfff072c147a39e03d5967"
+    },
+    {
+      "case_id": "MWB3-N-CF01B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF01B",
+      "metadata_sha256": "8f22d022db5ef28781cad7f68c5373113ad01a37da6d9e3a130c6e3e38a262ff"
+    },
+    {
+      "case_id": "MWB3-N-CF02A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF02A",
+      "metadata_sha256": "c3c24acfb79c8490c4bebe167263e5e94e299f92e481a74858d902b442dcab93"
+    },
+    {
+      "case_id": "MWB3-N-CF02B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF02B",
+      "metadata_sha256": "57a475cc4e64400a3a4d176e4e677622cb348063d804e8a1dab543e2e648c221"
+    },
+    {
+      "case_id": "MWB3-N-CF03A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF03A",
+      "metadata_sha256": "8c2599acc829f6242023c7d2d876f00d58f8be4ee4919a45e36fe67d29333e9b"
+    },
+    {
+      "case_id": "MWB3-N-CF03B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF03B",
+      "metadata_sha256": "569e09db622ace45d0133362db8fa7d981aa622956497855f17a9845d96f2e24"
+    },
+    {
+      "case_id": "MWB3-N-CF04A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF04A",
+      "metadata_sha256": "48277dab4fc428daa8dc4215860e430b59e43c5addbf105cae5b9d133ed0c668"
+    },
+    {
+      "case_id": "MWB3-N-CF04B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF04B",
+      "metadata_sha256": "851c8ef2613c1f8a04e9b0d77e60759b2e7b60f84b935c338e82f0b80c1999aa"
+    },
+    {
+      "case_id": "MWB3-N-CF05A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF05A",
+      "metadata_sha256": "63526ef5fbd271d257eea52c98f5bd877e607d7f39dfcf7091ceb2b984c2183a"
+    },
+    {
+      "case_id": "MWB3-N-CF05B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF05B",
+      "metadata_sha256": "0df12799866ea7e64dc9a3eef8ff777efa59f8cb7a104fff520a6175b5d97384"
+    },
+    {
+      "case_id": "MWB3-N-CF06A",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF06A",
+      "metadata_sha256": "858314c2a4d707c3af1b2af8fed20b70394475c47ec6272550b60cb9de320a0c"
+    },
+    {
+      "case_id": "MWB3-N-CF06B",
+      "group": "navigation/fairness",
+      "directory": "assets/navigation/fairness/MWB3-N-CF06B",
+      "metadata_sha256": "bf3a36075ab10663d536e39ba2b0b5106bbe04911de5f204d049cf7abd28fac5"
+    },
+    {
+      "case_id": "MWB3-N-CV01A",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV01A",
+      "metadata_sha256": "9f054126f0384806043c9fea4a4ac2810c5995d9d73487b42b4398a7193aba44"
+    },
+    {
+      "case_id": "MWB3-N-CV01B",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV01B",
+      "metadata_sha256": "20df7623701b1c0591dcbd05d7645dce428b932469ee08b01ea1daf76d613ae6"
+    },
+    {
+      "case_id": "MWB3-N-CV02A",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV02A",
+      "metadata_sha256": "83e8550787ae49497b737a2d2d0e8d9b23eb386f9104903ed0a16e22cafe4a8b"
+    },
+    {
+      "case_id": "MWB3-N-CV02B",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV02B",
+      "metadata_sha256": "53a95d5e580734c74641f6c1d05b82ceaef325e89256ed891340fda334b40872"
+    },
+    {
+      "case_id": "MWB3-N-CV03A",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV03A",
+      "metadata_sha256": "48a0aded054cc743fac4e4a3908ec091199cf7f0b84f753023f6a8aae96165cb"
+    },
+    {
+      "case_id": "MWB3-N-CV03B",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV03B",
+      "metadata_sha256": "a66058069e4a24820e7937b2028dcef6d05a772ec7daf6e79d49d4ecaa596713"
+    },
+    {
+      "case_id": "MWB3-N-CV04A",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV04A",
+      "metadata_sha256": "8e1575c1c9da70915417337c9e11d4b5aa80f1fa21958bfecc5eaeb57797940d"
+    },
+    {
+      "case_id": "MWB3-N-CV04B",
+      "group": "navigation/motion",
+      "directory": "assets/navigation/motion/MWB3-N-CV04B",
+      "metadata_sha256": "44877831ba851e819a27758f969bcfb76871f206a04d694f7821949e434ffb31"
+    },
+    {
+      "case_id": "MWB3-SW-RC01",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC01",
+      "metadata_sha256": "e0012106cae16749afa37ef93aa1c7720bcec39b4fb13e08f4f32d9e399f3f91"
+    },
+    {
+      "case_id": "MWB3-SW-RC02",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC02",
+      "metadata_sha256": "eec129a0e785827f153435b8e7b20bf10594614b916fde6f91ff73a0fd95a647"
+    },
+    {
+      "case_id": "MWB3-SW-RC03",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC03",
+      "metadata_sha256": "df86fb0e1ba0c1e0fed44bdc25213a5108def557de08948677127e0543fe5d31"
+    },
+    {
+      "case_id": "MWB3-SW-RC04",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC04",
+      "metadata_sha256": "f47d63768ae561bff0180b6ccb588ab0629b7acbf96018971c042f4073e6dc99"
+    },
+    {
+      "case_id": "MWB3-SW-RC05",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC05",
+      "metadata_sha256": "111c098636df36e096c6e4fa3e09f6a6b1b83a4901673f8b138d3f96918ae557"
+    },
+    {
+      "case_id": "MWB3-SW-RC06",
+      "group": "race",
+      "directory": "assets/race/MWB3-SW-RC06",
+      "metadata_sha256": "afd81a71bc2ccf21813b679fde10aef1d3c85e0b475c4b06f47be60dfc1b3a9a"
+    },
+    {
+      "case_id": "MWB3-R-RV01",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV01",
+      "metadata_sha256": "d32cab7f627c3d00f387642e1530549e6631c31596af11d6f1c972e8ead5c134"
+    },
+    {
+      "case_id": "MWB3-R-RV02",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV02",
+      "metadata_sha256": "1a56dbd6664034d72736326d567091ffd3495b0f152f0be4c9ac57e52e57a6be"
+    },
+    {
+      "case_id": "MWB3-R-RV03",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV03",
+      "metadata_sha256": "10711651ef8ad0a953a0fc9bdd7202284b697550a9aaa67544ed7ee89f202b57"
+    },
+    {
+      "case_id": "MWB3-R-RV04",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV04",
+      "metadata_sha256": "d4f52e5658a253fc7045c0003a2745a3598dfedfe6def4595588ddd8d94565f6"
+    },
+    {
+      "case_id": "MWB3-R-RV05",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV05",
+      "metadata_sha256": "ebf3ef60fb6d34b3fe00a7721c607bc2b8cf55673f9c3ffa03f82b2b80c8e7fa"
+    },
+    {
+      "case_id": "MWB3-R-RV06",
+      "group": "revisit",
+      "directory": "assets/revisit/MWB3-R-RV06",
+      "metadata_sha256": "9b7574b886bae0c585cd18f150718b4384865d9b2c930c67417d1065c542f5ad"
+    },
+    {
+      "case_id": "MWB3-S-SR01",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR01",
+      "metadata_sha256": "25ee78c563685381815f5d9d772332001b1300517fb0aafbc92cc1670dbe3457"
+    },
+    {
+      "case_id": "MWB3-S-SR02",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR02",
+      "metadata_sha256": "7359b7f8655d00ce9c2ef7c62164bc78800f60b20fb94cbfeaf4475e76cb99f4"
+    },
+    {
+      "case_id": "MWB3-S-SR03",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR03",
+      "metadata_sha256": "9600d24ab2df3c32b93877e05bbbb55555b0794c361a32baf513c8fc9188e676"
+    },
+    {
+      "case_id": "MWB3-S-SR04",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR04",
+      "metadata_sha256": "8993307e451e641540cac67cc7aa11cf417de9db3351466b4646ad4013815dcf"
+    },
+    {
+      "case_id": "MWB3-S-SR05",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR05",
+      "metadata_sha256": "8916758664d475ddac338deb1bd5562d8b03d9b043a9148aff786b98dfb9af1c"
+    },
+    {
+      "case_id": "MWB3-S-SR06",
+      "group": "spatial",
+      "directory": "assets/spatial/MWB3-S-SR06",
+      "metadata_sha256": "0382f5c5b7828b2985aaf6637434a366c3d0c3f5f6605c48c7d170b180e9ea9c"
+    },
+    {
+      "case_id": "MWB3-S-ST01",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST01",
+      "metadata_sha256": "c4ea2a6c739ea8fb0df6340a956e04a50c5c76bf3f9ffd3ad80b16f9a116f668"
+    },
+    {
+      "case_id": "MWB3-S-ST02",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST02",
+      "metadata_sha256": "19be3d01279398c09dfd07e12c200ce2f2b33b12184fef85ee3cce367fd42ce2"
+    },
+    {
+      "case_id": "MWB3-S-ST03",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST03",
+      "metadata_sha256": "1146eb85420a1b5861b48805e858e040b57f98909a2d1765247d3686f8695842"
+    },
+    {
+      "case_id": "MWB3-S-ST04",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST04",
+      "metadata_sha256": "0af743cd698d8e457d80c4172150074e3fd25ecf2603af4b4d5d7ca90679fa7c"
+    },
+    {
+      "case_id": "MWB3-S-ST05",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST05",
+      "metadata_sha256": "765cc7075ceb71ada160de078f221eb4f44747d9c26741899463b20d63ec11a5"
+    },
+    {
+      "case_id": "MWB3-S-ST06",
+      "group": "structural",
+      "directory": "assets/structural/MWB3-S-ST06",
+      "metadata_sha256": "eec942f877da07990f1a948667fe1539a2973a1f79e678277cbf82ea3bb2081a"
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+"""Self-contained structural validator for MultiWorldBench V3."""
+
+from __future__ import annotations
+
+import importlib
+import json
+from pathlib import Path
+from typing import Any
+
+from .registry import METRICS, METRIC_IDS
+
+
+def _load(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _walk_strings(value: Any):
+    if isinstance(value, dict):
+        for key, child in value.items():
+            yield str(key)
+            yield from _walk_strings(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from _walk_strings(child)
+    elif isinstance(value, str):
+        yield value
+
+
+def _check_range(value: Any, frames: int, label: str) -> None:
+    if (
+        not isinstance(value, list)
+        or len(value) != 2
+        or any(type(index) is not int for index in value)
+        or value[0] < 0
+        or value[1] > frames
+        or value[0] >= value[1]
+    ):
+        raise ValueError(f"invalid frame range for {label}: {value}")
+
+
+def _check_decoupling(project_root: Path, v3: Path) -> None:
+    forbidden = (
+        "MWB" + "2",
+        "legacy" + "_case_id",
+        "archive" + "_reference",
+        "MultiWorldBench." + "evaluation",
+        "MultiWorldBench" + "-runs",
+    )
+    roots = (v3, project_root / "controller/multiworldbench_v3")
+    for root in roots:
+        for path in root.rglob("*"):
+            if not path.is_file() or "__pycache__" in path.parts:
+                continue
+            if path.suffix not in {".py", ".json", ".md"}:
+                continue
+            text = path.read_text(encoding="utf-8")
+            found = [token for token in forbidden if token in text]
+            if found:
+                raise ValueError(f"old-version reference in {path}: {found}")
+
+
+def validate(project_root: Path) -> dict[str, Any]:
+    project_root = project_root.resolve()
+    v3 = project_root / "MultiWorldBench/v3"
+    manifest = _load(v3 / "manifest.json")
+    if manifest.get("self_contained") is not True:
+        raise ValueError("V3 manifest must declare self_contained=true")
+    if manifest.get("external_benchmark_dependencies") != []:
+        raise ValueError("V3 must not declare external benchmark dependencies")
+
+    ids = [item["id"] for item in manifest["metrics"]]
+    if tuple(ids) != METRIC_IDS:
+        raise ValueError(f"manifest metric order/content differs from registry: {ids}")
+    if len(ids) != 10 or len(set(ids)) != 10:
+        raise ValueError("V3 must contain exactly ten unique metrics")
+
+    registered = {item["id"]: item for item in METRICS}
+    all_case_ids: set[str] = set()
+    counts: dict[str, int] = {}
+    statuses: dict[str, str] = {}
+
+    for item in manifest["metrics"]:
+        registry_row = registered[item["id"]]
+        if item["implementation"] != registry_row["module"]:
+            raise ValueError(f"implementation differs from registry: {item['id']}")
+        if item["status"] != registry_row["status"]:
+            raise ValueError(f"status differs from registry: {item['id']}")
+
+        module = importlib.import_module(item["implementation"])
+        for symbol in ("score_case", "aggregate_cases"):
+            if not callable(getattr(module, symbol, None)):
+                raise ValueError(f"{item['implementation']} lacks {symbol}()")
+
+        case_path = v3 / item["case_file"]
+        case_set = _load(case_path)
+        if case_set.get("metric_id") != item["id"]:
+            raise ValueError(f"metric mismatch in {case_path}")
+        cases = case_set.get("cases", [])
+        if len(cases) != item["case_count"] or len(cases) != case_set.get("case_count"):
+            raise ValueError(f"case count mismatch in {case_path}")
+
+        absolute_strings = [
+            value for value in _walk_strings(case_set) if value.startswith("/")
+        ]
+        if absolute_strings:
+            raise ValueError(f"absolute external path remains in {case_path}")
+
+        local_ids = {case["case_id"] for case in cases}
+        if len(local_ids) != len(cases):
+            raise ValueError(f"duplicate case IDs in {case_path}")
+        duplicate = local_ids & all_case_ids
+        if duplicate:
+            raise ValueError(f"case IDs reused across metrics: {sorted(duplicate)}")
+        all_case_ids |= local_ids
+
+        by_id = {case["case_id"]: case for case in cases}
+        for case in cases:
+            case_id = case["case_id"]
+            if not case_id.startswith("MWB3-") or case.get("id") != case_id:
+                raise ValueError(f"invalid or mismatched V3 case ID: {case_id}")
+            if case.get("metrics") != [item["id"]]:
+                raise ValueError(f"case metric binding mismatch: {case_id}")
+
+            group = case.get("independence_group")
+            if group is not None and not str(group).startswith("MWB3-"):
+                raise ValueError(f"independence group was not remapped: {case_id}")
+            primary = case.get("primary_case_id")
+            if primary is not None and primary not in local_ids:
+                raise ValueError(f"invalid primary reference in {case_id}: {primary}")
+            counter = case.get("counter_case_of")
+            if counter is not None:
+                if counter not in local_ids:
+                    raise ValueError(f"invalid counter reference in {case_id}: {counter}")
+                if by_id[counter].get("independence_group") != group:
+                    raise ValueError(f"counter independence group mismatch: {case_id}")
+            if case.get("role_swapped") is True and counter is None:
+                raise ValueError(f"role-swapped case lacks counter reference: {case_id}")
+
+            frames = case.get("valid_num_frames", case.get("num_frames"))
+            if frames is not None:
+                if type(frames) is not int or frames <= 0:
+                    raise ValueError(f"invalid frame count: {case_id}")
+                for index, pair in enumerate(case.get("phase_pairs", [])):
+                    _check_range(pair["action_range"], frames, f"{case_id}.phase[{index}].action")
+                    _check_range(pair["idle_range"], frames, f"{case_id}.phase[{index}].idle")
+
+        counts[item["id"]] = len(cases)
+        statuses[item["id"]] = item["status"]
+
+    structural_path = v3 / "cases/shared_world/cross_view_structural_coherence.json"
+    structural = _load(structural_path)
+    if [question["id"] for question in structural["vlm_questions"]] != [
+        "same_building_gt",
+        "same_building_ab",
+    ]:
+        raise ValueError("structural judge must contain exactly the two approved questions")
+    if structural["check_frames"] != [60, 80, 100]:
+        raise ValueError("structural check frames changed")
+    for case in structural["cases"]:
+        frames = case["timeline"]["video_frames"]
+        if any(
+            type(frame) is not int or not 0 <= frame < frames
+            for frame in structural["check_frames"]
+        ):
+            raise ValueError(f"invalid structural frame for {case['case_id']}")
+        contract = case.get("visibility_contract", {})
+        if contract != {
+            "alpha_initially_sees_bravo_and_building": True,
+            "bravo_initially_does_not_see_building": True,
+            "bravo_sees_building_after_turn": True,
+            "no_occluder_or_world_edit": True,
+        }:
+            raise ValueError(f"invalid structural visibility contract: {case['case_id']}")
+        turn = case.get("bravo_turn", {})
+        if (
+            turn.get("direction") != "right"
+            or turn.get("start_frame") != 20
+            or turn.get("end_frame_exclusive") != 60
+            or turn.get("total_yaw_deg") != 90.0
+        ):
+            raise ValueError(f"invalid structural turn: {case['case_id']}")
+
+    spatial_path = v3 / "cases/shared_world/spatial_reasoning.json"
+    spatial = _load(spatial_path)
+    if [question["id"] for question in spatial["vlm_questions"]] != [
+        "same_building_gt",
+    ]:
+        raise ValueError("spatial-reasoning judge must contain only building identity")
+    if spatial["check_frames"] != [80, 100, 120]:
+        raise ValueError("spatial-reasoning check frames changed")
+    for case in spatial["cases"]:
+        frames = case["timeline"]["video_frames"]
+        if any(
+            type(frame) is not int or not 0 <= frame < frames
+            for frame in spatial["check_frames"]
+        ):
+            raise ValueError(f"invalid spatial-reasoning frame for {case['case_id']}")
+        contract = case.get("visibility_contract", {})
+        if contract != {
+            "alpha_initially_sees_bravo_and_building": True,
+            "bravo_faces_building_but_building_is_fully_occluded": True,
+            "bravo_must_remove_upper_dirt_block": True,
+            "bravo_should_see_building_after_removal": True,
+        }:
+            raise ValueError(f"invalid spatial-reasoning contract: {case['case_id']}")
+        phases = case["timeline"]["frames"]
+        if phases[1] != {
+            "range": [20, 60],
+            "actor": "bravo",
+            "action": "destroy_occluding_dirt",
+        }:
+            raise ValueError(f"invalid spatial-reasoning action: {case['case_id']}")
+        if "dirt_to_break" not in case or "remaining_pedestal" not in case:
+            raise ValueError(f"missing spatial-reasoning occluder: {case['case_id']}")
+
+    race_path = v3 / "cases/shared_world/race_condition_consistency.json"
+    race = _load(race_path)
+    if race.get("gt_collected") is not False or race.get("evaluation_uses_gt") is not False:
+        raise ValueError("race-condition cases must use conditioning stills without GT")
+    if [question["id"] for question in race["vlm_questions"]] != [
+        "same_block_count",
+        "same_block_type",
+        "matches_intended_block",
+    ]:
+        raise ValueError("race-condition judge must contain exactly count, type, and intended-block questions")
+    if race["check_frames"] != [60, 80, 100]:
+        raise ValueError("race-condition check frames changed")
+    visibility_classes = [case["visibility_class"] for case in race["cases"]]
+    if visibility_classes.count("mutual") != 3:
+        raise ValueError("race-condition suite must contain three mutual-visibility cases")
+    if sum(value != "mutual" for value in visibility_classes) != 3:
+        raise ValueError("race-condition suite must contain three one-way-visibility cases")
+    for case in race["cases"]:
+        action = case["simultaneous_action"]
+        _check_range(action["active_frame_range"], case["num_frames"], case["case_id"])
+        if action.get("native_action") != "use" or action.get("same_frames_for_both_roles") is not True:
+            raise ValueError(f"race action is not simultaneous native use: {case['case_id']}")
+        if action["active_frame_range"][1] - action["active_frame_range"][0] != 1:
+            raise ValueError(f"race action must contain exactly one use frame: {case['case_id']}")
+        references = case.get("block_reference_images", {})
+        if set(references) != {"alpha", "bravo"}:
+            raise ValueError(f"missing race block reference images: {case['case_id']}")
+        for relative in references.values():
+            reference = v3 / relative
+            if not reference.is_file():
+                raise ValueError(f"missing race block reference: {reference}")
+        if case.get("gt_collected") is not False:
+            raise ValueError(f"race case unexpectedly declares GT: {case['case_id']}")
+        if any(frame >= case["num_frames"] for frame in race["check_frames"]):
+            raise ValueError(f"invalid race check frame: {case['case_id']}")
+
+    for relative in (
+        "cases/revisit/style_consistency.json",
+        "cases/revisit/id_consistency.json",
+    ):
+        payload = _load(v3 / relative)
+        for case in payload["cases"]:
+            if case["observer"] != {
+                "role": "alpha",
+                "motion_policy": "stationary_no_input",
+            }:
+                raise ValueError(f"observer must stay stationary: {case['case_id']}")
+            if case["actor"]["role"] != "bravo":
+                raise ValueError(f"actor must be bravo: {case['case_id']}")
+            video_frames = case["capture_spec"]["video"]["frames"]
+            pair_ids: set[str] = set()
+            for pair in case["frame_pairs"]:
+                if pair["pair_id"] in pair_ids:
+                    raise ValueError(f"duplicate revisit pair: {case['case_id']}")
+                pair_ids.add(pair["pair_id"])
+                for key in ("initial_frame", "return_frame"):
+                    frame = pair[key]
+                    if type(frame) is not int or not 0 <= frame < video_frames:
+                        raise ValueError(f"invalid revisit frame: {case['case_id']} {pair}")
+            checks = case["visibility_validation"]
+            if len(checks) != 5 or any(
+                not row.get("valid")
+                or row.get("max_consecutive_hidden_frames", 0) < 8
+                for row in checks
+            ):
+                raise ValueError(f"visibility-break policy failed: {case['case_id']}")
+
+    _check_decoupling(project_root, v3)
+    return {
+        "status": "valid",
+        "self_contained": True,
+        "external_benchmark_dependencies": 0,
+        "metric_count": len(ids),
+        "case_set_count": len(manifest["metrics"]),
+        "unique_case_count": len(all_case_ids),
+        "case_counts": counts,
+        "metric_statuses": statuses,
+    }

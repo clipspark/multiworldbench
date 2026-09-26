@@ -1,0 +1,8142 @@
+[
+  {
+    "frame_count": 0,
+    "epochTime": 1789973690.246,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690246
+    }
+  },
+  {
+    "frame_count": 1,
+    "epochTime": 1789973690.297,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690296
+    }
+  },
+  {
+    "frame_count": 2,
+    "epochTime": 1789973690.346,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690346
+    }
+  },
+  {
+    "frame_count": 3,
+    "epochTime": 1789973690.397,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690397
+    }
+  },
+  {
+    "frame_count": 4,
+    "epochTime": 1789973690.447,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690447
+    }
+  },
+  {
+    "frame_count": 5,
+    "epochTime": 1789973690.497,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690497
+    }
+  },
+  {
+    "frame_count": 6,
+    "epochTime": 1789973690.546,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690546
+    }
+  },
+  {
+    "frame_count": 7,
+    "epochTime": 1789973690.596,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690596
+    }
+  },
+  {
+    "frame_count": 8,
+    "epochTime": 1789973690.647,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690646
+    }
+  },
+  {
+    "frame_count": 9,
+    "epochTime": 1789973690.697,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690696
+    }
+  },
+  {
+    "frame_count": 10,
+    "epochTime": 1789973690.746,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690746
+    }
+  },
+  {
+    "frame_count": 11,
+    "epochTime": 1789973690.797,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690797
+    }
+  },
+  {
+    "frame_count": 12,
+    "epochTime": 1789973690.846,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690846
+    }
+  },
+  {
+    "frame_count": 13,
+    "epochTime": 1789973690.897,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690896
+    }
+  },
+  {
+    "frame_count": 14,
+    "epochTime": 1789973690.947,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690947
+    }
+  },
+  {
+    "frame_count": 15,
+    "epochTime": 1789973690.996,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973690996
+    }
+  },
+  {
+    "frame_count": 16,
+    "epochTime": 1789973691.046,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691046
+    }
+  },
+  {
+    "frame_count": 17,
+    "epochTime": 1789973691.097,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691097
+    }
+  },
+  {
+    "frame_count": 18,
+    "epochTime": 1789973691.146,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691146
+    }
+  },
+  {
+    "frame_count": 19,
+    "epochTime": 1789973691.197,
+    "phase": "v0_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691196
+    }
+  },
+  {
+    "frame_count": 20,
+    "epochTime": 1789973691.247,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691246
+    }
+  },
+  {
+    "frame_count": 21,
+    "epochTime": 1789973691.296,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691296
+    }
+  },
+  {
+    "frame_count": 22,
+    "epochTime": 1789973691.347,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691347
+    }
+  },
+  {
+    "frame_count": 23,
+    "epochTime": 1789973691.396,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691396
+    }
+  },
+  {
+    "frame_count": 24,
+    "epochTime": 1789973691.447,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691447
+    }
+  },
+  {
+    "frame_count": 25,
+    "epochTime": 1789973691.497,
+    "phase": "v0_to_v1_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691497
+    }
+  },
+  {
+    "frame_count": 26,
+    "epochTime": 1789973691.546,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691546
+    }
+  },
+  {
+    "frame_count": 27,
+    "epochTime": 1789973691.597,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691597
+    }
+  },
+  {
+    "frame_count": 28,
+    "epochTime": 1789973691.646,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691646
+    }
+  },
+  {
+    "frame_count": 29,
+    "epochTime": 1789973691.696,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691696
+    }
+  },
+  {
+    "frame_count": 30,
+    "epochTime": 1789973691.747,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691747
+    }
+  },
+  {
+    "frame_count": 31,
+    "epochTime": 1789973691.796,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691796
+    }
+  },
+  {
+    "frame_count": 32,
+    "epochTime": 1789973691.847,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691846
+    }
+  },
+  {
+    "frame_count": 33,
+    "epochTime": 1789973691.897,
+    "phase": "v0_to_v1_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691897
+    }
+  },
+  {
+    "frame_count": 34,
+    "epochTime": 1789973691.946,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691946
+    }
+  },
+  {
+    "frame_count": 35,
+    "epochTime": 1789973691.998,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973691998
+    }
+  },
+  {
+    "frame_count": 36,
+    "epochTime": 1789973692.046,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692046
+    }
+  },
+  {
+    "frame_count": 37,
+    "epochTime": 1789973692.096,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692096
+    }
+  },
+  {
+    "frame_count": 38,
+    "epochTime": 1789973692.147,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692147
+    }
+  },
+  {
+    "frame_count": 39,
+    "epochTime": 1789973692.197,
+    "phase": "v0_to_v1_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692197
+    }
+  },
+  {
+    "frame_count": 40,
+    "epochTime": 1789973692.246,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692246
+    }
+  },
+  {
+    "frame_count": 41,
+    "epochTime": 1789973692.297,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692296
+    }
+  },
+  {
+    "frame_count": 42,
+    "epochTime": 1789973692.347,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692347
+    }
+  },
+  {
+    "frame_count": 43,
+    "epochTime": 1789973692.396,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692396
+    }
+  },
+  {
+    "frame_count": 44,
+    "epochTime": 1789973692.447,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692446
+    }
+  },
+  {
+    "frame_count": 45,
+    "epochTime": 1789973692.497,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692497
+    }
+  },
+  {
+    "frame_count": 46,
+    "epochTime": 1789973692.546,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692546
+    }
+  },
+  {
+    "frame_count": 47,
+    "epochTime": 1789973692.597,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692597
+    }
+  },
+  {
+    "frame_count": 48,
+    "epochTime": 1789973692.646,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692646
+    }
+  },
+  {
+    "frame_count": 49,
+    "epochTime": 1789973692.697,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692696
+    }
+  },
+  {
+    "frame_count": 50,
+    "epochTime": 1789973692.746,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692746
+    }
+  },
+  {
+    "frame_count": 51,
+    "epochTime": 1789973692.797,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692797
+    }
+  },
+  {
+    "frame_count": 52,
+    "epochTime": 1789973692.846,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692846
+    }
+  },
+  {
+    "frame_count": 53,
+    "epochTime": 1789973692.897,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692897
+    }
+  },
+  {
+    "frame_count": 54,
+    "epochTime": 1789973692.947,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692947
+    }
+  },
+  {
+    "frame_count": 55,
+    "epochTime": 1789973692.997,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973692996
+    }
+  },
+  {
+    "frame_count": 56,
+    "epochTime": 1789973693.047,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693047
+    }
+  },
+  {
+    "frame_count": 57,
+    "epochTime": 1789973693.096,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693096
+    }
+  },
+  {
+    "frame_count": 58,
+    "epochTime": 1789973693.147,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693147
+    }
+  },
+  {
+    "frame_count": 59,
+    "epochTime": 1789973693.197,
+    "phase": "v1_initial",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693196
+    }
+  },
+  {
+    "frame_count": 60,
+    "epochTime": 1789973693.246,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693246
+    }
+  },
+  {
+    "frame_count": 61,
+    "epochTime": 1789973693.297,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693297
+    }
+  },
+  {
+    "frame_count": 62,
+    "epochTime": 1789973693.347,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693346
+    }
+  },
+  {
+    "frame_count": 63,
+    "epochTime": 1789973693.397,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693397
+    }
+  },
+  {
+    "frame_count": 64,
+    "epochTime": 1789973693.446,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693446
+    }
+  },
+  {
+    "frame_count": 65,
+    "epochTime": 1789973693.496,
+    "phase": "v1_to_v0_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693496
+    }
+  },
+  {
+    "frame_count": 66,
+    "epochTime": 1789973693.547,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693546
+    }
+  },
+  {
+    "frame_count": 67,
+    "epochTime": 1789973693.597,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693597
+    }
+  },
+  {
+    "frame_count": 68,
+    "epochTime": 1789973693.646,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693646
+    }
+  },
+  {
+    "frame_count": 69,
+    "epochTime": 1789973693.696,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693696
+    }
+  },
+  {
+    "frame_count": 70,
+    "epochTime": 1789973693.747,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693747
+    }
+  },
+  {
+    "frame_count": 71,
+    "epochTime": 1789973693.796,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693796
+    }
+  },
+  {
+    "frame_count": 72,
+    "epochTime": 1789973693.846,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693846
+    }
+  },
+  {
+    "frame_count": 73,
+    "epochTime": 1789973693.897,
+    "phase": "v1_to_v0_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693897
+    }
+  },
+  {
+    "frame_count": 74,
+    "epochTime": 1789973693.946,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693946
+    }
+  },
+  {
+    "frame_count": 75,
+    "epochTime": 1789973693.997,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973693997
+    }
+  },
+  {
+    "frame_count": 76,
+    "epochTime": 1789973694.046,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694046
+    }
+  },
+  {
+    "frame_count": 77,
+    "epochTime": 1789973694.097,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694097
+    }
+  },
+  {
+    "frame_count": 78,
+    "epochTime": 1789973694.147,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694147
+    }
+  },
+  {
+    "frame_count": 79,
+    "epochTime": 1789973694.197,
+    "phase": "v1_to_v0_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694197
+    }
+  },
+  {
+    "frame_count": 80,
+    "epochTime": 1789973694.247,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694246
+    }
+  },
+  {
+    "frame_count": 81,
+    "epochTime": 1789973694.296,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694296
+    }
+  },
+  {
+    "frame_count": 82,
+    "epochTime": 1789973694.347,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694347
+    }
+  },
+  {
+    "frame_count": 83,
+    "epochTime": 1789973694.396,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694396
+    }
+  },
+  {
+    "frame_count": 84,
+    "epochTime": 1789973694.447,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694447
+    }
+  },
+  {
+    "frame_count": 85,
+    "epochTime": 1789973694.496,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694496
+    }
+  },
+  {
+    "frame_count": 86,
+    "epochTime": 1789973694.547,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694547
+    }
+  },
+  {
+    "frame_count": 87,
+    "epochTime": 1789973694.596,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694596
+    }
+  },
+  {
+    "frame_count": 88,
+    "epochTime": 1789973694.647,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694647
+    }
+  },
+  {
+    "frame_count": 89,
+    "epochTime": 1789973694.696,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694696
+    }
+  },
+  {
+    "frame_count": 90,
+    "epochTime": 1789973694.749,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694747
+    }
+  },
+  {
+    "frame_count": 91,
+    "epochTime": 1789973694.797,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694797
+    }
+  },
+  {
+    "frame_count": 92,
+    "epochTime": 1789973694.847,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694847
+    }
+  },
+  {
+    "frame_count": 93,
+    "epochTime": 1789973694.897,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694896
+    }
+  },
+  {
+    "frame_count": 94,
+    "epochTime": 1789973694.947,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694947
+    }
+  },
+  {
+    "frame_count": 95,
+    "epochTime": 1789973694.996,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973694996
+    }
+  },
+  {
+    "frame_count": 96,
+    "epochTime": 1789973695.046,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695046
+    }
+  },
+  {
+    "frame_count": 97,
+    "epochTime": 1789973695.097,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695097
+    }
+  },
+  {
+    "frame_count": 98,
+    "epochTime": 1789973695.146,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695146
+    }
+  },
+  {
+    "frame_count": 99,
+    "epochTime": 1789973695.199,
+    "phase": "v0_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695199
+    }
+  },
+  {
+    "frame_count": 100,
+    "epochTime": 1789973695.247,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695246
+    }
+  },
+  {
+    "frame_count": 101,
+    "epochTime": 1789973695.297,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695297
+    }
+  },
+  {
+    "frame_count": 102,
+    "epochTime": 1789973695.347,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695346
+    }
+  },
+  {
+    "frame_count": 103,
+    "epochTime": 1789973695.396,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695396
+    }
+  },
+  {
+    "frame_count": 104,
+    "epochTime": 1789973695.446,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695446
+    }
+  },
+  {
+    "frame_count": 105,
+    "epochTime": 1789973695.497,
+    "phase": "v0_to_v1_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695496
+    }
+  },
+  {
+    "frame_count": 106,
+    "epochTime": 1789973695.547,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695547
+    }
+  },
+  {
+    "frame_count": 107,
+    "epochTime": 1789973695.596,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695596
+    }
+  },
+  {
+    "frame_count": 108,
+    "epochTime": 1789973695.647,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695647
+    }
+  },
+  {
+    "frame_count": 109,
+    "epochTime": 1789973695.697,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695696
+    }
+  },
+  {
+    "frame_count": 110,
+    "epochTime": 1789973695.746,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695746
+    }
+  },
+  {
+    "frame_count": 111,
+    "epochTime": 1789973695.796,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695796
+    }
+  },
+  {
+    "frame_count": 112,
+    "epochTime": 1789973695.847,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695846
+    }
+  },
+  {
+    "frame_count": 113,
+    "epochTime": 1789973695.897,
+    "phase": "v0_to_v1_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695897
+    }
+  },
+  {
+    "frame_count": 114,
+    "epochTime": 1789973695.947,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695947
+    }
+  },
+  {
+    "frame_count": 115,
+    "epochTime": 1789973695.996,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973695996
+    }
+  },
+  {
+    "frame_count": 116,
+    "epochTime": 1789973696.047,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696047
+    }
+  },
+  {
+    "frame_count": 117,
+    "epochTime": 1789973696.096,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696096
+    }
+  },
+  {
+    "frame_count": 118,
+    "epochTime": 1789973696.147,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696147
+    }
+  },
+  {
+    "frame_count": 119,
+    "epochTime": 1789973696.197,
+    "phase": "v0_to_v1_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696197
+    }
+  },
+  {
+    "frame_count": 120,
+    "epochTime": 1789973696.246,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696246
+    }
+  },
+  {
+    "frame_count": 121,
+    "epochTime": 1789973696.297,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696297
+    }
+  },
+  {
+    "frame_count": 122,
+    "epochTime": 1789973696.347,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696347
+    }
+  },
+  {
+    "frame_count": 123,
+    "epochTime": 1789973696.397,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696397
+    }
+  },
+  {
+    "frame_count": 124,
+    "epochTime": 1789973696.446,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696446
+    }
+  },
+  {
+    "frame_count": 125,
+    "epochTime": 1789973696.497,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696496
+    }
+  },
+  {
+    "frame_count": 126,
+    "epochTime": 1789973696.547,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696547
+    }
+  },
+  {
+    "frame_count": 127,
+    "epochTime": 1789973696.597,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696597
+    }
+  },
+  {
+    "frame_count": 128,
+    "epochTime": 1789973696.647,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696647
+    }
+  },
+  {
+    "frame_count": 129,
+    "epochTime": 1789973696.696,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696696
+    }
+  },
+  {
+    "frame_count": 130,
+    "epochTime": 1789973696.747,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696746
+    }
+  },
+  {
+    "frame_count": 131,
+    "epochTime": 1789973696.796,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696796
+    }
+  },
+  {
+    "frame_count": 132,
+    "epochTime": 1789973696.847,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696847
+    }
+  },
+  {
+    "frame_count": 133,
+    "epochTime": 1789973696.897,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696897
+    }
+  },
+  {
+    "frame_count": 134,
+    "epochTime": 1789973696.947,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696947
+    }
+  },
+  {
+    "frame_count": 135,
+    "epochTime": 1789973696.996,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973696996
+    }
+  },
+  {
+    "frame_count": 136,
+    "epochTime": 1789973697.047,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697047
+    }
+  },
+  {
+    "frame_count": 137,
+    "epochTime": 1789973697.097,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697096
+    }
+  },
+  {
+    "frame_count": 138,
+    "epochTime": 1789973697.146,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697146
+    }
+  },
+  {
+    "frame_count": 139,
+    "epochTime": 1789973697.197,
+    "phase": "v1_revisit_1",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697197
+    }
+  },
+  {
+    "frame_count": 140,
+    "epochTime": 1789973697.246,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697246
+    }
+  },
+  {
+    "frame_count": 141,
+    "epochTime": 1789973697.297,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697296
+    }
+  },
+  {
+    "frame_count": 142,
+    "epochTime": 1789973697.347,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697347
+    }
+  },
+  {
+    "frame_count": 143,
+    "epochTime": 1789973697.397,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697397
+    }
+  },
+  {
+    "frame_count": 144,
+    "epochTime": 1789973697.446,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697446
+    }
+  },
+  {
+    "frame_count": 145,
+    "epochTime": 1789973697.497,
+    "phase": "v1_to_v0_2_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697496
+    }
+  },
+  {
+    "frame_count": 146,
+    "epochTime": 1789973697.546,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697546
+    }
+  },
+  {
+    "frame_count": 147,
+    "epochTime": 1789973697.597,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697596
+    }
+  },
+  {
+    "frame_count": 148,
+    "epochTime": 1789973697.646,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697646
+    }
+  },
+  {
+    "frame_count": 149,
+    "epochTime": 1789973697.697,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697696
+    }
+  },
+  {
+    "frame_count": 150,
+    "epochTime": 1789973697.747,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697747
+    }
+  },
+  {
+    "frame_count": 151,
+    "epochTime": 1789973697.797,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697797
+    }
+  },
+  {
+    "frame_count": 152,
+    "epochTime": 1789973697.846,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697846
+    }
+  },
+  {
+    "frame_count": 153,
+    "epochTime": 1789973697.897,
+    "phase": "v1_to_v0_2_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697897
+    }
+  },
+  {
+    "frame_count": 154,
+    "epochTime": 1789973697.947,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697947
+    }
+  },
+  {
+    "frame_count": 155,
+    "epochTime": 1789973697.997,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973697997
+    }
+  },
+  {
+    "frame_count": 156,
+    "epochTime": 1789973698.049,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698049
+    }
+  },
+  {
+    "frame_count": 157,
+    "epochTime": 1789973698.097,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698097
+    }
+  },
+  {
+    "frame_count": 158,
+    "epochTime": 1789973698.146,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698146
+    }
+  },
+  {
+    "frame_count": 159,
+    "epochTime": 1789973698.197,
+    "phase": "v1_to_v0_2_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698197
+    }
+  },
+  {
+    "frame_count": 160,
+    "epochTime": 1789973698.247,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698247
+    }
+  },
+  {
+    "frame_count": 161,
+    "epochTime": 1789973698.296,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698296
+    }
+  },
+  {
+    "frame_count": 162,
+    "epochTime": 1789973698.347,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698347
+    }
+  },
+  {
+    "frame_count": 163,
+    "epochTime": 1789973698.396,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698396
+    }
+  },
+  {
+    "frame_count": 164,
+    "epochTime": 1789973698.447,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698446
+    }
+  },
+  {
+    "frame_count": 165,
+    "epochTime": 1789973698.496,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698496
+    }
+  },
+  {
+    "frame_count": 166,
+    "epochTime": 1789973698.547,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698547
+    }
+  },
+  {
+    "frame_count": 167,
+    "epochTime": 1789973698.596,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698596
+    }
+  },
+  {
+    "frame_count": 168,
+    "epochTime": 1789973698.648,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698648
+    }
+  },
+  {
+    "frame_count": 169,
+    "epochTime": 1789973698.697,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698697
+    }
+  },
+  {
+    "frame_count": 170,
+    "epochTime": 1789973698.747,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698747
+    }
+  },
+  {
+    "frame_count": 171,
+    "epochTime": 1789973698.797,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698797
+    }
+  },
+  {
+    "frame_count": 172,
+    "epochTime": 1789973698.846,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698846
+    }
+  },
+  {
+    "frame_count": 173,
+    "epochTime": 1789973698.897,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698897
+    }
+  },
+  {
+    "frame_count": 174,
+    "epochTime": 1789973698.946,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698946
+    }
+  },
+  {
+    "frame_count": 175,
+    "epochTime": 1789973698.997,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973698997
+    }
+  },
+  {
+    "frame_count": 176,
+    "epochTime": 1789973699.047,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699047
+    }
+  },
+  {
+    "frame_count": 177,
+    "epochTime": 1789973699.097,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699097
+    }
+  },
+  {
+    "frame_count": 178,
+    "epochTime": 1789973699.147,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699147
+    }
+  },
+  {
+    "frame_count": 179,
+    "epochTime": 1789973699.196,
+    "phase": "v0_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699196
+    }
+  },
+  {
+    "frame_count": 180,
+    "epochTime": 1789973699.247,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699247
+    }
+  },
+  {
+    "frame_count": 181,
+    "epochTime": 1789973699.296,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699296
+    }
+  },
+  {
+    "frame_count": 182,
+    "epochTime": 1789973699.347,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699346
+    }
+  },
+  {
+    "frame_count": 183,
+    "epochTime": 1789973699.397,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699397
+    }
+  },
+  {
+    "frame_count": 184,
+    "epochTime": 1789973699.447,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699447
+    }
+  },
+  {
+    "frame_count": 185,
+    "epochTime": 1789973699.496,
+    "phase": "v0_to_v1_3_turn_away",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699496
+    }
+  },
+  {
+    "frame_count": 186,
+    "epochTime": 1789973699.547,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699546
+    }
+  },
+  {
+    "frame_count": 187,
+    "epochTime": 1789973699.597,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699596
+    }
+  },
+  {
+    "frame_count": 188,
+    "epochTime": 1789973699.647,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699647
+    }
+  },
+  {
+    "frame_count": 189,
+    "epochTime": 1789973699.697,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699696
+    }
+  },
+  {
+    "frame_count": 190,
+    "epochTime": 1789973699.747,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699747
+    }
+  },
+  {
+    "frame_count": 191,
+    "epochTime": 1789973699.796,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699796
+    }
+  },
+  {
+    "frame_count": 192,
+    "epochTime": 1789973699.846,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699846
+    }
+  },
+  {
+    "frame_count": 193,
+    "epochTime": 1789973699.897,
+    "phase": "v0_to_v1_3_visibility_break",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699897
+    }
+  },
+  {
+    "frame_count": 194,
+    "epochTime": 1789973699.947,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699946
+    }
+  },
+  {
+    "frame_count": 195,
+    "epochTime": 1789973699.997,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973699997
+    }
+  },
+  {
+    "frame_count": 196,
+    "epochTime": 1789973700.047,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700046
+    }
+  },
+  {
+    "frame_count": 197,
+    "epochTime": 1789973700.099,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700098
+    }
+  },
+  {
+    "frame_count": 198,
+    "epochTime": 1789973700.146,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700146
+    }
+  },
+  {
+    "frame_count": 199,
+    "epochTime": 1789973700.197,
+    "phase": "v0_to_v1_3_return_to_target",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700197
+    }
+  },
+  {
+    "frame_count": 200,
+    "epochTime": 1789973700.246,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700246
+    }
+  },
+  {
+    "frame_count": 201,
+    "epochTime": 1789973700.297,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700296
+    }
+  },
+  {
+    "frame_count": 202,
+    "epochTime": 1789973700.347,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700347
+    }
+  },
+  {
+    "frame_count": 203,
+    "epochTime": 1789973700.397,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700396
+    }
+  },
+  {
+    "frame_count": 204,
+    "epochTime": 1789973700.447,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700446
+    }
+  },
+  {
+    "frame_count": 205,
+    "epochTime": 1789973700.497,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700497
+    }
+  },
+  {
+    "frame_count": 206,
+    "epochTime": 1789973700.546,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700546
+    }
+  },
+  {
+    "frame_count": 207,
+    "epochTime": 1789973700.597,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700597
+    }
+  },
+  {
+    "frame_count": 208,
+    "epochTime": 1789973700.646,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700646
+    }
+  },
+  {
+    "frame_count": 209,
+    "epochTime": 1789973700.697,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700697
+    }
+  },
+  {
+    "frame_count": 210,
+    "epochTime": 1789973700.747,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700746
+    }
+  },
+  {
+    "frame_count": 211,
+    "epochTime": 1789973700.798,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700798
+    }
+  },
+  {
+    "frame_count": 212,
+    "epochTime": 1789973700.846,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700846
+    }
+  },
+  {
+    "frame_count": 213,
+    "epochTime": 1789973700.897,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700897
+    }
+  },
+  {
+    "frame_count": 214,
+    "epochTime": 1789973700.948,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700948
+    }
+  },
+  {
+    "frame_count": 215,
+    "epochTime": 1789973700.996,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973700996
+    }
+  },
+  {
+    "frame_count": 216,
+    "epochTime": 1789973701.047,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973701047
+    }
+  },
+  {
+    "frame_count": 217,
+    "epochTime": 1789973701.097,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973701096
+    }
+  },
+  {
+    "frame_count": 218,
+    "epochTime": 1789973701.147,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973701146
+    }
+  },
+  {
+    "frame_count": 219,
+    "epochTime": 1789973701.198,
+    "phase": "v1_revisit_2",
+    "player_present": true,
+    "camera_ready": true,
+    "x": 2268.5,
+    "y": 64,
+    "z": -11.5,
+    "yaw": -0.7853981633974483,
+    "pitch": 0,
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "attack": false,
+      "use": false,
+      "mine": false,
+      "place_block": false,
+      "camera": [
+        0,
+        0
+      ]
+    },
+    "native_input": {
+      "device": "X11_XTest",
+      "display": ":130",
+      "window": "0x200007",
+      "keys": [],
+      "buttons": [],
+      "executed_epoch_ms": 1789973701196
+    }
+  }
+]

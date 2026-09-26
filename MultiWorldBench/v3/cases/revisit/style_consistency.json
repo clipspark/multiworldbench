@@ -1,0 +1,849 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "benchmark_version": "3",
+  "metric_id": "style_consistency",
+  "status": "implemented",
+  "ranking_ready": false,
+  "case_count": 6,
+  "protocol": "revisit_visibility_break",
+  "fps": 20,
+  "visibility_break_policy": {
+    "required_agent": "B",
+    "minimum_consecutive_hidden_frames": 8,
+    "max_view_angle_deg": 65,
+    "transit_segments": 5
+  },
+  "frame_selection": {
+    "pairs": [
+      {
+        "pair_id": "v0_revisit_1",
+        "view": "v0",
+        "initial_frame": 10,
+        "return_frame": 90
+      },
+      {
+        "pair_id": "v0_revisit_2",
+        "view": "v0",
+        "initial_frame": 10,
+        "return_frame": 170
+      },
+      {
+        "pair_id": "v1_revisit_1",
+        "view": "v1",
+        "initial_frame": 50,
+        "return_frame": 132
+      },
+      {
+        "pair_id": "v1_revisit_2",
+        "view": "v1",
+        "initial_frame": 50,
+        "return_frame": 212
+      }
+    ],
+    "note": "两种视角各评价两轮回访；评分代码不硬编码帧号",
+    "configured_by": "case.frame_pairs"
+  },
+  "cases": [
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "sand",
+      "materials": {
+        "ground": "sand",
+        "wall": "sandstone",
+        "accent": "oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2088,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            2100.5,
+            64,
+            -8
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": 45
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST01",
+      "id": "MWB3-R-ST01",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST01",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST01/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST01/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    },
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "grass",
+      "materials": {
+        "ground": "grass_block",
+        "wall": "stone_bricks",
+        "accent": "oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2268,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            2280.5,
+            64,
+            -8
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": -45
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST02",
+      "id": "MWB3-R-ST02",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST02",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST02/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST02/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    },
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "sand_grass_boundary",
+      "materials": {
+        "ground": "grass_block",
+        "wall": "stone_bricks",
+        "accent": "oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2448,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            2460.5,
+            64,
+            -10
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": 60
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST03",
+      "id": "MWB3-R-ST03",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST03",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST03/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST03/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    },
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "sand",
+      "materials": {
+        "ground": "sand",
+        "wall": "sandstone",
+        "accent": "oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2628,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            2640.5,
+            64,
+            -8
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": 45
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST04",
+      "id": "MWB3-R-ST04",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST04",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST04/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST04/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    },
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "neutral_ground",
+      "materials": {
+        "ground": "smooth_stone",
+        "wall": "stone_bricks",
+        "accent": "stripped_oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2808,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            2820.5,
+            64,
+            -10
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": -60
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST05",
+      "id": "MWB3-R-ST05",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST05",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST05/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST05/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    },
+    {
+      "protocol": "revisit_visibility_break",
+      "environment": "grass",
+      "materials": {
+        "ground": "grass_block",
+        "wall": "deepslate_bricks",
+        "accent": "dark_oak_log"
+      },
+      "initial_pose": {
+        "alpha": {
+          "position": [
+            2988,
+            64,
+            -12
+          ],
+          "yaw_deg": -45,
+          "pitch_deg": 0
+        },
+        "bravo_v0": {
+          "position": [
+            3000.5,
+            64,
+            -12
+          ],
+          "yaw_deg": 0,
+          "pitch_deg": 0
+        },
+        "bravo_v1_yaw_deg": 45
+      },
+      "visibility_break_policy": {
+        "agent": "B",
+        "max_view_angle_deg": 65,
+        "min_consecutive_hidden_frames": 8
+      },
+      "visibility_validation": [
+        {
+          "start_frame": 20,
+          "end_frame": 40,
+          "max_consecutive_hidden_frames": 14,
+          "valid": true
+        },
+        {
+          "start_frame": 60,
+          "end_frame": 80,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 100,
+          "end_frame": 120,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 140,
+          "end_frame": 160,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        },
+        {
+          "start_frame": 180,
+          "end_frame": 200,
+          "max_consecutive_hidden_frames": 15,
+          "valid": true
+        }
+      ],
+      "valid": true,
+      "path": [
+        "v0_initial[0:20]",
+        "v0_to_v1_visibility_break[20:40]",
+        "v1_initial[40:60]",
+        "v1_to_v0_visibility_break[60:80]",
+        "v0_revisit_1[80:100]",
+        "v0_to_v1_visibility_break_2[100:120]",
+        "v1_revisit_1[120:140]",
+        "v1_to_v0_visibility_break_2[140:160]",
+        "v0_revisit_2[160:180]",
+        "v0_to_v1_visibility_break_3[180:200]",
+        "v1_revisit_2[200:220]"
+      ],
+      "native_action_semantics": "A is stationary with no input; B actions are executed via X11 XTest mouse/keyboard events; scene setup RCON is initialization only",
+      "case_id": "MWB3-R-ST06",
+      "id": "MWB3-R-ST06",
+      "metrics": [
+        "style_consistency"
+      ],
+      "independence_group": "MWB3-R-ST06",
+      "observer": {
+        "role": "alpha",
+        "motion_policy": "stationary_no_input"
+      },
+      "actor": {
+        "role": "bravo",
+        "motion_policy": "native_X11_XTest_actions"
+      },
+      "frame_pairs": [
+        {
+          "pair_id": "v0_revisit_1",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 90
+        },
+        {
+          "pair_id": "v0_revisit_2",
+          "view": "v0",
+          "initial_frame": 10,
+          "return_frame": 170
+        },
+        {
+          "pair_id": "v1_revisit_1",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 132
+        },
+        {
+          "pair_id": "v1_revisit_2",
+          "view": "v1",
+          "initial_frame": 50,
+          "return_frame": 212
+        }
+      ],
+      "capture_spec": {
+        "video": {
+          "alpha": "outputs/MWB3-R-ST06/alpha.mp4",
+          "bravo": "outputs/MWB3-R-ST06/bravo.mp4",
+          "fps": 20,
+          "frames": 240,
+          "action_frames": 220
+        }
+      }
+    }
+  ],
+  "metric_config": {
+    "histogram_bins_per_channel": 16,
+    "distance": "sqrt Jensen-Shannon",
+    "crop_fraction": {
+      "y": [
+        0.08,
+        0.88
+      ],
+      "x": [
+        0.08,
+        0.92
+      ]
+    },
+    "score_threshold": 0.25
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-S-ST02",
+  "group": "structural",
+  "self_contained": true,
+  "has_native_gt": true,
+  "files_sha256": {
+    "action_left.json": "bdfc02c09dfda180466c32159c2c7c665c880dab5c88762daad7df0124e017f4",
+    "action_right.json": "db752a5cd043913b48efa2906af99800dcdb6afba9f359914e90df459ad91623",
+    "alpha_actions.json": "93a347445a6d6790ab8f362c76b350ab0a3b119ae1f4f6b1adfe97f116afa77d",
+    "alpha_gt.mp4": "24262387e95e7a37e36a8b4a1aa0267e9ca7dbe218ddb804c490b4d03cadb6d7",
+    "bravo_actions.json": "20010519ab9eeac61b285913d8b69d9ec8753b85ac83fb3d8126777ac86dff36",
+    "bravo_gt.mp4": "aa9d8781fd62b7cd56868937c3be88eee35e1d1947602691cf98f928898d297c",
+    "first_frame.png": "e45a0bb733ca28323ce9c2347c6727e9d9a765c92bdaf95a9bd747752e7361fd",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

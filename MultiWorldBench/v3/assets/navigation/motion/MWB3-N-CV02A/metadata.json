@@ -1,0 +1,23 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-N-CV02A",
+  "metric": "motion",
+  "evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "source_frame_count": 241,
+  "gamma_frame_count": 189,
+  "role_swapped_materialization": false,
+  "files_sha256": {
+    "action_0.json": "d365dd271b11ff9a1c98689c083de193fe8c0a6f6e36bb91a109f8b46f2743a1",
+    "action_1.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+    "alpha_actions.json": "b70f7cb492b826290064a336f6d1d44b1bf25d3b175544a783bf818e6b0b2f1a",
+    "alpha_first_frame.png": "ae6214fc34e953dcfbce7a93e309b60bd595498f4f3662c0401feb1a9c87cc5c",
+    "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+    "alpha_solaris_actions.json": "634f978761a074f309cd70b1846d15e067aa7066a070269ba2a6cb6f08f923c8",
+    "bravo_actions.json": "94aa61ae9681a2e060df53f4923178b03467e7af361dd9064ac83b8e847b1ef0",
+    "bravo_first_frame.png": "b3f69e5641ce88e5256d9af0a9c02fea94eb124a6bb436862b5d0ff7a370a78c",
+    "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+    "bravo_solaris_actions.json": "1679676913a2774ceca4e48eda0f0a66596041a74fbe796db3b6110143798a14",
+    "first_frame.png": "f8504e71fc16276a4029a766b5cdf6cae082d432dadbaa710892125b25f6f64c",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

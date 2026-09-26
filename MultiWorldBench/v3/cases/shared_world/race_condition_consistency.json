@@ -1,0 +1,442 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "benchmark_version": "3",
+  "metric_id": "race_condition_consistency",
+  "name": "竞态条件一致性",
+  "description": "A、B 在同一帧向同一位置各放置一次不同方块，比较生成双视角中最终方块数量、类型的一致性，并判断最终方块是否属于本例 A/B 指定的候选材质。",
+  "gt_collected": false,
+  "evaluation_uses_gt": false,
+  "check_frames": [
+    60,
+    80,
+    100
+  ],
+  "vlm_questions": [
+    {
+      "id": "same_block_count",
+      "text": "A、B 看到的目标位置方块数量是否一致？",
+      "output": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "same_block_type",
+      "text": "A、B 看到的目标位置方块类型是否一致？",
+      "output": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "matches_intended_block",
+      "text": "最终目标位置的方块是否与 A 或 B 本例指定的候选方块之一相同？",
+      "output": [
+        0,
+        1
+      ]
+    }
+  ],
+  "frame_aggregation": "three-frame majority per question",
+  "case_aggregation": "minimum of the three binary questions",
+  "case_count": 6,
+  "ranking_ready": false,
+  "cases": [
+    {
+      "id": "MWB3-SW-RC01",
+      "case_id": "MWB3-SW-RC01",
+      "title": "并发放置竞态 · mutual · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "world": {
+        "target_cell": [
+          700,
+          91,
+          0
+        ],
+        "support_cell": [
+          700,
+          90,
+          0
+        ],
+        "alpha_position": [
+          697.5,
+          91,
+          0.5
+        ],
+        "bravo_position": [
+          703.5,
+          91,
+          0.5
+        ]
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC01/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC01/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC01/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC01/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC02",
+      "case_id": "MWB3-SW-RC02",
+      "title": "并发放置竞态 · mutual · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "world": {
+        "target_cell": [
+          712,
+          91,
+          0
+        ],
+        "support_cell": [
+          712,
+          90,
+          0
+        ],
+        "alpha_position": [
+          712.5,
+          91,
+          -3.0
+        ],
+        "bravo_position": [
+          712.5,
+          91,
+          4.0
+        ]
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC02/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC02/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC02/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC02/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC03",
+      "case_id": "MWB3-SW-RC03",
+      "title": "并发放置竞态 · mutual · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "world": {
+        "target_cell": [
+          724,
+          91,
+          0
+        ],
+        "support_cell": [
+          724,
+          90,
+          0
+        ],
+        "alpha_position": [
+          721.8,
+          91,
+          -2.2
+        ],
+        "bravo_position": [
+          726.2,
+          91,
+          3.2
+        ]
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC03/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC03/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC03/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC03/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC04",
+      "case_id": "MWB3-SW-RC04",
+      "title": "并发放置竞态 · alpha_sees_bravo · sandstone vs grass_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "world": {
+        "target_cell": [
+          736,
+          91,
+          0
+        ],
+        "support_cell": [
+          736,
+          90,
+          0
+        ],
+        "alpha_position": [
+          735.1,
+          91,
+          4.1
+        ],
+        "bravo_position": [
+          737.7,
+          91,
+          2.7
+        ]
+      },
+      "intended_materials": {
+        "alpha": "sandstone",
+        "bravo": "grass_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC04/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC04/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC04/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC04/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/sandstone.png",
+        "bravo": "assets/block_references/grass_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC05",
+      "case_id": "MWB3-SW-RC05",
+      "title": "并发放置竞态 · bravo_sees_alpha · copper_block vs lapis_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "world": {
+        "target_cell": [
+          748,
+          91,
+          0
+        ],
+        "support_cell": [
+          748,
+          90,
+          0
+        ],
+        "alpha_position": [
+          747.3,
+          91,
+          2.7
+        ],
+        "bravo_position": [
+          749.9,
+          91,
+          4.1
+        ]
+      },
+      "intended_materials": {
+        "alpha": "copper_block",
+        "bravo": "lapis_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC05/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC05/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC05/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC05/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/copper_block.png",
+        "bravo": "assets/block_references/lapis_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC06",
+      "case_id": "MWB3-SW-RC06",
+      "title": "并发放置竞态 · alpha_sees_bravo · quartz_block vs black_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "world": {
+        "target_cell": [
+          760,
+          91,
+          0
+        ],
+        "support_cell": [
+          760,
+          90,
+          0
+        ],
+        "alpha_position": [
+          758.9,
+          91,
+          3.8
+        ],
+        "bravo_position": [
+          761.6,
+          91,
+          2.2
+        ]
+      },
+      "intended_materials": {
+        "alpha": "quartz_block",
+        "bravo": "black_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "gt_collected": false,
+      "capture_spec": {
+        "conditioning_only": true,
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC06/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC06/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC06/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC06/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/quartz_block.png",
+        "bravo": "assets/block_references/black_wool.png"
+      }
+    }
+  ]
+}

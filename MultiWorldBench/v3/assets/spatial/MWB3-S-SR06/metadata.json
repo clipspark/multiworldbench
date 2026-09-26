@@ -1,0 +1,17 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-S-SR06",
+  "group": "spatial",
+  "self_contained": true,
+  "has_native_gt": true,
+  "files_sha256": {
+    "action_left.json": "ae9b5e74a0df3d5a3d42ae2544552b1ca6034cc398403ea99f382f45c329d817",
+    "action_right.json": "0e8b7fc917ac022fb303b0fc3372ebe716b38e2f148c0894940327828fb1e177",
+    "alpha_actions.json": "21edfca47f20a0ad630737b4b3c9dc877451d3fd1344d40f4de80d9d22e53732",
+    "alpha_gt.mp4": "0cc2791f2fe2f59694380697fc3935fd0062cf7e74e4632e07b75829cdd246f1",
+    "bravo_actions.json": "57f3efcc8fcffb7633e4bfd638beaebbaed0b6fff0cc654c95611f48dac522dc",
+    "bravo_gt.mp4": "8394665b044c686c96c132e02acfe491318d0d1fb39f0fa076fbf4c5dae08157",
+    "first_frame.png": "aff318c4aadc56fe8623ef48c18dd6c2061027e085de071e36b123f953dc0a5d",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

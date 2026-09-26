@@ -1,0 +1,747 @@
+{
+  "schema_version": "mwb.v3.navigation.assets.v1",
+  "self_contained": true,
+  "case_count": 44,
+  "cases": [
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI01A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "886bc8bccf188520b13ed536c73c5255381b5105c327605d149ed7d83db09bb9",
+        "metadata.json": "b1f0e5202cb128798c466c865e28150d4ec3bdda55fead87e3bf6462fd754194",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI01B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "5146e81245451e784d568a361cad6b0a37737da0fc74f1e42c8ca3752bc3a243",
+        "metadata.json": "c75ae89217925fb4e57d06e4ecc269766f1d2bb9cb4819d7bfb690fb29ae059b",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI02A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "886bc8bccf188520b13ed536c73c5255381b5105c327605d149ed7d83db09bb9",
+        "metadata.json": "4e1025c6afb17e89bc6c505aa851347855cc758ba7b7d13b7dace6204db33e76",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI02B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "5146e81245451e784d568a361cad6b0a37737da0fc74f1e42c8ca3752bc3a243",
+        "metadata.json": "dd8807741d1fc337a1aeb5e5695a3b191ab11a234861beb15b611cc61e90b0bb",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI03A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "81dd7ecbcd4dfa90c1780e5bddf6d73516193a0d911fcd3363752d97806d6b28",
+        "metadata.json": "df013c6b83ee8a55dc8c114494321e5c2c2729408f4a5c55cd71c3ebf489f0db",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI03B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "4530b8f99dbcd915125129e60358c8dac5a1f2ccafafd43054cf22d78c690020",
+        "metadata.json": "2c5b0d77a4d016181ca34ceade2f13fd776399578bab4a2d937277094b984577",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI04A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "81dd7ecbcd4dfa90c1780e5bddf6d73516193a0d911fcd3363752d97806d6b28",
+        "metadata.json": "c5f8f05cf997b38427a8e97aea366d3dc51395f5d59c0fb12775c6e0aa411a9c",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI04B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "4530b8f99dbcd915125129e60358c8dac5a1f2ccafafd43054cf22d78c690020",
+        "metadata.json": "2cda270e16f8d5df4806f25388bf6dc25c8bf650fd624920cb594b28b1b7cc11",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI05A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "d7cadc66dace83bb1203b370b93eec55e07571339ad292687b301395914dffd3",
+        "metadata.json": "f7c1176063d5358be83f782a1399fd6442bb1d2d52a027a339d39e4012147066",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI05B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "18e0a375cb2274972548eb61623d0eae18e2944f3c0292bba81ad839ee039a91",
+        "metadata.json": "51f529737ac59d5ebfb7b5c19003ae51212a7257e5a0feb4d560fe813acb5487",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI06A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "d7cadc66dace83bb1203b370b93eec55e07571339ad292687b301395914dffd3",
+        "metadata.json": "9a3ba3148cf4e19d199f493e3124ebab7246ce648d2d5aac80d352a4bba428c2",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI06B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "18e0a375cb2274972548eb61623d0eae18e2944f3c0292bba81ad839ee039a91",
+        "metadata.json": "ff33dedfa50a2e8e93292b604a3561221963e722e8de81f11d1381182191e4b6",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI07A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "db8639e011b227e6a58bfd5c54fe01f7e1df535379915eb2953cb6a0963aca28",
+        "metadata.json": "35f35c5f8ed0e6bbf5a40e4ff665d0da7eed46704194c28773145fffd7894fe2",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI07B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "9f7d50ea2f97e1049b95193078f972a36ba321c6022819b1ea232b5ce166a9a6",
+        "metadata.json": "0ba03dffc1d4bf964ea7f3a9091c3a3af982fd87d139fdf767b9617a2e76e479",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI08A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "db8639e011b227e6a58bfd5c54fe01f7e1df535379915eb2953cb6a0963aca28",
+        "metadata.json": "cbf8360e8f572bbfb6c91a9b81033fd96cd56269635f377305750c7b08ae777f",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI08B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "9f7d50ea2f97e1049b95193078f972a36ba321c6022819b1ea232b5ce166a9a6",
+        "metadata.json": "5801f697c7483fcd418e62f3be395e2646bf213f8baae110e178f821a7c38040",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI09A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "cd4968544e1f42d9798bc61ddf0c0b58c5b5d2964ef5a8029261787a9d6f6276",
+        "metadata.json": "41005d1d7e0865088e624c1bed18ea7e3d9e3a91a1164ab6412cfb9def54204e",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI09B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "7e29046619375b50aa4b3c214c5728a6fa2760c9b580c3409c875d0e62f5cc81",
+        "metadata.json": "e1313a21fba5e807129b4d8e251370b920d754a1b6c1b2d5cf6739cc8fe46275",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI10A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "cd4968544e1f42d9798bc61ddf0c0b58c5b5d2964ef5a8029261787a9d6f6276",
+        "metadata.json": "b71e538b0403a0d684cbd3257ae860bf39f8a001dd6e43d71a525a16e5590c87",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI10B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "7e29046619375b50aa4b3c214c5728a6fa2760c9b580c3409c875d0e62f5cc81",
+        "metadata.json": "30a94dcef59abbdf0fa9ffa04d827e558418387a838402ac9b82001c5d848741",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI11A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "db9372c29023c09a906a97f776b993fa43db91af8e9b24c7685db8bbe47be8bf",
+        "metadata.json": "57b66e2c503d74921b6fc70a1b59e2c092ff2b430f9ebe9952bb51cd5ca1d97b",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI11B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "a1061966aa0cc6a8caa53069629fb727707448a0d9f21478008eb490a7bf4163",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "e76243a3acc7633f0a87913eee30d58bfef3f56ec94679a5101e781d48e76e0e",
+        "metadata.json": "1487bb1c53a13dc15896407f62b5fc2154e7d443b428b4240e0f20584347093d",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI12A",
+      "files": {
+        "action_0.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "action_1.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "alpha_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "db9372c29023c09a906a97f776b993fa43db91af8e9b24c7685db8bbe47be8bf",
+        "metadata.json": "5ae8211437b5ef088e6a1a73f66f9c7b3dac2959c040b211d4cfea111d4c9d8f",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "control",
+      "case_id": "MWB3-N-CI12B",
+      "files": {
+        "action_0.json": "ac5dc38735b9df4afde0de3996d601542e67d377e56de9bb2f0e5c1d413dd699",
+        "action_1.json": "6e987a81206943be9e13ed37ca8c962acf1274886d977dad00675a8327c9c6dd",
+        "alpha_actions.json": "230103b5bfb616d60e7c230620f5878ea3f455032cd83a813098f80b09aa29f1",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_actions.json": "546891fd20d17afbc86bdbcae0264c22576f9563e2a3957f1edbee2edcf0dd7a",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "first_frame.png": "e76243a3acc7633f0a87913eee30d58bfef3f56ec94679a5101e781d48e76e0e",
+        "metadata.json": "ab60ab9c8f877ab542a78dbae635bbb29bd863933ab2bd9439e5f6cd13af7d39",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF01A",
+      "files": {
+        "action_0.json": "9d27d42f712fb35233f2b98c0fb795fe3713a0389c19dbd4a742b7b645d04c69",
+        "action_1.json": "c4839ecb0fafe88463ef54c3e745ec5d33c0979b602f9116e1aeee596d802a3b",
+        "alpha_actions.json": "e74e971ee05d0c6e057093cec387c9f34de8f28baa73d2145f5788373107deeb",
+        "alpha_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "f9ff8f59b7f6acec44c90f9e80cd7967b434f856227ac9fdcbd42b64155900aa",
+        "bravo_actions.json": "8ef885ec5497a754afe5842e12950f592ece7fc74896374adcac7e8dd84aa1de",
+        "bravo_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "b1afd9a3839b36feea5ada68fdff0bf9fe06b5736915c021d270df0a599ec84c",
+        "first_frame.png": "886bc8bccf188520b13ed536c73c5255381b5105c327605d149ed7d83db09bb9",
+        "metadata.json": "c3f0ac93d4cdb5623e12cf24873067b74af1836064bfff072c147a39e03d5967",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF01B",
+      "files": {
+        "action_0.json": "c4839ecb0fafe88463ef54c3e745ec5d33c0979b602f9116e1aeee596d802a3b",
+        "action_1.json": "9d27d42f712fb35233f2b98c0fb795fe3713a0389c19dbd4a742b7b645d04c69",
+        "alpha_actions.json": "8ef885ec5497a754afe5842e12950f592ece7fc74896374adcac7e8dd84aa1de",
+        "alpha_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "b1afd9a3839b36feea5ada68fdff0bf9fe06b5736915c021d270df0a599ec84c",
+        "bravo_actions.json": "e74e971ee05d0c6e057093cec387c9f34de8f28baa73d2145f5788373107deeb",
+        "bravo_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "f9ff8f59b7f6acec44c90f9e80cd7967b434f856227ac9fdcbd42b64155900aa",
+        "first_frame.png": "c31ed507900ee4af54a607dff28bf242b6b1735c4362ea2a63f4b41658f0af39",
+        "metadata.json": "8f22d022db5ef28781cad7f68c5373113ad01a37da6d9e3a130c6e3e38a262ff",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF02A",
+      "files": {
+        "action_0.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "action_1.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "alpha_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "alpha_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "bravo_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "bravo_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "first_frame.png": "886bc8bccf188520b13ed536c73c5255381b5105c327605d149ed7d83db09bb9",
+        "metadata.json": "c3c24acfb79c8490c4bebe167263e5e94e299f92e481a74858d902b442dcab93",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF02B",
+      "files": {
+        "action_0.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "action_1.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "alpha_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "alpha_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "bravo_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "bravo_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "first_frame.png": "c31ed507900ee4af54a607dff28bf242b6b1735c4362ea2a63f4b41658f0af39",
+        "metadata.json": "57a475cc4e64400a3a4d176e4e677622cb348063d804e8a1dab543e2e648c221",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF03A",
+      "files": {
+        "action_0.json": "fe0f67e6ef78e5367414d0d44f61b82b80ffe84622eaae3e102fec1d34f2bfef",
+        "action_1.json": "cc3fe5c62b3b2ac85c74a969ace2e58b69612b3836525d801db3e1a18ed4501e",
+        "alpha_actions.json": "e1ed2cd158f16dc74718a3ab8befa633c6a38ee112c703b355a56c5ac6670a20",
+        "alpha_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "d452a2e6a4ed82f78cfcc2103b73fa385919710b8a998bc1c3f31349ce3310cc",
+        "bravo_actions.json": "48cabf6e36d85f81bf6b57acb5e8192f7eba19cdd46c73d231a9d177c2e0a42e",
+        "bravo_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cbb375695630cd57c12b5debeb96a107d65c5f1ef669a4edcde572f6d65c27c5",
+        "first_frame.png": "886bc8bccf188520b13ed536c73c5255381b5105c327605d149ed7d83db09bb9",
+        "metadata.json": "8c2599acc829f6242023c7d2d876f00d58f8be4ee4919a45e36fe67d29333e9b",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF03B",
+      "files": {
+        "action_0.json": "cc3fe5c62b3b2ac85c74a969ace2e58b69612b3836525d801db3e1a18ed4501e",
+        "action_1.json": "fe0f67e6ef78e5367414d0d44f61b82b80ffe84622eaae3e102fec1d34f2bfef",
+        "alpha_actions.json": "48cabf6e36d85f81bf6b57acb5e8192f7eba19cdd46c73d231a9d177c2e0a42e",
+        "alpha_first_frame.png": "2db2d31adf9b9f6a01519935d12ece611fef9fc3af22ba0cbf25635e99039227",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cbb375695630cd57c12b5debeb96a107d65c5f1ef669a4edcde572f6d65c27c5",
+        "bravo_actions.json": "e1ed2cd158f16dc74718a3ab8befa633c6a38ee112c703b355a56c5ac6670a20",
+        "bravo_first_frame.png": "be0a6c7d57e73a4e49046ebca5f732a1893df865c6a5c6d94948cac787475528",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "d452a2e6a4ed82f78cfcc2103b73fa385919710b8a998bc1c3f31349ce3310cc",
+        "first_frame.png": "c31ed507900ee4af54a607dff28bf242b6b1735c4362ea2a63f4b41658f0af39",
+        "metadata.json": "569e09db622ace45d0133362db8fa7d981aa622956497855f17a9845d96f2e24",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF04A",
+      "files": {
+        "action_0.json": "9d27d42f712fb35233f2b98c0fb795fe3713a0389c19dbd4a742b7b645d04c69",
+        "action_1.json": "c4839ecb0fafe88463ef54c3e745ec5d33c0979b602f9116e1aeee596d802a3b",
+        "alpha_actions.json": "e74e971ee05d0c6e057093cec387c9f34de8f28baa73d2145f5788373107deeb",
+        "alpha_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "f9ff8f59b7f6acec44c90f9e80cd7967b434f856227ac9fdcbd42b64155900aa",
+        "bravo_actions.json": "8ef885ec5497a754afe5842e12950f592ece7fc74896374adcac7e8dd84aa1de",
+        "bravo_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "b1afd9a3839b36feea5ada68fdff0bf9fe06b5736915c021d270df0a599ec84c",
+        "first_frame.png": "81dd7ecbcd4dfa90c1780e5bddf6d73516193a0d911fcd3363752d97806d6b28",
+        "metadata.json": "48277dab4fc428daa8dc4215860e430b59e43c5addbf105cae5b9d133ed0c668",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF04B",
+      "files": {
+        "action_0.json": "c4839ecb0fafe88463ef54c3e745ec5d33c0979b602f9116e1aeee596d802a3b",
+        "action_1.json": "9d27d42f712fb35233f2b98c0fb795fe3713a0389c19dbd4a742b7b645d04c69",
+        "alpha_actions.json": "8ef885ec5497a754afe5842e12950f592ece7fc74896374adcac7e8dd84aa1de",
+        "alpha_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "b1afd9a3839b36feea5ada68fdff0bf9fe06b5736915c021d270df0a599ec84c",
+        "bravo_actions.json": "e74e971ee05d0c6e057093cec387c9f34de8f28baa73d2145f5788373107deeb",
+        "bravo_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "f9ff8f59b7f6acec44c90f9e80cd7967b434f856227ac9fdcbd42b64155900aa",
+        "first_frame.png": "2309e185771dd74114e3e364929b01ceda1c64cc80aa29249e2d8ea3e1619cc2",
+        "metadata.json": "851c8ef2613c1f8a04e9b0d77e60759b2e7b60f84b935c338e82f0b80c1999aa",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF05A",
+      "files": {
+        "action_0.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "action_1.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "alpha_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "alpha_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "bravo_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "bravo_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "first_frame.png": "81dd7ecbcd4dfa90c1780e5bddf6d73516193a0d911fcd3363752d97806d6b28",
+        "metadata.json": "63526ef5fbd271d257eea52c98f5bd877e607d7f39dfcf7091ceb2b984c2183a",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF05B",
+      "files": {
+        "action_0.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "action_1.json": "722f0c1947cf37120c1751d8286214866378f17589a9e2c5645b74c7ecb0e2b9",
+        "alpha_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "alpha_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "bravo_actions.json": "0b292971a0e1fd251de1ae2a8615895cb70b358f4d9812835cff7c925c2ee27c",
+        "bravo_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cc1267d86bcf0bfcf976b700ecd660028281883a718d011f5f03033230ebf098",
+        "first_frame.png": "2309e185771dd74114e3e364929b01ceda1c64cc80aa29249e2d8ea3e1619cc2",
+        "metadata.json": "0df12799866ea7e64dc9a3eef8ff777efa59f8cb7a104fff520a6175b5d97384",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF06A",
+      "files": {
+        "action_0.json": "fe0f67e6ef78e5367414d0d44f61b82b80ffe84622eaae3e102fec1d34f2bfef",
+        "action_1.json": "cc3fe5c62b3b2ac85c74a969ace2e58b69612b3836525d801db3e1a18ed4501e",
+        "alpha_actions.json": "e1ed2cd158f16dc74718a3ab8befa633c6a38ee112c703b355a56c5ac6670a20",
+        "alpha_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "d452a2e6a4ed82f78cfcc2103b73fa385919710b8a998bc1c3f31349ce3310cc",
+        "bravo_actions.json": "48cabf6e36d85f81bf6b57acb5e8192f7eba19cdd46c73d231a9d177c2e0a42e",
+        "bravo_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "cbb375695630cd57c12b5debeb96a107d65c5f1ef669a4edcde572f6d65c27c5",
+        "first_frame.png": "81dd7ecbcd4dfa90c1780e5bddf6d73516193a0d911fcd3363752d97806d6b28",
+        "metadata.json": "858314c2a4d707c3af1b2af8fed20b70394475c47ec6272550b60cb9de320a0c",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "fairness",
+      "case_id": "MWB3-N-CF06B",
+      "files": {
+        "action_0.json": "cc3fe5c62b3b2ac85c74a969ace2e58b69612b3836525d801db3e1a18ed4501e",
+        "action_1.json": "fe0f67e6ef78e5367414d0d44f61b82b80ffe84622eaae3e102fec1d34f2bfef",
+        "alpha_actions.json": "48cabf6e36d85f81bf6b57acb5e8192f7eba19cdd46c73d231a9d177c2e0a42e",
+        "alpha_first_frame.png": "8f1d6fac78dde6dff794383ca64f9be9f15091db93baaee5c900993677ed23cb",
+        "alpha_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "alpha_solaris_actions.json": "cbb375695630cd57c12b5debeb96a107d65c5f1ef669a4edcde572f6d65c27c5",
+        "bravo_actions.json": "e1ed2cd158f16dc74718a3ab8befa633c6a38ee112c703b355a56c5ac6670a20",
+        "bravo_first_frame.png": "a9d2c12e3b7c6ce1f552dca990b5aa9b418d5343ac0594d96df13ccb1562efa9",
+        "bravo_gamma_frame_map.json": "d6e476ab37486677518d446535092c5951e55308970799e720a74af3503ab5ec",
+        "bravo_solaris_actions.json": "d452a2e6a4ed82f78cfcc2103b73fa385919710b8a998bc1c3f31349ce3310cc",
+        "first_frame.png": "2309e185771dd74114e3e364929b01ceda1c64cc80aa29249e2d8ea3e1619cc2",
+        "metadata.json": "bf3a36075ab10663d536e39ba2b0b5106bbe04911de5f204d049cf7abd28fac5",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV01A",
+      "files": {
+        "action_0.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "action_1.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "alpha_actions.json": "f8be5a601e6a53f2ef70a74a68318d786718471b3051f4ee72a39450b584e5f9",
+        "alpha_first_frame.png": "ae6214fc34e953dcfbce7a93e309b60bd595498f4f3662c0401feb1a9c87cc5c",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "alpha_solaris_actions.json": "bbe6881a302f471c025afed2aa69b5471d4f522af5884b108fc2df1b0a6a9538",
+        "bravo_actions.json": "bc75f9a1cb1f175572a2274c49b73700d00c22382519eb6a58b7da8793c8e0d8",
+        "bravo_first_frame.png": "b3f69e5641ce88e5256d9af0a9c02fea94eb124a6bb436862b5d0ff7a370a78c",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_solaris_actions.json": "0dd59d8c37df62e839dc204eff06d02ec175a93fb5ab07475cb47f39ec1c947f",
+        "first_frame.png": "f8504e71fc16276a4029a766b5cdf6cae082d432dadbaa710892125b25f6f64c",
+        "metadata.json": "9f054126f0384806043c9fea4a4ac2810c5995d9d73487b42b4398a7193aba44",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV01B",
+      "files": {
+        "action_0.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "action_1.json": "b961f1944e5e72d21c7743750a847822ff2a4938fd29d08c7073e49184579e4b",
+        "alpha_actions.json": "bc75f9a1cb1f175572a2274c49b73700d00c22382519eb6a58b7da8793c8e0d8",
+        "alpha_first_frame.png": "b3f69e5641ce88e5256d9af0a9c02fea94eb124a6bb436862b5d0ff7a370a78c",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "alpha_solaris_actions.json": "0dd59d8c37df62e839dc204eff06d02ec175a93fb5ab07475cb47f39ec1c947f",
+        "bravo_actions.json": "f8be5a601e6a53f2ef70a74a68318d786718471b3051f4ee72a39450b584e5f9",
+        "bravo_first_frame.png": "ae6214fc34e953dcfbce7a93e309b60bd595498f4f3662c0401feb1a9c87cc5c",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_solaris_actions.json": "bbe6881a302f471c025afed2aa69b5471d4f522af5884b108fc2df1b0a6a9538",
+        "first_frame.png": "72c904bb8aba70eacac5e51dabfcfccc100438bd6cd3b1ccb8d6dc6cc63b7007",
+        "metadata.json": "20df7623701b1c0591dcbd05d7645dce428b932469ee08b01ea1daf76d613ae6",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV02A",
+      "files": {
+        "action_0.json": "d365dd271b11ff9a1c98689c083de193fe8c0a6f6e36bb91a109f8b46f2743a1",
+        "action_1.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "alpha_actions.json": "b70f7cb492b826290064a336f6d1d44b1bf25d3b175544a783bf818e6b0b2f1a",
+        "alpha_first_frame.png": "ae6214fc34e953dcfbce7a93e309b60bd595498f4f3662c0401feb1a9c87cc5c",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "634f978761a074f309cd70b1846d15e067aa7066a070269ba2a6cb6f08f923c8",
+        "bravo_actions.json": "94aa61ae9681a2e060df53f4923178b03467e7af361dd9064ac83b8e847b1ef0",
+        "bravo_first_frame.png": "b3f69e5641ce88e5256d9af0a9c02fea94eb124a6bb436862b5d0ff7a370a78c",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "1679676913a2774ceca4e48eda0f0a66596041a74fbe796db3b6110143798a14",
+        "first_frame.png": "f8504e71fc16276a4029a766b5cdf6cae082d432dadbaa710892125b25f6f64c",
+        "metadata.json": "83e8550787ae49497b737a2d2d0e8d9b23eb386f9104903ed0a16e22cafe4a8b",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV02B",
+      "files": {
+        "action_0.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "action_1.json": "d365dd271b11ff9a1c98689c083de193fe8c0a6f6e36bb91a109f8b46f2743a1",
+        "alpha_actions.json": "94aa61ae9681a2e060df53f4923178b03467e7af361dd9064ac83b8e847b1ef0",
+        "alpha_first_frame.png": "b3f69e5641ce88e5256d9af0a9c02fea94eb124a6bb436862b5d0ff7a370a78c",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "1679676913a2774ceca4e48eda0f0a66596041a74fbe796db3b6110143798a14",
+        "bravo_actions.json": "b70f7cb492b826290064a336f6d1d44b1bf25d3b175544a783bf818e6b0b2f1a",
+        "bravo_first_frame.png": "ae6214fc34e953dcfbce7a93e309b60bd595498f4f3662c0401feb1a9c87cc5c",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "634f978761a074f309cd70b1846d15e067aa7066a070269ba2a6cb6f08f923c8",
+        "first_frame.png": "72c904bb8aba70eacac5e51dabfcfccc100438bd6cd3b1ccb8d6dc6cc63b7007",
+        "metadata.json": "53a95d5e580734c74641f6c1d05b82ceaef325e89256ed891340fda334b40872",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV03A",
+      "files": {
+        "action_0.json": "d51dabc4be3006adf86fc4afb712a4c79657681b05bd163ed62e571d9f3ad601",
+        "action_1.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "alpha_actions.json": "e968975b865343da26a87e7bc5ef14f1abe338defd254bb13b7d0e7c61355cbe",
+        "alpha_first_frame.png": "7405fbc229345fdc2e4b4150e3041ceff9f87e56e930f1b34194328c078d7b0b",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "alpha_solaris_actions.json": "5c7b2d006d6613316b790af6323978d617f91a5300a8aede258ca29fa82fdae9",
+        "bravo_actions.json": "bc75f9a1cb1f175572a2274c49b73700d00c22382519eb6a58b7da8793c8e0d8",
+        "bravo_first_frame.png": "7f0491606d65ae96cab5c74a8af65ce7926073f1a54ece28c07644d1ab134ad9",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_solaris_actions.json": "0dd59d8c37df62e839dc204eff06d02ec175a93fb5ab07475cb47f39ec1c947f",
+        "first_frame.png": "c78a6467d0b07de0b1204fbcd56cd6250119b4dc78df2516af428b15141a4a44",
+        "metadata.json": "48a0aded054cc743fac4e4a3908ec091199cf7f0b84f753023f6a8aae96165cb",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV03B",
+      "files": {
+        "action_0.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "action_1.json": "d51dabc4be3006adf86fc4afb712a4c79657681b05bd163ed62e571d9f3ad601",
+        "alpha_actions.json": "bc75f9a1cb1f175572a2274c49b73700d00c22382519eb6a58b7da8793c8e0d8",
+        "alpha_first_frame.png": "7f0491606d65ae96cab5c74a8af65ce7926073f1a54ece28c07644d1ab134ad9",
+        "alpha_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "alpha_solaris_actions.json": "0dd59d8c37df62e839dc204eff06d02ec175a93fb5ab07475cb47f39ec1c947f",
+        "bravo_actions.json": "e968975b865343da26a87e7bc5ef14f1abe338defd254bb13b7d0e7c61355cbe",
+        "bravo_first_frame.png": "7405fbc229345fdc2e4b4150e3041ceff9f87e56e930f1b34194328c078d7b0b",
+        "bravo_gamma_frame_map.json": "b6dd9e5d8285bcb3a1cbbd692540845910859fc646fbe4c37fff21d1dda2642c",
+        "bravo_solaris_actions.json": "5c7b2d006d6613316b790af6323978d617f91a5300a8aede258ca29fa82fdae9",
+        "first_frame.png": "1e8c97a464116ae126c4979efebaf2f11867cb30293ccf6ffa6ce5ed6df013a5",
+        "metadata.json": "a66058069e4a24820e7937b2028dcef6d05a772ec7daf6e79d49d4ecaa596713",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV04A",
+      "files": {
+        "action_0.json": "d365dd271b11ff9a1c98689c083de193fe8c0a6f6e36bb91a109f8b46f2743a1",
+        "action_1.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "alpha_actions.json": "b70f7cb492b826290064a336f6d1d44b1bf25d3b175544a783bf818e6b0b2f1a",
+        "alpha_first_frame.png": "c8544fc341381a0df5d56be142e3a3b3fca8efdb85f650fe5d7650340849b833",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "634f978761a074f309cd70b1846d15e067aa7066a070269ba2a6cb6f08f923c8",
+        "bravo_actions.json": "94aa61ae9681a2e060df53f4923178b03467e7af361dd9064ac83b8e847b1ef0",
+        "bravo_first_frame.png": "1bea2a63d0dcc992208f335eb935298e6f61505bdbc05da20b299e6976f9655c",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "1679676913a2774ceca4e48eda0f0a66596041a74fbe796db3b6110143798a14",
+        "first_frame.png": "8a15a7359fee72ccb411287fee418d6e93b363180422099432dfc846ab0fa91e",
+        "metadata.json": "8e1575c1c9da70915417337c9e11d4b5aa80f1fa21958bfecc5eaeb57797940d",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    },
+    {
+      "metric": "motion",
+      "case_id": "MWB3-N-CV04B",
+      "files": {
+        "action_0.json": "cdadddb6ebd5955885698d0b152ced33fbf41d797a2c09de44b764d700763ef3",
+        "action_1.json": "d365dd271b11ff9a1c98689c083de193fe8c0a6f6e36bb91a109f8b46f2743a1",
+        "alpha_actions.json": "94aa61ae9681a2e060df53f4923178b03467e7af361dd9064ac83b8e847b1ef0",
+        "alpha_first_frame.png": "1bea2a63d0dcc992208f335eb935298e6f61505bdbc05da20b299e6976f9655c",
+        "alpha_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "alpha_solaris_actions.json": "1679676913a2774ceca4e48eda0f0a66596041a74fbe796db3b6110143798a14",
+        "bravo_actions.json": "b70f7cb492b826290064a336f6d1d44b1bf25d3b175544a783bf818e6b0b2f1a",
+        "bravo_first_frame.png": "c8544fc341381a0df5d56be142e3a3b3fca8efdb85f650fe5d7650340849b833",
+        "bravo_gamma_frame_map.json": "d527452e6de69ed26586f2ea7b598fb685b96188ee0820a55aa53fec5580f663",
+        "bravo_solaris_actions.json": "634f978761a074f309cd70b1846d15e067aa7066a070269ba2a6cb6f08f923c8",
+        "first_frame.png": "d7338533d66d439904e6ed208482627d9c08ed89a3555b1ff214881e693d6d2c",
+        "metadata.json": "44877831ba851e819a27758f969bcfb76871f206a04d694f7821949e434ffb31",
+        "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3984 @@
+[
+  {
+    "frame_index": 0,
+    "epochTime": 0.0,
+    "epoch_ms": 0,
+    "phase": "CONDITIONING",
+    "turn_index": -1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 1,
+    "epochTime": 0.05,
+    "epoch_ms": 50,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 2,
+    "epochTime": 0.1,
+    "epoch_ms": 100,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 3,
+    "epochTime": 0.15,
+    "epoch_ms": 150,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 4,
+    "epochTime": 0.2,
+    "epoch_ms": 200,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 5,
+    "epochTime": 0.25,
+    "epoch_ms": 250,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 6,
+    "epochTime": 0.3,
+    "epoch_ms": 300,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 7,
+    "epochTime": 0.35,
+    "epoch_ms": 350,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 8,
+    "epochTime": 0.4,
+    "epoch_ms": 400,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 9,
+    "epochTime": 0.45,
+    "epoch_ms": 450,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 10,
+    "epochTime": 0.5,
+    "epoch_ms": 500,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 11,
+    "epochTime": 0.55,
+    "epoch_ms": 550,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 12,
+    "epochTime": 0.6,
+    "epoch_ms": 600,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 13,
+    "epochTime": 0.65,
+    "epoch_ms": 650,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 14,
+    "epochTime": 0.7,
+    "epoch_ms": 700,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 15,
+    "epochTime": 0.75,
+    "epoch_ms": 750,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 16,
+    "epochTime": 0.8,
+    "epoch_ms": 800,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 17,
+    "epochTime": 0.85,
+    "epoch_ms": 850,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 18,
+    "epochTime": 0.9,
+    "epoch_ms": 900,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 19,
+    "epochTime": 0.95,
+    "epoch_ms": 950,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 20,
+    "epochTime": 1.0,
+    "epoch_ms": 1000,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 21,
+    "epochTime": 1.05,
+    "epoch_ms": 1050,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 22,
+    "epochTime": 1.1,
+    "epoch_ms": 1100,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 23,
+    "epochTime": 1.15,
+    "epoch_ms": 1150,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 24,
+    "epochTime": 1.2,
+    "epoch_ms": 1200,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 25,
+    "epochTime": 1.25,
+    "epoch_ms": 1250,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 26,
+    "epochTime": 1.3,
+    "epoch_ms": 1300,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 27,
+    "epochTime": 1.35,
+    "epoch_ms": 1350,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 28,
+    "epochTime": 1.4,
+    "epoch_ms": 1400,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 29,
+    "epochTime": 1.45,
+    "epoch_ms": 1450,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 30,
+    "epochTime": 1.5,
+    "epoch_ms": 1500,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 31,
+    "epochTime": 1.55,
+    "epoch_ms": 1550,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 32,
+    "epochTime": 1.6,
+    "epoch_ms": 1600,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 33,
+    "epochTime": 1.65,
+    "epoch_ms": 1650,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 34,
+    "epochTime": 1.7,
+    "epoch_ms": 1700,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 35,
+    "epochTime": 1.75,
+    "epoch_ms": 1750,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 36,
+    "epochTime": 1.8,
+    "epoch_ms": 1800,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 37,
+    "epochTime": 1.85,
+    "epoch_ms": 1850,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 38,
+    "epochTime": 1.9,
+    "epoch_ms": 1900,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 39,
+    "epochTime": 1.95,
+    "epoch_ms": 1950,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 40,
+    "epochTime": 2.0,
+    "epoch_ms": 2000,
+    "phase": "ACTION",
+    "turn_index": 0,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 41,
+    "epochTime": 2.05,
+    "epoch_ms": 2050,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 42,
+    "epochTime": 2.1,
+    "epoch_ms": 2100,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 43,
+    "epochTime": 2.15,
+    "epoch_ms": 2150,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 44,
+    "epochTime": 2.2,
+    "epoch_ms": 2200,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 45,
+    "epochTime": 2.25,
+    "epoch_ms": 2250,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 46,
+    "epochTime": 2.3,
+    "epoch_ms": 2300,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 47,
+    "epochTime": 2.35,
+    "epoch_ms": 2350,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 48,
+    "epochTime": 2.4,
+    "epoch_ms": 2400,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 49,
+    "epochTime": 2.45,
+    "epoch_ms": 2450,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 50,
+    "epochTime": 2.5,
+    "epoch_ms": 2500,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 51,
+    "epochTime": 2.55,
+    "epoch_ms": 2550,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 52,
+    "epochTime": 2.6,
+    "epoch_ms": 2600,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 53,
+    "epochTime": 2.65,
+    "epoch_ms": 2650,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 54,
+    "epochTime": 2.7,
+    "epoch_ms": 2700,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 55,
+    "epochTime": 2.75,
+    "epoch_ms": 2750,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 56,
+    "epochTime": 2.8,
+    "epoch_ms": 2800,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 57,
+    "epochTime": 2.85,
+    "epoch_ms": 2850,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 58,
+    "epochTime": 2.9,
+    "epoch_ms": 2900,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 59,
+    "epochTime": 2.95,
+    "epoch_ms": 2950,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 60,
+    "epochTime": 3.0,
+    "epoch_ms": 3000,
+    "phase": "IDLE",
+    "turn_index": 0,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 61,
+    "epochTime": 3.05,
+    "epoch_ms": 3050,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 62,
+    "epochTime": 3.1,
+    "epoch_ms": 3100,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 63,
+    "epochTime": 3.15,
+    "epoch_ms": 3150,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 64,
+    "epochTime": 3.2,
+    "epoch_ms": 3200,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 65,
+    "epochTime": 3.25,
+    "epoch_ms": 3250,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 66,
+    "epochTime": 3.3,
+    "epoch_ms": 3300,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 67,
+    "epochTime": 3.35,
+    "epoch_ms": 3350,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 68,
+    "epochTime": 3.4,
+    "epoch_ms": 3400,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 69,
+    "epochTime": 3.45,
+    "epoch_ms": 3450,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 70,
+    "epochTime": 3.5,
+    "epoch_ms": 3500,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 71,
+    "epochTime": 3.55,
+    "epoch_ms": 3550,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 72,
+    "epochTime": 3.6,
+    "epoch_ms": 3600,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 73,
+    "epochTime": 3.65,
+    "epoch_ms": 3650,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 74,
+    "epochTime": 3.7,
+    "epoch_ms": 3700,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 75,
+    "epochTime": 3.75,
+    "epoch_ms": 3750,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 76,
+    "epochTime": 3.8,
+    "epoch_ms": 3800,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 77,
+    "epochTime": 3.85,
+    "epoch_ms": 3850,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 78,
+    "epochTime": 3.9,
+    "epoch_ms": 3900,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 79,
+    "epochTime": 3.95,
+    "epoch_ms": 3950,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 80,
+    "epochTime": 4.0,
+    "epoch_ms": 4000,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 81,
+    "epochTime": 4.05,
+    "epoch_ms": 4050,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 82,
+    "epochTime": 4.1,
+    "epoch_ms": 4100,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 83,
+    "epochTime": 4.15,
+    "epoch_ms": 4150,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 84,
+    "epochTime": 4.2,
+    "epoch_ms": 4200,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 85,
+    "epochTime": 4.25,
+    "epoch_ms": 4250,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 86,
+    "epochTime": 4.3,
+    "epoch_ms": 4300,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 87,
+    "epochTime": 4.35,
+    "epoch_ms": 4350,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 88,
+    "epochTime": 4.4,
+    "epoch_ms": 4400,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 89,
+    "epochTime": 4.45,
+    "epoch_ms": 4450,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 90,
+    "epochTime": 4.5,
+    "epoch_ms": 4500,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 91,
+    "epochTime": 4.55,
+    "epoch_ms": 4550,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 92,
+    "epochTime": 4.6,
+    "epoch_ms": 4600,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 93,
+    "epochTime": 4.65,
+    "epoch_ms": 4650,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 94,
+    "epochTime": 4.7,
+    "epoch_ms": 4700,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 95,
+    "epochTime": 4.75,
+    "epoch_ms": 4750,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 96,
+    "epochTime": 4.8,
+    "epoch_ms": 4800,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 97,
+    "epochTime": 4.85,
+    "epoch_ms": 4850,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 98,
+    "epochTime": 4.9,
+    "epoch_ms": 4900,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 99,
+    "epochTime": 4.95,
+    "epoch_ms": 4950,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 100,
+    "epochTime": 5.0,
+    "epoch_ms": 5000,
+    "phase": "ACTION",
+    "turn_index": 1,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 101,
+    "epochTime": 5.05,
+    "epoch_ms": 5050,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 102,
+    "epochTime": 5.1,
+    "epoch_ms": 5100,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 103,
+    "epochTime": 5.15,
+    "epoch_ms": 5150,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 104,
+    "epochTime": 5.2,
+    "epoch_ms": 5200,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 105,
+    "epochTime": 5.25,
+    "epoch_ms": 5250,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 106,
+    "epochTime": 5.3,
+    "epoch_ms": 5300,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 107,
+    "epochTime": 5.35,
+    "epoch_ms": 5350,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 108,
+    "epochTime": 5.4,
+    "epoch_ms": 5400,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 109,
+    "epochTime": 5.45,
+    "epoch_ms": 5450,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 110,
+    "epochTime": 5.5,
+    "epoch_ms": 5500,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 111,
+    "epochTime": 5.55,
+    "epoch_ms": 5550,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 112,
+    "epochTime": 5.6,
+    "epoch_ms": 5600,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 113,
+    "epochTime": 5.65,
+    "epoch_ms": 5650,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 114,
+    "epochTime": 5.7,
+    "epoch_ms": 5700,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 115,
+    "epochTime": 5.75,
+    "epoch_ms": 5750,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 116,
+    "epochTime": 5.8,
+    "epoch_ms": 5800,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 117,
+    "epochTime": 5.85,
+    "epoch_ms": 5850,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 118,
+    "epochTime": 5.9,
+    "epoch_ms": 5900,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 119,
+    "epochTime": 5.95,
+    "epoch_ms": 5950,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 120,
+    "epochTime": 6.0,
+    "epoch_ms": 6000,
+    "phase": "IDLE",
+    "turn_index": 1,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 121,
+    "epochTime": 6.05,
+    "epoch_ms": 6050,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 122,
+    "epochTime": 6.1,
+    "epoch_ms": 6100,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 123,
+    "epochTime": 6.15,
+    "epoch_ms": 6150,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 124,
+    "epochTime": 6.2,
+    "epoch_ms": 6200,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 125,
+    "epochTime": 6.25,
+    "epoch_ms": 6250,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 126,
+    "epochTime": 6.3,
+    "epoch_ms": 6300,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 127,
+    "epochTime": 6.35,
+    "epoch_ms": 6350,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 128,
+    "epochTime": 6.4,
+    "epoch_ms": 6400,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 129,
+    "epochTime": 6.45,
+    "epoch_ms": 6450,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 130,
+    "epochTime": 6.5,
+    "epoch_ms": 6500,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 131,
+    "epochTime": 6.55,
+    "epoch_ms": 6550,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 132,
+    "epochTime": 6.6,
+    "epoch_ms": 6600,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 133,
+    "epochTime": 6.65,
+    "epoch_ms": 6650,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 134,
+    "epochTime": 6.7,
+    "epoch_ms": 6700,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 135,
+    "epochTime": 6.75,
+    "epoch_ms": 6750,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 136,
+    "epochTime": 6.8,
+    "epoch_ms": 6800,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 137,
+    "epochTime": 6.85,
+    "epoch_ms": 6850,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 138,
+    "epochTime": 6.9,
+    "epoch_ms": 6900,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 139,
+    "epochTime": 6.95,
+    "epoch_ms": 6950,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 140,
+    "epochTime": 7.0,
+    "epoch_ms": 7000,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 141,
+    "epochTime": 7.05,
+    "epoch_ms": 7050,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 142,
+    "epochTime": 7.1,
+    "epoch_ms": 7100,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 143,
+    "epochTime": 7.15,
+    "epoch_ms": 7150,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 144,
+    "epochTime": 7.2,
+    "epoch_ms": 7200,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 145,
+    "epochTime": 7.25,
+    "epoch_ms": 7250,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 146,
+    "epochTime": 7.3,
+    "epoch_ms": 7300,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 147,
+    "epochTime": 7.35,
+    "epoch_ms": 7350,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 148,
+    "epochTime": 7.4,
+    "epoch_ms": 7400,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 149,
+    "epochTime": 7.45,
+    "epoch_ms": 7450,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 150,
+    "epochTime": 7.5,
+    "epoch_ms": 7500,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 151,
+    "epochTime": 7.55,
+    "epoch_ms": 7550,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 152,
+    "epochTime": 7.6,
+    "epoch_ms": 7600,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 153,
+    "epochTime": 7.65,
+    "epoch_ms": 7650,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 154,
+    "epochTime": 7.7,
+    "epoch_ms": 7700,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 155,
+    "epochTime": 7.75,
+    "epoch_ms": 7750,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 156,
+    "epochTime": 7.8,
+    "epoch_ms": 7800,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 157,
+    "epochTime": 7.85,
+    "epoch_ms": 7850,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 158,
+    "epochTime": 7.9,
+    "epoch_ms": 7900,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 159,
+    "epochTime": 7.95,
+    "epoch_ms": 7950,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 160,
+    "epochTime": 8.0,
+    "epoch_ms": 8000,
+    "phase": "ACTION",
+    "turn_index": 2,
+    "primitive": "W",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 161,
+    "epochTime": 8.05,
+    "epoch_ms": 8050,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 162,
+    "epochTime": 8.1,
+    "epoch_ms": 8100,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 163,
+    "epochTime": 8.15,
+    "epoch_ms": 8150,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 164,
+    "epochTime": 8.2,
+    "epoch_ms": 8200,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 165,
+    "epochTime": 8.25,
+    "epoch_ms": 8250,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 166,
+    "epochTime": 8.3,
+    "epoch_ms": 8300,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 167,
+    "epochTime": 8.35,
+    "epoch_ms": 8350,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 168,
+    "epochTime": 8.4,
+    "epoch_ms": 8400,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 169,
+    "epochTime": 8.45,
+    "epoch_ms": 8450,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 170,
+    "epochTime": 8.5,
+    "epoch_ms": 8500,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 171,
+    "epochTime": 8.55,
+    "epoch_ms": 8550,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 172,
+    "epochTime": 8.6,
+    "epoch_ms": 8600,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 173,
+    "epochTime": 8.65,
+    "epoch_ms": 8650,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 174,
+    "epochTime": 8.7,
+    "epoch_ms": 8700,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 175,
+    "epochTime": 8.75,
+    "epoch_ms": 8750,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 176,
+    "epochTime": 8.8,
+    "epoch_ms": 8800,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 177,
+    "epochTime": 8.85,
+    "epoch_ms": 8850,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 178,
+    "epochTime": 8.9,
+    "epoch_ms": 8900,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 179,
+    "epochTime": 8.95,
+    "epoch_ms": 8950,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "frame_index": 180,
+    "epochTime": 9.0,
+    "epoch_ms": 9000,
+    "phase": "IDLE",
+    "turn_index": 2,
+    "primitive": "-",
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

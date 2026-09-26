@@ -1,0 +1,17 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-SW-RC03",
+  "group": "race",
+  "self_contained": true,
+  "has_native_gt": true,
+  "files_sha256": {
+    "action_left.json": "c6a60358d911e84ec82796bee3a67f4201c07053293b2c1f1402e2f3a1c623ff",
+    "action_right.json": "c6a60358d911e84ec82796bee3a67f4201c07053293b2c1f1402e2f3a1c623ff",
+    "alpha_actions.json": "d43d2e3da84b4f69d0815f5d06725ffc121989d12b7b2e6cd22fc1198810d425",
+    "alpha_gt.mp4": "2a9b3b0595f2cc6a9e732e4af03b2b2d1dcf3dbeb397252f80b57b6a17335b91",
+    "bravo_actions.json": "d43d2e3da84b4f69d0815f5d06725ffc121989d12b7b2e6cd22fc1198810d425",
+    "bravo_gt.mp4": "bad0e395ed2d5773f8cce68bfa1ed4d1586e1fbe63350c09ec710bd9d3d2e0ed",
+    "first_frame.png": "c32b0ba21ebd8793b2bd47dc7a47bca2be3b08d1ae390f35dc8e0d15eac9a1cf",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}

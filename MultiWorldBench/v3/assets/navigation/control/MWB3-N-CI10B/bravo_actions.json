@@ -1,0 +1,3441 @@
+[
+  {
+    "epochTime": 0.0,
+    "epoch_ms": 0.0,
+    "minecraft_tick": 0,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.05,
+    "epoch_ms": 50.0,
+    "minecraft_tick": 1,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.1,
+    "epoch_ms": 100.0,
+    "minecraft_tick": 2,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.15,
+    "epoch_ms": 150.0,
+    "minecraft_tick": 3,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.2,
+    "epoch_ms": 200.0,
+    "minecraft_tick": 4,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.25,
+    "epoch_ms": 250.0,
+    "minecraft_tick": 5,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.3,
+    "epoch_ms": 300.0,
+    "minecraft_tick": 6,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.35,
+    "epoch_ms": 350.0,
+    "minecraft_tick": 7,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.4,
+    "epoch_ms": 400.0,
+    "minecraft_tick": 8,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.45,
+    "epoch_ms": 450.0,
+    "minecraft_tick": 9,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.5,
+    "epoch_ms": 500.0,
+    "minecraft_tick": 10,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.55,
+    "epoch_ms": 550.0,
+    "minecraft_tick": 11,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.6,
+    "epoch_ms": 600.0,
+    "minecraft_tick": 12,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.65,
+    "epoch_ms": 650.0,
+    "minecraft_tick": 13,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.7,
+    "epoch_ms": 700.0,
+    "minecraft_tick": 14,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.75,
+    "epoch_ms": 750.0,
+    "minecraft_tick": 15,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.8,
+    "epoch_ms": 800.0,
+    "minecraft_tick": 16,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.85,
+    "epoch_ms": 850.0,
+    "minecraft_tick": 17,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.9,
+    "epoch_ms": 900.0,
+    "minecraft_tick": 18,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 0.95,
+    "epoch_ms": 950.0,
+    "minecraft_tick": 19,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.0,
+    "epoch_ms": 1000.0,
+    "minecraft_tick": 20,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.05,
+    "epoch_ms": 1050.0,
+    "minecraft_tick": 21,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.1,
+    "epoch_ms": 1100.0,
+    "minecraft_tick": 22,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.15,
+    "epoch_ms": 1150.0,
+    "minecraft_tick": 23,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.2,
+    "epoch_ms": 1200.0,
+    "minecraft_tick": 24,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.25,
+    "epoch_ms": 1250.0,
+    "minecraft_tick": 25,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.3,
+    "epoch_ms": 1300.0,
+    "minecraft_tick": 26,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.35,
+    "epoch_ms": 1350.0,
+    "minecraft_tick": 27,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.4,
+    "epoch_ms": 1400.0,
+    "minecraft_tick": 28,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.45,
+    "epoch_ms": 1450.0,
+    "minecraft_tick": 29,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.5,
+    "epoch_ms": 1500.0,
+    "minecraft_tick": 30,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.55,
+    "epoch_ms": 1550.0,
+    "minecraft_tick": 31,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.6,
+    "epoch_ms": 1600.0,
+    "minecraft_tick": 32,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.65,
+    "epoch_ms": 1650.0,
+    "minecraft_tick": 33,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.7,
+    "epoch_ms": 1700.0,
+    "minecraft_tick": 34,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.75,
+    "epoch_ms": 1750.0,
+    "minecraft_tick": 35,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.8,
+    "epoch_ms": 1800.0,
+    "minecraft_tick": 36,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.85,
+    "epoch_ms": 1850.0,
+    "minecraft_tick": 37,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.9,
+    "epoch_ms": 1900.0,
+    "minecraft_tick": 38,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 1.95,
+    "epoch_ms": 1950.0,
+    "minecraft_tick": 39,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.0,
+    "epoch_ms": 2000.0,
+    "minecraft_tick": 40,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.05,
+    "epoch_ms": 2050.0,
+    "minecraft_tick": 41,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.1,
+    "epoch_ms": 2100.0,
+    "minecraft_tick": 42,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.15,
+    "epoch_ms": 2150.0,
+    "minecraft_tick": 43,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.2,
+    "epoch_ms": 2200.0,
+    "minecraft_tick": 44,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.25,
+    "epoch_ms": 2250.0,
+    "minecraft_tick": 45,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.3,
+    "epoch_ms": 2300.0,
+    "minecraft_tick": 46,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.35,
+    "epoch_ms": 2350.0,
+    "minecraft_tick": 47,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.4,
+    "epoch_ms": 2400.0,
+    "minecraft_tick": 48,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.45,
+    "epoch_ms": 2450.0,
+    "minecraft_tick": 49,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.5,
+    "epoch_ms": 2500.0,
+    "minecraft_tick": 50,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.55,
+    "epoch_ms": 2550.0,
+    "minecraft_tick": 51,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.6,
+    "epoch_ms": 2600.0,
+    "minecraft_tick": 52,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.65,
+    "epoch_ms": 2650.0,
+    "minecraft_tick": 53,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.7,
+    "epoch_ms": 2700.0,
+    "minecraft_tick": 54,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.75,
+    "epoch_ms": 2750.0,
+    "minecraft_tick": 55,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.8,
+    "epoch_ms": 2800.0,
+    "minecraft_tick": 56,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.85,
+    "epoch_ms": 2850.0,
+    "minecraft_tick": 57,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.9,
+    "epoch_ms": 2900.0,
+    "minecraft_tick": 58,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 2.95,
+    "epoch_ms": 2950.0,
+    "minecraft_tick": 59,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.0,
+    "epoch_ms": 3000.0,
+    "minecraft_tick": 60,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.05,
+    "epoch_ms": 3050.0,
+    "minecraft_tick": 61,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.1,
+    "epoch_ms": 3100.0,
+    "minecraft_tick": 62,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.15,
+    "epoch_ms": 3150.0,
+    "minecraft_tick": 63,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.2,
+    "epoch_ms": 3200.0,
+    "minecraft_tick": 64,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.25,
+    "epoch_ms": 3250.0,
+    "minecraft_tick": 65,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.3,
+    "epoch_ms": 3300.0,
+    "minecraft_tick": 66,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.35,
+    "epoch_ms": 3350.0,
+    "minecraft_tick": 67,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.4,
+    "epoch_ms": 3400.0,
+    "minecraft_tick": 68,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.45,
+    "epoch_ms": 3450.0,
+    "minecraft_tick": 69,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.5,
+    "epoch_ms": 3500.0,
+    "minecraft_tick": 70,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.55,
+    "epoch_ms": 3550.0,
+    "minecraft_tick": 71,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.6,
+    "epoch_ms": 3600.0,
+    "minecraft_tick": 72,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.65,
+    "epoch_ms": 3650.0,
+    "minecraft_tick": 73,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.7,
+    "epoch_ms": 3700.0,
+    "minecraft_tick": 74,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.75,
+    "epoch_ms": 3750.0,
+    "minecraft_tick": 75,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.8,
+    "epoch_ms": 3800.0,
+    "minecraft_tick": 76,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.85,
+    "epoch_ms": 3850.0,
+    "minecraft_tick": 77,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.9,
+    "epoch_ms": 3900.0,
+    "minecraft_tick": 78,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 3.95,
+    "epoch_ms": 3950.0,
+    "minecraft_tick": 79,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.0,
+    "epoch_ms": 4000.0,
+    "minecraft_tick": 80,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.05,
+    "epoch_ms": 4050.0,
+    "minecraft_tick": 81,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.1,
+    "epoch_ms": 4100.0,
+    "minecraft_tick": 82,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.15,
+    "epoch_ms": 4150.0,
+    "minecraft_tick": 83,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.2,
+    "epoch_ms": 4200.0,
+    "minecraft_tick": 84,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.25,
+    "epoch_ms": 4250.0,
+    "minecraft_tick": 85,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.3,
+    "epoch_ms": 4300.0,
+    "minecraft_tick": 86,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.35,
+    "epoch_ms": 4350.0,
+    "minecraft_tick": 87,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.4,
+    "epoch_ms": 4400.0,
+    "minecraft_tick": 88,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.45,
+    "epoch_ms": 4450.0,
+    "minecraft_tick": 89,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.5,
+    "epoch_ms": 4500.0,
+    "minecraft_tick": 90,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.55,
+    "epoch_ms": 4550.0,
+    "minecraft_tick": 91,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.6,
+    "epoch_ms": 4600.0,
+    "minecraft_tick": 92,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.65,
+    "epoch_ms": 4650.0,
+    "minecraft_tick": 93,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.7,
+    "epoch_ms": 4700.0,
+    "minecraft_tick": 94,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.75,
+    "epoch_ms": 4750.0,
+    "minecraft_tick": 95,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.8,
+    "epoch_ms": 4800.0,
+    "minecraft_tick": 96,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.85,
+    "epoch_ms": 4850.0,
+    "minecraft_tick": 97,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.9,
+    "epoch_ms": 4900.0,
+    "minecraft_tick": 98,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 4.95,
+    "epoch_ms": 4950.0,
+    "minecraft_tick": 99,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.0,
+    "epoch_ms": 5000.0,
+    "minecraft_tick": 100,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.05,
+    "epoch_ms": 5050.0,
+    "minecraft_tick": 101,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.1,
+    "epoch_ms": 5100.0,
+    "minecraft_tick": 102,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.15,
+    "epoch_ms": 5150.0,
+    "minecraft_tick": 103,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.2,
+    "epoch_ms": 5200.0,
+    "minecraft_tick": 104,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.25,
+    "epoch_ms": 5250.0,
+    "minecraft_tick": 105,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.3,
+    "epoch_ms": 5300.0,
+    "minecraft_tick": 106,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.35,
+    "epoch_ms": 5350.0,
+    "minecraft_tick": 107,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.4,
+    "epoch_ms": 5400.0,
+    "minecraft_tick": 108,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.45,
+    "epoch_ms": 5450.0,
+    "minecraft_tick": 109,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.5,
+    "epoch_ms": 5500.0,
+    "minecraft_tick": 110,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.55,
+    "epoch_ms": 5550.0,
+    "minecraft_tick": 111,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.6,
+    "epoch_ms": 5600.0,
+    "minecraft_tick": 112,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.65,
+    "epoch_ms": 5650.0,
+    "minecraft_tick": 113,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.7,
+    "epoch_ms": 5700.0,
+    "minecraft_tick": 114,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.75,
+    "epoch_ms": 5750.0,
+    "minecraft_tick": 115,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.8,
+    "epoch_ms": 5800.0,
+    "minecraft_tick": 116,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.85,
+    "epoch_ms": 5850.0,
+    "minecraft_tick": 117,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.9,
+    "epoch_ms": 5900.0,
+    "minecraft_tick": 118,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 5.95,
+    "epoch_ms": 5950.0,
+    "minecraft_tick": 119,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.0,
+    "epoch_ms": 6000.0,
+    "minecraft_tick": 120,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.05,
+    "epoch_ms": 6050.0,
+    "minecraft_tick": 121,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.1,
+    "epoch_ms": 6100.0,
+    "minecraft_tick": 122,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.15,
+    "epoch_ms": 6150.0,
+    "minecraft_tick": 123,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.2,
+    "epoch_ms": 6200.0,
+    "minecraft_tick": 124,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.25,
+    "epoch_ms": 6250.0,
+    "minecraft_tick": 125,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.3,
+    "epoch_ms": 6300.0,
+    "minecraft_tick": 126,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.35,
+    "epoch_ms": 6350.0,
+    "minecraft_tick": 127,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.4,
+    "epoch_ms": 6400.0,
+    "minecraft_tick": 128,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.45,
+    "epoch_ms": 6450.0,
+    "minecraft_tick": 129,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.5,
+    "epoch_ms": 6500.0,
+    "minecraft_tick": 130,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.55,
+    "epoch_ms": 6550.0,
+    "minecraft_tick": 131,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.6,
+    "epoch_ms": 6600.0,
+    "minecraft_tick": 132,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.65,
+    "epoch_ms": 6650.0,
+    "minecraft_tick": 133,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.7,
+    "epoch_ms": 6700.0,
+    "minecraft_tick": 134,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.75,
+    "epoch_ms": 6750.0,
+    "minecraft_tick": 135,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.8,
+    "epoch_ms": 6800.0,
+    "minecraft_tick": 136,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.85,
+    "epoch_ms": 6850.0,
+    "minecraft_tick": 137,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.9,
+    "epoch_ms": 6900.0,
+    "minecraft_tick": 138,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 6.95,
+    "epoch_ms": 6950.0,
+    "minecraft_tick": 139,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.0,
+    "epoch_ms": 7000.0,
+    "minecraft_tick": 140,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": true,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.05,
+    "epoch_ms": 7050.0,
+    "minecraft_tick": 141,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.1,
+    "epoch_ms": 7100.0,
+    "minecraft_tick": 142,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.15,
+    "epoch_ms": 7150.0,
+    "minecraft_tick": 143,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.2,
+    "epoch_ms": 7200.0,
+    "minecraft_tick": 144,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.25,
+    "epoch_ms": 7250.0,
+    "minecraft_tick": 145,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.3,
+    "epoch_ms": 7300.0,
+    "minecraft_tick": 146,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.35,
+    "epoch_ms": 7350.0,
+    "minecraft_tick": 147,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.4,
+    "epoch_ms": 7400.0,
+    "minecraft_tick": 148,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.45,
+    "epoch_ms": 7450.0,
+    "minecraft_tick": 149,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.5,
+    "epoch_ms": 7500.0,
+    "minecraft_tick": 150,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.55,
+    "epoch_ms": 7550.0,
+    "minecraft_tick": 151,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.6,
+    "epoch_ms": 7600.0,
+    "minecraft_tick": 152,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.65,
+    "epoch_ms": 7650.0,
+    "minecraft_tick": 153,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.7,
+    "epoch_ms": 7700.0,
+    "minecraft_tick": 154,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.75,
+    "epoch_ms": 7750.0,
+    "minecraft_tick": 155,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.8,
+    "epoch_ms": 7800.0,
+    "minecraft_tick": 156,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.85,
+    "epoch_ms": 7850.0,
+    "minecraft_tick": 157,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.9,
+    "epoch_ms": 7900.0,
+    "minecraft_tick": 158,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 7.95,
+    "epoch_ms": 7950.0,
+    "minecraft_tick": 159,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.0,
+    "epoch_ms": 8000.0,
+    "minecraft_tick": 160,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": true,
+      "back": false,
+      "left": false,
+      "right": true,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.05,
+    "epoch_ms": 8050.0,
+    "minecraft_tick": 161,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.1,
+    "epoch_ms": 8100.0,
+    "minecraft_tick": 162,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.15,
+    "epoch_ms": 8150.0,
+    "minecraft_tick": 163,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.2,
+    "epoch_ms": 8200.0,
+    "minecraft_tick": 164,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.25,
+    "epoch_ms": 8250.0,
+    "minecraft_tick": 165,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.3,
+    "epoch_ms": 8300.0,
+    "minecraft_tick": 166,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.35,
+    "epoch_ms": 8350.0,
+    "minecraft_tick": 167,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.4,
+    "epoch_ms": 8400.0,
+    "minecraft_tick": 168,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.45,
+    "epoch_ms": 8450.0,
+    "minecraft_tick": 169,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.5,
+    "epoch_ms": 8500.0,
+    "minecraft_tick": 170,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.55,
+    "epoch_ms": 8550.0,
+    "minecraft_tick": 171,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.6,
+    "epoch_ms": 8600.0,
+    "minecraft_tick": 172,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.65,
+    "epoch_ms": 8650.0,
+    "minecraft_tick": 173,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.7,
+    "epoch_ms": 8700.0,
+    "minecraft_tick": 174,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.75,
+    "epoch_ms": 8750.0,
+    "minecraft_tick": 175,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.8,
+    "epoch_ms": 8800.0,
+    "minecraft_tick": 176,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.85,
+    "epoch_ms": 8850.0,
+    "minecraft_tick": 177,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.9,
+    "epoch_ms": 8900.0,
+    "minecraft_tick": 178,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 8.95,
+    "epoch_ms": 8950.0,
+    "minecraft_tick": 179,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "epochTime": 9.0,
+    "epoch_ms": 9000.0,
+    "minecraft_tick": 180,
+    "control_source": "synthetic_planned_control",
+    "action": {
+      "forward": false,
+      "back": false,
+      "left": false,
+      "right": false,
+      "jump": false,
+      "sprint": false,
+      "sneak": false,
+      "camera": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

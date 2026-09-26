@@ -1,0 +1,17 @@
+{
+  "schema_version": "mwb.v3.asset.v1",
+  "case_id": "MWB3-R-RV03",
+  "group": "revisit",
+  "self_contained": true,
+  "has_native_gt": true,
+  "files_sha256": {
+    "action_left.json": "dca0c32660eda5ddea15218bbaf4f6def9b1e0b191a220d5a1df6d53b91038d7",
+    "action_right.json": "cc4f980d47e3529e8f9443e55daaa8402fbf6ff4d9f0f3ff2807a97ba228eaa4",
+    "alpha_actions.json": "c37455775944a7f24428fbed2f991d28b353cc0ea83895a643409c5560a85f31",
+    "alpha_gt.mp4": "3a0364ef8f22714737e2e8b5a1c7b08ffef058d10f34286ad1b69dc081e0b6ac",
+    "bravo_actions.json": "3dcd577b4a8ccdd3c071eaa25295a9a4eccd96fd6ebe3a879d0451027e84563a",
+    "bravo_gt.mp4": "7738c3603a23a86bcaf0f800889323e0bdcdf8dd0350c0b4cdae608e720c5e00",
+    "first_frame.png": "d7992c8637f39a3cf0d4802672bb79cfbbc8429e8178f583015718de15996a2f",
+    "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
+  }
+}
