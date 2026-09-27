@@ -7,37 +7,37 @@
       "case_id": "MWB3-S-SS01",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS01",
-      "metadata_sha256": "05591552e7b3c3fefce0561f08a8451fd32ccc3c0fb3c9ae1136a0d82b73106f"
+      "metadata_sha256": "ce94128947fa5152186af84382c567a3691b1a21f710e97ba696108e0f896749"
     },
     {
       "case_id": "MWB3-S-SS02",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS02",
-      "metadata_sha256": "4bd360a07c645e6e6c0215b501ccc741f6f4302891588eff68f5be8ff2d512f0"
+      "metadata_sha256": "306e4c552e5395f6e92ce48968153c29979b6878508c5b0c4ea11f6e1e01fec4"
     },
     {
       "case_id": "MWB3-S-SS03",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS03",
-      "metadata_sha256": "1e7b56ced2eecddbe2d8d46aae74f99656782eb79ae18cbd8ccd86d920f8ace8"
+      "metadata_sha256": "35317a7524219ef17c7dd4a0bea491b03fdd26d2ec910c13daeadb8343f0b884"
     },
     {
       "case_id": "MWB3-S-SS04",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS04",
-      "metadata_sha256": "de3da9d73b1893b0ef669952e65a34dad31957124552f82222317906efb55aff"
+      "metadata_sha256": "2e97f44f9bb6ec94d117e1e2c4b0cfa79c183ec2e342c36d2ccf7d53eec2d962"
     },
     {
       "case_id": "MWB3-S-SS05",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS05",
-      "metadata_sha256": "7c7b49a1501aaefc44da62eb79a8e7e6a9362f178807fbbb94f168a6678e1b7a"
+      "metadata_sha256": "2dcc2c392f534addaa74e6334ee0f643ebb5c1463e738be12dfcc7f17ebf89a8"
     },
     {
       "case_id": "MWB3-S-SS06",
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS06",
-      "metadata_sha256": "63d29c7dc70a6caea869326b5a1ed5afa040d4b2bc7f4d988e1e01ad984d7c0e"
+      "metadata_sha256": "f547faf54d62c427bdb172a67cd34de9b232132c2d2166d6ea683c3f2aa487e1"
     },
     {
       "case_id": "MWB3-N-CI01A",

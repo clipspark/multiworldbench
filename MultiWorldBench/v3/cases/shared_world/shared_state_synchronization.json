@@ -2,13 +2,15 @@
   "schema_version": "mwb.v3.case_set.v1",
   "case_count": 6,
   "fps": 20,
-  "formal_score": false,
-  "gt_collected": false,
-  "action_evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "formal_score": true,
+  "gt_collected": true,
+  "action_evidence_policy": "native_x11_xtest_gt_with_versioned_model_actions",
   "timing": {
     "conditioning_frames": 1,
-    "action_seconds": 0.05,
-    "idle_seconds": 4.0
+    "action_seconds": 0.4,
+    "idle_seconds": 4.0,
+    "placement_action_seconds": 0.05,
+    "destruction_action_seconds": 0.4
   },
   "cases": [
     {
@@ -47,19 +49,19 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
+            "aim_distance_blocks": 3.952771179818029,
             "active": true,
             "target_cell": [
               622,
@@ -76,19 +78,19 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
+            "aim_distance_blocks": 3.952771179818029,
             "active": false,
             "target_cell": [
               622,
@@ -157,19 +159,19 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
+            "aim_distance_blocks": 3.952771179818029,
             "active": false,
             "target_cell": [
               622,
@@ -186,19 +188,19 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
+            "aim_distance_blocks": 3.952771179818029,
             "active": true,
             "target_cell": [
               622,
@@ -236,8 +238,7 @@
       "id": "MWB3-S-SS03",
       "operation": "place",
       "active_roles": [
-        "alpha",
-        "bravo"
+        "alpha"
       ],
       "metrics": [
         "shared_state_synchronization"
@@ -268,19 +269,19 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
+            "aim_distance_blocks": 3.952771179818029,
             "active": true,
             "target_cell": [
               622,
@@ -297,20 +298,20 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 17.952324309360336,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
             "aim_point": [
               622.5,
               91.0,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.255891931917932,
-            "active": true,
+            "aim_distance_blocks": 3.952771179818029,
+            "active": false,
             "target_cell": [
               622,
               91,
@@ -340,7 +341,8 @@
         "center_material": "minecraft:red_concrete",
         "arm_material": "minecraft:white_concrete",
         "arm_radius_blocks": 4
-      }
+      },
+      "counter_design": "role-side swap with a single native actor"
     },
     {
       "case_id": "MWB3-S-SS04",
@@ -362,10 +364,10 @@
         {
           "action_range": [
             1,
-            2
+            9
           ],
           "idle_range": [
-            2,
+            9,
             81
           ]
         }
@@ -378,19 +380,19 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
+            "aim_distance_blocks": 3.775499966891804,
             "active": true,
             "target_cell": [
               622,
@@ -407,19 +409,19 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
+            "aim_distance_blocks": 3.775499966891804,
             "active": false,
             "target_cell": [
               622,
@@ -472,10 +474,10 @@
         {
           "action_range": [
             1,
-            2
+            9
           ],
           "idle_range": [
-            2,
+            9,
             81
           ]
         }
@@ -488,19 +490,19 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
+            "aim_distance_blocks": 3.775499966891804,
             "active": false,
             "target_cell": [
               622,
@@ -517,19 +519,19 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
+            "aim_distance_blocks": 3.775499966891804,
             "active": true,
             "target_cell": [
               622,
@@ -567,7 +569,6 @@
       "id": "MWB3-S-SS06",
       "operation": "destroy",
       "active_roles": [
-        "alpha",
         "bravo"
       ],
       "metrics": [
@@ -583,10 +584,10 @@
         {
           "action_range": [
             1,
-            2
+            9
           ],
           "idle_range": [
-            2,
+            9,
             81
           ]
         }
@@ -599,20 +600,20 @@
         "alpha": {
           "pose": {
             "position": [
-              619.5,
+              624.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": -143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
-            "active": true,
+            "aim_distance_blocks": 3.775499966891804,
+            "active": false,
             "target_cell": [
               622,
               91,
@@ -628,19 +629,19 @@
         "bravo": {
           "pose": {
             "position": [
-              625.5,
+              620.5,
               91,
-              4.5
+              3.5
             ],
-            "native_yaw_deg": 143.13010235415598,
-            "native_pitch_deg": 12.625836878907364,
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
             "aim_point": [
               622.5,
               91.5,
               0.5
             ],
             "aim_role": "shared_cross_center",
-            "aim_distance_blocks": 5.123904761019667,
+            "aim_distance_blocks": 3.775499966891804,
             "active": true,
             "target_cell": [
               622,
@@ -671,13 +672,14 @@
         "center_material": "minecraft:red_concrete",
         "arm_material": "minecraft:white_concrete",
         "arm_radius_blocks": 4
-      }
+      },
+      "counter_design": "role-side swap with a single native actor"
     }
   ],
-  "limitations": "Placement and destruction are scored separately. Material is evaluated only for placement. Every case expects exactly one changed block at the red center of the white ground cross. Native GT has not been collected.",
+  "limitations": "Placement and destruction are scored separately. Material is evaluated only for placement. Every case uses survival-mode native interaction by one actor and expects exactly one changed block at the red center of the white ground cross. Native GT is collected and validated before scoring.",
   "benchmark_version": "3",
   "metric_id": "shared_state_synchronization",
-  "ranking_ready": false,
+  "ranking_ready": true,
   "evidence_fields": {
     "common": [
       "action_success",
@@ -731,6 +733,6 @@
       "arm_material": "minecraft:white_concrete",
       "arm_radius_blocks": 4
     },
-    "context_geometry": "stone-brick courtyard with a white ground cross, red center, asymmetric colored edge markers and corner posts"
+    "context_geometry": "natural grass ground with only the requested white ground cross and red center marker"
   }
 }

@@ -45,27 +45,20 @@ async function main() {
       const cid=spec.case_id;
       const caseDir=path.join(assetsRoot,cid);
       const [tx,ty,tz]=spec.target_cell;
-      await send(`fill ${tx-8} ${ty-1} ${tz-7} ${tx+8} ${ty-1} ${tz+9} minecraft:polished_andesite`);
+      await send(`fill ${tx-8} ${ty-1} ${tz-7} ${tx+8} ${ty-1} ${tz+9} minecraft:grass_block`);
       await send(`fill ${tx-8} ${ty} ${tz-7} ${tx+8} ${ty+7} ${tz+9} minecraft:air`);
+      await send(`execute positioned ${tx} ${ty} ${tz} run kill @e[type=minecraft:item,distance=..32]`);
       await send(`fill ${tx-4} ${ty-1} ${tz} ${tx+4} ${ty-1} ${tz} minecraft:white_concrete`);
       await send(`fill ${tx} ${ty-1} ${tz-4} ${tx} ${ty-1} ${tz+4} minecraft:white_concrete`);
       await send(`setblock ${tx} ${ty-1} ${tz} minecraft:red_concrete`);
-      await send(`fill ${tx-8} ${ty-1} ${tz-7} ${tx+8} ${ty-1} ${tz-7} minecraft:deepslate_tiles`);
-      await send(`fill ${tx-8} ${ty-1} ${tz+9} ${tx+8} ${ty-1} ${tz+9} minecraft:smooth_sandstone`);
-      await send(`fill ${tx-8} ${ty-1} ${tz-7} ${tx-8} ${ty-1} ${tz+9} minecraft:oxidized_copper`);
-      await send(`fill ${tx+8} ${ty-1} ${tz-7} ${tx+8} ${ty-1} ${tz+9} minecraft:bricks`);
-      for (const [x,z,block] of [[tx-7,tz-6,'yellow_concrete'],[tx+7,tz-6,'cyan_concrete'],[tx-7,tz+8,'lime_concrete'],[tx+7,tz+8,'magenta_concrete']]) {
-        await send(`fill ${x} ${ty} ${z} ${x} ${ty+2} ${z} minecraft:${block}`);
-        await send(`setblock ${x} ${ty+3} ${z} minecraft:sea_lantern`);
-      }
       await send(`setblock ${tx} ${ty} ${tz} minecraft:${spec.operation==='destroy'?'coarse_dirt':'air'}`);
       const actual={};
       for (const [role,name] of [['alpha','CameraAlpha'],['bravo','CameraBravo']]) {
         const pose=spec.initial_conditions[role].pose;
         await send(`gamemode survival ${name}`);
         await send(`clear ${name}`);
-        if (spec.operation==='place' && pose.active) await send(`item replace entity ${name} weapon.mainhand with minecraft:coarse_dirt 64`);
-        else if (spec.operation==='destroy' && pose.active) await send(`item replace entity ${name} weapon.mainhand with minecraft:diamond_pickaxe 1`);
+        if (spec.operation==='place' && pose.active) await send(`item replace entity ${name} weapon.mainhand with minecraft:coarse_dirt 1`);
+        else if (spec.operation==='destroy' && pose.active) await send(`item replace entity ${name} weapon.mainhand with minecraft:diamond_shovel 1`);
         await send(`tp ${name} ${pose.position.join(' ')} ${pose.native_yaw_deg} ${pose.native_pitch_deg}`);
         actual[role]={position:await send(`data get entity ${name} Pos`),rotation:await send(`data get entity ${name} Rotation`),selected_item:await send(`data get entity ${name} SelectedItem`)};
       }

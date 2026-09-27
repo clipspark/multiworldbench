@@ -6,10 +6,10 @@
   "has_native_gt": false,
   "files_sha256": {
     "action_left.json": "4c27b2410f8bc427c45b4d039ce2e778d2ff14392a71f94e019fe9f6ff4b1420",
-    "action_right.json": "a4b9bbc4d23e03aef393fe7da846111a20ea58d170fa83df27fdc9569212c4ab",
+    "action_right.json": "4c65343d3441a14ebf7de1b138dc08d14d40601a145a6bc3f4dacce40954c4cb",
     "alpha_actions.json": "de1ac557228d60632e1f54351fac508d44d3564d21f06ea5bbc6d4db2f1073d3",
-    "bravo_actions.json": "8cd619e9927e779d4d81e7639e5101ff3fbaf581be4ee178832820a88af7b77e",
-    "first_frame.png": "5d9e98de757374cad4a53ffc41768e4d9dbaec83a6cce0288dca0c7ce8b4bf47",
+    "bravo_actions.json": "f21f809ee20f6aca4e97b5e7ed753e32139d361d390f4d14ab142bdf7b28a766",
+    "first_frame.png": "eeffa7ae30b9943e146684f9e0789a721a056ce71a09bee2c6d80e74693eacfa",
     "prompt.txt": "9066d7d530cc6b3f4cb0f00a492a45e57aba086738a16c8f7a0714f8a05dcb0c"
   },
   "scene": "marked_cross_courtyard",

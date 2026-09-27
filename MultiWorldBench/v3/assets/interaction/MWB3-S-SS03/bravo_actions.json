@@ -5,7 +5,7 @@
     "epoch_ms": 0,
     "turn_index": -1,
     "phase": "CONDITIONING",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -43,7 +43,7 @@
     "epoch_ms": 50,
     "turn_index": 0,
     "phase": "ACTION",
-    "primitive": "USE",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -54,7 +54,7 @@
       "sprint": false,
       "sneak": false,
       "attack": false,
-      "use": true,
+      "use": false,
       "mount": false,
       "dismount": false,
       "place_block": false,
@@ -81,7 +81,7 @@
     "epoch_ms": 100,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -119,7 +119,7 @@
     "epoch_ms": 150,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -157,7 +157,7 @@
     "epoch_ms": 200,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -195,7 +195,7 @@
     "epoch_ms": 250,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -233,7 +233,7 @@
     "epoch_ms": 300,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -271,7 +271,7 @@
     "epoch_ms": 350,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -309,7 +309,7 @@
     "epoch_ms": 400,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -347,7 +347,7 @@
     "epoch_ms": 450,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -385,7 +385,7 @@
     "epoch_ms": 500,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -423,7 +423,7 @@
     "epoch_ms": 550,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -461,7 +461,7 @@
     "epoch_ms": 600,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -499,7 +499,7 @@
     "epoch_ms": 650,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -537,7 +537,7 @@
     "epoch_ms": 700,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -575,7 +575,7 @@
     "epoch_ms": 750,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -613,7 +613,7 @@
     "epoch_ms": 800,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -651,7 +651,7 @@
     "epoch_ms": 850,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -689,7 +689,7 @@
     "epoch_ms": 900,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -727,7 +727,7 @@
     "epoch_ms": 950,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -765,7 +765,7 @@
     "epoch_ms": 1000,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -803,7 +803,7 @@
     "epoch_ms": 1050,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -841,7 +841,7 @@
     "epoch_ms": 1100,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -879,7 +879,7 @@
     "epoch_ms": 1150,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -917,7 +917,7 @@
     "epoch_ms": 1200,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -955,7 +955,7 @@
     "epoch_ms": 1250,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -993,7 +993,7 @@
     "epoch_ms": 1300,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1031,7 +1031,7 @@
     "epoch_ms": 1350,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1069,7 +1069,7 @@
     "epoch_ms": 1400,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1107,7 +1107,7 @@
     "epoch_ms": 1450,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1145,7 +1145,7 @@
     "epoch_ms": 1500,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1183,7 +1183,7 @@
     "epoch_ms": 1550,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1221,7 +1221,7 @@
     "epoch_ms": 1600,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1259,7 +1259,7 @@
     "epoch_ms": 1650,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1297,7 +1297,7 @@
     "epoch_ms": 1700,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1335,7 +1335,7 @@
     "epoch_ms": 1750,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1373,7 +1373,7 @@
     "epoch_ms": 1800,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1411,7 +1411,7 @@
     "epoch_ms": 1850,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1449,7 +1449,7 @@
     "epoch_ms": 1900,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1487,7 +1487,7 @@
     "epoch_ms": 1950,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1525,7 +1525,7 @@
     "epoch_ms": 2000,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1563,7 +1563,7 @@
     "epoch_ms": 2050,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1601,7 +1601,7 @@
     "epoch_ms": 2100,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1639,7 +1639,7 @@
     "epoch_ms": 2150,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1677,7 +1677,7 @@
     "epoch_ms": 2200,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1715,7 +1715,7 @@
     "epoch_ms": 2250,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1753,7 +1753,7 @@
     "epoch_ms": 2300,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1791,7 +1791,7 @@
     "epoch_ms": 2350,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1829,7 +1829,7 @@
     "epoch_ms": 2400,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1867,7 +1867,7 @@
     "epoch_ms": 2450,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1905,7 +1905,7 @@
     "epoch_ms": 2500,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1943,7 +1943,7 @@
     "epoch_ms": 2550,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -1981,7 +1981,7 @@
     "epoch_ms": 2600,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2019,7 +2019,7 @@
     "epoch_ms": 2650,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2057,7 +2057,7 @@
     "epoch_ms": 2700,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2095,7 +2095,7 @@
     "epoch_ms": 2750,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2133,7 +2133,7 @@
     "epoch_ms": 2800,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2171,7 +2171,7 @@
     "epoch_ms": 2850,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2209,7 +2209,7 @@
     "epoch_ms": 2900,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2247,7 +2247,7 @@
     "epoch_ms": 2950,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2285,7 +2285,7 @@
     "epoch_ms": 3000,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2323,7 +2323,7 @@
     "epoch_ms": 3050,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2361,7 +2361,7 @@
     "epoch_ms": 3100,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2399,7 +2399,7 @@
     "epoch_ms": 3150,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2437,7 +2437,7 @@
     "epoch_ms": 3200,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2475,7 +2475,7 @@
     "epoch_ms": 3250,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2513,7 +2513,7 @@
     "epoch_ms": 3300,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2551,7 +2551,7 @@
     "epoch_ms": 3350,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2589,7 +2589,7 @@
     "epoch_ms": 3400,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2627,7 +2627,7 @@
     "epoch_ms": 3450,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2665,7 +2665,7 @@
     "epoch_ms": 3500,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2703,7 +2703,7 @@
     "epoch_ms": 3550,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2741,7 +2741,7 @@
     "epoch_ms": 3600,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2779,7 +2779,7 @@
     "epoch_ms": 3650,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2817,7 +2817,7 @@
     "epoch_ms": 3700,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2855,7 +2855,7 @@
     "epoch_ms": 3750,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2893,7 +2893,7 @@
     "epoch_ms": 3800,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2931,7 +2931,7 @@
     "epoch_ms": 3850,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -2969,7 +2969,7 @@
     "epoch_ms": 3900,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -3007,7 +3007,7 @@
     "epoch_ms": 3950,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -3045,7 +3045,7 @@
     "epoch_ms": 4000,
     "turn_index": 0,
     "phase": "IDLE",
-    "primitive": "-",
+    "primitive": "IDLE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,

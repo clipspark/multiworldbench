@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate Solaris and Gamma-World on V3 shared-state synchronization cases."""
+"""Evaluate native GT, Solaris, and Gamma-World on V3 shared-state cases."""
 from __future__ import annotations
 import argparse, hashlib, json, os, re, subprocess, sys, time
 from pathlib import Path
@@ -41,8 +41,15 @@ def gamma_video(cid:str)->Path:
     hits=list((RUN/'models/gamma/interaction').glob(f'**/{cid}/generated.mp4'))
     if len(hits)!=1: raise RuntimeError(f'{cid}: Gamma output count={len(hits)}')
     return hits[0]
+def available_models(cases:list[dict[str,Any]])->list[str]:
+    models=['solaris','gamma']
+    gt=[RUN/f'models/gt/interaction/{case["case_id"]}/{role}_gt.mp4' for case in cases for role in ('alpha','bravo')]
+    if all(path.is_file() for path in gt): models.insert(0,'gt')
+    elif any(path.is_file() for path in gt): raise RuntimeError('native GT is incomplete; refusing a partial evaluation')
+    return models
 def generated(model:str,cid:str,role:str,frame:int)->Path:
     out=RUN/f'evaluation/frames/{model}/{cid}/{role}_{frame:03d}.png'
+    if model=='gt': return extract(RUN/f'models/gt/interaction/{cid}/{role}_gt.mp4',frame,out)
     if model=='solaris': return extract(RUN/f'models/solaris/interaction/{cid}/{role}_generated.mp4',frame,out)
     crop='crop=iw/2:ih:0:0' if role=='alpha' else 'crop=iw/2:ih:iw/2:0'
     return extract(gamma_video(cid),frame,out,crop)
@@ -50,8 +57,8 @@ def conditioning(cid:str,role:str)->Path:
     return half(ASSETS/cid/'first_frame.png',role,RUN/f'evaluation/frames/conditioning/{cid}/{role}.png')
 
 def prepare()->None:
-    cases=load(CASES_FILE)['cases']; req=[]
-    for model in ('solaris','gamma'):
+    cases=load(CASES_FILE)['cases']; models=available_models(cases); req=[]
+    for model in models:
       for case in cases:
         cid=case['case_id']
         for frame in FRAMES:
@@ -61,8 +68,8 @@ def prepare()->None:
                'prompt':metric.build_prompt(case),'keys':list(metric.output_keys(case['operation']))}
           req.append(row)
     dump(RUN/'evaluation/requests.json',req)
-    dump(RUN/'evaluation/prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':['solaris','gamma'],'frames':list(FRAMES)})
-    print(json.dumps({'requests':len(req),'cases':len(cases)}))
+    dump(RUN/'evaluation/prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':models,'frames':list(FRAMES)})
+    print(json.dumps({'requests':len(req),'cases':len(cases),'models':models}))
 
 def parse(raw:str,keys:tuple[str,...])->dict[str,int]:
     m=re.search(r'\{.*?\}',raw,re.S)
@@ -104,8 +111,9 @@ def judge(shard:int,num_shards:int,max_memory:int)->None:
 
 def majority(values:list[dict[str,int]],key:str)->int: return int(sum(v[key] for v in values)*2>=len(values))
 def aggregate()->None:
-    cases=load(CASES_FILE)['cases']; out={'schema_version':'mwb.v3.shared_state.model_comparison.v1','frames':list(FRAMES),'models':{}}
-    for model in ('solaris','gamma'):
+    cases=load(CASES_FILE)['cases']; models=load(RUN/'evaluation/prepare_complete.json')['models']
+    out={'schema_version':'mwb.v3.shared_state.model_comparison.v2','frames':list(FRAMES),'models':{}}
+    for model in models:
       scored=[]
       for case in cases:
         cid=case['case_id']; per=[]

@@ -5,11 +5,11 @@
   "self_contained": true,
   "has_native_gt": false,
   "files_sha256": {
-    "action_left.json": "63009172e2ab9283d59754ee57de96d7f46c6a182e6baa0ff1a3bf0d1f7718f3",
+    "action_left.json": "4c27b2410f8bc427c45b4d039ce2e778d2ff14392a71f94e019fe9f6ff4b1420",
     "action_right.json": "63009172e2ab9283d59754ee57de96d7f46c6a182e6baa0ff1a3bf0d1f7718f3",
     "alpha_actions.json": "ae5583cba4ccd5b74675cdf3fa9d24ae4a40c80a0468e908b5470f123eb9f5f7",
-    "bravo_actions.json": "ae5583cba4ccd5b74675cdf3fa9d24ae4a40c80a0468e908b5470f123eb9f5f7",
-    "first_frame.png": "79cd2bae2b1d89f6ea65b0ef1ae0eed66f459a333d82cde23017b1469127b39b",
+    "bravo_actions.json": "642c48a0f46cdcd3ba0e438004ba7da50dfb9f8a997ab763ec1a71491d923b6c",
+    "first_frame.png": "72a0225b26a5595d416a57ca2c3e6b66bd9a248cf7e741f539049c854fdf7d53",
     "prompt.txt": "9066d7d530cc6b3f4cb0f00a492a45e57aba086738a16c8f7a0714f8a05dcb0c"
   },
   "scene": "marked_cross_courtyard",
