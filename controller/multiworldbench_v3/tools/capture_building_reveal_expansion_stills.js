@@ -191,7 +191,7 @@ async function main() {
       await send(`forceload add ${cx-35} -31 ${cx+35} 31`);
       const b=builder(send,cx); await base(b,spec.ground); await spec.sceneBuild(b); await spec.buildingBuild(b);
       const focus=[cx+0.5,68,2.5];
-      const alpha=[cx+0.5,64,-10.05];
+      const alpha=[cx+0.5,64,-13.0];
       const rad=spec.angle_deg*Math.PI/180,bravo=[cx+0.5+18*Math.sin(rad),64,2.5-18*Math.cos(rad)];
       // A single dirt block seals a one-block observation aperture. The frame
       // prevents tall buildings from leaking around the occluder; breaking the
@@ -201,8 +201,9 @@ async function main() {
       await send('clear CameraAlpha'); await send('clear CameraBravo');
       const actual={};
       for (const [role,name,position] of [['alpha','CameraAlpha',alpha],['bravo','CameraBravo',bravo]]) {
-        const rotation=aimPose(position,focus); await send(`tp ${name} ${position.join(' ')} ${rotation.yaw} ${rotation.pitch}`); await wait(800);
-        actual[role]={requested:{position,yaw:rotation.yaw,pitch:rotation.pitch},server_position:await send(`data get entity ${name} Pos`),server_rotation:await send(`data get entity ${name} Rotation`),on_ground:await send(`data get entity ${name} OnGround`)};
+        const aim=role==='alpha'?[cx+0.5,65.5,-9.5]:focus;
+        const rotation=aimPose(position,aim); await send(`tp ${name} ${position.join(' ')} ${rotation.yaw} ${rotation.pitch}`); await wait(800);
+        actual[role]={requested:{position,aim,yaw:rotation.yaw,pitch:rotation.pitch},server_position:await send(`data get entity ${name} Pos`),server_rotation:await send(`data get entity ${name} Rotation`),on_ground:await send(`data get entity ${name} OnGround`)};
       }
       await wait(3500);
       const alphaFile=path.join(caseDir,'alpha_first_frame.png'),bravoFile=path.join(caseDir,'bravo_first_frame.png'),pairFile=path.join(caseDir,'first_frame_pair.png');
@@ -210,7 +211,7 @@ async function main() {
       execFileSync('ffmpeg',['-nostdin','-v','error','-y','-f','x11grab','-video_size','1280x720','-i',':131.0','-frames:v','1',bravoFile]);
       execFileSync('ffmpeg',['-nostdin','-v','error','-y','-i',alphaFile,'-i',bravoFile,'-filter_complex','[0:v]scale=640:360:flags=lanczos[a];[1:v]scale=640:360:flags=lanczos[b];[a][b]hstack=inputs=2[v]','-map','[v]','-frames:v','1',pairFile]);
       const files={alpha:path.relative(output,alphaFile),bravo:path.relative(output,bravoFile),pair:path.relative(output,pairFile),sha256:{alpha:sha256(alphaFile),bravo:sha256(bravoFile),pair:sha256(pairFile)}};
-      const record={case_id:spec.id,scene_id:spec.scene_id,scene_name:spec.scene,building_id:spec.building_id,building_name:spec.building,relative_angle_deg:spec.angle_deg,focus,occluder:{block:'minecraft:dirt',position:occluder,aperture_frame:'minecraft:polished_deepslate',required_break_count:1},precondition:{alpha_building_visible:false,bravo_building_visible:true},actual,files,gt_collected:false,inference_run:false};
+      const record={case_id:spec.id,scene_id:spec.scene_id,scene_name:spec.scene,building_id:spec.building_id,building_name:spec.building,relative_angle_deg:spec.angle_deg,focus,occluder:{block:'minecraft:dirt',position:occluder,aperture_frame:'minecraft:polished_deepslate',required_break_count:1,requested_alpha_eye_to_block_center_distance:Math.hypot(3.5,0.12),within_survival_reach:true},precondition:{alpha_building_visible:false,bravo_building_visible:true},actual,files,gt_collected:false,inference_run:false};
       fs.writeFileSync(path.join(caseDir,'capture.json'),JSON.stringify(record,null,2)+'\n'); records.push(record); console.log(`Captured ${spec.id}: ${spec.scene} / ${spec.building} / ${spec.angle_deg}°`);
     }
     fs.writeFileSync(path.join(output,'capture_manifest.json'),JSON.stringify({schema_version:'mwb.v3.building_reveal.first_frames.v1',source:'native Minecraft clients after RCON-only case initialization',candidate_only:true,game_modified:false,gt_collected:false,inference_run:false,resolution_each:[1280,720],pair_resolution:[1280,360],records},null,2)+'\n');
