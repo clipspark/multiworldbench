@@ -43,9 +43,8 @@ sys.path.insert(0, str(REPO))
 from controller.multiworldbench_v3.metrics import (  # noqa: E402
     cross_view_structural_coherence as structural_metric,
     id_consistency as id_metric,
-    interaction_fidelity as interaction_metric,
+    shared_interaction_consistency as interaction_metric,
     race_condition_consistency as race_metric,
-    shared_state_synchronization as sync_metric,
     spatial_reasoning as spatial_metric,
     style_consistency as style_metric,
 )
@@ -61,10 +60,7 @@ SPATIAL_PROMPT = (
     "with exactly {\"occluder_removed\":0 or 1,\"target_revealed\":0 or 1,\"same_building_gt\":0 or 1}."
 )
 SPATIAL_KEYS = ("occluder_removed", "target_revealed", "same_building_gt")
-INTERACTION_KEYS = (
-    "actor_execution", "target_location_correct", "non_target_clean",
-    "placement_material_correct", "observer_sync", "location_consistency",
-)
+INTERACTION_KEYS = interaction_metric.OUTPUT_KEYS
 
 
 def load(path: Path) -> Any:
@@ -136,7 +132,7 @@ def gt_video(group: str, index: int, role: str) -> Path:
 
 def solaris_video(group: str, index: int, role: str) -> Path:
     case = {
-        "interaction": f"MWB3-S-IF{index + 1:02d}",
+        "interaction": f"MWB3-S-SI{index + 1:02d}",
         "structural": f"MWB3-S-ST{index + 1:02d}",
         "spatial": f"MWB3-S-SR{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}",
@@ -149,7 +145,7 @@ def evidence_frame(model: str, group: str, index: int, role: str, frame: int) ->
     case_id = {
         "structural": f"MWB3-S-ST{index + 1:02d}", "spatial": f"MWB3-S-SR{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}", "revisit": f"MWB3-R-RV{index + 1:02d}",
-        "interaction": f"MWB3-S-IF{index + 1:02d}",
+        "interaction": f"MWB3-S-SI{index + 1:02d}",
     }[group]
     output = RUN / "evaluation" / "frames" / model / group / case_id / f"{role}_{frame:03d}.png"
     if model == "gt":
@@ -163,7 +159,7 @@ def evidence_frame(model: str, group: str, index: int, role: str, frame: int) ->
 
 
 def conditioning_frame(group: str, index: int, role: str) -> Path:
-    case_id = f"MWB3-SW-RC{index + 1:02d}" if group == "race" else f"MWB3-S-IF{index + 1:02d}"
+    case_id = f"MWB3-SW-RC{index + 1:02d}" if group == "race" else f"MWB3-S-SI{index + 1:02d}"
     source = ASSETS / group / case_id / "first_frame.png"
     return image_half(source, role, RUN / "evaluation" / "frames" / "conditioning" / group / case_id / f"{role}.png")
 
@@ -181,26 +177,7 @@ def request(request_id: str, metric: str, model: str, case_id: str, frame_or_pai
 
 
 def interaction_prompt(case: dict[str, Any]) -> str:
-    operation = case["operation"]
-    roles = ", ".join(case["active_roles"])
-    expected = ", ".join(f"{key}:{value}" for key, value in case["expected_after"].items())
-    material_rule = (
-        "placement_material_correct: every placed target block is visually coarse dirt as specified. "
-        if operation == "place" else
-        "placement_material_correct: return 1 because material correctness is not applicable to destruction. "
-    )
-    return (
-        "Judge one planned Minecraft shared-world interaction from four images. Images 1 and 2 are initial A and B; "
-        "Images 3 and 4 are generated A and B at the same post-action frame. The operation is " + operation +
-        "; active role(s): " + roles + "; expected final state: " + expected + ". "
-        "actor_execution: all active roles visibly completed the intended operation. target_location_correct: every "
-        "change is at the pre-aimed target. non_target_clean: no unrelated visible blocks were changed. " + material_rule +
-        "observer_sync: the non-acting view, or both views when both act, shows the same resulting world state. "
-        "location_consistency: both views place the result at the corresponding physical location. If evidence is "
-        "hidden or unclear, answer 0. Return ONLY JSON with exactly "
-        '{"actor_execution":0 or 1,"target_location_correct":0 or 1,"non_target_clean":0 or 1,'
-        '"placement_material_correct":0 or 1,"observer_sync":0 or 1,"location_consistency":0 or 1}.'
-    )
+    return interaction_metric.build_prompt(case)
 
 
 def prepare() -> None:
@@ -248,7 +225,7 @@ def prepare() -> None:
                 requests.append(request(f"id_{model}_{index+1:02d}_{pair_id}", "id_consistency", model, case_id, pair_id, images, id_metric.PROMPT, id_metric.OUTPUT_KEYS,
                                         {"native_frames": [initial, returned], "generated_frames": [generated_initial, generated_returned]}))
     # GT-free interaction/shared-state pilot remains diagnostic for both models.
-    interaction_cases = load(REPO / "MultiWorldBench/v3/cases/shared_world/interaction_fidelity.json")["cases"]
+    interaction_cases = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_interaction_consistency.json")["cases"]
     for model in ("solaris", "gamma"):
         for index, case in enumerate(interaction_cases):
             for frame in FRAMES["interaction"]:
@@ -429,18 +406,23 @@ def aggregate() -> None:
         aggregate["evidence_coverage"] = 1.0
         aggregate["strict_v3_evaluable"] = True
         output["id_consistency"][model] = {"cases": cases, "aggregate": aggregate}
-    # Diagnostic interaction evidence, shared by two high-level metrics.
-    interaction_config = load(REPO / "MultiWorldBench/v3/cases/shared_world/interaction_fidelity.json")["cases"]
-    output["interaction_fidelity"], output["shared_state_synchronization"] = {}, {}
+    # One strict shared-interaction score with two transparent diagnostics.
+    interaction_config = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_interaction_consistency.json")["cases"]
+    output["shared_interaction_consistency"] = {}
     for model in ("solaris", "gamma"):
-        interaction_rows, sync_rows = [], []
+        interaction_rows = []
         for index, case in enumerate(interaction_config):
             frames = [by_id[f"interaction_{model}_{index+1:02d}_{frame}"] for frame in FRAMES["interaction"]]
             voted = {key: majority(frames, key) for key in INTERACTION_KEYS}
-            irow = interaction_metric.score_case({"operation": case["operation"], **voted}); irow["case_id"] = case["case_id"]; irow["frames"] = frames; interaction_rows.append(irow)
-            srow = sync_metric.score_case(voted); srow["case_id"] = case["case_id"].replace("-IF", "-SS"); srow["frames"] = frames; sync_rows.append(srow)
-        output["interaction_fidelity"][model] = {"diagnostic_only": True, "cases": interaction_rows, "aggregate": interaction_metric.aggregate_cases(interaction_rows)}
-        output["shared_state_synchronization"][model] = {"diagnostic_only": True, "cases": sync_rows, "aggregate": sync_metric.aggregate_cases(sync_rows)}
+            row = interaction_metric.score_case({"operation": case["operation"], **voted})
+            row["case_id"] = case["case_id"]
+            row["frames"] = frames
+            interaction_rows.append(row)
+        output["shared_interaction_consistency"][model] = {
+            "diagnostic_only": True,
+            "cases": interaction_rows,
+            "aggregate": interaction_metric.aggregate_cases(interaction_rows),
+        }
     # Navigation is computed separately because it uses DPVO and dense optical
     # flow rather than the VLM.  Merge the self-contained V3 results here so a
     # single comparison artifact covers the complete benchmark.

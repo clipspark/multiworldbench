@@ -10,9 +10,8 @@ from controller.multiworldbench_v3.metrics import (
     coordination_fairness,
     cross_view_structural_coherence,
     id_consistency,
-    interaction_fidelity,
+    shared_interaction_consistency,
     race_condition_consistency,
-    shared_state_synchronization,
     spatial_reasoning,
     style_consistency,
 )
@@ -74,27 +73,41 @@ class MetricTests(unittest.TestCase):
         self.assertAlmostEqual(response["path_length"], 3.0)
         self.assertAlmostEqual(response["normalized_path_deviation"], 0.0)
 
-    def test_interaction_strict_product(self):
-        passed = interaction_fidelity.score_case({
+    def test_shared_interaction_strict_product_and_diagnostics(self):
+        complete = {
             "operation": "place", "actor_execution": 1,
             "target_location_correct": 1, "non_target_clean": 1,
-            "placement_material_correct": 1,
-        })
-        failed = interaction_fidelity.score_case({
-            "operation": "place", "actor_execution": 1,
-            "target_location_correct": 1, "non_target_clean": 0,
-            "placement_material_correct": 1,
-        })
+            "placement_material_correct": 1, "observer_sync": 1,
+            "location_consistency": 1,
+        }
+        passed = shared_interaction_consistency.score_case(complete)
         self.assertEqual(passed["score"], 1)
-        self.assertEqual(failed["score"], 0)
-
-    def test_sync_actor_gate_and_missing(self):
+        self.assertEqual(passed["diagnostic_subscores"], {
+            "interaction_correctness": 1, "cross_view_synchronization": 1,
+        })
+        interaction_failure = shared_interaction_consistency.score_case({
+            **complete, "non_target_clean": 0,
+        })
+        self.assertEqual(interaction_failure["score"], 0)
         self.assertEqual(
-            shared_state_synchronization.score_case({"actor_execution": 0})["score"], 0
+            interaction_failure["diagnostic_subscores"]["interaction_correctness"], 0
         )
-        value = shared_state_synchronization.score_case({"actor_execution": 1})
+        sync_failure = shared_interaction_consistency.score_case({
+            **complete, "observer_sync": 0,
+        })
+        self.assertEqual(sync_failure["score"], 0)
+        self.assertEqual(
+            sync_failure["diagnostic_subscores"]["cross_view_synchronization"], 0
+        )
+
+    def test_shared_interaction_missing_and_schema(self):
+        value = shared_interaction_consistency.score_case({"actor_execution": 1})
         self.assertIsNone(value["score"])
         self.assertEqual(value["status"], "not_evaluable")
+        valid = {key: 1 for key in shared_interaction_consistency.OUTPUT_KEYS}
+        self.assertEqual(shared_interaction_consistency.validate_output(valid), valid)
+        with self.assertRaises(ValueError):
+            shared_interaction_consistency.validate_output({**valid, "extra": 1})
 
     def test_structural_exact_schema_and_majority(self):
         rows = [

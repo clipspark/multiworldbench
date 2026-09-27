@@ -22,8 +22,7 @@ NAMES = {
     "control_isolation": "控制隔离度",
     "coordination_fairness": "协同公平性",
     "cross_view_motion_consistency": "跨视角运动一致性",
-    "interaction_fidelity": "因果交互正确性",
-    "shared_state_synchronization": "共享状态同步性",
+    "shared_interaction_consistency": "共享交互一致性",
     "cross_view_structural_coherence": "跨视角结构一致性",
     "spatial_reasoning": "空间推理能力",
     "race_condition_consistency": "竞态条件一致性",
@@ -35,7 +34,7 @@ GROUPS = {
     "spatial": ("空间推理能力", "MWB3-S-SR"),
     "race": ("竞态条件一致性", "MWB3-SW-RC"),
     "revisit": ("回访风格 / ID 一致性", "MWB3-R-RV"),
-    "interaction": ("交互与共享状态（诊断）", "MWB3-S-IF"),
+    "interaction": ("共享交互一致性（诊断）", "MWB3-S-SI"),
 }
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 

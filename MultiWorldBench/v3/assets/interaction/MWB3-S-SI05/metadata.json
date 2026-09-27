@@ -1,15 +1,15 @@
 {
   "schema_version": "mwb.v3.asset.v1",
-  "case_id": "MWB3-S-IF02",
+  "case_id": "MWB3-S-SI05",
   "group": "interaction",
   "self_contained": true,
   "has_native_gt": false,
   "files_sha256": {
     "action_left.json": "4c27b2410f8bc427c45b4d039ce2e778d2ff14392a71f94e019fe9f6ff4b1420",
-    "action_right.json": "9a53d3dd77f2c0a4af51fe06c39951dea03662e782967f5aab7d00b9188f4d7a",
+    "action_right.json": "26fd7f6813e8cad56d85e74a865ed1146fe4d16db3df70795543868ba4b5aa5b",
     "alpha_actions.json": "bb1341396523701fbbe268d030422bb51230a323b41e4745998035782bcd7074",
-    "bravo_actions.json": "294c327ed4829e68a71992aacdf920ae16d2168cbfc08a3fab196f9b8a238548",
-    "first_frame.png": "26bc730d93da756d91a0831cb1b1420cac2101f80beb190c09891c2d398f9ebd",
+    "bravo_actions.json": "86902f090547dbb62f11b4d4f6095ced269c33b18341f812ad7ecc12ea27ef4b",
+    "first_frame.png": "b8ca92c61c66367f2fcd9ab3122becf0ab92d3e2fe215739bd126b3617010b04",
     "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
   }
 }

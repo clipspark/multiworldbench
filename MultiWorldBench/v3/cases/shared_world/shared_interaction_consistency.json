@@ -12,14 +12,14 @@
   },
   "cases": [
     {
-      "case_id": "MWB3-S-SS01",
-      "id": "MWB3-S-SS01",
+      "case_id": "MWB3-S-SI01",
+      "id": "MWB3-S-SI01",
       "operation": "place",
       "active_roles": [
         "alpha"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -42,7 +42,7 @@
       "expected_after": {
         "alpha": "minecraft:coarse_dirt"
       },
-      "independence_group": "MWB3-S-SS01",
+      "independence_group": "MWB3-S-SI01",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -105,14 +105,14 @@
       }
     },
     {
-      "case_id": "MWB3-S-SS02",
-      "id": "MWB3-S-SS02",
+      "case_id": "MWB3-S-SI02",
+      "id": "MWB3-S-SI02",
       "operation": "place",
       "active_roles": [
         "bravo"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -135,7 +135,7 @@
       "expected_after": {
         "bravo": "minecraft:coarse_dirt"
       },
-      "independence_group": "MWB3-S-SS02",
+      "independence_group": "MWB3-S-SI02",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -198,15 +198,15 @@
       }
     },
     {
-      "case_id": "MWB3-S-SS03",
-      "id": "MWB3-S-SS03",
+      "case_id": "MWB3-S-SI03",
+      "id": "MWB3-S-SI03",
       "operation": "place",
       "active_roles": [
         "alpha",
         "bravo"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -230,7 +230,7 @@
         "alpha": "minecraft:coarse_dirt",
         "bravo": "minecraft:coarse_dirt"
       },
-      "independence_group": "MWB3-S-SS03",
+      "independence_group": "MWB3-S-SI03",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -293,14 +293,14 @@
       }
     },
     {
-      "case_id": "MWB3-S-SS04",
-      "id": "MWB3-S-SS04",
+      "case_id": "MWB3-S-SI04",
+      "id": "MWB3-S-SI04",
       "operation": "destroy",
       "active_roles": [
         "alpha"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -323,7 +323,7 @@
       "expected_after": {
         "alpha": "minecraft:air"
       },
-      "independence_group": "MWB3-S-SS04",
+      "independence_group": "MWB3-S-SI04",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -386,14 +386,14 @@
       }
     },
     {
-      "case_id": "MWB3-S-SS05",
-      "id": "MWB3-S-SS05",
+      "case_id": "MWB3-S-SI05",
+      "id": "MWB3-S-SI05",
       "operation": "destroy",
       "active_roles": [
         "bravo"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -416,7 +416,7 @@
       "expected_after": {
         "bravo": "minecraft:air"
       },
-      "independence_group": "MWB3-S-SS05",
+      "independence_group": "MWB3-S-SI05",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -479,15 +479,15 @@
       }
     },
     {
-      "case_id": "MWB3-S-SS06",
-      "id": "MWB3-S-SS06",
+      "case_id": "MWB3-S-SI06",
+      "id": "MWB3-S-SI06",
       "operation": "destroy",
       "active_roles": [
         "alpha",
         "bravo"
       ],
       "metrics": [
-        "shared_state_synchronization"
+        "shared_interaction_consistency"
       ],
       "scene": "preaim_interactions",
       "fps": 20,
@@ -511,7 +511,7 @@
         "alpha": "minecraft:air",
         "bravo": "minecraft:air"
       },
-      "independence_group": "MWB3-S-SS06",
+      "independence_group": "MWB3-S-SI06",
       "initial_conditions": {
         "alpha": {
           "pose": {
@@ -582,12 +582,29 @@
     "Single-event isolation supersedes earlier multi-round navigation design for this pilot."
   ],
   "benchmark_version": "3",
-  "metric_id": "shared_state_synchronization",
+  "metric_id": "shared_interaction_consistency",
   "ranking_ready": false,
   "evidence_fields": [
     "actor_execution",
+    "target_location_correct",
+    "non_target_clean",
+    "placement_material_correct",
     "observer_sync",
     "location_consistency"
   ],
-  "actor_success_gate": true
+  "metric_name": "共享交互一致性",
+  "diagnostic_subscores": {
+    "interaction_correctness": [
+      "actor_execution",
+      "target_location_correct",
+      "non_target_clean",
+      "placement_material_correct"
+    ],
+    "cross_view_synchronization": [
+      "actor_execution",
+      "observer_sync",
+      "location_consistency"
+    ]
+  },
+  "aggregation": "strict_product_all_six_components"
 }

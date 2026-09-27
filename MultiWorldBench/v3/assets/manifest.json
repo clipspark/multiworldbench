@@ -4,40 +4,40 @@
   "case_count": 74,
   "cases": [
     {
-      "case_id": "MWB3-S-IF01",
+      "case_id": "MWB3-S-SI01",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF01",
-      "metadata_sha256": "f3bacdbae1446496fb4a67c09ff5dac677fbbd6288983de3cb764274f8cf38de"
+      "directory": "assets/interaction/MWB3-S-SI01",
+      "metadata_sha256": "a1b3575e1e24710047b2fe6385935d87eb9e6cdddbcce0473e9980b8f44cc5aa"
     },
     {
-      "case_id": "MWB3-S-IF02",
+      "case_id": "MWB3-S-SI02",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF02",
-      "metadata_sha256": "2a6697aec144942e06d7ac7def6df74a499acce102578f7f1b750df7315612d7"
+      "directory": "assets/interaction/MWB3-S-SI02",
+      "metadata_sha256": "95bcfb77264f81978284c36544cf51cc61235e8096e0d5f455ce2c8d2302a1fe"
     },
     {
-      "case_id": "MWB3-S-IF03",
+      "case_id": "MWB3-S-SI03",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF03",
-      "metadata_sha256": "dc9cd080f977ed88572fecbb59f67174d5759685a98a7a6829ce2e179f434995"
+      "directory": "assets/interaction/MWB3-S-SI03",
+      "metadata_sha256": "f32681b2ffbc97ff6dd793ec713775b04411cfc640ed61632d784e3c4c64eddb"
     },
     {
-      "case_id": "MWB3-S-IF04",
+      "case_id": "MWB3-S-SI04",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF04",
-      "metadata_sha256": "fc594812ed3ce584395df2e669af4ac278b55eae0866acf0e6647b98a750969c"
+      "directory": "assets/interaction/MWB3-S-SI04",
+      "metadata_sha256": "52177df19f5c229c3dfb695d0947cf9a788f28b8774057439f896f7acf2983a1"
     },
     {
-      "case_id": "MWB3-S-IF05",
+      "case_id": "MWB3-S-SI05",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF05",
-      "metadata_sha256": "cfb67184d9b82eeab7e86bb6e3e6adc6c1ee6628946fc54bb64367ff18a4c808"
+      "directory": "assets/interaction/MWB3-S-SI05",
+      "metadata_sha256": "8905f392c01c84d6964737c33e5f5e39ae1e69e0162ed22182516c03e238c165"
     },
     {
-      "case_id": "MWB3-S-IF06",
+      "case_id": "MWB3-S-SI06",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-IF06",
-      "metadata_sha256": "b4324257e27d8ff9aaaff772731efdd9b13451b8f57aa3c8564ccef152ef323c"
+      "directory": "assets/interaction/MWB3-S-SI06",
+      "metadata_sha256": "a22bec92728a79332265beb1ef42cb6707bd52eedc7625168fcfd565a09c34b2"
     },
     {
       "case_id": "MWB3-N-CI01A",
