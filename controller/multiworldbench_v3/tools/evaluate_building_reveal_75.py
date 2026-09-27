@@ -79,13 +79,21 @@ def judge(shard:int,shards:int,max_memory:int,model_filter:str|None=None)->None:
         content=[{'type':'text','text':row['prompt']}]
         for i,p in enumerate(row['images'],1):content.extend([{'type':'text','text':f'Image {i}'},{'type':'image','image':p}])
         messages=[{'role':'user','content':content}];attempts=[];measurement=None
-        for _ in range(2):
+        for attempt_index in range(3):
             start=time.time();chat=worker.processor.apply_chat_template(messages,tokenize=False,add_generation_prompt=True);images,videos=process_vision_info(messages);inputs=worker.processor(text=[chat],images=images,videos=videos,padding=True,return_tensors='pt').to(worker.input_device)
-            with torch.inference_mode():generated=worker.model.generate(**inputs,max_new_tokens=120,do_sample=False,use_cache=True)
+            # The third attempt is a fixed-seed, low-temperature fallback for
+            # rare deterministic decoder degeneration (for example, a stream
+            # of punctuation with no JSON object). The failed deterministic
+            # attempts remain in the evidence file.
+            sampling=attempt_index==2
+            torch.manual_seed(12345)
+            kwargs={'max_new_tokens':120,'do_sample':sampling,'use_cache':True}
+            if sampling:kwargs.update({'temperature':0.2,'top_p':0.9,'top_k':20})
+            with torch.inference_mode():generated=worker.model.generate(**inputs,**kwargs)
             raw=worker.processor.batch_decode(generated[:,inputs.input_ids.shape[1]:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0].strip()
             try:measurement=parse(raw,tuple(row['keys']));error=None
             except Exception as exc:error=repr(exc)
-            attempts.append({'raw':raw,'error':error,'seconds':round(time.time()-start,3)});del inputs,generated;torch.cuda.empty_cache()
+            attempts.append({'raw':raw,'error':error,'seconds':round(time.time()-start,3),'sampling_fallback':sampling});del inputs,generated;torch.cuda.empty_cache()
             if error is None:break
             messages.extend([{'role':'assistant','content':raw},{'role':'user','content':'Return only the requested JSON object with exactly the specified integer 0/1 fields.'}])
         dump(dest,{'request':row,'attempts':attempts,'measurement':measurement});print(row['request_id'],measurement,flush=True);complete+=1
