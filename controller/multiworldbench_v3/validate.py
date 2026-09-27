@@ -154,6 +154,79 @@ def validate(project_root: Path) -> dict[str, Any]:
         counts[item["id"]] = len(cases)
         statuses[item["id"]] = item["status"]
 
+
+    navigation_path = v3 / "cases/navigation/navigation_visibility_suite.json"
+    navigation = _load(navigation_path)
+    expected_actions = {"idle", "forward", "back", "left", "look_left"}
+    if navigation.get("schema_version") != "mwb.v3.navigation_visibility_suite.v2":
+        raise ValueError("navigation suite must use the balanced joint-metric schema")
+    if navigation.get("case_count") != 180:
+        raise ValueError("navigation suite must contain 180 cases")
+
+    navigation_groups: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    for case in navigation["cases"]:
+        key = (case["visibility_class"], case["scene"]["scene_id"])
+        navigation_groups.setdefault(key, []).append(case)
+        if case.get("round_count") != 5 or len(case.get("turns", [])) != 5:
+            raise ValueError(f"navigation case must contain five rounds: {case['case_id']}")
+        if len(case.get("phase_ranges", [])) != 5:
+            raise ValueError(f"navigation case lacks five phase ranges: {case['case_id']}")
+        for role in ("alpha", "bravo"):
+            action_ids = [turn[role].get("action_id") for turn in case["turns"]]
+            if set(action_ids) != expected_actions or len(action_ids) != 5:
+                raise ValueError(
+                    f"navigation case does not expose all five actions for {role}: "
+                    f"{case['case_id']} {action_ids}"
+                )
+
+    if len(navigation_groups) != 18:
+        raise ValueError("navigation suite must cover 3 visibility classes x 6 scenes")
+    for group_key, cases in navigation_groups.items():
+        if len(cases) != 10:
+            raise ValueError(f"navigation group must contain ten cases: {group_key}")
+        families = {
+            role: [case for case in cases if case.get("fixed_role") == role]
+            for role in ("alpha", "bravo")
+        }
+        if any(len(rows) != 5 for rows in families.values()):
+            raise ValueError(f"navigation group lacks two five-case directions: {group_key}")
+        for fixed_role, rows in families.items():
+            variable_role = "bravo" if fixed_role == "alpha" else "alpha"
+            fixed_schedules = [
+                [turn[fixed_role]["action_id"] for turn in case["turns"]]
+                for case in rows
+            ]
+            if len({tuple(schedule) for schedule in fixed_schedules}) != 1:
+                raise ValueError(f"fixed-role history differs inside {group_key}/{fixed_role}")
+            for turn_index in range(5):
+                fixed_levels = {
+                    case["turns"][turn_index][fixed_role]["action_id"]
+                    for case in rows
+                }
+                variable_levels = {
+                    case["turns"][turn_index][variable_role]["action_id"]
+                    for case in rows
+                }
+                if len(fixed_levels) != 1 or variable_levels != expected_actions:
+                    raise ValueError(
+                        f"unbalanced intervention matrix: "
+                        f"{group_key}/{fixed_role}/round{turn_index + 1}"
+                    )
+
+    role_action_counts = {
+        role: {
+            action_id: sum(
+                turn[role]["action_id"] == action_id
+                for case in navigation["cases"]
+                for turn in case["turns"]
+            )
+            for action_id in expected_actions
+        }
+        for role in ("alpha", "bravo")
+    }
+    if role_action_counts["alpha"] != role_action_counts["bravo"]:
+        raise ValueError(f"navigation fairness samples are not role-balanced: {role_action_counts}")
+
     structural_path = v3 / "cases/shared_world/cross_view_structural_coherence.json"
     structural = _load(structural_path)
     if [question["id"] for question in structural["vlm_questions"]] != [

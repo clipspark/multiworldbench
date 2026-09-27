@@ -32,7 +32,7 @@
       "implementation": "controller.multiworldbench_v3.metrics.control_isolation",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 balanced joint-evaluation schedules (5 A-fixed + 5 B-fixed)"
     },
     {
       "id": "coordination_fairness",
@@ -46,7 +46,7 @@
       "definition": "A/B 在同类导航动作下的移动距离、路径长度、轨迹偏离和航向变化分布一致性",
       "relative_pose_required": false,
       "shared_case_suite": true,
-      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 balanced joint-evaluation schedules (5 A-fixed + 5 B-fixed)"
     },
     {
       "id": "cross_view_motion_consistency",
@@ -58,7 +58,7 @@
       "implementation": "controller.multiworldbench_v3.metrics.cross_view_motion_consistency",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 multi-round action schedules"
+      "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 balanced joint-evaluation schedules (5 A-fixed + 5 B-fixed)"
     },
     {
       "id": "interaction_fidelity",
