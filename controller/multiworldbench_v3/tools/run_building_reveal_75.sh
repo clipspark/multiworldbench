@@ -53,8 +53,10 @@ PY
 echo "[$(date -Is)] inputs_ready"
 
 start_solaris(){
-  local i=$1 gpu=$2 shard raw
+  local i=$1 gpu=$2 shard raw samples
   shard=$(printf '%02d' "$i"); raw="$RUN/models/solaris/raw/shard_$shard"; mkdir -p "$raw"
+  samples=$(find "$RUN/prepared/solaris/shard_$shard/dataset/test" -mindepth 1 -maxdepth 1 -type d | wc -l)
+  test "$samples" -gt 0
   (
     cd "$SOLARIS"
     CUDA_VISIBLE_DEVICES="$gpu" OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 \
@@ -63,7 +65,7 @@ start_solaris(){
       experiment_name="mwb3_building_reveal_75_s$shard" \
       device.eval_data_dir="$RUN/prepared/solaris/shard_$shard/dataset" \
       device.output_dir="$raw" device.pretrained_model_dir="$SOLARIS/pretrained" \
-      device.eval_num_samples="$MAX_SHARD" runner.num_frames_eval="$FRAMES" \
+      device.eval_num_samples="$samples" runner.num_frames_eval="$FRAMES" \
       runner.params.eval_dataloader_config.params.batch_size=1 \
       runner.params.eval_dataloader_config.params.num_workers=0 \
       enable_jax_cache=true device.jax_cache_dir=/data2/xuzhangbo/.cache/solaris-jax \
