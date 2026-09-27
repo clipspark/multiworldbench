@@ -63,7 +63,7 @@ def parse(raw:str,keys:tuple[str,...])->dict[str,int]:
     if not all(type(v[k]) is int and v[k] in (0,1) for k in keys):raise ValueError(f'binary integers required: {v}')
     return {k:v[k] for k in keys}
 
-def judge(shard:int,shards:int,max_memory:int,model_filter:str|None=None)->None:
+def judge(shard:int,shards:int,max_memory:int,model_filter:str|None=None,checkpoint:Path=QWEN)->None:
     import torch
     from qwen_vl_utils import process_vision_info
     sys.path.insert(0,'/data2/xuzhangbo/multihuman-animate/solaris/vlm_eval')
@@ -71,7 +71,7 @@ def judge(shard:int,shards:int,max_memory:int,model_filter:str|None=None)->None:
     rows=load(RUN/'evaluation/requests.json')
     if model_filter is not None:rows=[row for row in rows if row['model']==model_filter]
     selected=[r for i,r in enumerate(rows) if i%shards==shard]
-    worker=QwenJudge(QWEN,120,384*28*28,'balanced',max_memory,'sdpa');torch.manual_seed(12345);outdir=RUN/'evaluation/vlm'
+    worker=QwenJudge(checkpoint,120,384*28*28,'balanced',max_memory,'sdpa');torch.manual_seed(12345);outdir=RUN/'evaluation/vlm'
     complete=0
     for row in selected:
         dest=outdir/f"{row['request_id']}.json"
@@ -95,7 +95,7 @@ def judge(shard:int,shards:int,max_memory:int,model_filter:str|None=None)->None:
             attempts.append({'raw':raw,'error':error,'seconds':round(time.time()-start,3),'beam_fallback':beam_fallback});del inputs,generated;torch.cuda.empty_cache()
             if error is None:break
             messages.extend([{'role':'assistant','content':raw},{'role':'user','content':'Return only the requested JSON object with exactly the specified integer 0/1 fields.'}])
-        dump(dest,{'request':row,'attempts':attempts,'measurement':measurement});print(row['request_id'],measurement,flush=True);complete+=1
+        dump(dest,{'request':row,'judge_checkpoint':str(checkpoint),'attempts':attempts,'measurement':measurement});print(row['request_id'],measurement,flush=True);complete+=1
     dump(RUN/'evaluation'/f'judge_shard_{shard:02d}_of_{shards:02d}.json',{'completed':complete,'total':len(selected),'cuda':os.environ.get('CUDA_VISIBLE_DEVICES')})
 
 def aggregate()->None:
@@ -129,8 +129,8 @@ def aggregate()->None:
     dump(RUN/'comparison/scores.json',output);dump(RUN/'evaluation/complete.json',{'status':'complete','requests':len(requests)});print(json.dumps({k:{m:v['aggregate'] for m,v in models.items()} for k,models in output.items() if isinstance(models,dict) and 'solaris' in models},ensure_ascii=False,indent=2))
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('mode',choices=('prepare','judge','aggregate'));p.add_argument('--shard-index',type=int,default=0);p.add_argument('--num-shards',type=int,default=1);p.add_argument('--max-memory-gib',type=int,default=43);p.add_argument('--model-filter',choices=('solaris','gamma'));a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('mode',choices=('prepare','judge','aggregate'));p.add_argument('--shard-index',type=int,default=0);p.add_argument('--num-shards',type=int,default=1);p.add_argument('--max-memory-gib',type=int,default=43);p.add_argument('--model-filter',choices=('solaris','gamma'));p.add_argument('--checkpoint',type=Path,default=QWEN);a=p.parse_args()
     if a.mode=='prepare':prepare()
-    elif a.mode=='judge':judge(a.shard_index,a.num_shards,a.max_memory_gib,a.model_filter)
+    elif a.mode=='judge':judge(a.shard_index,a.num_shards,a.max_memory_gib,a.model_filter,a.checkpoint)
     else:aggregate()
 if __name__=='__main__':main()
