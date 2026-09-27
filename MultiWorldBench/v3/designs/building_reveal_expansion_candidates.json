@@ -10,14 +10,15 @@
     "total_cases": 125
   },
   "shared_protocol": {
-    "alpha_position_radius_blocks": 7,
-    "bravo_position_radius_blocks": 10,
+    "alpha_position_radius_blocks": 12.55,
+    "bravo_position_radius_blocks": 18,
     "alpha_initial_view": "building fully hidden by one standardized dirt occluder",
-    "bravo_initial_view": "building visible and recognizable",
+    "bravo_initial_view": "building visible and recognizable; CameraAlpha visible in the same frame",
     "action": "alpha destroys the dirt occluder; bravo remains stationary",
-    "common_preconditions": ["occluder_removed", "target_revealed"],
+    "common_preconditions": ["bravo_sees_alpha_and_building", "occluder_removed", "target_revealed"],
     "cross_view_questions": ["same_building_gt", "same_building_ab"],
-    "spatial_dependency": "reuse cross_view_structural_coherence.same_building_gt"
+    "spatial_dependency": "reuse cross_view_structural_coherence.same_building_gt",
+    "observer_visibility_requirement": "stationary observer CameraBravo must see CameraAlpha and the building simultaneously in the initial frame"
   },
   "scenes": [
     {
@@ -119,10 +120,50 @@
     }
   ],
   "relative_view_angles": [
-    {"angle_id": "MWB3-RV-AN30", "delta_azimuth_deg": 30, "label": "同侧小夹角", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [5.0, -8.66], "alpha_yaw_deg": 0, "bravo_yaw_deg": 30},
-    {"angle_id": "MWB3-RV-AN60", "delta_azimuth_deg": 60, "label": "同象限斜视", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [8.66, -5.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 60},
-    {"angle_id": "MWB3-RV-AN90", "delta_azimuth_deg": 90, "label": "正交侧视", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [10.0, 0.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 90},
-    {"angle_id": "MWB3-RV-AN120", "delta_azimuth_deg": 120, "label": "钝角跨面", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [8.66, 5.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 120},
-    {"angle_id": "MWB3-RV-AN150", "delta_azimuth_deg": 150, "label": "近对侧观察", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [5.0, 8.66], "alpha_yaw_deg": 0, "bravo_yaw_deg": 150}
+    {
+      "angle_id": "MWB3-RV-AN20",
+      "delta_azimuth_deg": 20,
+      "label": "同侧近邻观察",
+      "alpha_relative_position": [0.0, -12.55],
+      "bravo_relative_position": [6.16, -16.91],
+      "observer_role": "CameraBravo",
+      "observer_sees": "CameraAlpha and building"
+    },
+    {
+      "angle_id": "MWB3-RV-AN25",
+      "delta_azimuth_deg": 25,
+      "label": "同侧小夹角 I",
+      "alpha_relative_position": [0.0, -12.55],
+      "bravo_relative_position": [7.61, -16.31],
+      "observer_role": "CameraBravo",
+      "observer_sees": "CameraAlpha and building"
+    },
+    {
+      "angle_id": "MWB3-RV-AN30",
+      "delta_azimuth_deg": 30,
+      "label": "同侧小夹角 II",
+      "alpha_relative_position": [0.0, -12.55],
+      "bravo_relative_position": [9.0, -15.59],
+      "observer_role": "CameraBravo",
+      "observer_sees": "CameraAlpha and building"
+    },
+    {
+      "angle_id": "MWB3-RV-AN35",
+      "delta_azimuth_deg": 35,
+      "label": "同侧斜视 I",
+      "alpha_relative_position": [0.0, -12.55],
+      "bravo_relative_position": [10.32, -14.74],
+      "observer_role": "CameraBravo",
+      "observer_sees": "CameraAlpha and building"
+    },
+    {
+      "angle_id": "MWB3-RV-AN40",
+      "delta_azimuth_deg": 40,
+      "label": "同侧斜视 II",
+      "alpha_relative_position": [0.0, -12.55],
+      "bravo_relative_position": [11.57, -13.79],
+      "observer_role": "CameraBravo",
+      "observer_sees": "CameraAlpha and building"
+    }
   ]
 }

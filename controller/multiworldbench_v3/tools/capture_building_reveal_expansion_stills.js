@@ -13,11 +13,11 @@ const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 const sha256 = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 
 const candidates = [
-  { id:'MWB3-RV-C01', scene_id:'MWB3-RV-SC01', scene:'云杉峡谷工场', building_id:'MWB3-RV-BL01', building:'偏置水轮磨坊', angle_deg:30, ground:'grass_block', sceneBuild:buildSpruceCanyon, buildingBuild:buildMill },
-  { id:'MWB3-RV-C02', scene_id:'MWB3-RV-SC02', scene:'砂岩峡谷绿洲', building_id:'MWB3-RV-BL02', building:'高低双塔门楼', angle_deg:60, ground:'sand', sceneBuild:buildOasis, buildingBuild:buildGatehouse },
-  { id:'MWB3-RV-C03', scene_id:'MWB3-RV-SC03', scene:'雪原玄武岩采石场', building_id:'MWB3-RV-BL03', building:'阶梯星象台', angle_deg:90, ground:'snow_block', sceneBuild:buildSnowQuarry, buildingBuild:buildObservatory },
-  { id:'MWB3-RV-C04', scene_id:'MWB3-RV-SC04', scene:'红树林潮汐码头', building_id:'MWB3-RV-BL04', building:'高脚信号屋', angle_deg:120, ground:'mud', sceneBuild:buildMangroveDock, buildingBuild:buildSignalHouse },
-  { id:'MWB3-RV-C05', scene_id:'MWB3-RV-SC05', scene:'恶地化石发掘营', building_id:'MWB3-RV-BL05', building:'锯齿顶铸造厂', angle_deg:150, ground:'red_sand', sceneBuild:buildBadlandsDig, buildingBuild:buildFoundry },
+  { id:'MWB3-RV-C01', scene_id:'MWB3-RV-SC01', scene:'云杉峡谷工场', building_id:'MWB3-RV-BL01', building:'偏置水轮磨坊', angle_deg:20, ground:'grass_block', sceneBuild:buildSpruceCanyon, buildingBuild:buildMill },
+  { id:'MWB3-RV-C02', scene_id:'MWB3-RV-SC02', scene:'砂岩峡谷绿洲', building_id:'MWB3-RV-BL02', building:'高低双塔门楼', angle_deg:25, ground:'sand', sceneBuild:buildOasis, buildingBuild:buildGatehouse },
+  { id:'MWB3-RV-C03', scene_id:'MWB3-RV-SC03', scene:'雪原玄武岩采石场', building_id:'MWB3-RV-BL03', building:'阶梯星象台', angle_deg:30, ground:'snow_block', sceneBuild:buildSnowQuarry, buildingBuild:buildObservatory },
+  { id:'MWB3-RV-C04', scene_id:'MWB3-RV-SC04', scene:'红树林潮汐码头', building_id:'MWB3-RV-BL04', building:'高脚信号屋', angle_deg:35, ground:'mud', sceneBuild:buildMangroveDock, buildingBuild:buildSignalHouse },
+  { id:'MWB3-RV-C05', scene_id:'MWB3-RV-SC05', scene:'恶地化石发掘营', building_id:'MWB3-RV-BL05', building:'锯齿顶铸造厂', angle_deg:40, ground:'red_sand', sceneBuild:buildBadlandsDig, buildingBuild:buildFoundry },
 ];
 
 function aimPose(origin, focus) {
@@ -193,6 +193,9 @@ async function main() {
       const focus=[cx+0.5,68,2.5];
       const alpha=[cx+0.5,64,-10.05];
       const rad=spec.angle_deg*Math.PI/180,bravo=[cx+0.5+18*Math.sin(rad),64,2.5-18*Math.cos(rad)];
+      // B is the stationary observer. Aim between the building center and A's
+      // eye position so both remain comfortably inside B's initial frame.
+      const bravoFocus=[cx+0.5,66.81,-3.775];
       // A single dirt block seals a one-block observation aperture. The frame
       // prevents tall buildings from leaking around the occluder; breaking the
       // dirt is still the only reveal action required by the case.
@@ -201,7 +204,8 @@ async function main() {
       await send('clear CameraAlpha'); await send('clear CameraBravo');
       const actual={};
       for (const [role,name,position] of [['alpha','CameraAlpha',alpha],['bravo','CameraBravo',bravo]]) {
-        const rotation=aimPose(position,focus); await send(`tp ${name} ${position.join(' ')} ${rotation.yaw} ${rotation.pitch}`); await wait(800);
+        const roleFocus=role==='bravo'?bravoFocus:focus;
+        const rotation=aimPose(position,roleFocus); await send(`tp ${name} ${position.join(' ')} ${rotation.yaw} ${rotation.pitch}`); await wait(800);
         actual[role]={requested:{position,yaw:rotation.yaw,pitch:rotation.pitch},server_position:await send(`data get entity ${name} Pos`),server_rotation:await send(`data get entity ${name} Rotation`),on_ground:await send(`data get entity ${name} OnGround`)};
       }
       await wait(3500);
@@ -210,7 +214,7 @@ async function main() {
       execFileSync('ffmpeg',['-nostdin','-v','error','-y','-f','x11grab','-video_size','1280x720','-i',':131.0','-frames:v','1',bravoFile]);
       execFileSync('ffmpeg',['-nostdin','-v','error','-y','-i',alphaFile,'-i',bravoFile,'-filter_complex','[0:v]scale=640:360:flags=lanczos[a];[1:v]scale=640:360:flags=lanczos[b];[a][b]hstack=inputs=2[v]','-map','[v]','-frames:v','1',pairFile]);
       const files={alpha:path.relative(output,alphaFile),bravo:path.relative(output,bravoFile),pair:path.relative(output,pairFile),sha256:{alpha:sha256(alphaFile),bravo:sha256(bravoFile),pair:sha256(pairFile)}};
-      const record={case_id:spec.id,scene_id:spec.scene_id,scene_name:spec.scene,building_id:spec.building_id,building_name:spec.building,relative_angle_deg:spec.angle_deg,focus,occluder:{block:'minecraft:dirt',position:occluder,aperture_frame:'minecraft:polished_deepslate',required_break_count:1},precondition:{alpha_building_visible:false,bravo_building_visible:true},actual,files,gt_collected:false,inference_run:false};
+      const record={case_id:spec.id,scene_id:spec.scene_id,scene_name:spec.scene,building_id:spec.building_id,building_name:spec.building,relative_angle_deg:spec.angle_deg,focus,bravo_focus:bravoFocus,occluder:{block:'minecraft:dirt',position:occluder,aperture_frame:'minecraft:polished_deepslate',required_break_count:1},precondition:{alpha_building_visible:false,bravo_building_visible:true,bravo_sees_alpha:true},actual,files,gt_collected:false,inference_run:false};
       fs.writeFileSync(path.join(caseDir,'capture.json'),JSON.stringify(record,null,2)+'\n'); records.push(record); console.log(`Captured ${spec.id}: ${spec.scene} / ${spec.building} / ${spec.angle_deg}°`);
     }
     fs.writeFileSync(path.join(output,'capture_manifest.json'),JSON.stringify({schema_version:'mwb.v3.building_reveal.first_frames.v1',source:'native Minecraft clients after RCON-only case initialization',candidate_only:true,game_modified:false,gt_collected:false,inference_run:false,resolution_each:[1280,720],pair_resolution:[1280,360],records},null,2)+'\n');
