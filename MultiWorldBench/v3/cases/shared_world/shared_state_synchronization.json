@@ -1,6 +1,6 @@
 {
   "schema_version": "mwb.v3.case_set.v1",
-  "case_count": 3,
+  "case_count": 6,
   "fps": 20,
   "formal_score": false,
   "gt_collected": false,
@@ -291,24 +291,324 @@
           }
         }
       }
+    },
+    {
+      "case_id": "MWB3-S-SS04",
+      "id": "MWB3-S-SS04",
+      "operation": "destroy",
+      "active_roles": [
+        "alpha"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "alpha": "minecraft:air"
+      },
+      "independence_group": "MWB3-S-SS04",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 15.64224645720879,
+            "aim_point": [
+              620.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 4.153841595439095,
+            "active": true,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
+            "aim_point": [
+              620.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 5.123904761019667,
+            "active": false,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-S-SS05",
+      "id": "MWB3-S-SS05",
+      "operation": "destroy",
+      "active_roles": [
+        "bravo"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "bravo": "minecraft:air"
+      },
+      "independence_group": "MWB3-S-SS05",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
+            "aim_point": [
+              623.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 5.123904761019667,
+            "active": false,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 15.64224645720879,
+            "aim_point": [
+              623.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 4.153841595439095,
+            "active": true,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-S-SS06",
+      "id": "MWB3-S-SS06",
+      "operation": "destroy",
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "alpha": "minecraft:air",
+        "bravo": "minecraft:air"
+      },
+      "independence_group": "MWB3-S-SS06",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 15.64224645720879,
+            "aim_point": [
+              620.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 4.153841595439095,
+            "active": true,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 15.64224645720879,
+            "aim_point": [
+              623.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 4.153841595439095,
+            "active": true,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        }
+      }
     }
   ],
-  "limitations": [
-    "Initial pose and inventory are engine setup, not formal recorded actions.",
-    "Generated scene/inventory may drift; one-item initial inventory does not guarantee one generated placement.",
-    "Single-event isolation supersedes earlier multi-round navigation design for this pilot.",
-    "Only placement cases are eligible because the fourth question explicitly evaluates placed-block material."
-  ],
+  "limitations": "Placement and destruction are scored separately. Material is evaluated only for placement. Native GT has not yet been collected.",
   "benchmark_version": "3",
   "metric_id": "shared_state_synchronization",
   "ranking_ready": false,
-  "evidence_fields": [
-    "actor_placement_success",
-    "same_placement_state",
-    "same_target_location",
-    "same_expected_material"
-  ],
+  "evidence_fields": {
+    "common": [
+      "action_success",
+      "same_block_count",
+      "same_target_location"
+    ],
+    "placement_only": [
+      "same_expected_material"
+    ],
+    "destruction_material_evaluated": false
+  },
   "metric_name": "共享状态同步性",
-  "aggregation": "additive_four_binary_questions",
-  "max_score": 4
+  "aggregation": "operation_specific_normalization_then_macro_mean",
+  "score_definition": {
+    "placement": {
+      "questions": 4,
+      "normalization": "sum / 4"
+    },
+    "destruction": {
+      "questions": 3,
+      "normalization": "sum / 3",
+      "material_question": false
+    },
+    "score_range": [
+      0,
+      1
+    ],
+    "aggregation": "compute placement and destruction means separately, then macro-average the available operation means"
+  },
+  "score_range": [
+    0,
+    1
+  ]
 }

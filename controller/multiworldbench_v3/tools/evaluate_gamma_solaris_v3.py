@@ -60,7 +60,6 @@ SPATIAL_PROMPT = (
     "with exactly {\"occluder_removed\":0 or 1,\"target_revealed\":0 or 1,\"same_building_gt\":0 or 1}."
 )
 SPATIAL_KEYS = ("occluder_removed", "target_revealed", "same_building_gt")
-INTERACTION_KEYS = sync_metric.OUTPUT_KEYS
 
 
 def load(path: Path) -> Any:
@@ -230,7 +229,7 @@ def prepare() -> None:
         for index, case in enumerate(interaction_cases):
             for frame in FRAMES["interaction"]:
                 images = [conditioning_frame("interaction", index, "alpha"), conditioning_frame("interaction", index, "bravo"), evidence_frame(model, "interaction", index, "alpha", frame), evidence_frame(model, "interaction", index, "bravo", frame)]
-                requests.append(request(f"interaction_{model}_{index+1:02d}_{frame}", "shared_state_synchronization_diagnostic", model, case["case_id"], frame, images, interaction_prompt(case), INTERACTION_KEYS, {"operation": case["operation"]}))
+                requests.append(request(f"interaction_{model}_{index+1:02d}_{frame}", "shared_state_synchronization_diagnostic", model, case["case_id"], frame, images, interaction_prompt(case), sync_metric.output_keys(case["operation"]), {"operation": case["operation"]}))
     for row in requests:
         row["image_sha256"] = [sha256(Path(path)) for path in row["images"]]
     dump(RUN / "evaluation" / "requests.json", requests)
@@ -406,14 +405,15 @@ def aggregate() -> None:
         aggregate["evidence_coverage"] = 1.0
         aggregate["strict_v3_evaluable"] = True
         output["id_consistency"][model] = {"cases": cases, "aggregate": aggregate}
-    # One four-question shared-state score.
+    # Operation-specific shared-state scores: placement has four questions; destruction has three.
     interaction_config = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json")["cases"]
     output["shared_state_synchronization"] = {}
     for model in ("solaris", "gamma"):
         interaction_rows = []
         for index, case in enumerate(interaction_config):
             frames = [by_id[f"interaction_{model}_{index+1:02d}_{frame}"] for frame in FRAMES["interaction"]]
-            voted = {key: majority(frames, key) for key in INTERACTION_KEYS}
+            keys = sync_metric.output_keys(case["operation"])
+            voted = {key: majority(frames, key) for key in keys}
             row = sync_metric.score_case({"operation": case["operation"], **voted})
             row["case_id"] = case["case_id"]
             row["frames"] = frames

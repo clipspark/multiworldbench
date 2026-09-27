@@ -1,7 +1,7 @@
 {
   "schema_version": "mwb.v3.assets.v1",
   "self_contained": true,
-  "case_count": 71,
+  "case_count": 74,
   "cases": [
     {
       "case_id": "MWB3-S-SS01",
@@ -20,6 +20,24 @@
       "group": "interaction",
       "directory": "assets/interaction/MWB3-S-SS03",
       "metadata_sha256": "af23ef37b4a4c8f94b64377cbc37dedd65c10aeb64485340e52b32413df14e16"
+    },
+    {
+      "case_id": "MWB3-S-SS04",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-SS04",
+      "metadata_sha256": "4f25e1398c9a3b9f8354d5806ab77d0a050e10f0596daa70c584176e6657e312"
+    },
+    {
+      "case_id": "MWB3-S-SS05",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-SS05",
+      "metadata_sha256": "7dccb9cc373e318e453a966b14f1fae58b88ff59f7af55027bcb0c9c53743b54"
+    },
+    {
+      "case_id": "MWB3-S-SS06",
+      "group": "interaction",
+      "directory": "assets/interaction/MWB3-S-SS06",
+      "metadata_sha256": "ec12d340844c56c72c37dd6cb021fa637b02d617dac65fd9275569fba07a2d00"
     },
     {
       "case_id": "MWB3-N-CI01A",

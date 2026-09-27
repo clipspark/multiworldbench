@@ -73,29 +73,48 @@ class MetricTests(unittest.TestCase):
         self.assertAlmostEqual(response["path_length"], 3.0)
         self.assertAlmostEqual(response["normalized_path_deviation"], 0.0)
 
-    def test_shared_state_four_point_additive_score(self):
-        complete = {key: 1 for key in shared_state_synchronization.OUTPUT_KEYS}
-        passed = shared_state_synchronization.score_case(complete)
-        self.assertEqual(passed["score"], 4)
-        self.assertEqual(passed["score_0_100"], 100)
-        partial = shared_state_synchronization.score_case({
-            **complete, "same_target_location": 0,
+    def test_shared_state_operation_normalization(self):
+        place = shared_state_synchronization.score_case({
+            "operation": "place",
+            **{key: 1 for key in shared_state_synchronization.PLACEMENT_KEYS},
+        })
+        self.assertEqual(place["raw_points"], 4)
+        self.assertEqual(place["score"], 1)
+        partial_place = shared_state_synchronization.score_case({
+            "operation": "place",
+            "action_success": 1,
+            "same_block_count": 1,
+            "same_target_location": 1,
             "same_expected_material": 0,
         })
-        self.assertEqual(partial["score"], 2)
-        self.assertEqual(partial["score_0_100"], 50)
-        aggregate = shared_state_synchronization.aggregate_cases([passed, partial])
-        self.assertEqual(aggregate["score_0_4"], 3)
-        self.assertEqual(aggregate["score_0_100"], 75)
+        self.assertEqual(partial_place["score"], 0.75)
+        destroy = shared_state_synchronization.score_case({
+            "operation": "destroy",
+            "action_success": 1,
+            "same_block_count": 1,
+            "same_target_location": 0,
+        })
+        self.assertAlmostEqual(destroy["score"], 2 / 3)
+        self.assertNotIn("same_expected_material", destroy["questions"])
+        aggregate = shared_state_synchronization.aggregate_cases([place, partial_place, destroy])
+        self.assertEqual(aggregate["operation_scores"]["place"]["score"], 0.875)
+        self.assertAlmostEqual(aggregate["operation_scores"]["destroy"]["score"], 2 / 3)
+        self.assertAlmostEqual(aggregate["score"], (0.875 + 2 / 3) / 2)
 
-    def test_shared_state_missing_and_schema(self):
-        value = shared_state_synchronization.score_case({"actor_placement_success": 1})
+    def test_shared_state_missing_and_operation_schema(self):
+        value = shared_state_synchronization.score_case({
+            "operation": "destroy", "action_success": 1,
+        })
         self.assertIsNone(value["score"])
         self.assertEqual(value["status"], "not_evaluable")
-        valid = {key: 1 for key in shared_state_synchronization.OUTPUT_KEYS}
-        self.assertEqual(shared_state_synchronization.validate_output(valid), valid)
+        place = {key: 1 for key in shared_state_synchronization.PLACEMENT_KEYS}
+        destroy = {key: 1 for key in shared_state_synchronization.DESTRUCTION_KEYS}
+        self.assertEqual(shared_state_synchronization.validate_output(place, "place"), place)
+        self.assertEqual(shared_state_synchronization.validate_output(destroy, "destroy"), destroy)
         with self.assertRaises(ValueError):
-            shared_state_synchronization.validate_output({**valid, "extra": 1})
+            shared_state_synchronization.validate_output({**destroy, "same_expected_material": 1}, "destroy")
+        with self.assertRaises(ValueError):
+            shared_state_synchronization.score_case({"operation": "move"})
 
     def test_structural_exact_schema_and_majority(self):
         rows = [

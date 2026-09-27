@@ -65,14 +65,14 @@
       "name": "共享状态同步性",
       "status": "implemented",
       "case_file": "cases/shared_world/shared_state_synchronization.json",
-      "case_count": 3,
+      "case_count": 6,
       "implementation": "controller.multiworldbench_v3.metrics.shared_state_synchronization",
       "ranking_ready": false,
       "score_range": [
         0,
-        4
+        1
       ],
-      "aggregation": "sum_of_four_binary_questions"
+      "aggregation": "placement sum/4 and destruction sum/3; macro-mean of operation scores"
     },
     {
       "id": "cross_view_structural_coherence",
