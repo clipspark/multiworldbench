@@ -55,7 +55,7 @@ echo "[$(date -Is)] inputs_ready"
 start_solaris(){
   local i=$1 gpu=$2 shard raw samples
   shard=$(printf '%02d' "$i"); raw="$RUN/models/solaris/raw/shard_$shard"; mkdir -p "$raw"
-  samples=$(find "$RUN/prepared/solaris/shard_$shard/dataset/test" -mindepth 1 -maxdepth 1 -type d | wc -l)
+  samples=$(grep -cve '^[[:space:]]*$' "$RUN/prepared/solaris_lists/shard_$shard.txt")
   test "$samples" -gt 0
   (
     cd "$SOLARIS"
