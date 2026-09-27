@@ -13,13 +13,21 @@ const BUILDING_FOCUS_Y = 69;
 const scenes = candidates.map(({scene_id, scene, ground, sceneBuild}) => ({scene_id, scene, ground, sceneBuild}));
 const buildings = candidates.map(({building_id, building, buildingBuild}) => ({building_id, building, buildingBuild}));
 
-async function commandsFor(cx, scene, building) {
+async function commandsFor(cx, scene, building, alpha, bravo) {
   const commands = [];
   const send = async command => { commands.push(command); return ''; };
   const b = builder(send, cx);
   await base(b, scene.ground);
   await scene.sceneBuild(b);
   await building.buildingBuild(b);
+  // Keep both stationary cameras on deterministic ground. Some rich scenes
+  // contain rails or docks at the nominal orbit coordinates; a small local
+  // landing pad prevents collision push without changing game code.
+  for (const position of [alpha, bravo]) {
+    const px=Math.floor(position[0]-cx), pz=Math.floor(position[2]);
+    await b.fill(px-1,63,pz-1,px+1,63,pz+1,scene.ground);
+    await b.fill(px-1,64,pz-1,px+1,66,pz+1,'air');
+  }
   // One nearby dirt block hides the building before the action. There is no
   // surrounding aperture wall: removing this single block opens the complete
   // view rather than a one-block slit.
@@ -52,7 +60,7 @@ async function main() {
           scene_id:scene.scene_id,scene_name:scene.scene,
           building_id:building.building_id,building_name:building.building,
           relative_agent_angle_deg:angle,observer_radius:observerRadius,world_x_offset:cx,
-          setup_commands:await commandsFor(cx,scene,building),
+          setup_commands:await commandsFor(cx,scene,building,alpha,bravo),
           initial_poses:{
             alpha:{role:'actor',position:alpha,native_yaw_deg:alphaAim.yaw,native_pitch_deg:alphaAim.pitch,focus},
             bravo:{role:'stationary_observer',position:bravo,native_yaw_deg:bravoAim.yaw,native_pitch_deg:bravoAim.pitch,focus:bravoFocus}
