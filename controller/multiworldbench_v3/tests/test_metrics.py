@@ -10,6 +10,7 @@ from controller.multiworldbench_v3.metrics import (
     coordination_fairness,
     cross_view_structural_coherence,
     id_consistency,
+    shared_state_persistence,
     shared_state_synchronization,
     race_condition_consistency,
     spatial_reasoning,
@@ -136,6 +137,51 @@ class MetricTests(unittest.TestCase):
             shared_state_synchronization.validate_output({**destroy, "same_expected_material": 1}, "destroy")
         with self.assertRaises(ValueError):
             shared_state_synchronization.score_case({"operation": "move"})
+
+    def test_shared_state_persistence_strict_majority(self):
+        passed = shared_state_persistence.score_case([
+            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 1},
+            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
+            {"operator_observed_expected_change": 0, "returning_observer_observed_same_change": 1},
+        ])
+        self.assertEqual(passed["questions"], {
+            "operator_observed_expected_change": 1,
+            "returning_observer_observed_same_change": 1,
+        })
+        self.assertEqual(passed["score"], 1)
+        failed = shared_state_persistence.score_case([
+            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
+            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
+            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 1},
+        ])
+        self.assertEqual(failed["score"], 0)
+        with self.assertRaises(ValueError):
+            shared_state_persistence.validate_output({
+                "operator_observed_expected_change": 1,
+                "returning_observer_observed_same_change": 1,
+                "extra": 0,
+            })
+        with self.assertRaises(ValueError):
+            shared_state_persistence.score_case([])
+
+    def test_shared_state_persistence_prompt_and_macro_average(self):
+        prompt = shared_state_persistence.build_prompt({
+            "operation": "place",
+            "expected_change_count": 1,
+            "expected_after": {"target_cell": "minecraft:coarse_dirt"},
+            "reference_marker": {"center_material": "minecraft:red_concrete"},
+        })
+        self.assertIn("A after B has turned away", prompt)
+        self.assertIn("exactly 1 block", prompt)
+        self.assertIn("minecraft:coarse_dirt", prompt)
+        aggregate = shared_state_persistence.aggregate_cases([
+            {"operation": "place", "score": 1},
+            {"operation": "place", "score": 0},
+            {"operation": "destroy", "score": 1},
+        ])
+        self.assertEqual(aggregate["operation_scores"]["place"]["score"], 0.5)
+        self.assertEqual(aggregate["operation_scores"]["destroy"]["score"], 1.0)
+        self.assertEqual(aggregate["score"], 0.75)
 
     def test_structural_shared_preconditions_and_majority(self):
         rows = [

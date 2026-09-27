@@ -9,7 +9,7 @@
 - `aggregate_cases()`：聚合可评 case，并保留不可评状态。
 
 VLM 模块还公开固定的 `OUTPUT_SCHEMA`、`PROMPT` 和 `validate_output()`。
-`registry.py` 是九项实现注册表；`validate.py` 检查注册、ID、counter/角色互换关系、
+`registry.py` 是十项实现注册表；`validate.py` 检查注册、ID、counter/角色互换关系、
 帧位、回访可见性中断，并拒绝外部基准路径或跨版本引用。
 
 ## 共享建筑揭示 case

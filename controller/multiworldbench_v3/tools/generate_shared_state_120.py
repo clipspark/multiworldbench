@@ -60,7 +60,7 @@ def main():
             'reference_marker':{'shape':'ground_cross','center_cell':[tx,ty-1,tz],'target_support_cells':[[x,ty-1,z] for x,_,z in target_cells], 'center_material':scene['marker'],'arm_material':scene['cross'],'arm_radius_blocks':4},
             'scene_spec':{'origin':[tx,ty,tz],'floor_material':scene['floor'],'cross_material':scene['cross'],'marker_material':scene['marker'],'geometry_relative':scene['geometry'],'visibility_occluder':({'relative':[0,0,3,0,2,3],'material':'minecraft:polished_basalt'} if visibility=='none' else None)},
             'action_protocol':{'native_input':'X11_XTest','start_frame':10,'end_frame_exclusive':11 if operation=='place' else 18,'button':'right' if operation=='place' else 'left'},
-            'independence_group':f"{scene['scene_id']}:{visibility}:{interaction}",
+            'independence_group':f"MWB3-SS:{scene['scene_id']}:{visibility}:{interaction}",
           })
     suite={'schema_version':'mwb.v3.shared_state.case_set.v2','case_count':len(cases),'formal_score':True,'gt_collected':False,
       'selection':{'method':'fixed_balanced_sample','selected_candidates':[s['source_candidate'] for s in SELECTED],'seed':20260927},

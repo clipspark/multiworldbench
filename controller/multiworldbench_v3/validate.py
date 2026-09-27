@@ -340,6 +340,108 @@ def validate(project_root: Path) -> dict[str, Any]:
             if case["initial_conditions"][role]["pose"].get("target_cell") not in targets:
                 raise ValueError(f"shared-state role target is unmarked: {case['case_id']} {role}")
 
+    persistence_path = v3 / "cases/shared_world/shared_state_persistence.json"
+    persistence = _load(persistence_path)
+    if persistence.get("metric_id") != "shared_state_persistence":
+        raise ValueError("shared-state persistence metric binding changed")
+    if persistence.get("gt_collected") is not False:
+        raise ValueError("shared-state persistence design must remain uncollected")
+    if persistence.get("first_frames_materialized") is not False:
+        raise ValueError("shared-state persistence must not claim first-frame materialization")
+    if persistence.get("factorization") != {
+        "scenes": 5,
+        "operations": 2,
+        "turn_directions": 2,
+        "total": 20,
+    }:
+        raise ValueError("shared-state persistence factorization changed")
+    if persistence.get("score_protocol") != {
+        "questions": [
+            "operator_observed_expected_change",
+            "returning_observer_observed_same_change",
+        ],
+        "check_frames": [160, 170, 180],
+        "case_aggregation": "majority_per_question_then_strict_product",
+        "suite_aggregation": "macro_mean_of_place_and_destroy_case_pass_rates",
+    }:
+        raise ValueError("shared-state persistence score protocol changed")
+    expected_persistence_cells = {
+        (scene, operation, variant)
+        for scene in {case["scene"] for case in persistence["cases"]}
+        for operation in ("place", "destroy")
+        for variant in (0, 1)
+    }
+    actual_persistence_cells = {
+        (case["scene"], case["operation"], case["variant"])
+        for case in persistence["cases"]
+    }
+    if (
+        len(persistence.get("cases", [])) != 20
+        or len({case["scene"] for case in persistence["cases"]}) != 5
+        or actual_persistence_cells != expected_persistence_cells
+    ):
+        raise ValueError("shared-state persistence factorial cells are incomplete")
+    for case in persistence["cases"]:
+        case_id = case["case_id"]
+        if case.get("roles") != {
+            "operator": "bravo",
+            "returning_observer": "alpha",
+        }:
+            raise ValueError(f"invalid persistence roles: {case_id}")
+        if case.get("expected_change_count") != 1:
+            raise ValueError(f"persistence must change exactly one block: {case_id}")
+        if case.get("num_frames") != 181 or case.get("valid_num_frames") != 181:
+            raise ValueError(f"invalid persistence frame count: {case_id}")
+        phases = case.get("timeline", [])
+        cursor = 0
+        for phase in phases:
+            _check_range(phase.get("range"), 181, f"{case_id}.{phase.get('phase')}")
+            if phase["range"][0] != cursor:
+                raise ValueError(f"persistence timeline has a gap or overlap: {case_id}")
+            cursor = phase["range"][1]
+        if cursor != 181:
+            raise ValueError(f"persistence timeline does not cover all frames: {case_id}")
+        phase_by_name = {phase["phase"]: phase for phase in phases}
+        if phase_by_name["joint_observe"]["range"] != [0, 20]:
+            raise ValueError(f"invalid joint-observation range: {case_id}")
+        operate = phase_by_name["bravo_operates"]
+        expected_operation_range = [60, 61] if case["operation"] == "place" else [60, 68]
+        expected_action = "use_once" if case["operation"] == "place" else "hold_attack"
+        if operate["range"] != expected_operation_range or operate["bravo"].get("action") != expected_action:
+            raise ValueError(f"invalid persistence operation: {case_id}")
+        alpha_turn = phase_by_name["alpha_turns_away"]["alpha"].get("total_delta_deg")
+        alpha_return = phase_by_name["alpha_returns"]["alpha"].get("total_delta_deg")
+        if alpha_turn not in (-110, 110) or alpha_return != -alpha_turn:
+            raise ValueError(f"alpha return does not cancel turn-away yaw: {case_id}")
+        if phase_by_name["bravo_turns_away"]["bravo"].get("total_delta_deg") != -alpha_turn:
+            raise ValueError(f"bravo turn-away direction changed: {case_id}")
+        if case.get("evidence_frames") != {
+            "joint_initial": 10,
+            "operator_post_action": 80,
+            "returning_observer_checks": [160, 170, 180],
+        }:
+            raise ValueError(f"invalid persistence evidence frames: {case_id}")
+        contract = case.get("visibility_contract", {})
+        for key in (
+            "alpha_target_hidden_range",
+            "bravo_target_hidden_range",
+            "both_target_hidden_range",
+        ):
+            _check_range(contract.get(key), 181, f"{case_id}.{key}")
+        if (
+            contract.get("both_see_target_initially") is not True
+            or contract.get("alpha_returns_to_initial_yaw") is not True
+            or contract.get("minimum_contiguous_hidden_frames") != 20
+            or contract.get("both_target_hidden_range") != [110, 130]
+        ):
+            raise ValueError(f"invalid persistence visibility contract: {case_id}")
+        marker = case.get("reference_marker", {})
+        if marker.get("shape") != "ground_cross" or not marker.get("center_material"):
+            raise ValueError(f"persistence case lacks colored ground cross: {case_id}")
+        reuse = case.get("first_frame_reuse", {})
+        if reuse.get("runtime_dependency") is not False:
+            raise ValueError(f"persistence case must be runtime-independent: {case_id}")
+
     race_path = v3 / "cases/shared_world/race_condition_consistency.json"
     race = _load(race_path)
     if race.get("gt_collected") is not False or race.get("evaluation_uses_gt") is not False:
@@ -412,7 +514,7 @@ def validate(project_root: Path) -> dict[str, Any]:
         "status": "valid",
         "self_contained": True,
         "external_benchmark_dependencies": 0,
-        "metric_count": len(ids),
+        "metric_count": len(METRIC_IDS),
         "case_set_count": len(manifest["metrics"]),
         "unique_case_count": len(all_case_ids),
         "case_counts": counts,

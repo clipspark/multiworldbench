@@ -11,6 +11,7 @@
     ],
     "shared_world": [
       "shared_state_synchronization",
+      "shared_state_persistence",
       "cross_view_structural_coherence",
       "spatial_reasoning",
       "race_condition_consistency"
@@ -75,6 +76,23 @@
       "aggregation": "placement sum/4 and destruction sum/3; macro-mean of operation scores",
       "suite_definition": "5 geometry-rich scenes × 3 visibility classes × 4 interaction types × 2 variants",
       "gt_collected": true
+    },
+    {
+      "id": "shared_state_persistence",
+      "domain": "shared_world",
+      "name": "共享状态持久性",
+      "status": "implemented_uncollected",
+      "case_file": "cases/shared_world/shared_state_persistence.json",
+      "case_count": 20,
+      "implementation": "controller.multiworldbench_v3.metrics.shared_state_persistence",
+      "ranking_ready": false,
+      "score_range": [
+        0,
+        1
+      ],
+      "aggregation": "majority per binary question across frames 160/170/180, strict product per case, macro-mean of placement and destruction pass rates",
+      "suite_definition": "5 geometry-rich scenes × 2 operations × 2 turn-away directions",
+      "gt_collected": false
     },
     {
       "id": "cross_view_structural_coherence",

@@ -1,5 +1,6 @@
 {
   "schema_version": "mwb.v3.shared_state.case_set.v2",
+  "metric_id": "shared_state_synchronization",
   "case_count": 120,
   "formal_score": true,
   "gt_collected": true,
@@ -213,7 +214,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:mutual:single_place"
+      "independence_group": "MWB3-SS:grass_oak:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS002",
@@ -394,7 +395,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:mutual:single_place"
+      "independence_group": "MWB3-SS:grass_oak:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS003",
@@ -575,7 +576,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:mutual:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS004",
@@ -756,7 +757,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:mutual:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS005",
@@ -948,7 +949,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:mutual:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS006",
@@ -1140,7 +1141,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:mutual:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS007",
@@ -1332,7 +1333,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS008",
@@ -1524,7 +1525,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS009",
@@ -1705,7 +1706,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:one_way:single_place"
+      "independence_group": "MWB3-SS:grass_oak:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS010",
@@ -1886,7 +1887,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:one_way:single_place"
+      "independence_group": "MWB3-SS:grass_oak:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS011",
@@ -2067,7 +2068,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:one_way:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS012",
@@ -2248,7 +2249,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:one_way:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS013",
@@ -2440,7 +2441,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:one_way:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS014",
@@ -2632,7 +2633,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:one_way:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS015",
@@ -2824,7 +2825,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS016",
@@ -3016,7 +3017,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS017",
@@ -3207,7 +3208,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:none:single_place"
+      "independence_group": "MWB3-SS:grass_oak:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS018",
@@ -3398,7 +3399,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:none:single_place"
+      "independence_group": "MWB3-SS:grass_oak:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS019",
@@ -3589,7 +3590,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:none:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS020",
@@ -3780,7 +3781,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:none:single_destroy"
+      "independence_group": "MWB3-SS:grass_oak:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS021",
@@ -3982,7 +3983,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:none:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS022",
@@ -4184,7 +4185,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "grass_oak:none:dual_place"
+      "independence_group": "MWB3-SS:grass_oak:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS023",
@@ -4386,7 +4387,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:none:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS024",
@@ -4588,7 +4589,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "grass_oak:none:dual_destroy"
+      "independence_group": "MWB3-SS:grass_oak:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS025",
@@ -4769,7 +4770,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:mutual:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS026",
@@ -4950,7 +4951,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:mutual:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS027",
@@ -5131,7 +5132,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:mutual:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS028",
@@ -5312,7 +5313,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:mutual:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS029",
@@ -5504,7 +5505,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:mutual:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS030",
@@ -5696,7 +5697,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:mutual:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS031",
@@ -5888,7 +5889,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS032",
@@ -6080,7 +6081,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS033",
@@ -6261,7 +6262,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:one_way:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS034",
@@ -6442,7 +6443,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:one_way:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS035",
@@ -6623,7 +6624,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:one_way:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS036",
@@ -6804,7 +6805,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:one_way:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS037",
@@ -6996,7 +6997,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:one_way:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS038",
@@ -7188,7 +7189,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:one_way:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS039",
@@ -7380,7 +7381,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS040",
@@ -7572,7 +7573,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS041",
@@ -7763,7 +7764,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:none:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS042",
@@ -7954,7 +7955,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:none:single_place"
+      "independence_group": "MWB3-SS:sandstone_court:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS043",
@@ -8145,7 +8146,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:none:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS044",
@@ -8336,7 +8337,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:none:single_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS045",
@@ -8538,7 +8539,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:none:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS046",
@@ -8740,7 +8741,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "sandstone_court:none:dual_place"
+      "independence_group": "MWB3-SS:sandstone_court:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS047",
@@ -8942,7 +8943,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:none:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS048",
@@ -9144,7 +9145,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "sandstone_court:none:dual_destroy"
+      "independence_group": "MWB3-SS:sandstone_court:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS049",
@@ -9325,7 +9326,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:mutual:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS050",
@@ -9506,7 +9507,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:mutual:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS051",
@@ -9687,7 +9688,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:mutual:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS052",
@@ -9868,7 +9869,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:mutual:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS053",
@@ -10060,7 +10061,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:mutual:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS054",
@@ -10252,7 +10253,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:mutual:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS055",
@@ -10444,7 +10445,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS056",
@@ -10636,7 +10637,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS057",
@@ -10817,7 +10818,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:one_way:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS058",
@@ -10998,7 +10999,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:one_way:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS059",
@@ -11179,7 +11180,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:one_way:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS060",
@@ -11360,7 +11361,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:one_way:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS061",
@@ -11552,7 +11553,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:one_way:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS062",
@@ -11744,7 +11745,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:one_way:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS063",
@@ -11936,7 +11937,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS064",
@@ -12128,7 +12129,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS065",
@@ -12319,7 +12320,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:none:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS066",
@@ -12510,7 +12511,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:none:single_place"
+      "independence_group": "MWB3-SS:stone_plaza:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS067",
@@ -12701,7 +12702,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:none:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS068",
@@ -12892,7 +12893,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:none:single_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS069",
@@ -13094,7 +13095,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:none:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS070",
@@ -13296,7 +13297,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "stone_plaza:none:dual_place"
+      "independence_group": "MWB3-SS:stone_plaza:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS071",
@@ -13498,7 +13499,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:none:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS072",
@@ -13700,7 +13701,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "stone_plaza:none:dual_destroy"
+      "independence_group": "MWB3-SS:stone_plaza:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS073",
@@ -13881,7 +13882,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:mutual:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS074",
@@ -14062,7 +14063,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:mutual:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS075",
@@ -14243,7 +14244,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:mutual:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS076",
@@ -14424,7 +14425,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:mutual:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS077",
@@ -14616,7 +14617,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:mutual:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS078",
@@ -14808,7 +14809,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:mutual:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS079",
@@ -15000,7 +15001,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS080",
@@ -15192,7 +15193,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS081",
@@ -15373,7 +15374,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:one_way:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS082",
@@ -15554,7 +15555,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:one_way:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS083",
@@ -15735,7 +15736,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:one_way:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS084",
@@ -15916,7 +15917,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:one_way:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS085",
@@ -16108,7 +16109,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:one_way:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS086",
@@ -16300,7 +16301,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:one_way:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS087",
@@ -16492,7 +16493,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS088",
@@ -16684,7 +16685,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS089",
@@ -16875,7 +16876,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:none:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS090",
@@ -17066,7 +17067,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:none:single_place"
+      "independence_group": "MWB3-SS:tuff_copper:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS091",
@@ -17257,7 +17258,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:none:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS092",
@@ -17448,7 +17449,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:none:single_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS093",
@@ -17650,7 +17651,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:none:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS094",
@@ -17852,7 +17853,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "tuff_copper:none:dual_place"
+      "independence_group": "MWB3-SS:tuff_copper:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS095",
@@ -18054,7 +18055,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:none:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS096",
@@ -18256,7 +18257,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "tuff_copper:none:dual_destroy"
+      "independence_group": "MWB3-SS:tuff_copper:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS097",
@@ -18437,7 +18438,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:mutual:single_place"
+      "independence_group": "MWB3-SS:snow_ice:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS098",
@@ -18618,7 +18619,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:mutual:single_place"
+      "independence_group": "MWB3-SS:snow_ice:mutual:single_place"
     },
     {
       "case_id": "MWB3-S-SS099",
@@ -18799,7 +18800,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:mutual:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS100",
@@ -18980,7 +18981,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:mutual:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:mutual:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS101",
@@ -19172,7 +19173,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:mutual:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS102",
@@ -19364,7 +19365,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:mutual:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:mutual:dual_place"
     },
     {
       "case_id": "MWB3-S-SS103",
@@ -19556,7 +19557,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS104",
@@ -19748,7 +19749,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:mutual:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:mutual:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS105",
@@ -19929,7 +19930,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:one_way:single_place"
+      "independence_group": "MWB3-SS:snow_ice:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS106",
@@ -20110,7 +20111,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:one_way:single_place"
+      "independence_group": "MWB3-SS:snow_ice:one_way:single_place"
     },
     {
       "case_id": "MWB3-S-SS107",
@@ -20291,7 +20292,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:one_way:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS108",
@@ -20472,7 +20473,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:one_way:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:one_way:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS109",
@@ -20664,7 +20665,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:one_way:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS110",
@@ -20856,7 +20857,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:one_way:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:one_way:dual_place"
     },
     {
       "case_id": "MWB3-S-SS111",
@@ -21048,7 +21049,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS112",
@@ -21240,7 +21241,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:one_way:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:one_way:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS113",
@@ -21431,7 +21432,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:none:single_place"
+      "independence_group": "MWB3-SS:snow_ice:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS114",
@@ -21622,7 +21623,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:none:single_place"
+      "independence_group": "MWB3-SS:snow_ice:none:single_place"
     },
     {
       "case_id": "MWB3-S-SS115",
@@ -21813,7 +21814,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:none:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS116",
@@ -22004,7 +22005,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:none:single_destroy"
+      "independence_group": "MWB3-SS:snow_ice:none:single_destroy"
     },
     {
       "case_id": "MWB3-S-SS117",
@@ -22206,7 +22207,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:none:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS118",
@@ -22408,7 +22409,7 @@
         "end_frame_exclusive": 11,
         "button": "right"
       },
-      "independence_group": "snow_ice:none:dual_place"
+      "independence_group": "MWB3-SS:snow_ice:none:dual_place"
     },
     {
       "case_id": "MWB3-S-SS119",
@@ -22610,7 +22611,7 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:none:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:none:dual_destroy"
     },
     {
       "case_id": "MWB3-S-SS120",
@@ -22812,9 +22813,9 @@
         "end_frame_exclusive": 18,
         "button": "left"
       },
-      "independence_group": "snow_ice:none:dual_destroy"
+      "independence_group": "MWB3-SS:snow_ice:none:dual_destroy"
     }
   ],
-  "gt_run": "/data2/xuzhangbo/MultiWorldBench-runs/shared_state_120_20260927_v1",
+  "gt_run": "outputs/shared_state_synchronization_gt",
   "limitations": "Placement and destruction are evaluated separately and normalized to [0,1]. Material is evaluated only for placement. All formal actions are native X11 XTest inputs; RCON is used only for scene setup and validation."
 }

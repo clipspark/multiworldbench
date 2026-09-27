@@ -1,0 +1,6232 @@
+{
+  "schema_version": "mwb.v3.shared_state_persistence.case_set.v1",
+  "metric_id": "shared_state_persistence",
+  "name_zh": "共享状态持久性",
+  "case_count": 20,
+  "formal_score": true,
+  "gt_collected": false,
+  "first_frames_materialized": false,
+  "factorization": {
+    "scenes": 5,
+    "operations": 2,
+    "turn_directions": 2,
+    "total": 20
+  },
+  "design": "A and B jointly observe; A turns away; B changes one block; B turns away; A returns and verifies the persistent state",
+  "score_protocol": {
+    "questions": [
+      "operator_observed_expected_change",
+      "returning_observer_observed_same_change"
+    ],
+    "check_frames": [
+      160,
+      170,
+      180
+    ],
+    "case_aggregation": "majority_per_question_then_strict_product",
+    "suite_aggregation": "macro_mean_of_place_and_destroy_case_pass_rates"
+  },
+  "frame_range_convention": "half_open_[start,end)",
+  "cases": [
+    {
+      "case_id": "MWB3-S-SP001",
+      "id": "MWB3-S-SP001",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "operation": "place",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8998.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9000.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9000,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9002.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9000.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9000,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9000,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9000,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9000,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:grass_oak:place"
+    },
+    {
+      "case_id": "MWB3-S-SP002",
+      "id": "MWB3-S-SP002",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "operation": "place",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9046.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9048.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9048,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9050.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9048.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9048,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9048,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9048,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9048,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:grass_oak:place"
+    },
+    {
+      "case_id": "MWB3-S-SP003",
+      "id": "MWB3-S-SP003",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "operation": "destroy",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9094.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9096.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9096,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9098.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9096.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9096,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9096,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9096,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9096,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:grass_oak:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP004",
+      "id": "MWB3-S-SP004",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "operation": "destroy",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9142.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9144.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9144,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9146.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9144.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9144,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9144,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9144,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9144,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:grass_oak:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP005",
+      "id": "MWB3-S-SP005",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "operation": "place",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9190.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9192.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9192,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9194.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9192.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9192,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9192,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9192,
+          90,
+          0
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9192,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:sandstone_court:place"
+    },
+    {
+      "case_id": "MWB3-S-SP006",
+      "id": "MWB3-S-SP006",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "operation": "place",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9238.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9240.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9240,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9242.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9240.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9240,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9240,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9240,
+          90,
+          0
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9240,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:sandstone_court:place"
+    },
+    {
+      "case_id": "MWB3-S-SP007",
+      "id": "MWB3-S-SP007",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "operation": "destroy",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9286.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9288.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9288,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9290.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9288.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9288,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9288,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9288,
+          90,
+          0
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9288,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:sandstone_court:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP008",
+      "id": "MWB3-S-SP008",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "operation": "destroy",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9334.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9336.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9336,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9338.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9336.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9336,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9336,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9336,
+          90,
+          0
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9336,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:sandstone_court:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP009",
+      "id": "MWB3-S-SP009",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "operation": "place",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9382.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9384.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9384,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9386.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9384.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9384,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9384,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9384,
+          90,
+          0
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9384,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:stone_plaza:place"
+    },
+    {
+      "case_id": "MWB3-S-SP010",
+      "id": "MWB3-S-SP010",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "operation": "place",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9430.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9432.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9432,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9434.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9432.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9432,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9432,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9432,
+          90,
+          0
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9432,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:stone_plaza:place"
+    },
+    {
+      "case_id": "MWB3-S-SP011",
+      "id": "MWB3-S-SP011",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "operation": "destroy",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9478.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9480.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9480,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9482.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9480.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9480,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9480,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9480,
+          90,
+          0
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9480,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:stone_plaza:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP012",
+      "id": "MWB3-S-SP012",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "operation": "destroy",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9526.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9528.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9528,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9530.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9528.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9528,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9528,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9528,
+          90,
+          0
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9528,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:stone_plaza:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP013",
+      "id": "MWB3-S-SP013",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "operation": "place",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9574.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9576.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9576,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9578.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9576.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9576,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9576,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9576,
+          90,
+          0
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9576,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:tuff_copper:place"
+    },
+    {
+      "case_id": "MWB3-S-SP014",
+      "id": "MWB3-S-SP014",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "operation": "place",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9622.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9624.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9624,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9626.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9624.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9624,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9624,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9624,
+          90,
+          0
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9624,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:tuff_copper:place"
+    },
+    {
+      "case_id": "MWB3-S-SP015",
+      "id": "MWB3-S-SP015",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "operation": "destroy",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9670.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9672.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9672,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9674.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9672.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9672,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9672,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9672,
+          90,
+          0
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9672,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:tuff_copper:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP016",
+      "id": "MWB3-S-SP016",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "operation": "destroy",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9718.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9720.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9720,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9722.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9720.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9720,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9720,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9720,
+          90,
+          0
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9720,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:tuff_copper:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP017",
+      "id": "MWB3-S-SP017",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "operation": "place",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9766.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9768.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9768,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9770.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9768.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9768,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9768,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9768,
+          90,
+          0
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9768,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:snow_ice:place"
+    },
+    {
+      "case_id": "MWB3-S-SP018",
+      "id": "MWB3-S-SP018",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "operation": "place",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9814.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9816.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9816,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9818.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 24.194724811376226,
+            "aim_point": [
+              9816.5,
+              91,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9816,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9816,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:air"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9816,
+          90,
+          0
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9816,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            61
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "use_once",
+            "button": "right"
+          }
+        },
+        {
+          "range": [
+            61,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:snow_ice:place"
+    },
+    {
+      "case_id": "MWB3-S-SP019",
+      "id": "MWB3-S-SP019",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "operation": "destroy",
+      "variant": 0,
+      "variant_description": "A turns right and B turns left",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9862.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9864.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9864,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9866.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9864.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9864,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9864,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9864,
+          90,
+          0
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9864,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:snow_ice:destroy"
+    },
+    {
+      "case_id": "MWB3-S-SP020",
+      "id": "MWB3-S-SP020",
+      "metrics": [
+        "shared_state_persistence"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "operation": "destroy",
+      "variant": 1,
+      "variant_description": "A turns left and B turns right",
+      "roles": {
+        "operator": "bravo",
+        "returning_observer": "alpha"
+      },
+      "fps": 20,
+      "num_frames": 181,
+      "valid_num_frames": 181,
+      "duration_seconds": 9.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9910.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": -146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9912.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9912,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9914.5,
+              91,
+              3.5
+            ],
+            "native_yaw_deg": 146.30993247402023,
+            "native_pitch_deg": 17.25647218338879,
+            "aim_point": [
+              9912.5,
+              91.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "target_cell": [
+              9912,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9912,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "expected_before": {
+        "target_cell": "minecraft:coarse_dirt"
+      },
+      "expected_after": {
+        "target_cell": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9912,
+          90,
+          0
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9912,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ]
+        ]
+      },
+      "timeline": [
+        {
+          "range": [
+            0,
+            20
+          ],
+          "phase": "joint_observe",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            20,
+            40
+          ],
+          "phase": "alpha_turns_away",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": -110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            40,
+            60
+          ],
+          "phase": "alpha_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            60,
+            68
+          ],
+          "phase": "bravo_operates",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "hold_attack",
+            "button": "left"
+          }
+        },
+        {
+          "range": [
+            68,
+            90
+          ],
+          "phase": "post_operation_settle",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            90,
+            110
+          ],
+          "phase": "bravo_turns_away",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          }
+        },
+        {
+          "range": [
+            110,
+            130
+          ],
+          "phase": "both_hidden_hold",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            130,
+            150
+          ],
+          "phase": "alpha_returns",
+          "alpha": {
+            "action": "camera_yaw",
+            "total_delta_deg": 110
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        },
+        {
+          "range": [
+            150,
+            181
+          ],
+          "phase": "alpha_reobserves",
+          "alpha": {
+            "action": "idle"
+          },
+          "bravo": {
+            "action": "idle"
+          }
+        }
+      ],
+      "native_action_protocol": {
+        "input": "X11_XTest",
+        "camera": "relative_mouse_motion",
+        "placement_button": "right",
+        "destruction_button": "left",
+        "only_bravo_changes_world": true,
+        "player_positions_fixed": true
+      },
+      "evidence_frames": {
+        "joint_initial": 10,
+        "operator_post_action": 80,
+        "returning_observer_checks": [
+          160,
+          170,
+          180
+        ]
+      },
+      "visibility_contract": {
+        "both_see_target_initially": true,
+        "alpha_target_hidden_range": [
+          40,
+          130
+        ],
+        "bravo_target_hidden_range": [
+          110,
+          181
+        ],
+        "both_target_hidden_range": [
+          110,
+          130
+        ],
+        "alpha_returns_to_initial_yaw": true,
+        "minimum_contiguous_hidden_frames": 20
+      },
+      "first_frame_reuse": {
+        "allowed": true,
+        "runtime_dependency": false,
+        "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
+      },
+      "independence_group": "MWB3-SP:snow_ice:destroy"
+    }
+  ]
+}
