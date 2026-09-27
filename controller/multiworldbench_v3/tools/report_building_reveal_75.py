@@ -133,10 +133,10 @@ h1{{margin-bottom:6px}}.muted{{color:#9eabc0}}.cards{{display:grid;grid-template
 th,td{{padding:8px 10px;border-bottom:1px solid #253147;text-align:center}}th{{position:sticky;top:0;background:#1c2738}}td:nth-child(1),td:nth-child(2),td:nth-child(3){{text-align:left}}
 code{{color:#ffd181}}h2{{margin-top:32px}}
 </style></head><body><main><h1>MultiWorldBench V3：共享建筑揭示</h1>
-<p class="muted">75 case = 5 个富几何场景 × 5 种建筑 × 3 个角色夹角（20° / 30° / 40°）。A 原先被单个泥土块遮挡并执行原生破坏动作；静止的 B 始终看到 A 与建筑。</p>
+<p class="muted">75 case = 5 个富几何场景 × 5 种建筑 × 3 个角色夹角（20° / 30° / 40°）。A 原先被单个泥土块完全遮挡并执行原生破坏动作；挖开后 GT 中至少约 60% 的完整建筑可见；静止的 B 始终看到 A 与建筑。</p>
 <div class="cards">{''.join(cards)}</div>
-<h2>评分口径</h2><p>跨视角结构一致性：80、100、120 帧分别用 VLM 判断遮挡是否移除、A 是否看见建筑、生成 A 与 GT A 是否为同一建筑、生成 A 与生成 B 是否为同一建筑；逐项多数票，case 取四项最小值（0/1）。空间推理复用前三项门控，再取 SAM2 投影面积一致性和相机视角对齐分的较低值（0–100）。</p>
-<h2>代表视频</h2><div class="videos">{''.join(videos)}</div>
+<h2>评分口径</h2><p>跨视角结构一致性：80、100、120 帧分别用 VLM 判断遮挡是否移除、A 是否看见至少约 60% 的完整建筑、生成 A 与 GT A 是否为同一建筑、生成 A 与生成 B 是否为同一建筑；逐项多数票，case 取四项最小值（0/1）。空间推理复用前三项门控，再取 SAM2 投影面积一致性和相机视角对齐分的较低值（0–100）。</p>
+<p class="muted">VLM 主评使用 Qwen2.5-VL-72B-Instruct-AWQ；14/450 条因解码器只输出标点而采用 Qwen2.5-VL-3B-Instruct 回退，原始 72B 失败证据单独保留。</p><h2>代表视频</h2><div class="videos">{''.join(videos)}</div>
 <h2>75 个 case 完整评分表</h2><div class="table-wrap"><table><thead><tr>
 <th>Case</th><th>场景</th><th>建筑</th><th>角度</th>
 <th>Solaris 结构</th><th>S 前提</th><th>S 建筑问题</th><th>S 空间</th><th>S 面积</th><th>S 视角</th>
