@@ -1,0 +1,128 @@
+{
+  "schema_version": "mwb.v3.building_reveal_expansion_design.v1",
+  "benchmark_version": "3",
+  "status": "draft_for_visual_review",
+  "active_case_suite_unchanged": true,
+  "factorization_if_fully_crossed": {
+    "scenes": 5,
+    "buildings": 5,
+    "relative_view_angles": 5,
+    "total_cases": 125
+  },
+  "shared_protocol": {
+    "alpha_position_radius_blocks": 7,
+    "bravo_position_radius_blocks": 10,
+    "alpha_initial_view": "building fully hidden by one standardized dirt occluder",
+    "bravo_initial_view": "building visible and recognizable",
+    "action": "alpha destroys the dirt occluder; bravo remains stationary",
+    "common_preconditions": ["occluder_removed", "target_revealed"],
+    "cross_view_questions": ["same_building_gt", "same_building_ab"],
+    "spatial_dependency": "reuse cross_view_structural_coherence.same_building_gt"
+  },
+  "scenes": [
+    {
+      "scene_id": "MWB3-RV-SC01",
+      "name": "云杉峡谷工场",
+      "biome_style": "taiga_ravine",
+      "ground_palette": ["grass_block", "stone", "coarse_dirt", "gravel", "mossy_cobblestone"],
+      "geometry": ["三层不等高石台地", "斜穿场景的浅溪", "单拱石桥", "高低错落的云杉簇", "原木堆与矮石墙", "四根灯柱"],
+      "pose_features": ["桥拱边缘", "台地折线", "树干竖线", "原木端面", "灯柱高频角点"],
+      "clear_zone_radius_blocks": 13,
+      "building_anchor": [0, 65, 0]
+    },
+    {
+      "scene_id": "MWB3-RV-SC02",
+      "name": "砂岩峡谷绿洲",
+      "biome_style": "desert_canyon",
+      "ground_palette": ["sand", "sandstone", "cut_sandstone", "terracotta", "water"],
+      "geometry": ["两侧分层砂岩崖壁", "弯曲干涸河道", "偏心绿洲水池", "残破柱列", "金合欢树", "红白遮阳棚"],
+      "pose_features": ["岩层水平纹理", "柱列重复角点", "水岸曲线", "棚顶色块", "树冠不规则轮廓"],
+      "clear_zone_radius_blocks": 13,
+      "building_anchor": [0, 64, 0]
+    },
+    {
+      "scene_id": "MWB3-RV-SC03",
+      "name": "雪原玄武岩采石场",
+      "biome_style": "snow_quarry",
+      "ground_palette": ["snow_block", "stone", "polished_basalt", "deepslate_tiles", "packed_ice"],
+      "geometry": ["阶梯式采石坑", "三组高低不同玄武岩柱", "弧形矿车轨道", "木质吊架", "积雪斜坡", "暖色灯笼链"],
+      "pose_features": ["轨道曲率", "玄武岩条纹", "台阶转角", "吊架交叉梁", "冰雪明暗边界"],
+      "clear_zone_radius_blocks": 13,
+      "building_anchor": [0, 66, 0]
+    },
+    {
+      "scene_id": "MWB3-RV-SC04",
+      "name": "红树林潮汐码头",
+      "biome_style": "mangrove_marsh",
+      "ground_palette": ["mud", "mangrove_planks", "water", "moss_block", "clay"],
+      "geometry": ["十字与斜向组合栈道", "深浅水交界", "红树根群", "三个泥滩小岛", "系船桩列", "悬挂灯笼与芦苇簇"],
+      "pose_features": ["栈道透视线", "水岸不规则边界", "根系分叉", "木桩重复竖线", "灯笼亮点"],
+      "clear_zone_radius_blocks": 12,
+      "building_anchor": [0, 64, 0]
+    },
+    {
+      "scene_id": "MWB3-RV-SC05",
+      "name": "恶地化石发掘营",
+      "biome_style": "badlands_excavation",
+      "ground_palette": ["red_sand", "orange_terracotta", "yellow_terracotta", "red_terracotta", "smooth_stone"],
+      "geometry": ["彩陶条带坡面", "弧形化石肋骨", "双层脚手架", "折线矿车轨道", "样本箱阵列", "高低观测旗杆"],
+      "pose_features": ["地层色带", "骨架弧线", "脚手架网格", "轨道折点", "旗杆与箱体角点"],
+      "clear_zone_radius_blocks": 13,
+      "building_anchor": [0, 65, 0]
+    }
+  ],
+  "buildings": [
+    {
+      "building_id": "MWB3-RV-BL01",
+      "name": "偏置水轮磨坊",
+      "footprint_blocks": [9, 7],
+      "height_blocks": 8,
+      "palette": ["stone_bricks", "oak_planks", "dark_oak_stairs", "red_terracotta"],
+      "identity_features": ["仅位于左侧的五格水轮", "不对称红色屋顶老虎窗", "石质一层与木质二层", "右侧短廊桥"],
+      "silhouette": "低宽主体 + 左侧圆轮 + 偏右屋脊"
+    },
+    {
+      "building_id": "MWB3-RV-BL02",
+      "name": "高低双塔门楼",
+      "footprint_blocks": [11, 6],
+      "height_blocks": 10,
+      "palette": ["stone_bricks", "cracked_stone_bricks", "spruce_planks", "blue_wool"],
+      "identity_features": ["左塔十格、右塔七格", "中央双层拱门", "右侧斜撑", "左塔蓝色竖带", "不连续垛口"],
+      "silhouette": "一高一低双塔 + 中央凹口"
+    },
+    {
+      "building_id": "MWB3-RV-BL03",
+      "name": "阶梯星象台",
+      "footprint_blocks": [9, 9],
+      "height_blocks": 9,
+      "palette": ["smooth_sandstone", "cut_copper", "dark_prismarine", "purple_glazed_terracotta"],
+      "identity_features": ["三级退台", "偏心铜质半球顶", "向右上倾斜的望远镜筒", "外置之字楼梯", "紫色入口标记"],
+      "silhouette": "金字塔退台 + 偏心圆顶 + 斜向长杆"
+    },
+    {
+      "building_id": "MWB3-RV-BL04",
+      "name": "高脚信号屋",
+      "footprint_blocks": [8, 8],
+      "height_blocks": 10,
+      "palette": ["mangrove_planks", "stripped_mangrove_log", "deepslate_tile_stairs", "yellow_wool"],
+      "identity_features": ["L 形高脚平台", "单坡深色屋顶", "右后方高信号桅杆", "环形阳台缺一角", "三盏垂直灯笼"],
+      "silhouette": "架空 L 形主体 + 单坡顶 + 细长桅杆"
+    },
+    {
+      "building_id": "MWB3-RV-BL05",
+      "name": "锯齿顶铸造厂",
+      "footprint_blocks": [12, 8],
+      "height_blocks": 11,
+      "palette": ["bricks", "polished_blackstone_bricks", "oxidized_copper", "iron_bars"],
+      "identity_features": ["三段锯齿屋顶", "左后方黑红条纹烟囱", "右侧悬臂吊车", "正面两扇不等宽高窗", "铜绿管道"],
+      "silhouette": "长厂房 + 三齿屋顶 + 高烟囱 + 侧向吊臂"
+    }
+  ],
+  "relative_view_angles": [
+    {"angle_id": "MWB3-RV-AN30", "delta_azimuth_deg": 30, "label": "同侧小夹角", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [5.0, -8.66], "alpha_yaw_deg": 0, "bravo_yaw_deg": 30},
+    {"angle_id": "MWB3-RV-AN60", "delta_azimuth_deg": 60, "label": "同象限斜视", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [8.66, -5.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 60},
+    {"angle_id": "MWB3-RV-AN90", "delta_azimuth_deg": 90, "label": "正交侧视", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [10.0, 0.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 90},
+    {"angle_id": "MWB3-RV-AN120", "delta_azimuth_deg": 120, "label": "钝角跨面", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [8.66, 5.0], "alpha_yaw_deg": 0, "bravo_yaw_deg": 120},
+    {"angle_id": "MWB3-RV-AN150", "delta_azimuth_deg": 150, "label": "近对侧观察", "alpha_relative_position": [0.0, -7.0], "bravo_relative_position": [5.0, 8.66], "alpha_yaw_deg": 0, "bravo_yaw_deg": 150}
+  ]
+}
