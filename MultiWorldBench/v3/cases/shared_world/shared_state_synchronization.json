@@ -1,0 +1,314 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "case_count": 3,
+  "fps": 20,
+  "formal_score": false,
+  "gt_collected": false,
+  "action_evidence_policy": "synthetic_planned_control_diagnostic_only",
+  "timing": {
+    "conditioning_frames": 1,
+    "action_seconds": 0.05,
+    "idle_seconds": 4.0
+  },
+  "cases": [
+    {
+      "case_id": "MWB3-S-SS01",
+      "id": "MWB3-S-SS01",
+      "operation": "place",
+      "active_roles": [
+        "alpha"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "alpha": "minecraft:coarse_dirt"
+      },
+      "independence_group": "MWB3-S-SS01",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 22.04794746356044,
+            "aim_point": [
+              620.5,
+              91,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 4.315599610714601,
+            "active": true,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
+            "aim_point": [
+              620.5,
+              91,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 5.255891931917932,
+            "active": false,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-S-SS02",
+      "id": "MWB3-S-SS02",
+      "operation": "place",
+      "active_roles": [
+        "bravo"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "bravo": "minecraft:coarse_dirt"
+      },
+      "independence_group": "MWB3-S-SS02",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
+            "aim_point": [
+              623.5,
+              91,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 5.255891931917932,
+            "active": false,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 22.04794746356044,
+            "aim_point": [
+              623.5,
+              91,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 4.315599610714601,
+            "active": true,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    },
+    {
+      "case_id": "MWB3-S-SS03",
+      "id": "MWB3-S-SS03",
+      "operation": "place",
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "preaim_interactions",
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "phase_pairs": [
+        {
+          "action_range": [
+            1,
+            2
+          ],
+          "idle_range": [
+            2,
+            81
+          ]
+        }
+      ],
+      "expected_after": {
+        "alpha": "minecraft:coarse_dirt",
+        "bravo": "minecraft:coarse_dirt"
+      },
+      "independence_group": "MWB3-S-SS03",
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              620.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 22.04794746356044,
+            "aim_point": [
+              620.5,
+              91,
+              0.5
+            ],
+            "aim_role": "alpha",
+            "aim_distance_blocks": 4.315599610714601,
+            "active": true,
+            "target_cell": [
+              620,
+              91,
+              0
+            ],
+            "support_cell": [
+              620,
+              90,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              623.5,
+              91,
+              4.5
+            ],
+            "native_yaw_deg": -180,
+            "native_pitch_deg": 22.04794746356044,
+            "aim_point": [
+              623.5,
+              91,
+              0.5
+            ],
+            "aim_role": "bravo",
+            "aim_distance_blocks": 4.315599610714601,
+            "active": true,
+            "target_cell": [
+              623,
+              91,
+              0
+            ],
+            "support_cell": [
+              623,
+              90,
+              0
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Initial pose and inventory are engine setup, not formal recorded actions.",
+    "Generated scene/inventory may drift; one-item initial inventory does not guarantee one generated placement.",
+    "Single-event isolation supersedes earlier multi-round navigation design for this pilot.",
+    "Only placement cases are eligible because the fourth question explicitly evaluates placed-block material."
+  ],
+  "benchmark_version": "3",
+  "metric_id": "shared_state_synchronization",
+  "ranking_ready": false,
+  "evidence_fields": [
+    "actor_placement_success",
+    "same_placement_state",
+    "same_target_location",
+    "same_expected_material"
+  ],
+  "metric_name": "共享状态同步性",
+  "aggregation": "additive_four_binary_questions",
+  "max_score": 4
+}

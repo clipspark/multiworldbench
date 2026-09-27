@@ -43,7 +43,7 @@
     "epoch_ms": 50,
     "turn_index": 0,
     "phase": "ACTION",
-    "primitive": "-",
+    "primitive": "USE",
     "control_source": "synthetic_planned_control",
     "action": {
       "forward": false,
@@ -54,7 +54,7 @@
       "sprint": false,
       "sneak": false,
       "attack": false,
-      "use": false,
+      "use": true,
       "mount": false,
       "dismount": false,
       "place_block": false,
@@ -80,7 +80,7 @@
     "epochTime": 0.1,
     "epoch_ms": 100,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -118,7 +118,7 @@
     "epochTime": 0.15,
     "epoch_ms": 150,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -156,7 +156,7 @@
     "epochTime": 0.2,
     "epoch_ms": 200,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -194,7 +194,7 @@
     "epochTime": 0.25,
     "epoch_ms": 250,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -232,7 +232,7 @@
     "epochTime": 0.3,
     "epoch_ms": 300,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -270,7 +270,7 @@
     "epochTime": 0.35,
     "epoch_ms": 350,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -308,7 +308,7 @@
     "epochTime": 0.4,
     "epoch_ms": 400,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -346,7 +346,7 @@
     "epochTime": 0.45,
     "epoch_ms": 450,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -384,7 +384,7 @@
     "epochTime": 0.5,
     "epoch_ms": 500,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -422,7 +422,7 @@
     "epochTime": 0.55,
     "epoch_ms": 550,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -460,7 +460,7 @@
     "epochTime": 0.6,
     "epoch_ms": 600,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -498,7 +498,7 @@
     "epochTime": 0.65,
     "epoch_ms": 650,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -536,7 +536,7 @@
     "epochTime": 0.7,
     "epoch_ms": 700,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -574,7 +574,7 @@
     "epochTime": 0.75,
     "epoch_ms": 750,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -612,7 +612,7 @@
     "epochTime": 0.8,
     "epoch_ms": 800,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -650,7 +650,7 @@
     "epochTime": 0.85,
     "epoch_ms": 850,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -688,7 +688,7 @@
     "epochTime": 0.9,
     "epoch_ms": 900,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -726,7 +726,7 @@
     "epochTime": 0.95,
     "epoch_ms": 950,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -764,7 +764,7 @@
     "epochTime": 1.0,
     "epoch_ms": 1000,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -802,7 +802,7 @@
     "epochTime": 1.05,
     "epoch_ms": 1050,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -840,7 +840,7 @@
     "epochTime": 1.1,
     "epoch_ms": 1100,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -878,7 +878,7 @@
     "epochTime": 1.15,
     "epoch_ms": 1150,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -916,7 +916,7 @@
     "epochTime": 1.2,
     "epoch_ms": 1200,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -954,7 +954,7 @@
     "epochTime": 1.25,
     "epoch_ms": 1250,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -992,7 +992,7 @@
     "epochTime": 1.3,
     "epoch_ms": 1300,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1030,7 +1030,7 @@
     "epochTime": 1.35,
     "epoch_ms": 1350,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1068,7 +1068,7 @@
     "epochTime": 1.4,
     "epoch_ms": 1400,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1106,7 +1106,7 @@
     "epochTime": 1.45,
     "epoch_ms": 1450,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1144,7 +1144,7 @@
     "epochTime": 1.5,
     "epoch_ms": 1500,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1182,7 +1182,7 @@
     "epochTime": 1.55,
     "epoch_ms": 1550,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1220,7 +1220,7 @@
     "epochTime": 1.6,
     "epoch_ms": 1600,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1258,7 +1258,7 @@
     "epochTime": 1.65,
     "epoch_ms": 1650,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1296,7 +1296,7 @@
     "epochTime": 1.7,
     "epoch_ms": 1700,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1334,7 +1334,7 @@
     "epochTime": 1.75,
     "epoch_ms": 1750,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1372,7 +1372,7 @@
     "epochTime": 1.8,
     "epoch_ms": 1800,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1410,7 +1410,7 @@
     "epochTime": 1.85,
     "epoch_ms": 1850,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1448,7 +1448,7 @@
     "epochTime": 1.9,
     "epoch_ms": 1900,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1486,7 +1486,7 @@
     "epochTime": 1.95,
     "epoch_ms": 1950,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {
@@ -1524,7 +1524,7 @@
     "epochTime": 2.0,
     "epoch_ms": 2000,
     "turn_index": 0,
-    "phase": "ACTION",
+    "phase": "IDLE",
     "primitive": "-",
     "control_source": "synthetic_planned_control",
     "action": {

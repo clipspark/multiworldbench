@@ -1,43 +1,25 @@
 {
   "schema_version": "mwb.v3.assets.v1",
   "self_contained": true,
-  "case_count": 74,
+  "case_count": 71,
   "cases": [
     {
-      "case_id": "MWB3-S-SI01",
+      "case_id": "MWB3-S-SS01",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI01",
-      "metadata_sha256": "a1b3575e1e24710047b2fe6385935d87eb9e6cdddbcce0473e9980b8f44cc5aa"
+      "directory": "assets/interaction/MWB3-S-SS01",
+      "metadata_sha256": "f6c95dec9dbd70bceb5c7a03e6b2217bc5d2400095bc16088124dcb17faa00b2"
     },
     {
-      "case_id": "MWB3-S-SI02",
+      "case_id": "MWB3-S-SS02",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI02",
-      "metadata_sha256": "95bcfb77264f81978284c36544cf51cc61235e8096e0d5f455ce2c8d2302a1fe"
+      "directory": "assets/interaction/MWB3-S-SS02",
+      "metadata_sha256": "3c09fe410f578ed8571313cd15173a024e9509fd36a909f152d9e9e45b2f9d80"
     },
     {
-      "case_id": "MWB3-S-SI03",
+      "case_id": "MWB3-S-SS03",
       "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI03",
-      "metadata_sha256": "f32681b2ffbc97ff6dd793ec713775b04411cfc640ed61632d784e3c4c64eddb"
-    },
-    {
-      "case_id": "MWB3-S-SI04",
-      "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI04",
-      "metadata_sha256": "52177df19f5c229c3dfb695d0947cf9a788f28b8774057439f896f7acf2983a1"
-    },
-    {
-      "case_id": "MWB3-S-SI05",
-      "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI05",
-      "metadata_sha256": "8905f392c01c84d6964737c33e5f5e39ae1e69e0162ed22182516c03e238c165"
-    },
-    {
-      "case_id": "MWB3-S-SI06",
-      "group": "interaction",
-      "directory": "assets/interaction/MWB3-S-SI06",
-      "metadata_sha256": "a22bec92728a79332265beb1ef42cb6707bd52eedc7625168fcfd565a09c34b2"
+      "directory": "assets/interaction/MWB3-S-SS03",
+      "metadata_sha256": "af23ef37b4a4c8f94b64377cbc37dedd65c10aeb64485340e52b32413df14e16"
     },
     {
       "case_id": "MWB3-N-CI01A",

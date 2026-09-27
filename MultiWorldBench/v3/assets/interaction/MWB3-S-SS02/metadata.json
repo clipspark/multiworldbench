@@ -1,14 +1,14 @@
 {
   "schema_version": "mwb.v3.asset.v1",
-  "case_id": "MWB3-S-SI02",
+  "case_id": "MWB3-S-SS02",
   "group": "interaction",
   "self_contained": true,
   "has_native_gt": false,
   "files_sha256": {
     "action_left.json": "4c27b2410f8bc427c45b4d039ce2e778d2ff14392a71f94e019fe9f6ff4b1420",
-    "action_right.json": "9a53d3dd77f2c0a4af51fe06c39951dea03662e782967f5aab7d00b9188f4d7a",
-    "alpha_actions.json": "bb1341396523701fbbe268d030422bb51230a323b41e4745998035782bcd7074",
-    "bravo_actions.json": "294c327ed4829e68a71992aacdf920ae16d2168cbfc08a3fab196f9b8a238548",
+    "action_right.json": "63009172e2ab9283d59754ee57de96d7f46c6a182e6baa0ff1a3bf0d1f7718f3",
+    "alpha_actions.json": "de1ac557228d60632e1f54351fac508d44d3564d21f06ea5bbc6d4db2f1073d3",
+    "bravo_actions.json": "ae5583cba4ccd5b74675cdf3fa9d24ae4a40c80a0468e908b5470f123eb9f5f7",
     "first_frame.png": "26bc730d93da756d91a0831cb1b1420cac2101f80beb190c09891c2d398f9ebd",
     "prompt.txt": "14ad732ae1aecf98ad055be75c4a7de1b2049aec6fac70463dc2d9f256e0a5e7"
   }

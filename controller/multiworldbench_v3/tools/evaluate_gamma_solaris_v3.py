@@ -43,7 +43,7 @@ sys.path.insert(0, str(REPO))
 from controller.multiworldbench_v3.metrics import (  # noqa: E402
     cross_view_structural_coherence as structural_metric,
     id_consistency as id_metric,
-    shared_interaction_consistency as interaction_metric,
+    shared_state_synchronization as sync_metric,
     race_condition_consistency as race_metric,
     spatial_reasoning as spatial_metric,
     style_consistency as style_metric,
@@ -60,7 +60,7 @@ SPATIAL_PROMPT = (
     "with exactly {\"occluder_removed\":0 or 1,\"target_revealed\":0 or 1,\"same_building_gt\":0 or 1}."
 )
 SPATIAL_KEYS = ("occluder_removed", "target_revealed", "same_building_gt")
-INTERACTION_KEYS = interaction_metric.OUTPUT_KEYS
+INTERACTION_KEYS = sync_metric.OUTPUT_KEYS
 
 
 def load(path: Path) -> Any:
@@ -132,7 +132,7 @@ def gt_video(group: str, index: int, role: str) -> Path:
 
 def solaris_video(group: str, index: int, role: str) -> Path:
     case = {
-        "interaction": f"MWB3-S-SI{index + 1:02d}",
+        "interaction": f"MWB3-S-SS{index + 1:02d}",
         "structural": f"MWB3-S-ST{index + 1:02d}",
         "spatial": f"MWB3-S-SR{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}",
@@ -145,7 +145,7 @@ def evidence_frame(model: str, group: str, index: int, role: str, frame: int) ->
     case_id = {
         "structural": f"MWB3-S-ST{index + 1:02d}", "spatial": f"MWB3-S-SR{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}", "revisit": f"MWB3-R-RV{index + 1:02d}",
-        "interaction": f"MWB3-S-SI{index + 1:02d}",
+        "interaction": f"MWB3-S-SS{index + 1:02d}",
     }[group]
     output = RUN / "evaluation" / "frames" / model / group / case_id / f"{role}_{frame:03d}.png"
     if model == "gt":
@@ -159,7 +159,7 @@ def evidence_frame(model: str, group: str, index: int, role: str, frame: int) ->
 
 
 def conditioning_frame(group: str, index: int, role: str) -> Path:
-    case_id = f"MWB3-SW-RC{index + 1:02d}" if group == "race" else f"MWB3-S-SI{index + 1:02d}"
+    case_id = f"MWB3-SW-RC{index + 1:02d}" if group == "race" else f"MWB3-S-SS{index + 1:02d}"
     source = ASSETS / group / case_id / "first_frame.png"
     return image_half(source, role, RUN / "evaluation" / "frames" / "conditioning" / group / case_id / f"{role}.png")
 
@@ -177,7 +177,7 @@ def request(request_id: str, metric: str, model: str, case_id: str, frame_or_pai
 
 
 def interaction_prompt(case: dict[str, Any]) -> str:
-    return interaction_metric.build_prompt(case)
+    return sync_metric.build_prompt(case)
 
 
 def prepare() -> None:
@@ -225,12 +225,12 @@ def prepare() -> None:
                 requests.append(request(f"id_{model}_{index+1:02d}_{pair_id}", "id_consistency", model, case_id, pair_id, images, id_metric.PROMPT, id_metric.OUTPUT_KEYS,
                                         {"native_frames": [initial, returned], "generated_frames": [generated_initial, generated_returned]}))
     # GT-free interaction/shared-state pilot remains diagnostic for both models.
-    interaction_cases = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_interaction_consistency.json")["cases"]
+    interaction_cases = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json")["cases"]
     for model in ("solaris", "gamma"):
         for index, case in enumerate(interaction_cases):
             for frame in FRAMES["interaction"]:
                 images = [conditioning_frame("interaction", index, "alpha"), conditioning_frame("interaction", index, "bravo"), evidence_frame(model, "interaction", index, "alpha", frame), evidence_frame(model, "interaction", index, "bravo", frame)]
-                requests.append(request(f"interaction_{model}_{index+1:02d}_{frame}", "interaction_shared_state_diagnostic", model, case["case_id"], frame, images, interaction_prompt(case), INTERACTION_KEYS, {"operation": case["operation"]}))
+                requests.append(request(f"interaction_{model}_{index+1:02d}_{frame}", "shared_state_synchronization_diagnostic", model, case["case_id"], frame, images, interaction_prompt(case), INTERACTION_KEYS, {"operation": case["operation"]}))
     for row in requests:
         row["image_sha256"] = [sha256(Path(path)) for path in row["images"]]
     dump(RUN / "evaluation" / "requests.json", requests)
@@ -406,22 +406,22 @@ def aggregate() -> None:
         aggregate["evidence_coverage"] = 1.0
         aggregate["strict_v3_evaluable"] = True
         output["id_consistency"][model] = {"cases": cases, "aggregate": aggregate}
-    # One strict shared-interaction score with two transparent diagnostics.
-    interaction_config = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_interaction_consistency.json")["cases"]
-    output["shared_interaction_consistency"] = {}
+    # One four-question shared-state score.
+    interaction_config = load(REPO / "MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json")["cases"]
+    output["shared_state_synchronization"] = {}
     for model in ("solaris", "gamma"):
         interaction_rows = []
         for index, case in enumerate(interaction_config):
             frames = [by_id[f"interaction_{model}_{index+1:02d}_{frame}"] for frame in FRAMES["interaction"]]
             voted = {key: majority(frames, key) for key in INTERACTION_KEYS}
-            row = interaction_metric.score_case({"operation": case["operation"], **voted})
+            row = sync_metric.score_case({"operation": case["operation"], **voted})
             row["case_id"] = case["case_id"]
             row["frames"] = frames
             interaction_rows.append(row)
-        output["shared_interaction_consistency"][model] = {
+        output["shared_state_synchronization"][model] = {
             "diagnostic_only": True,
             "cases": interaction_rows,
-            "aggregate": interaction_metric.aggregate_cases(interaction_rows),
+            "aggregate": sync_metric.aggregate_cases(interaction_rows),
         }
     # Navigation is computed separately because it uses DPVO and dense optical
     # flow rather than the VLM.  Merge the self-contained V3 results here so a

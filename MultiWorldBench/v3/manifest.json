@@ -10,7 +10,7 @@
       "cross_view_motion_consistency"
     ],
     "shared_world": [
-      "shared_interaction_consistency",
+      "shared_state_synchronization",
       "cross_view_structural_coherence",
       "spatial_reasoning",
       "race_condition_consistency"
@@ -60,19 +60,19 @@
       "suite_definition": "3 initial-visibility classes × 6 geometry-rich scenes × 10 balanced joint-evaluation schedules (5 A-fixed + 5 B-fixed)"
     },
     {
-      "id": "shared_interaction_consistency",
+      "id": "shared_state_synchronization",
       "domain": "shared_world",
-      "name": "共享交互一致性",
+      "name": "共享状态同步性",
       "status": "implemented",
-      "case_file": "cases/shared_world/shared_interaction_consistency.json",
-      "case_count": 6,
-      "implementation": "controller.multiworldbench_v3.metrics.shared_interaction_consistency",
+      "case_file": "cases/shared_world/shared_state_synchronization.json",
+      "case_count": 3,
+      "implementation": "controller.multiworldbench_v3.metrics.shared_state_synchronization",
       "ranking_ready": false,
-      "aggregation": "strict_product",
-      "diagnostic_subscores": [
-        "interaction_correctness",
-        "cross_view_synchronization"
-      ]
+      "score_range": [
+        0,
+        4
+      ],
+      "aggregation": "sum_of_four_binary_questions"
     },
     {
       "id": "cross_view_structural_coherence",
