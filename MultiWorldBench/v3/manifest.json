@@ -63,16 +63,18 @@
       "id": "shared_state_synchronization",
       "domain": "shared_world",
       "name": "共享状态同步性",
-      "status": "implemented",
+      "status": "implemented_gt_collected",
       "case_file": "cases/shared_world/shared_state_synchronization.json",
-      "case_count": 6,
+      "case_count": 120,
       "implementation": "controller.multiworldbench_v3.metrics.shared_state_synchronization",
       "ranking_ready": false,
       "score_range": [
         0,
         1
       ],
-      "aggregation": "placement sum/4 and destruction sum/3; macro-mean of operation scores"
+      "aggregation": "placement sum/4 and destruction sum/3; macro-mean of operation scores",
+      "suite_definition": "5 geometry-rich scenes × 3 visibility classes × 4 interaction types × 2 variants",
+      "gt_collected": true
     },
     {
       "id": "cross_view_structural_coherence",

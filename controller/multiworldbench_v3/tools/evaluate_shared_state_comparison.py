@@ -10,8 +10,8 @@ _run_env=os.environ.get('MWB3_SHARED_STATE_RUN')
 if not _run_env:
     raise RuntimeError('MWB3_SHARED_STATE_RUN must point to an explicit output directory')
 RUN=Path(_run_env).resolve()
-ASSETS=REPO/'MultiWorldBench/v3/assets/interaction'
-CASES_FILE=REPO/'MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json'
+ASSETS=Path(os.environ.get('MWB3_SHARED_STATE_ASSETS', REPO/'MultiWorldBench/v3/assets/interaction')).resolve()
+CASES_FILE=Path(os.environ.get('MWB3_SHARED_STATE_CASES', REPO/'MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json')).resolve()
 QWEN=Path('/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ')
 FRAMES=(60,70,80)
 sys.path.insert(0,str(REPO))
@@ -25,6 +25,8 @@ def dump(path:Path,value:Any)->None:
 def sha(path:Path)->str: return hashlib.sha256(path.read_bytes()).hexdigest()
 def extract(video:Path, frame:int, output:Path, crop:str|None=None)->Path:
     output.parent.mkdir(parents=True,exist_ok=True)
+    if output.is_file() and output.stat().st_size > 0:
+        return output
     fs=[f'select=eq(n\\,{frame})']
     if crop: fs.append(crop)
     fs.append('scale=480:320:flags=lanczos')
@@ -33,6 +35,8 @@ def extract(video:Path, frame:int, output:Path, crop:str|None=None)->Path:
 def half(image:Path,role:str,output:Path)->Path:
     from PIL import Image
     output.parent.mkdir(parents=True,exist_ok=True)
+    if output.is_file() and output.stat().st_size > 0:
+        return output
     with Image.open(image).convert('RGB') as im:
         w,h=im.size; box=(0,0,w//2,h) if role=='alpha' else (w//2,0,w,h)
         im.crop(box).resize((480,320),Image.Resampling.LANCZOS).save(output)

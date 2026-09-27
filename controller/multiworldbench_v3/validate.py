@@ -295,20 +295,56 @@ def validate(project_root: Path) -> dict[str, Any]:
 
     shared_state_path = v3 / "cases/shared_world/shared_state_synchronization.json"
     shared_state = _load(shared_state_path)
-    scene_design = shared_state.get("scene_design", {})
-    marker = scene_design.get("reference_marker", {})
-    if marker.get("shape") != "ground_cross" or marker.get("center_material") != "minecraft:red_concrete":
-        raise ValueError("shared-state suite lacks the approved ground-cross reference marker")
+    if shared_state.get("case_count") != 120 or len(shared_state.get("cases", [])) != 120:
+        raise ValueError("shared-state suite must contain exactly 120 cases")
+    if shared_state.get("gt_collected") is not True:
+        raise ValueError("shared-state suite must record completed native GT collection")
+    if shared_state.get("factorization") != {
+        "scenes": 5,
+        "visibility_classes": 3,
+        "interaction_types": 4,
+        "variants_per_condition": 2,
+        "total": 120,
+    }:
+        raise ValueError("shared-state factorization changed")
+    expected_cells = {
+        (scene, visibility, interaction, variant)
+        for scene in {case["scene"] for case in shared_state["cases"]}
+        for visibility in ("mutual", "one_way", "none")
+        for interaction in ("single_place", "single_destroy", "dual_place", "dual_destroy")
+        for variant in (0, 1)
+    }
+    actual_cells = {
+        (case["scene"], case["visibility_class"], case["interaction_type"], case["variant"])
+        for case in shared_state["cases"]
+    }
+    if len({case["scene"] for case in shared_state["cases"]}) != 5 or actual_cells != expected_cells:
+        raise ValueError("shared-state factorial cells are incomplete")
+    ids = [case["case_id"] for case in shared_state["cases"]]
+    if len(ids) != len(set(ids)):
+        raise ValueError("duplicate shared-state case id")
     for case in shared_state["cases"]:
-        if case.get("expected_change_count") != 1:
-            raise ValueError(f"shared-state expected change count must be one: {case['case_id']}")
-        if case.get("target_cell") != scene_design.get("target_cell"):
-            raise ValueError(f"shared-state target is not the cross center: {case['case_id']}")
-        if case.get("reference_marker") != marker:
-            raise ValueError(f"shared-state marker differs from suite contract: {case['case_id']}")
+        marker = case.get("reference_marker", {})
+        if marker.get("shape") != "ground_cross" or not marker.get("center_material"):
+            raise ValueError(f"shared-state case lacks a colored ground cross: {case['case_id']}")
+        expected_count = 1 if case["actor_mode"] == "single" else 2
+        if case.get("expected_change_count") != expected_count:
+            raise ValueError(f"invalid shared-state expected count: {case['case_id']}")
+        targets = case.get("target_cells", [])
+        if len(targets) != expected_count or len(marker.get("target_support_cells", [])) != expected_count:
+            raise ValueError(f"invalid shared-state target list: {case['case_id']}")
+        protocol = case.get("action_protocol", {})
+        if protocol.get("native_input") != "X11_XTest" or protocol.get("start_frame") != 10:
+            raise ValueError(f"invalid shared-state native action: {case['case_id']}")
+        expected_button = "right" if case["operation"] == "place" else "left"
+        expected_end = 11 if case["operation"] == "place" else 18
+        if protocol.get("button") != expected_button or protocol.get("end_frame_exclusive") != expected_end:
+            raise ValueError(f"invalid shared-state action duration: {case['case_id']}")
+        if "counter_design" in case:
+            raise ValueError(f"shared-state counter case is not allowed: {case['case_id']}")
         for role in ("alpha", "bravo"):
-            if case["initial_conditions"][role]["pose"].get("target_cell") != case["target_cell"]:
-                raise ValueError(f"shared-state role target differs from cross center: {case['case_id']} {role}")
+            if case["initial_conditions"][role]["pose"].get("target_cell") not in targets:
+                raise ValueError(f"shared-state role target is unmarked: {case['case_id']} {role}")
 
     race_path = v3 / "cases/shared_world/race_condition_consistency.json"
     race = _load(race_path)

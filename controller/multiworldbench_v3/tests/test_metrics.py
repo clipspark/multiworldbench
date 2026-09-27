@@ -101,17 +101,20 @@ class MetricTests(unittest.TestCase):
         self.assertAlmostEqual(aggregate["operation_scores"]["destroy"]["score"], 2 / 3)
         self.assertAlmostEqual(aggregate["score"], (0.875 + 2 / 3) / 2)
 
-    def test_shared_state_prompt_requires_expected_count_and_cross_center(self):
+    def test_shared_state_prompt_requires_expected_count_and_colored_targets(self):
         case = {
             "operation": "place",
             "active_roles": ["alpha", "bravo"],
             "expected_change_count": 1,
-            "expected_after": {"shared_cross_center": "minecraft:coarse_dirt"},
+            "expected_after": {"marked_targets": "minecraft:coarse_dirt"},
+            "reference_marker": {"center_material": "minecraft:blue_concrete"},
         }
         prompt = shared_state_synchronization.build_prompt(case)
         self.assertIn("expected count (1)", prompt)
         self.assertIn("same number of blocks added", prompt)
-        self.assertIn("red center of the white ground cross", prompt)
+        self.assertIn("colored target square(s)", prompt)
+        self.assertIn("minecraft:blue_concrete", prompt)
+        self.assertIn("Ignore floating dropped-item entities", prompt)
         with self.assertRaises(KeyError):
             shared_state_synchronization.build_prompt({
                 "operation": "destroy",

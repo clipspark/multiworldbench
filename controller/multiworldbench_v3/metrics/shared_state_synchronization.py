@@ -36,27 +36,29 @@ def build_prompt(case: Mapping[str, Any]) -> str:
     expected_count = int(case["expected_change_count"])
     if expected_count < 0:
         raise ValueError("expected_change_count must be non-negative")
+    marker = case.get("reference_marker", {})
+    marker_material = marker.get("center_material", "colored")
     questions = (
         f"action_success: did the intended shared-world {verb} produce the expected final state? "
         f"same_block_count: do A and B observe the same number of blocks {change}, "
         f"and is that number exactly the expected count ({expected_count})? "
-        "same_target_location: do both views show the state change at the red center of the white ground cross? "
+        "same_target_location: do both views show the state change on the colored target square(s) "
+        f"({marker_material}) embedded in the ground cross? "
     )
     if operation == "place":
-        expected = ", ".join(
-            f"{key}:{value}" for key, value in case["expected_after"].items()
-        )
+        expected = ", ".join(f"{key}:{value}" for key, value in case["expected_after"].items())
         questions += (
-            "same_expected_material: are the placed blocks seen from A and B the same material, "
+            "same_expected_material: are the placed full blocks seen from A and B the same material, "
             f"and is that material the expected material ({expected})? "
         )
     keys = output_keys(operation)
-    schema = "{" + ",".join(f'\"{key}\":0 or 1' for key in keys) + "}"
+    schema = "{" + ",".join(f'"{key}":0 or 1' for key in keys) + "}"
     count = len(keys)
     return (
         "Judge a planned Minecraft shared-world action from four images. Images 1 and 2 are initial A and B; "
         f"Images 3 and 4 are generated A and B at the same post-action frame. Operation: {operation}; "
         f"active role(s): {roles}. Answer {count} independent binary questions. "
+        "Count only full blocks fixed to the world grid. Ignore floating dropped-item entities, players, tools, particles, and HUD icons. "
         + questions
         + f"Give one point for each yes. If evidence is hidden or unclear, answer 0. Return ONLY JSON with exactly {schema}."
     )
