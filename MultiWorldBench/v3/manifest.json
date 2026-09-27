@@ -81,20 +81,25 @@
       "domain": "shared_world",
       "name": "跨视角结构一致性",
       "status": "implemented",
-      "case_file": "cases/shared_world/cross_view_structural_coherence.json",
+      "case_file": "cases/shared_world/building_reveal_shared.json",
       "case_count": 6,
       "implementation": "controller.multiworldbench_v3.metrics.cross_view_structural_coherence",
-      "ranking_ready": false
+      "ranking_ready": false,
+      "shared_case_suite": true,
+      "suite_definition": "B sees building; A is occluded, destroys dirt, and reveals the building"
     },
     {
       "id": "spatial_reasoning",
       "domain": "shared_world",
       "name": "空间推理能力",
       "status": "implemented",
-      "case_file": "cases/shared_world/spatial_reasoning.json",
+      "case_file": "cases/shared_world/building_reveal_shared.json",
       "case_count": 6,
       "implementation": "controller.multiworldbench_v3.metrics.spatial_reasoning",
-      "ranking_ready": false
+      "ranking_ready": false,
+      "shared_case_suite": true,
+      "suite_definition": "B sees building; A is occluded, destroys dirt, and reveals the building",
+      "depends_on": "cross_view_structural_coherence.questions.same_building_gt"
     },
     {
       "id": "race_condition_consistency",

@@ -11,7 +11,7 @@ import tempfile
 from pathlib import Path
 
 
-GROUPS = ("interaction", "structural", "spatial", "race", "revisit")
+GROUPS = ("interaction", "reveal", "race", "revisit")
 REQUIRED = ("first_frame.png", "action_left.json", "action_right.json", "prompt.txt")
 
 

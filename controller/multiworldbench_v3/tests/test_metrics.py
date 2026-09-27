@@ -137,19 +137,33 @@ class MetricTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             shared_state_synchronization.score_case({"operation": "move"})
 
-    def test_structural_exact_schema_and_majority(self):
+    def test_structural_shared_preconditions_and_majority(self):
         rows = [
-            {"same_building_gt": 1, "same_building_ab": 1},
-            {"same_building_gt": 1, "same_building_ab": 0},
-            {"same_building_gt": 0, "same_building_ab": 1},
+            {"occluder_removed": 1, "target_revealed": 1,
+             "same_building_gt": 1, "same_building_ab": 1},
+            {"occluder_removed": 1, "target_revealed": 1,
+             "same_building_gt": 1, "same_building_ab": 0},
+            {"occluder_removed": 0, "target_revealed": 1,
+             "same_building_gt": 0, "same_building_ab": 1},
         ]
         value = cross_view_structural_coherence.score_case(rows)
+        self.assertEqual(value["common_preconditions"], {
+            "occluder_removed": 1, "target_revealed": 1,
+        })
         self.assertEqual(value["questions"], {
-            "same_building_gt": 1, "same_building_ab": 1
+            "same_building_gt": 1, "same_building_ab": 1,
         })
         self.assertEqual(value["score"], 1)
+        failed = cross_view_structural_coherence.score_case([
+            {"occluder_removed": 0, "target_revealed": 1,
+             "same_building_gt": 1, "same_building_ab": 1},
+        ])
+        self.assertEqual(failed["score"], 0)
+        self.assertEqual(failed["status"], "failed_precondition")
         with self.assertRaises(ValueError):
             cross_view_structural_coherence.validate_output({
+                "occluder_removed": 1,
+                "target_revealed": 1,
                 "same_building_gt": 1,
                 "same_building_ab": 1,
                 "extra": 0,
@@ -181,18 +195,16 @@ class MetricTests(unittest.TestCase):
                 "winner": "alpha",
             })
 
-    def test_spatial_reasoning_geometry_and_gates(self):
+    def test_spatial_reasoning_reuses_cross_view_identity(self):
         self.assertEqual(spatial_reasoning.projected_area_consistency(50, 100), 50.0)
         self.assertEqual(spatial_reasoning.projected_area_consistency(200, 100), 50.0)
         self.assertEqual(spatial_reasoning.camera_angle_consistency(359, 1, 20), 90.0)
+        structural = cross_view_structural_coherence.score_case([
+            {"occluder_removed": 1, "target_revealed": 1,
+             "same_building_gt": 1, "same_building_ab": 0},
+        ])
         complete = spatial_reasoning.score_case({
-            "occluder_removed": 1,
-            "target_revealed": 1,
-            "same_building_gt_frames": [
-                {"same_building_gt": 1},
-                {"same_building_gt": 1},
-                {"same_building_gt": 0},
-            ],
+            "cross_view_structural_coherence": structural,
             "predicted_area_pixels": 50,
             "gt_area_pixels": 100,
             "predicted_camera_angle_deg": 5,
@@ -200,24 +212,25 @@ class MetricTests(unittest.TestCase):
         })
         self.assertEqual(complete["score"], 50.0)
         self.assertEqual(complete["status"], "evaluable")
+        self.assertEqual(complete["dependency"]["value"], 1)
+
+        failed_identity = dict(structural)
+        failed_identity["questions"] = dict(structural["questions"], same_building_gt=0)
         gated = spatial_reasoning.score_case({
-            "occluder_removed": 0,
-            "target_revealed": 0,
-            "same_building_gt": 0,
+            "common_preconditions": structural["common_preconditions"],
+            "cross_view_structural_coherence": failed_identity,
         })
         self.assertEqual(gated["score"], 0.0)
-        self.assertEqual(gated["status"], "failed_gate")
+        self.assertEqual(gated["status"], "failed_cross_view_identity")
+
         missing = spatial_reasoning.score_case({
-            "occluder_removed": 1,
-            "target_revealed": 1,
-            "same_building_gt": 1,
+            "cross_view_structural_coherence": structural,
         })
         self.assertIsNone(missing["score"])
         self.assertEqual(missing["status"], "not_evaluable")
         with self.assertRaises(ValueError):
-            spatial_reasoning.validate_output({
+            spatial_reasoning.score_case({
                 "same_building_gt": 1,
-                "same_orientation": 1,
             })
 
     def test_id_gt_gate_and_strict_generated(self):

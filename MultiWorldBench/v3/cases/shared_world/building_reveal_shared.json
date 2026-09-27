@@ -1,0 +1,937 @@
+{
+  "schema_version": "mwb.v3.shared_building_reveal.v1",
+  "benchmark_version": "3",
+  "metric_ids": [
+    "cross_view_structural_coherence",
+    "spatial_reasoning"
+  ],
+  "status": "designed_not_collected",
+  "ranking_ready": false,
+  "case_count": 6,
+  "description": "B initially sees the building. A faces it but a dirt block fully occludes it; A destroys the dirt block and then sees the building. One case suite supplies both metrics.",
+  "check_frames": [
+    80,
+    100,
+    120
+  ],
+  "common_preconditions": [
+    {
+      "id": "occluder_removed",
+      "text": "A 是否成功移除遮挡建筑的泥土块？",
+      "values": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "target_revealed",
+      "text": "移除遮挡后，A 是否能看到并辨认建筑？",
+      "values": [
+        0,
+        1
+      ]
+    }
+  ],
+  "vlm_questions": [
+    {
+      "id": "same_building_gt",
+      "text": "生成 A 与 GT A 中是不是同一个建筑？",
+      "values": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "same_building_ab",
+      "text": "生成 A 与生成 B 中是不是同一个建筑？",
+      "values": [
+        0,
+        1
+      ]
+    }
+  ],
+  "metric_aggregation": {
+    "cross_view_structural_coherence": "公共前提通过后，两个建筑一致性问题各做三帧多数票，case 分数取较低值。",
+    "spatial_reasoning": "复用公共前提和跨视角 same_building_gt；不重复进行建筑身份 VLM 判断。通过后取投影面积一致性与相机角度一致性的较低值。"
+  },
+  "cases": [
+    {
+      "case_id": "MWB3-S-RV01",
+      "id": "MWB3-S-RV01",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV01",
+      "building_id": "stone_arch_wood",
+      "building_name": "石砖拱门与木质侧翼",
+      "layout": "opposite_sides",
+      "distance_group": "near",
+      "azimuth_deg": 0,
+      "nominal_distance": 8,
+      "actual_horizontal_distance": 7.999999999999979,
+      "world_x_offset": 3100,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -2,
+            64,
+            0,
+            -2,
+            66,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            2,
+            64,
+            0,
+            2,
+            66,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            -2,
+            67,
+            0,
+            2,
+            67,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            -3,
+            65,
+            0,
+            -3,
+            65,
+            1
+          ],
+          "material": "oak_planks"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3100.5,
+            64,
+            -7.499999999999979
+          ],
+          "native_yaw_deg": -0.0,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3088.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          0,
+          65,
+          -7
+        ],
+        "remaining_pedestal": [
+          0,
+          64,
+          -7
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV01"
+    },
+    {
+      "case_id": "MWB3-S-RV02",
+      "id": "MWB3-S-RV02",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV02",
+      "building_id": "quartz_double_opening",
+      "building_name": "双开口石英门",
+      "layout": "opposite_sides",
+      "distance_group": "near",
+      "azimuth_deg": 30,
+      "nominal_distance": 8,
+      "actual_horizontal_distance": 7.999999999999979,
+      "world_x_offset": 3200,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -3,
+            64,
+            0,
+            -3,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            0,
+            64,
+            0,
+            0,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            3,
+            64,
+            0,
+            3,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            -3,
+            67,
+            0,
+            3,
+            67,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            3,
+            65,
+            1,
+            4,
+            65,
+            1
+          ],
+          "material": "oak_planks"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3204.5,
+            64,
+            -6.428203230275491
+          ],
+          "native_yaw_deg": 29.999999999999996,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3188.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          4,
+          65,
+          -6
+        ],
+        "remaining_pedestal": [
+          4,
+          64,
+          -6
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV02"
+    },
+    {
+      "case_id": "MWB3-S-RV03",
+      "id": "MWB3-S-RV03",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV03",
+      "building_id": "brick_stepped_crown_gold",
+      "building_name": "阶梯顶砖拱门与金色侧翼",
+      "layout": "opposite_sides",
+      "distance_group": "near",
+      "azimuth_deg": 60,
+      "nominal_distance": 8,
+      "actual_horizontal_distance": 7.879999999999981,
+      "world_x_offset": 3300,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -2,
+            64,
+            0,
+            -2,
+            67,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            2,
+            64,
+            0,
+            2,
+            67,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -2,
+            68,
+            0,
+            2,
+            68,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -1,
+            69,
+            0,
+            1,
+            69,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -3,
+            66,
+            0,
+            -3,
+            66,
+            1
+          ],
+          "material": "gold_block"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3307.3242801818215,
+            64,
+            -3.4399999999999915
+          ],
+          "native_yaw_deg": 59.99999999999999,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3288.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          6,
+          65,
+          -3
+        ],
+        "remaining_pedestal": [
+          6,
+          64,
+          -3
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV03"
+    },
+    {
+      "case_id": "MWB3-S-RV04",
+      "id": "MWB3-S-RV04",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV04",
+      "building_id": "stone_arch_wood",
+      "building_name": "石砖拱门与木质侧翼",
+      "layout": "same_side",
+      "distance_group": "far",
+      "azimuth_deg": 0,
+      "nominal_distance": 12,
+      "actual_horizontal_distance": 11.999999999999979,
+      "world_x_offset": 3400,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -2,
+            64,
+            0,
+            -2,
+            66,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            2,
+            64,
+            0,
+            2,
+            66,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            -2,
+            67,
+            0,
+            2,
+            67,
+            0
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "bounds": [
+            -3,
+            65,
+            0,
+            -3,
+            65,
+            1
+          ],
+          "material": "oak_planks"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3400.5,
+            64,
+            -11.499999999999979
+          ],
+          "native_yaw_deg": -0.0,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3388.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          0,
+          65,
+          -11
+        ],
+        "remaining_pedestal": [
+          0,
+          64,
+          -11
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV04"
+    },
+    {
+      "case_id": "MWB3-S-RV05",
+      "id": "MWB3-S-RV05",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV05",
+      "building_id": "quartz_double_opening",
+      "building_name": "双开口石英门",
+      "layout": "same_side",
+      "distance_group": "far",
+      "azimuth_deg": 30,
+      "nominal_distance": 12,
+      "actual_horizontal_distance": 11.539999999999988,
+      "world_x_offset": 3500,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -3,
+            64,
+            0,
+            -3,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            0,
+            64,
+            0,
+            0,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            3,
+            64,
+            0,
+            3,
+            66,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            -3,
+            67,
+            0,
+            3,
+            67,
+            0
+          ],
+          "material": "quartz_block"
+        },
+        {
+          "bounds": [
+            3,
+            65,
+            1,
+            4,
+            65,
+            1
+          ],
+          "material": "oak_planks"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3506.27,
+            64,
+            -9.493933159672412
+          ],
+          "native_yaw_deg": 29.999999999999996,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3488.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          5,
+          65,
+          -9
+        ],
+        "remaining_pedestal": [
+          5,
+          64,
+          -9
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV05"
+    },
+    {
+      "case_id": "MWB3-S-RV06",
+      "id": "MWB3-S-RV06",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "independence_group": "MWB3-S-RV06",
+      "building_id": "brick_stepped_crown_gold",
+      "building_name": "阶梯顶砖拱门与金色侧翼",
+      "layout": "same_side",
+      "distance_group": "far",
+      "azimuth_deg": 60,
+      "nominal_distance": 12,
+      "actual_horizontal_distance": 11.999999999999979,
+      "world_x_offset": 3600,
+      "target_anchor": [
+        0.5,
+        65.62,
+        0.5
+      ],
+      "building_blueprint_relative_to_world_x_offset": [
+        {
+          "bounds": [
+            -2,
+            64,
+            0,
+            -2,
+            67,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            2,
+            64,
+            0,
+            2,
+            67,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -2,
+            68,
+            0,
+            2,
+            68,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -1,
+            69,
+            0,
+            1,
+            69,
+            0
+          ],
+          "material": "bricks"
+        },
+        {
+          "bounds": [
+            -3,
+            66,
+            0,
+            -3,
+            66,
+            1
+          ],
+          "material": "gold_block"
+        }
+      ],
+      "initial_poses": {
+        "alpha": {
+          "position": [
+            3610.892304845413,
+            64,
+            -5.49999999999999
+          ],
+          "native_yaw_deg": 59.99999999999999,
+          "pitch_deg": 0
+        },
+        "bravo": {
+          "position": [
+            3588.0,
+            64,
+            -12.0
+          ],
+          "native_yaw_deg": -45.0,
+          "pitch_deg": 0
+        }
+      },
+      "occluder": {
+        "material": "dirt",
+        "target_block": [
+          9,
+          65,
+          -5
+        ],
+        "remaining_pedestal": [
+          9,
+          64,
+          -5
+        ],
+        "actor": "alpha"
+      },
+      "visibility_contract": {
+        "alpha_faces_building_but_building_is_fully_occluded": true,
+        "bravo_initially_sees_building": true,
+        "alpha_must_remove_occluding_dirt": true,
+        "alpha_should_see_building_after_removal": true,
+        "bravo_remains_stationary": true
+      },
+      "timeline": {
+        "fps": 20,
+        "video_frames": 121,
+        "frames": [
+          {
+            "range": [
+              0,
+              20
+            ],
+            "action": "idle"
+          },
+          {
+            "range": [
+              20,
+              60
+            ],
+            "actor": "alpha",
+            "action": "destroy_occluding_dirt"
+          },
+          {
+            "range": [
+              60,
+              121
+            ],
+            "action": "idle_after_reveal"
+          }
+        ]
+      },
+      "camera_angle_tolerance_deg": 30.0,
+      "output_directory": "outputs/shared_world/building_reveal/MWB3-S-RV06"
+    }
+  ]
+}

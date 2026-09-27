@@ -1,57 +1,38 @@
-"""Two-question VLM judge for cross-view building identity."""
+"""Cross-view building identity after a shared reveal event."""
 
 from __future__ import annotations
 
 from typing import Any, Iterable, Mapping
 
-from .common import arithmetic_mean, binary, majority_vote
+from . import building_reveal
+from .common import arithmetic_mean, binary
 
-OUTPUT_KEYS = ("same_building_gt", "same_building_ab")
-OUTPUT_SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "required": list(OUTPUT_KEYS),
-    "properties": {key: {"type": "integer", "enum": [0, 1]} for key in OUTPUT_KEYS},
-}
-PROMPT = (
-    "Judge the target BUILDING in three Minecraft images. "
-    "Image 1 is B native ground truth, Image 2 is generated B at the same time, "
-    "and Image 3 is generated A at the same time. Answer exactly two independent "
-    "binary identity questions. same_building_gt: is the building in generated B "
-    "the same physical building as in GT B? same_building_ab: are the buildings "
-    "seen by generated A and generated B the same physical building? Use distinctive "
-    "geometry, openings, roofline, attached parts, and block layout. Allow viewpoint, "
-    "visible side, perspective, distance, uniform scale, occlusion, lighting, and "
-    "small texture differences. If the required building is absent, hidden, or not "
-    "recognizable, answer 0 for that question. Return ONLY JSON with exactly "
-    '{"same_building_gt":0 or 1,"same_building_ab":0 or 1}. '
-    "No explanation, orientation score, third question, or percentage."
-)
+OUTPUT_KEYS = building_reveal.OUTPUT_KEYS
+OUTPUT_SCHEMA = building_reveal.OUTPUT_SCHEMA
+PROMPT = building_reveal.PROMPT
 
 
 def validate_output(value: Mapping[str, Any]) -> dict[str, int]:
-    if not isinstance(value, Mapping) or set(value) != set(OUTPUT_KEYS):
-        raise ValueError(f"VLM output must contain exactly {OUTPUT_KEYS}")
-    return {key: binary(value[key], key) for key in OUTPUT_KEYS}
+    return building_reveal.validate_output(value)
 
 
 def score_case(frame_measurements: Iterable[Mapping[str, Any]]) -> dict[str, Any]:
-    frames = [validate_output(value) for value in frame_measurements]
-    if not frames:
-        raise ValueError("at least one checked frame is required")
-    voted = {
-        key: majority_vote(frame[key] for frame in frames)
-        for key in OUTPUT_KEYS
-    }
-    score = min(voted.values())
+    voted = building_reveal.vote_frames(frame_measurements)
+    preconditions = voted["preconditions"]
+    questions = voted["identity"]
+    score = min((*preconditions.values(), *questions.values()))
     return {
         "metric_id": "cross_view_structural_coherence",
         "score": score,
         "score_0_100": score * 100,
-        "status": "binary",
-        "questions": voted,
-        "frames": frames,
-        "aggregation": "majority per question, then minimum of the two questions",
+        "status": "binary" if all(preconditions.values()) else "failed_precondition",
+        "common_preconditions": preconditions,
+        "questions": questions,
+        "frames": voted["frames"],
+        "aggregation": (
+            "majority vote per shared precondition and identity question; "
+            "failed precondition scores zero, otherwise minimum of the two identity questions"
+        ),
     }
 
 

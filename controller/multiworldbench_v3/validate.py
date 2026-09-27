@@ -227,71 +227,65 @@ def validate(project_root: Path) -> dict[str, Any]:
     if role_action_counts["alpha"] != role_action_counts["bravo"]:
         raise ValueError(f"navigation fairness samples are not role-balanced: {role_action_counts}")
 
-    structural_path = v3 / "cases/shared_world/cross_view_structural_coherence.json"
-    structural = _load(structural_path)
-    if [question["id"] for question in structural["vlm_questions"]] != [
+    reveal_path = v3 / "cases/shared_world/building_reveal_shared.json"
+    reveal = _load(reveal_path)
+    expected_reveal_metrics = [
+        "cross_view_structural_coherence",
+        "spatial_reasoning",
+    ]
+    if reveal.get("metric_ids") != expected_reveal_metrics:
+        raise ValueError("building-reveal suite must bind both shared metrics")
+    if [item["id"] for item in reveal.get("common_preconditions", [])] != [
+        "occluder_removed",
+        "target_revealed",
+    ]:
+        raise ValueError("building-reveal suite must define exactly two common preconditions")
+    if [question["id"] for question in reveal.get("vlm_questions", [])] != [
         "same_building_gt",
         "same_building_ab",
     ]:
-        raise ValueError("structural judge must contain exactly the two approved questions")
-    if structural["check_frames"] != [60, 80, 100]:
-        raise ValueError("structural check frames changed")
-    for case in structural["cases"]:
+        raise ValueError("building-reveal judge must contain exactly two identity questions")
+    if reveal.get("check_frames") != [80, 100, 120]:
+        raise ValueError("building-reveal check frames changed")
+    for removed_path in (
+        v3 / "cases/shared_world/cross_view_structural_coherence.json",
+        v3 / "cases/shared_world/spatial_reasoning.json",
+    ):
+        if removed_path.exists():
+            raise ValueError(f"separate reveal case file must not remain: {removed_path}")
+    expected_contract = {
+        "alpha_faces_building_but_building_is_fully_occluded": True,
+        "bravo_initially_sees_building": True,
+        "alpha_must_remove_occluding_dirt": True,
+        "alpha_should_see_building_after_removal": True,
+        "bravo_remains_stationary": True,
+    }
+    for case in reveal["cases"]:
+        if case.get("metrics") != expected_reveal_metrics:
+            raise ValueError(f"shared metric binding mismatch: {case['case_id']}")
         frames = case["timeline"]["video_frames"]
         if any(
             type(frame) is not int or not 0 <= frame < frames
-            for frame in structural["check_frames"]
+            for frame in reveal["check_frames"]
         ):
-            raise ValueError(f"invalid structural frame for {case['case_id']}")
-        contract = case.get("visibility_contract", {})
-        if contract != {
-            "alpha_initially_sees_bravo_and_building": True,
-            "bravo_initially_does_not_see_building": True,
-            "bravo_sees_building_after_turn": True,
-            "no_occluder_or_world_edit": True,
-        }:
-            raise ValueError(f"invalid structural visibility contract: {case['case_id']}")
-        turn = case.get("bravo_turn", {})
-        if (
-            turn.get("direction") != "right"
-            or turn.get("start_frame") != 20
-            or turn.get("end_frame_exclusive") != 60
-            or turn.get("total_yaw_deg") != 90.0
-        ):
-            raise ValueError(f"invalid structural turn: {case['case_id']}")
-
-    spatial_path = v3 / "cases/shared_world/spatial_reasoning.json"
-    spatial = _load(spatial_path)
-    if [question["id"] for question in spatial["vlm_questions"]] != [
-        "same_building_gt",
-    ]:
-        raise ValueError("spatial-reasoning judge must contain only building identity")
-    if spatial["check_frames"] != [80, 100, 120]:
-        raise ValueError("spatial-reasoning check frames changed")
-    for case in spatial["cases"]:
-        frames = case["timeline"]["video_frames"]
-        if any(
-            type(frame) is not int or not 0 <= frame < frames
-            for frame in spatial["check_frames"]
-        ):
-            raise ValueError(f"invalid spatial-reasoning frame for {case['case_id']}")
-        contract = case.get("visibility_contract", {})
-        if contract != {
-            "alpha_initially_sees_bravo_and_building": True,
-            "bravo_faces_building_but_building_is_fully_occluded": True,
-            "bravo_must_remove_upper_dirt_block": True,
-            "bravo_should_see_building_after_removal": True,
-        }:
-            raise ValueError(f"invalid spatial-reasoning contract: {case['case_id']}")
+            raise ValueError(f"invalid building-reveal frame for {case['case_id']}")
+        if case.get("visibility_contract") != expected_contract:
+            raise ValueError(f"invalid building-reveal contract: {case['case_id']}")
         phases = case["timeline"]["frames"]
         if phases[1] != {
             "range": [20, 60],
-            "actor": "bravo",
+            "actor": "alpha",
             "action": "destroy_occluding_dirt",
         }:
-            raise ValueError(f"invalid spatial-reasoning action: {case['case_id']}")
-        if "dirt_to_break" not in case or "remaining_pedestal" not in case:
-            raise ValueError(f"missing spatial-reasoning occluder: {case['case_id']}")
+            raise ValueError(f"invalid building-reveal action: {case['case_id']}")
+        occluder = case.get("occluder", {})
+        if (
+            occluder.get("actor") != "alpha"
+            or occluder.get("material") != "dirt"
+            or "target_block" not in occluder
+            or "remaining_pedestal" not in occluder
+        ):
+            raise ValueError(f"missing building-reveal occluder: {case['case_id']}")
 
     shared_state_path = v3 / "cases/shared_world/shared_state_synchronization.json"
     shared_state = _load(shared_state_path)

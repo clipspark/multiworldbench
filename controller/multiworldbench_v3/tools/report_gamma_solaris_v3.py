@@ -30,8 +30,7 @@ NAMES = {
     "id_consistency": "回访 ID 一致性",
 }
 GROUPS = {
-    "structural": ("跨视角结构一致性", "MWB3-S-ST"),
-    "spatial": ("空间推理能力", "MWB3-S-SR"),
+    "reveal": ("建筑揭示（结构一致性 / 空间推理共用）", "MWB3-S-RV"),
     "race": ("竞态条件一致性", "MWB3-SW-RC"),
     "revisit": ("回访风格 / ID 一致性", "MWB3-R-RV"),
     "interaction": ("共享状态同步性（诊断）", "MWB3-S-SS"),
@@ -61,7 +60,7 @@ def comparison_clip(group: str, index: int, output: Path) -> None:
         return
     output.parent.mkdir(parents=True, exist_ok=True)
     gamma = gamma_video(group, f"{GROUPS[group][1]}{index + 1:02d}")
-    if group in ("structural", "spatial", "revisit"):
+    if group in ("reveal", "revisit"):
         inputs = [gt_video(group, index, "alpha"), gt_video(group, index, "bravo"),
                   solaris_video(group, index, "alpha"), solaris_video(group, index, "bravo"), gamma]
         solaris_a = "[2:v]"
@@ -213,9 +212,9 @@ table{{border-collapse:collapse;width:100%;background:var(--panel)}}th,td{{paddi
 .grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}}article{{background:var(--panel);padding:12px;border:1px solid var(--line);border-radius:10px}}article h3{{margin:0 0 8px}}video{{width:100%;background:#000}}
 details{{background:var(--panel);border:1px solid var(--line);padding:12px;border-radius:8px}}summary{{cursor:pointer;color:var(--accent)}}.scroll{{overflow:auto;margin-top:12px}}code{{font-size:11px;color:#cbd8f5;white-space:pre-wrap}}
 </style></head><body><main><h1>Gamma-World 与 Solaris · MultiWorldBench V3</h1>
-<p>同一首帧、同一双人逐帧动作、同一检查帧和 V3 指标代码。二值指标表中汇总为 0–100，逐 case 保留 0/1。交互/共享状态没有原生 GT，因此两个模型均只给诊断分；空间推理在几何证据缺失时按 V3 规则标记不可评。</p>
+<p>同一首帧、同一双人逐帧动作、同一检查帧和 V3 指标代码。二值指标表中汇总为 0–100，逐 case 保留 0/1。交互/共享状态没有原生 GT，因此两个模型均只给诊断分；跨视角结构一致性与空间推理共用同一批建筑揭示 case 和共同前提，空间推理直接复用跨视角的建筑身份结果。几何证据缺失时按 V3 规则标记不可评。</p>
 <table><thead><tr><th>高层指标</th><th>Solaris</th><th>Gamma-World</th><th>可评性</th></tr></thead><tbody>{''.join(summary_rows)}</tbody></table>
-{''.join(metric_sections)}<h1>视频对照</h1><p>结构、空间、回访：左 GT / 中 Solaris / 右 Gamma；竞态和交互：左 Solaris / 右 Gamma。每列上 A、下 B。</p>
+{''.join(metric_sections)}<h1>视频对照</h1><p>建筑揭示、回访：左 GT / 中 Solaris / 右 Gamma；竞态和交互：左 Solaris / 右 Gamma。每列上 A、下 B。</p>
 {''.join(video_sections)}</main></body></html>"""
     (RUN / "comparison" / "index.html").write_text(document, encoding="utf-8")
     print(RUN / "comparison" / "index.html")

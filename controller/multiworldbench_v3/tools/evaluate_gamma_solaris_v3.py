@@ -24,7 +24,7 @@ REPO = Path(__file__).resolve().parents[3]
 RUN = Path(os.environ.get("MWB3_RUN", REPO / "MultiWorldBench/v3/results/latest")).resolve()
 ASSETS = REPO / "MultiWorldBench/v3/assets"
 QWEN = Path("/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ")
-FRAMES = {"structural": [60, 80, 100], "spatial": [80, 100, 120], "race": [60, 80, 100], "interaction": [60, 70, 80]}
+FRAMES = {"reveal": [80, 100, 120], "race": [60, 80, 100], "interaction": [60, 70, 80]}
 # Gamma-World's released VAE has statistics for at most 50 latent frames and
 # its runner requires a latent-frame count divisible by three.  The nearest
 # legal length is 48 latent / 189 RGB frames.  The native V4 trajectory uses
@@ -48,19 +48,6 @@ from controller.multiworldbench_v3.metrics import (  # noqa: E402
     spatial_reasoning as spatial_metric,
     style_consistency as style_metric,
 )
-
-SPATIAL_PROMPT = (
-    "Judge the post-action state in two Minecraft images. Image 1 is B native ground truth and Image 2 is "
-    "generated B at the same time. B was instructed to destroy the single foreground dirt block that initially "
-    "occluded a distinctive stone-brick BUILDING with asymmetric wood attachments and a gold marker. Answer three "
-    "binary questions. occluder_removed: is the foreground eye-level dirt occluder removed in generated B? "
-    "target_revealed: is the target building visible and recognizable in generated B? same_building_gt: does generated "
-    "B show the same physical building as GT B? For identity use geometry, openings, roofline, attached parts, and block "
-    "layout; allow viewpoint, distance, lighting, and small texture differences. If unclear, answer 0. Return ONLY JSON "
-    "with exactly {\"occluder_removed\":0 or 1,\"target_revealed\":0 or 1,\"same_building_gt\":0 or 1}."
-)
-SPATIAL_KEYS = ("occluder_removed", "target_revealed", "same_building_gt")
-
 
 def load(path: Path) -> Any:
     with path.open(encoding="utf-8") as handle:
@@ -121,8 +108,7 @@ def gamma_video(group: str, case_id: str) -> Path:
 
 def gt_video(group: str, index: int, role: str) -> Path:
     case_id = {
-        "structural": f"MWB3-S-ST{index + 1:02d}",
-        "spatial": f"MWB3-S-SR{index + 1:02d}",
+        "reveal": f"MWB3-S-RV{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}",
         "revisit": f"MWB3-R-RV{index + 1:02d}",
     }[group]
@@ -132,8 +118,7 @@ def gt_video(group: str, index: int, role: str) -> Path:
 def solaris_video(group: str, index: int, role: str) -> Path:
     case = {
         "interaction": f"MWB3-S-SS{index + 1:02d}",
-        "structural": f"MWB3-S-ST{index + 1:02d}",
-        "spatial": f"MWB3-S-SR{index + 1:02d}",
+        "reveal": f"MWB3-S-RV{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}",
         "revisit": f"MWB3-R-RV{index + 1:02d}",
     }[group]
@@ -142,7 +127,7 @@ def solaris_video(group: str, index: int, role: str) -> Path:
 
 def evidence_frame(model: str, group: str, index: int, role: str, frame: int) -> Path:
     case_id = {
-        "structural": f"MWB3-S-ST{index + 1:02d}", "spatial": f"MWB3-S-SR{index + 1:02d}",
+        "reveal": f"MWB3-S-RV{index + 1:02d}",
         "race": f"MWB3-SW-RC{index + 1:02d}", "revisit": f"MWB3-R-RV{index + 1:02d}",
         "interaction": f"MWB3-S-SS{index + 1:02d}",
     }[group]
@@ -158,7 +143,11 @@ def evidence_frame(model: str, group: str, index: int, role: str, frame: int) ->
 
 
 def conditioning_frame(group: str, index: int, role: str) -> Path:
-    case_id = f"MWB3-SW-RC{index + 1:02d}" if group == "race" else f"MWB3-S-SS{index + 1:02d}"
+    case_id = {
+        "race": f"MWB3-SW-RC{index + 1:02d}",
+        "interaction": f"MWB3-S-SS{index + 1:02d}",
+        "reveal": f"MWB3-S-RV{index + 1:02d}",
+    }[group]
     source = ASSETS / group / case_id / "first_frame.png"
     return image_half(source, role, RUN / "evaluation" / "frames" / "conditioning" / group / case_id / f"{role}.png")
 
@@ -183,24 +172,23 @@ def prepare() -> None:
     if not (RUN / "models" / "gamma").is_dir():
         raise RuntimeError("Gamma inference directory is missing")
     requests: list[dict[str, Any]] = []
-    # Cross-view building identity.
+    # One shared reveal judgment supplies both common preconditions and both
+    # cross-view identity questions. Spatial reasoning reuses this result.
     for model in ("solaris", "gamma"):
         for index in range(6):
-            case_id = f"MWB3-S-ST{index + 1:02d}"
-            for frame in FRAMES["structural"]:
+            case_id = f"MWB3-S-RV{index + 1:02d}"
+            for frame in FRAMES["reveal"]:
                 images = [
-                    evidence_frame("gt", "structural", index, "bravo", frame),
-                    evidence_frame(model, "structural", index, "bravo", frame),
-                    evidence_frame(model, "structural", index, "alpha", frame),
+                    conditioning_frame("reveal", index, "alpha"),
+                    evidence_frame("gt", "reveal", index, "alpha", frame),
+                    evidence_frame(model, "reveal", index, "alpha", frame),
+                    evidence_frame(model, "reveal", index, "bravo", frame),
                 ]
-                requests.append(request(f"structural_{model}_{index+1:02d}_{frame}", "cross_view_structural_coherence", model, case_id, frame, images, structural_metric.PROMPT, structural_metric.OUTPUT_KEYS))
-    # Spatial reveal gates and identity.
-    for model in ("solaris", "gamma"):
-        for index in range(6):
-            case_id = f"MWB3-S-SR{index + 1:02d}"
-            for frame in FRAMES["spatial"]:
-                images = [evidence_frame("gt", "spatial", index, "bravo", frame), evidence_frame(model, "spatial", index, "bravo", frame)]
-                requests.append(request(f"spatial_{model}_{index+1:02d}_{frame}", "spatial_reasoning", model, case_id, frame, images, SPATIAL_PROMPT, SPATIAL_KEYS))
+                requests.append(request(
+                    f"reveal_{model}_{index+1:02d}_{frame}",
+                    "building_reveal_shared", model, case_id, frame, images,
+                    structural_metric.PROMPT, structural_metric.OUTPUT_KEYS,
+                ))
     # Race conditions use initial views and candidate block references.
     race_cases = load(REPO / "MultiWorldBench/v3/cases/shared_world/race_condition_consistency.json")["cases"]
     for model in ("solaris", "gamma"):
@@ -351,36 +339,45 @@ def aggregate() -> None:
     if missing:
         raise RuntimeError(f"missing/invalid VLM results ({len(missing)}): {missing[:10]}")
     output: dict[str, Any] = {"style_consistency": load(RUN / "evaluation" / "style_scores.json")}
-    # Structural.
+    # Shared reveal: score cross-view identity once, then reuse its
+    # same_building_gt question and common preconditions for spatial reasoning.
     output["cross_view_structural_coherence"] = {}
-    for model in ("solaris", "gamma"):
-        cases = []
-        for index in range(6):
-            frames = [by_id[f"structural_{model}_{index+1:02d}_{frame}"] for frame in FRAMES["structural"]]
-            row = structural_metric.score_case(frames); row["case_id"] = f"MWB3-S-ST{index+1:02d}"; cases.append(row)
-        output["cross_view_structural_coherence"][model] = {"cases": cases, "aggregate": structural_metric.aggregate_cases(cases)}
-    # Spatial.  Optional geometry evidence is produced by the self-contained
-    # SAM2/SIFT measurement tool.  Failed gates still have an exact score of
-    # zero; passed gates remain explicitly not evaluable when a defensible
-    # camera angle cannot be recovered.
+    output["spatial_reasoning"] = {}
     geometry_path = RUN / "evaluation" / "spatial_geometry.json"
     geometry = load(geometry_path) if geometry_path.is_file() else {}
-    output["spatial_reasoning"] = {}
     for model in ("solaris", "gamma"):
-        cases = []
+        structural_cases = []
+        spatial_cases = []
         for index in range(6):
-            frames = [by_id[f"spatial_{model}_{index+1:02d}_{frame}"] for frame in FRAMES["spatial"]]
-            evidence = {key: majority(frames, key) for key in SPATIAL_KEYS}
-            case_id = f"MWB3-S-SR{index+1:02d}"
+            case_id = f"MWB3-S-RV{index+1:02d}"
+            frames = [
+                by_id[f"reveal_{model}_{index+1:02d}_{frame}"]
+                for frame in FRAMES["reveal"]
+            ]
+            structural = structural_metric.score_case(frames)
+            structural["case_id"] = case_id
+            structural_cases.append(structural)
+
+            evidence = {
+                "cross_view_structural_coherence": structural,
+            }
             measured = geometry.get(model, {}).get(case_id, {})
             for key in ("projected_area_score_0_100", "camera_angle_score_0_100"):
                 if measured.get(key) is not None:
                     evidence[key] = measured[key]
-            row = spatial_metric.score_case(evidence); row["case_id"] = case_id; row["frames"] = frames
+            spatial = spatial_metric.score_case(evidence)
+            spatial["case_id"] = case_id
             if measured:
-                row["geometry_evidence"] = measured
-            cases.append(row)
-        output["spatial_reasoning"][model] = {"cases": cases, "aggregate": spatial_metric.aggregate_cases(cases)}
+                spatial["geometry_evidence"] = measured
+            spatial_cases.append(spatial)
+        output["cross_view_structural_coherence"][model] = {
+            "cases": structural_cases,
+            "aggregate": structural_metric.aggregate_cases(structural_cases),
+        }
+        output["spatial_reasoning"][model] = {
+            "cases": spatial_cases,
+            "aggregate": spatial_metric.aggregate_cases(spatial_cases),
+        }
     # Race.
     output["race_condition_consistency"] = {}
     for model in ("solaris", "gamma"):
