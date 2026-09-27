@@ -16,6 +16,10 @@ REQUIRED_NATIVE = (
     "bravo_actions.json", "first_frame.png", "action_left.json",
     "action_right.json", "prompt.txt",
 )
+REQUIRED_NO_GT = (
+    ".complete", "alpha_actions.json", "bravo_actions.json", "first_frame.png",
+    "action_left.json", "action_right.json", "prompt.txt", "provenance.json",
+)
 GAMMA_FILES = ("first_frame.png", "action_left.json", "action_right.json", "prompt.txt")
 
 
@@ -39,6 +43,10 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-root", required=True, type=Path)
     parser.add_argument("--shards", required=True, type=int)
+    parser.add_argument(
+        "--no-gt", action="store_true",
+        help="validate planned-action inputs with a reused first frame and no GT videos",
+    )
     args = parser.parse_args()
     if args.shards < 1:
         raise ValueError("--shards must be positive")
@@ -52,7 +60,8 @@ def main() -> None:
         raise ValueError(f"expected 180 unique cases, got {len(ids)}/{len(set(ids))}")
     for row in cases:
         case = source / row["case_id"]
-        missing = [name for name in REQUIRED_NATIVE if not (case / name).exists()]
+        required = REQUIRED_NO_GT if args.no_gt else REQUIRED_NATIVE
+        missing = [name for name in required if not (case / name).exists()]
         if missing:
             raise FileNotFoundError(f"{case}: missing {missing}")
         # Capture may have started before metadata-only suite regeneration.
@@ -82,6 +91,8 @@ def main() -> None:
                 "self_contained": True,
                 "case_count": len(records),
                 "frames": 189,
+                "gt_collected": not args.no_gt,
+                "gt_used_for_scoring": False,
                 "cases": records,
             }
             (stage / "manifest.json").write_text(
@@ -105,6 +116,8 @@ def main() -> None:
         "shard_sizes": [len(bucket) for bucket in buckets],
         "source": str(source),
         "gamma": str(gamma),
+        "gt_collected": not args.no_gt,
+        "gt_used_for_scoring": False,
     }
     (lists / "plan.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary))
