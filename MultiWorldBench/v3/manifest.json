@@ -98,25 +98,25 @@
       "id": "cross_view_structural_coherence",
       "domain": "shared_world",
       "name": "跨视角结构一致性",
-      "status": "implemented",
+      "status": "implemented_uncollected",
       "case_file": "cases/shared_world/building_reveal_shared.json",
-      "case_count": 6,
+      "case_count": 75,
       "implementation": "controller.multiworldbench_v3.metrics.cross_view_structural_coherence",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "B sees building; A is occluded, destroys dirt, and reveals the building"
+      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B sees A and building"
     },
     {
       "id": "spatial_reasoning",
       "domain": "shared_world",
       "name": "空间推理能力",
-      "status": "implemented",
+      "status": "implemented_uncollected",
       "case_file": "cases/shared_world/building_reveal_shared.json",
-      "case_count": 6,
+      "case_count": 75,
       "implementation": "controller.multiworldbench_v3.metrics.spatial_reasoning",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "B sees building; A is occluded, destroys dirt, and reveals the building",
+      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B sees A and building",
       "depends_on": "cross_view_structural_coherence.questions.same_building_gt"
     },
     {
