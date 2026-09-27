@@ -6,6 +6,10 @@ const {candidates, aimPose, builder, base} = require('./capture_building_reveal_
 
 const ANGLES = [20, 30, 40];
 const CHECK_FRAMES = [80, 100, 120];
+const ORBIT_RADIUS = 23;
+const ALPHA_Z = -19.35;
+const OCCLUDER_Z = -19;
+const BUILDING_FOCUS_Y = 69;
 const scenes = candidates.map(({scene_id, scene, ground, sceneBuild}) => ({scene_id, scene, ground, sceneBuild}));
 const buildings = candidates.map(({building_id, building, buildingBuild}) => ({building_id, building, buildingBuild}));
 
@@ -16,8 +20,10 @@ async function commandsFor(cx, scene, building) {
   await base(b, scene.ground);
   await scene.sceneBuild(b);
   await building.buildingBuild(b);
-  await b.fill(-2,64,-10,2,69,-10,'polished_deepslate');
-  await send(`setblock ${cx} 65 -10 minecraft:dirt`);
+  // One nearby dirt block hides the building before the action. There is no
+  // surrounding aperture wall: removing this single block opens the complete
+  // view rather than a one-block slit.
+  await send(`setblock ${cx} 65 ${OCCLUDER_Z} minecraft:dirt`);
   return commands;
 }
 
@@ -31,15 +37,12 @@ async function main() {
       for (const angle of ANGLES) {
         const scene=scenes[si], building=buildings[bi];
         const cx=7200 + ordinal*80;
-        const alpha=[cx+0.5,64,-10.05];
-        const focus=[cx+0.5,68,2.5];
+        const alpha=[cx+0.5,64,ALPHA_Z];
+        const focus=[cx+0.5,BUILDING_FOCUS_Y,2.5];
         const rad=angle*Math.PI/180;
-        // At 40 degrees, radius 18 overlaps a railway sleeper in the snow
-        // quarry and the dig-site rail in the badlands. Preserve the requested
-        // angle and move only these two five-case families 1.5 blocks inward.
-        const observerRadius=((si===2 || si===4) && angle===40)?16.5:18;
+        const observerRadius=ORBIT_RADIUS;
         const bravo=[cx+0.5+observerRadius*Math.sin(rad),64,2.5-observerRadius*Math.cos(rad)];
-        const bravoFocus=[cx+0.5,66.81,-3.775];
+        const bravoFocus=[cx+0.5,67.5,(ALPHA_Z+2.5)/2];
         const alphaAim=aimPose(alpha,focus), bravoAim=aimPose(bravo,bravoFocus);
         const caseId=`MWB3-S-RV-S${String(si+1).padStart(2,'0')}-B${String(bi+1).padStart(2,'0')}-A${angle}`;
         cases.push({
@@ -56,11 +59,11 @@ async function main() {
           },
           visibility_contract:{
             before_action:{alpha_sees_building:false,bravo_sees_building:true,bravo_sees_alpha:true},
-            after_action:{alpha_sees_building:true,bravo_sees_building:true,bravo_sees_alpha:true}
+            after_action:{alpha_sees_building:true,alpha_visible_building_fraction:[0.60,0.80],bravo_sees_building:true,bravo_sees_alpha:true}
           },
           reveal:{
-            actor:'alpha',occluder:{material:'minecraft:dirt',position:[cx,65,-10],count:1},
-            aperture_frame:{material:'minecraft:polished_deepslate',bounds:[cx-2,64,-10,cx+2,69,-10]},
+            actor:'alpha',occluder:{material:'minecraft:dirt',position:[cx,65,OCCLUDER_Z],count:1},
+            reveal_visibility_target:{minimum_fraction:0.60,preferred_range:[0.60,0.80],basis:'whole_building_visible_in_native_gt_alpha'},
             required_native_action:'hold_attack',action_frames:[21,60]
           },
           recording:{fps:20,frames:129,check_frames:CHECK_FRAMES},
@@ -77,11 +80,11 @@ async function main() {
     }
   }
   const suite={
-    schema_version:'mwb.v3.shared_building_reveal.v2',benchmark_version:'3',
+    schema_version:'mwb.v3.shared_building_reveal.v3',benchmark_version:'3',
     metric_ids:['cross_view_structural_coherence','spatial_reasoning'],
     status:'designed_not_collected',ranking_ready:false,self_contained:true,external_case_dependencies:[],
     case_count:cases.length,factorization:{scenes:5,buildings:5,relative_agent_angles_deg:ANGLES,total:75},
-    description:'A is initially blocked by exactly one dirt block and destroys it with native attack input. Stationary observer B sees A and the building throughout. The same fully crossed suite supplies both metrics.',
+    description:'A is initially blocked by one near-camera dirt block and destroys it with native attack input. The unobstructed GT view must expose at least 60% of the whole building. Stationary observer B sees A and the building throughout. The same fully crossed suite supplies both metrics.',
     check_frames:CHECK_FRAMES,
     common_preconditions:[
       {id:'occluder_removed',text:'A 是否成功移除遮挡建筑的泥土块？',values:[0,1]},

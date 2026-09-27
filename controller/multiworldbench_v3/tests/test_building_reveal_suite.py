@@ -54,4 +54,8 @@ def test_building_reveal_full_factorial_and_contract() -> None:
             math.degrees(math.atan2(bravo[0] - center_x, center_z - bravo[2]))
         )
         assert observed == case["relative_agent_angle_deg"]
-        assert math.isclose(alpha[2], -10.05)
+        assert math.isclose(alpha[2], -19.35)
+        assert case["visibility_contract"]["after_action"]["alpha_visible_building_fraction"] == [0.60, 0.80]
+        assert case["reveal"]["reveal_visibility_target"]["minimum_fraction"] == 0.60
+        assert "aperture_frame" not in case["reveal"]
+        assert sum("minecraft:dirt" in command and command.startswith("setblock ") for command in case["setup_commands"]) == 1
