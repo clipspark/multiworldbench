@@ -71,8 +71,8 @@ def validate(project_root: Path) -> dict[str, Any]:
     ids = [item["id"] for item in manifest["metrics"]]
     if tuple(ids) != METRIC_IDS:
         raise ValueError(f"manifest metric order/content differs from registry: {ids}")
-    if len(ids) != 10 or len(set(ids)) != 10:
-        raise ValueError("V3 must contain exactly ten unique metrics")
+    if len(ids) != len(METRIC_IDS) or len(set(ids)) != len(METRIC_IDS):
+        raise ValueError(f"V3 must contain exactly {len(METRIC_IDS)} unique metrics")
 
     registered = {item["id"]: item for item in METRICS}
     all_case_ids: set[str] = set()
@@ -292,6 +292,23 @@ def validate(project_root: Path) -> dict[str, Any]:
             raise ValueError(f"invalid spatial-reasoning action: {case['case_id']}")
         if "dirt_to_break" not in case or "remaining_pedestal" not in case:
             raise ValueError(f"missing spatial-reasoning occluder: {case['case_id']}")
+
+    shared_state_path = v3 / "cases/shared_world/shared_state_synchronization.json"
+    shared_state = _load(shared_state_path)
+    scene_design = shared_state.get("scene_design", {})
+    marker = scene_design.get("reference_marker", {})
+    if marker.get("shape") != "ground_cross" or marker.get("center_material") != "minecraft:red_concrete":
+        raise ValueError("shared-state suite lacks the approved ground-cross reference marker")
+    for case in shared_state["cases"]:
+        if case.get("expected_change_count") != 1:
+            raise ValueError(f"shared-state expected change count must be one: {case['case_id']}")
+        if case.get("target_cell") != scene_design.get("target_cell"):
+            raise ValueError(f"shared-state target is not the cross center: {case['case_id']}")
+        if case.get("reference_marker") != marker:
+            raise ValueError(f"shared-state marker differs from suite contract: {case['case_id']}")
+        for role in ("alpha", "bravo"):
+            if case["initial_conditions"][role]["pose"].get("target_cell") != case["target_cell"]:
+                raise ValueError(f"shared-state role target differs from cross center: {case['case_id']} {role}")
 
     race_path = v3 / "cases/shared_world/race_condition_consistency.json"
     race = _load(race_path)

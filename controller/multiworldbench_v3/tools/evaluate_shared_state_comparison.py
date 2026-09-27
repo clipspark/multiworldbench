@@ -6,7 +6,10 @@ from pathlib import Path
 from typing import Any
 
 REPO=Path(__file__).resolve().parents[3]
-RUN=Path(os.environ.get('MWB3_SHARED_STATE_RUN','/data2/xuzhangbo/MultiWorldBench-runs/shared_state_solaris_gamma_20260927_v1')).resolve()
+_run_env=os.environ.get('MWB3_SHARED_STATE_RUN')
+if not _run_env:
+    raise RuntimeError('MWB3_SHARED_STATE_RUN must point to an explicit output directory')
+RUN=Path(_run_env).resolve()
 ASSETS=REPO/'MultiWorldBench/v3/assets/interaction'
 CASES_FILE=REPO/'MultiWorldBench/v3/cases/shared_world/shared_state_synchronization.json'
 QWEN=Path('/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ')

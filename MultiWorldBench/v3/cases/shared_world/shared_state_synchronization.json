@@ -21,7 +21,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -40,34 +40,34 @@
         }
       ],
       "expected_after": {
-        "alpha": "minecraft:coarse_dirt"
+        "shared_cross_center": "minecraft:coarse_dirt"
       },
       "independence_group": "MWB3-S-SS01",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 22.04794746356044,
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              620.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "alpha",
-            "aim_distance_blocks": 4.315599610714601,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.255891931917932,
             "active": true,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
@@ -76,32 +76,49 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
             "native_yaw_deg": 143.13010235415598,
             "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              620.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "alpha",
+            "aim_role": "shared_cross_center",
             "aim_distance_blocks": 5.255891931917932,
             "active": false,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     },
     {
@@ -114,7 +131,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -133,34 +150,34 @@
         }
       ],
       "expected_after": {
-        "bravo": "minecraft:coarse_dirt"
+        "shared_cross_center": "minecraft:coarse_dirt"
       },
       "independence_group": "MWB3-S-SS02",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
             "native_yaw_deg": -143.13010235415598,
             "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              623.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "bravo",
+            "aim_role": "shared_cross_center",
             "aim_distance_blocks": 5.255891931917932,
             "active": false,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
@@ -169,32 +186,49 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 22.04794746356044,
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              623.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "bravo",
-            "aim_distance_blocks": 4.315599610714601,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.255891931917932,
             "active": true,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     },
     {
@@ -208,7 +242,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -227,35 +261,34 @@
         }
       ],
       "expected_after": {
-        "alpha": "minecraft:coarse_dirt",
-        "bravo": "minecraft:coarse_dirt"
+        "shared_cross_center": "minecraft:coarse_dirt"
       },
       "independence_group": "MWB3-S-SS03",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 22.04794746356044,
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              620.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "alpha",
-            "aim_distance_blocks": 4.315599610714601,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.255891931917932,
             "active": true,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
@@ -264,32 +297,49 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 22.04794746356044,
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 17.952324309360336,
             "aim_point": [
-              623.5,
-              91,
+              622.5,
+              91.0,
               0.5
             ],
-            "aim_role": "bravo",
-            "aim_distance_blocks": 4.315599610714601,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.255891931917932,
             "active": true,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     },
     {
@@ -302,7 +352,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -321,34 +371,34 @@
         }
       ],
       "expected_after": {
-        "alpha": "minecraft:air"
+        "shared_cross_center": "minecraft:air"
       },
       "independence_group": "MWB3-S-SS04",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 15.64224645720879,
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              620.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "alpha",
-            "aim_distance_blocks": 4.153841595439095,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.123904761019667,
             "active": true,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
@@ -357,32 +407,49 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
             "native_yaw_deg": 143.13010235415598,
             "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              620.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "alpha",
+            "aim_role": "shared_cross_center",
             "aim_distance_blocks": 5.123904761019667,
             "active": false,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     },
     {
@@ -395,7 +462,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -414,34 +481,34 @@
         }
       ],
       "expected_after": {
-        "bravo": "minecraft:air"
+        "shared_cross_center": "minecraft:air"
       },
       "independence_group": "MWB3-S-SS05",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
             "native_yaw_deg": -143.13010235415598,
             "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              623.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "bravo",
+            "aim_role": "shared_cross_center",
             "aim_distance_blocks": 5.123904761019667,
             "active": false,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
@@ -450,32 +517,49 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 15.64224645720879,
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              623.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "bravo",
-            "aim_distance_blocks": 4.153841595439095,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.123904761019667,
             "active": true,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     },
     {
@@ -489,7 +573,7 @@
       "metrics": [
         "shared_state_synchronization"
       ],
-      "scene": "preaim_interactions",
+      "scene": "marked_cross_courtyard",
       "fps": 20,
       "num_frames": 81,
       "valid_num_frames": 81,
@@ -508,35 +592,34 @@
         }
       ],
       "expected_after": {
-        "alpha": "minecraft:air",
-        "bravo": "minecraft:air"
+        "shared_cross_center": "minecraft:air"
       },
       "independence_group": "MWB3-S-SS06",
       "initial_conditions": {
         "alpha": {
           "pose": {
             "position": [
-              620.5,
+              619.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 15.64224645720879,
+            "native_yaw_deg": -143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              620.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "alpha",
-            "aim_distance_blocks": 4.153841595439095,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.123904761019667,
             "active": true,
             "target_cell": [
-              620,
+              622,
               91,
               0
             ],
             "support_cell": [
-              620,
+              622,
               90,
               0
             ]
@@ -545,36 +628,53 @@
         "bravo": {
           "pose": {
             "position": [
-              623.5,
+              625.5,
               91,
               4.5
             ],
-            "native_yaw_deg": -180,
-            "native_pitch_deg": 15.64224645720879,
+            "native_yaw_deg": 143.13010235415598,
+            "native_pitch_deg": 12.625836878907364,
             "aim_point": [
-              623.5,
+              622.5,
               91.5,
               0.5
             ],
-            "aim_role": "bravo",
-            "aim_distance_blocks": 4.153841595439095,
+            "aim_role": "shared_cross_center",
+            "aim_distance_blocks": 5.123904761019667,
             "active": true,
             "target_cell": [
-              623,
+              622,
               91,
               0
             ],
             "support_cell": [
-              623,
+              622,
               90,
               0
             ]
           }
         }
+      },
+      "target_cell": [
+        622,
+        91,
+        0
+      ],
+      "expected_change_count": 1,
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          622,
+          90,
+          0
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
       }
     }
   ],
-  "limitations": "Placement and destruction are scored separately. Material is evaluated only for placement. Native GT has not yet been collected.",
+  "limitations": "Placement and destruction are scored separately. Material is evaluated only for placement. Every case expects exactly one changed block at the red center of the white ground cross. Native GT has not been collected.",
   "benchmark_version": "3",
   "metric_id": "shared_state_synchronization",
   "ranking_ready": false,
@@ -587,7 +687,8 @@
     "placement_only": [
       "same_expected_material"
     ],
-    "destruction_material_evaluated": false
+    "destruction_material_evaluated": false,
+    "same_block_count_definition": "A and B must observe the same changed-block count, and that count must equal case.expected_change_count."
   },
   "metric_name": "共享状态同步性",
   "aggregation": "operation_specific_normalization_then_macro_mean",
@@ -610,5 +711,26 @@
   "score_range": [
     0,
     1
-  ]
+  ],
+  "scene_design": {
+    "name": "marked_cross_courtyard",
+    "target_cell": [
+      622,
+      91,
+      0
+    ],
+    "expected_change_count": 1,
+    "reference_marker": {
+      "shape": "ground_cross",
+      "center_cell": [
+        622,
+        90,
+        0
+      ],
+      "center_material": "minecraft:red_concrete",
+      "arm_material": "minecraft:white_concrete",
+      "arm_radius_blocks": 4
+    },
+    "context_geometry": "stone-brick courtyard with a white ground cross, red center, asymmetric colored edge markers and corner posts"
+  }
 }

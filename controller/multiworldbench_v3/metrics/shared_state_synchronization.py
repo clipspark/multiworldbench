@@ -32,10 +32,15 @@ def build_prompt(case: Mapping[str, Any]) -> str:
     operation = str(case["operation"])
     roles = ", ".join(case["active_roles"])
     verb = "placement" if operation == "place" else "destruction"
+    change = "added" if operation == "place" else "removed"
+    expected_count = int(case["expected_change_count"])
+    if expected_count < 0:
+        raise ValueError("expected_change_count must be non-negative")
     questions = (
-        f"action_success: did every active role complete its intended {verb}? "
-        "same_block_count: do A and B observe the same number of blocks added or removed? "
-        "same_target_location: do both views show the state change at the corresponding intended physical location? "
+        f"action_success: did the intended shared-world {verb} produce the expected final state? "
+        f"same_block_count: do A and B observe the same number of blocks {change}, "
+        f"and is that number exactly the expected count ({expected_count})? "
+        "same_target_location: do both views show the state change at the red center of the white ground cross? "
     )
     if operation == "place":
         expected = ", ".join(
