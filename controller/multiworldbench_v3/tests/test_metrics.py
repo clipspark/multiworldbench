@@ -178,6 +178,9 @@ class MetricTests(unittest.TestCase):
         self.assertIn("CENTER of the colored ground cross", prompt)
         self.assertIn("operator_expected_change_occurred", prompt)
         self.assertIn("minecraft:coarse_dirt", prompt)
+        self.assertIn("Image 1 is a labelled side-by-side comparison for operator B", prompt)
+        self.assertIn("Image 2 is the same labelled BEFORE/AFTER comparison for observer A", prompt)
+        self.assertNotIn("native GT", prompt)
         aggregate = shared_state_persistence.aggregate_cases([
             {"operation": "place", "score": 1},
             {"operation": "place", "score": 0},

@@ -13,7 +13,7 @@ QWEN=Path('/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ')
 CHECK_FRAMES=(180,)
 PRE_FRAME=18
 OPERATOR_FRAME=100
-EVAL_ROOT=RUN/'evaluation_change_detection'
+EVAL_ROOT=RUN/'evaluation_change_detection_joint_pairs'
 FRAME_ROOT=EVAL_ROOT/'frames'
 sys.path.insert(0,str(REPO))
 from controller.multiworldbench_v3.metrics import shared_state_persistence as metric
@@ -65,21 +65,16 @@ def prepare()->None:
     cases=load(CASES_FILE)['cases'];models=['gt','solaris','gamma'];req=[]
     for case in cases:
       cid=case['case_id']
-      gt_operator_before=generated('gt',cid,'bravo',PRE_FRAME);gt_operator_after=generated('gt',cid,'bravo',OPERATOR_FRAME);gt_observer_before=generated('gt',cid,'alpha',PRE_FRAME)
-      gt_pair_root=FRAME_ROOT/f'pairs/gt/{cid}'
-      gt_operator_pair=comparison_pair(gt_operator_before,gt_operator_after,gt_pair_root/'operator.png')
       for frame in CHECK_FRAMES:
-        gt_observer_after=generated('gt',cid,'alpha',frame)
-        gt_observer_pair=comparison_pair(gt_observer_before,gt_observer_after,gt_pair_root/'observer.png')
         for model in models:
           operator_before=generated(model,cid,'bravo',PRE_FRAME);operator_after=generated(model,cid,'bravo',OPERATOR_FRAME);observer_before=generated(model,cid,'alpha',PRE_FRAME)
           observer_after=generated(model,cid,'alpha',frame)
           pair_root=FRAME_ROOT/f'pairs/{model}/{cid}'
           operator_pair=comparison_pair(operator_before,operator_after,pair_root/'operator.png')
           observer_pair=comparison_pair(observer_before,observer_after,pair_root/'observer.png')
-          images=[gt_operator_pair,operator_pair,gt_observer_pair,observer_pair]
-          req.append({'request_id':f'{model}_{cid}_{frame}','model':model,'case_id':cid,'operation':case['operation'],'frame':frame,'pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'images':[str(p) for p in images],'image_sha256':[sha(p) for p in images],'prompt':metric.build_reference_prompt(case),'keys':list(metric.OUTPUT_KEYS)})
-    dump(EVAL_ROOT/'requests.json',req);dump(EVAL_ROOT/'prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':models,'check_frames':list(CHECK_FRAMES),'pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'protocol':'gt_referenced_labelled_full_frame_pairs'});print(json.dumps({'requests':len(req),'cases':len(cases),'models':models,'evaluation':str(EVAL_ROOT)}))
+          images=[operator_pair,observer_pair]
+          req.append({'request_id':f'{model}_{cid}_{frame}','model':model,'case_id':cid,'operation':case['operation'],'frame':frame,'pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'images':[str(p) for p in images],'image_sha256':[sha(p) for p in images],'prompt':metric.build_prompt(case),'keys':list(metric.OUTPUT_KEYS)})
+    dump(EVAL_ROOT/'requests.json',req);dump(EVAL_ROOT/'prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':models,'check_frames':list(CHECK_FRAMES),'pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'protocol':'labelled_full_frame_before_after_pairs'});print(json.dumps({'requests':len(req),'cases':len(cases),'models':models,'evaluation':str(EVAL_ROOT)}))
 
 def parse(raw:str,keys:tuple[str,...])->dict[str,int]:
     m=re.search(r'\{.*?\}',raw,re.S)
@@ -113,7 +108,7 @@ def judge(shard:int,num_shards:int,max_memory:int)->None:
     dump(EVAL_ROOT/f'judge_shard_{shard:02d}_of_{num_shards:02d}.json',{'completed':completed,'total':len(selected),'cuda':os.environ.get('CUDA_VISIBLE_DEVICES')})
 
 def aggregate()->None:
-    cases=load(CASES_FILE)['cases'];models=load(EVAL_ROOT/'prepare_complete.json')['models'];out={'schema_version':'mwb.v3.shared_state_persistence.model_comparison.v7','evaluation_protocol':'gt_referenced_labelled_full_frame_pairs','pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'check_frames':list(CHECK_FRAMES),'models':{}}
+    cases=load(CASES_FILE)['cases'];models=load(EVAL_ROOT/'prepare_complete.json')['models'];out={'schema_version':'mwb.v3.shared_state_persistence.model_comparison.v5','evaluation_protocol':'labelled_full_frame_before_after_pairs','pre_frame':PRE_FRAME,'operator_frame':OPERATOR_FRAME,'check_frames':list(CHECK_FRAMES),'models':{}}
     for model in models:
       scored=[]
       for case in cases:

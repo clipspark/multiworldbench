@@ -14,6 +14,7 @@
   },
   "design": "A and B jointly observe the marked center; A turns away; B places or destroys one configured block; B turns away; A returns and verifies persistence",
   "score_protocol": {
+    "visual_inputs": "two labelled full-frame BEFORE/AFTER comparisons without GT reference images: operator B and returning observer A",
     "questions": [
       "operator_expected_change_occurred",
       "returning_observer_expected_change_occurred"

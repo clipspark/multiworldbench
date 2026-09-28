@@ -93,7 +93,7 @@
       "aggregation": "single stable check frame, strict product per case, macro-mean of placement and destruction pass rates",
       "suite_definition": "5 geometry-rich scenes × 5 visually distinct block types × 2 operations (placement/destruction)",
       "gt_collected": true,
-      "evaluation_protocol": "GT-referenced labelled full-frame BEFORE/AFTER comparisons; VLM binary operator and returning-observer judgments; strict product per case"
+      "evaluation_protocol": "two labelled full-frame BEFORE/AFTER comparisons without GT reference images; VLM binary operator and returning-observer judgments; strict product per case"
     },
     {
       "id": "cross_view_structural_coherence",
