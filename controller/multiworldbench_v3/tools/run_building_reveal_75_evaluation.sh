@@ -9,7 +9,9 @@ GEOMETRY=controller/multiworldbench_v3/tools/measure_building_reveal_75_geometry
 REPORT=controller/multiworldbench_v3/tools/report_building_reveal_75.py
 PRIMARY=/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ
 FALLBACK=/data2/xuzhangbo/models/Qwen2.5-VL-3B-Instruct
-SHARDS=8
+IFS=',' read -r -a GPU_IDS <<< "${MWB3_EVALUATION_GPUS:-0,1,2,3,4,5,6,7}"
+SHARDS=${#GPU_IDS[@]}
+(( SHARDS > 0 )) || { echo "at least one evaluation GPU is required" >&2; exit 2; }
 
 test -f "$RUN/.inference_complete"
 mkdir -p "$RUN/logs/evaluation"
@@ -25,12 +27,12 @@ run_judges() {
   local failed=0
   declare -a pids=()
   for i in $(seq 0 $((SHARDS-1))); do
-    CUDA_VISIBLE_DEVICES="$i" "$JUDGE_PY" "$EVALUATOR" judge \
+    CUDA_VISIBLE_DEVICES="${GPU_IDS[$i]}" "$JUDGE_PY" "$EVALUATOR" judge \
       --shard-index "$i" --num-shards "$SHARDS" --max-memory-gib "$memory" \
       --checkpoint "$checkpoint" \
       >"$RUN/logs/evaluation/${label}_shard_$(printf '%02d' "$i").log" 2>&1 &
     pids[$i]=$!
-    echo "[$(date -Is)] ${label}_start shard=$i gpu=$i pid=${pids[$i]}"
+    echo "[$(date -Is)] ${label}_start shard=$i gpu=${GPU_IDS[$i]} pid=${pids[$i]}"
   done
   for i in $(seq 0 $((SHARDS-1))); do
     wait "${pids[$i]}" || failed=1
@@ -51,7 +53,7 @@ if (( missing > 0 )); then
   run_judges "$FALLBACK" qwen3b 16
 fi
 
-CUDA_VISIBLE_DEVICES=0 "$JUDGE_PY" "$GEOMETRY" >"$RUN/logs/evaluation/geometry.log" 2>&1
+CUDA_VISIBLE_DEVICES="${GPU_IDS[0]}" "$JUDGE_PY" "$GEOMETRY" >"$RUN/logs/evaluation/geometry.log" 2>&1
 "$JUDGE_PY" "$EVALUATOR" aggregate
 python3 "$REPORT"
 touch "$RUN/.evaluation_complete"

@@ -130,7 +130,7 @@ def aggregate()->None:
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('mode',choices=('prepare','judge','aggregate'));p.add_argument('--shard-index',type=int,default=0);p.add_argument('--num-shards',type=int,default=1);p.add_argument('--max-memory-gib',type=int,default=43);p.add_argument('--model-filter',choices=('solaris','gamma'));p.add_argument('--checkpoint',type=Path,default=QWEN);a=p.parse_args()
-    if a.mode=='prepare':prepare()
+    if a.mode=='prepare':prepare(a.model_filter)
     elif a.mode=='judge':judge(a.shard_index,a.num_shards,a.max_memory_gib,a.model_filter,a.checkpoint)
     else:aggregate()
 if __name__=='__main__':main()
