@@ -1,6 +1,6 @@
 """Prepare V3 concurrent-placement inference from conditioning stills, without GT."""
 from __future__ import annotations
-import argparse, hashlib, json, shutil
+import argparse, hashlib, json, shutil, subprocess
 from pathlib import Path
 
 parser=argparse.ArgumentParser()
@@ -19,14 +19,40 @@ def write(path,value):
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+"\n")
 
+def pair_first(alpha: Path, bravo: Path, output: Path):
+    output.parent.mkdir(parents=True,exist_ok=True)
+    subprocess.run([
+        "ffmpeg","-nostdin","-hide_banner","-loglevel","error","-y",
+        "-i",str(alpha),"-i",str(bravo),"-filter_complex","[0:v][1:v]hstack=inputs=2[v]",
+        "-map","[v]","-frames:v","1",str(output),
+    ],check=True)
+
+def normalize_first(source: Path, output: Path):
+    subprocess.run([
+        "ffmpeg","-nostdin","-hide_banner","-loglevel","error","-y",
+        "-i",str(source),"-vf","scale=640:360:flags=lanczos,crop=640:352:0:4",
+        "-frames:v","1",str(output),
+    ],check=True)
+
+def gamma_action(rows, frames=129):
+    keyboard=[];camera=[]
+    for frame in range(frames):
+        values=[0]*23
+        if frame < len(rows) and rows[frame]["action"]["attack"]: values[19]=1
+        if frame < len(rows) and rows[frame]["action"]["use"]: values[20]=1
+        keyboard.append(values);camera.append([0.0,0.0])
+    return {"keyboard":keyboard,"camera":camera}
+
 cases=[]
 for spec in suite["cases"]:
     cid=spec["case_id"]; captured=by_id[cid]
     dest=args.output/"inputs/cases"/cid;dest.mkdir(parents=True)
+    asset=args.output/"assets/race"/cid;asset.mkdir(parents=True)
+    role_rows={}
     for role in ("alpha","bravo"):
         source=Path(captured["images"][role]["image"])
         assert hashlib.sha256(source.read_bytes()).hexdigest()==captured["images"][role]["sha256"]
-        shutil.copyfile(source,dest/f"{role}_first_frame.png")
+        normalize_first(source,dest/f"{role}_first_frame.png")
         reference=args.repo/"MultiWorldBench/v3"/spec["block_reference_images"][role]
         assert reference.is_file(), reference
         shutil.copyfile(reference,dest/f"{role}_block_reference.png")
@@ -40,6 +66,21 @@ for spec in suite["cases"]:
         assert sum(row["action"]["use"] for row in planned)==end-start
         write(dest/f"{role}_actions.json",planned)
         write(dest/f"{role}_solaris_actions.json",canon)
+        write(asset/f"{role}_actions.json",planned)
+        write(asset/("action_left.json" if role=="alpha" else "action_right.json"),gamma_action(planned))
+        role_rows[role]=planned
+    pair_first(dest/"alpha_first_frame.png",dest/"bravo_first_frame.png",asset/"first_frame.png")
+    prompt=("Two Minecraft players simultaneously attempt once to place different blocks "
+            "at the same marked target cell.\n")
+    (asset/"prompt.txt").write_text(prompt,encoding="utf-8")
+    metadata={
+        "schema_version":"mwb.v3.asset.race_condition.v1","case_id":cid,
+        "group":"race","self_contained":True,"has_native_gt":False,
+        "scene_id":spec["scene_id"],"block_pair_id":spec["block_pair_id"],
+        "visibility_class":spec["visibility_class"],"target_cell":spec["world"]["target_cell"],
+        "intended_materials":spec["intended_materials"],"gamma_frames":129,"solaris_frames":101,
+    }
+    write(asset/"metadata.json",metadata)
     cases.append({
         "case_id":cid,"num_frames":spec["num_frames"],"fps":spec["fps"],
         "scene_id":spec["scene_id"],"block_pair_id":spec["block_pair_id"],
