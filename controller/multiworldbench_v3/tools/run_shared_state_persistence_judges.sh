@@ -5,7 +5,7 @@ REPO=${MWB3_REPO:-/data2/xuzhangbo/MultiWorldBench-modelscope/runtime-local/work
 PY=${QWEN_JUDGE_PY:-/data2/xuzhangbo/.venvs/qwen-judge/bin/python}
 CASES=${MWB3_PERSISTENCE_CASES:-$REPO/MultiWorldBench/v3/cases/shared_world/shared_state_persistence.json}
 ASSETS=${MWB3_PERSISTENCE_ASSETS:-$RUN/assets/interaction}
-EXPECTED=180
+EXPECTED=60
 IFS=',' read -r -a GPUS <<<"${MWB3_VLM_GPUS:-0,1,2,3,4,5,6,7}"
 SHARDS=${#GPUS[@]}
 (( SHARDS > 0 )) || { echo "MWB3_VLM_GPUS contains no GPUs"; exit 29; }
@@ -18,7 +18,7 @@ export MWB3_PERSISTENCE_RUN="$RUN" MWB3_PERSISTENCE_CASES="$CASES" MWB3_PERSISTE
 actual=$("$PY" - <<'PY'
 import json,os
 from pathlib import Path
-print(len(json.loads((Path(os.environ['MWB3_PERSISTENCE_RUN'])/'evaluation_gt_reference/requests.json').read_text())))
+print(len(json.loads((Path(os.environ['MWB3_PERSISTENCE_RUN'])/'evaluation_change_detection/requests.json').read_text())))
 PY
 )
 [[ "$actual" == "$EXPECTED" ]] || { echo "expected $EXPECTED requests, got $actual"; exit 30; }
@@ -34,9 +34,9 @@ done
 failed=0
 for i in $(seq 0 $((SHARDS-1))); do wait "${pids[$i]}" || failed=1; done
 (( failed==0 )) || exit 31
-outputs=$(find "$RUN/evaluation_gt_reference/vlm" -type f -name '*.json' | wc -l)
+outputs=$(find "$RUN/evaluation_change_detection/vlm" -type f -name '*.json' | wc -l)
 [[ "$outputs" == "$EXPECTED" ]] || { echo "expected $EXPECTED outputs, got $outputs"; exit 32; }
 "$PY" controller/multiworldbench_v3/tools/evaluate_shared_state_persistence.py aggregate
 "$PY" controller/multiworldbench_v3/tools/report_shared_state_persistence.py
-touch "$RUN/.evaluation_gt_reference_complete"
+touch "$RUN/.evaluation_change_detection_complete"
 echo "[$(date -Is)] vlm_manager_complete outputs=$outputs"

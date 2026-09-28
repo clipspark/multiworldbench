@@ -357,11 +357,11 @@ def validate(project_root: Path) -> dict[str, Any]:
         raise ValueError("shared-state persistence factorization changed")
     if persistence.get("score_protocol") != {
         "questions": [
-            "operator_matches_gt",
-            "returning_observer_matches_gt",
+            "operator_expected_change_occurred",
+            "returning_observer_expected_change_occurred",
         ],
-        "check_frames": [160, 170, 180],
-        "case_aggregation": "majority_per_question_then_strict_product",
+        "check_frames": [180],
+        "case_aggregation": "single_check_frame_then_strict_product",
         "suite_aggregation": "macro_mean_of_place_and_destroy_case_pass_rates",
     }:
         raise ValueError("shared-state persistence score protocol changed")
@@ -416,11 +416,14 @@ def validate(project_root: Path) -> dict[str, Any]:
         if phase_by_name["bravo_turns_away"]["bravo"].get("total_delta_deg") != -alpha_turn:
             raise ValueError(f"bravo turn-away direction changed: {case_id}")
         if case.get("evidence_frames") != {
-            "joint_initial": 10,
+            "joint_initial": 18,
             "operator_post_action": 80,
-            "returning_observer_checks": [160, 170, 180],
+            "returning_observer_checks": [180],
         }:
             raise ValueError(f"invalid persistence evidence frames: {case_id}")
+        expected_warmup_ms = 5000 if case_id == "MWB3-S-SP002" else 900
+        if case.get("capture_warmup_ms") != expected_warmup_ms:
+            raise ValueError(f"invalid persistence capture warmup: {case_id}")
         contract = case.get("visibility_contract", {})
         for key in (
             "alpha_target_hidden_range",

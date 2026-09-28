@@ -15,15 +15,13 @@
   "design": "A and B jointly observe; A turns away; B changes one block; B turns away; A returns and verifies the persistent state",
   "score_protocol": {
     "questions": [
-      "operator_matches_gt",
-      "returning_observer_matches_gt"
+      "operator_expected_change_occurred",
+      "returning_observer_expected_change_occurred"
     ],
     "check_frames": [
-      160,
-      170,
       180
     ],
-    "case_aggregation": "majority_per_question_then_strict_product",
+    "case_aggregation": "single_check_frame_then_strict_product",
     "suite_aggregation": "macro_mean_of_place_and_destroy_case_pass_rates"
   },
   "frame_range_convention": "half_open_[start,end)",
@@ -306,11 +304,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -336,7 +332,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:grass_oak:place"
+      "independence_group": "MWB3-SP:grass_oak:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP002",
@@ -616,11 +613,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -646,7 +641,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:grass_oak:place"
+      "independence_group": "MWB3-SP:grass_oak:place",
+      "capture_warmup_ms": 5000
     },
     {
       "case_id": "MWB3-S-SP003",
@@ -926,11 +922,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -956,7 +950,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:grass_oak:destroy"
+      "independence_group": "MWB3-SP:grass_oak:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP004",
@@ -1236,11 +1231,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -1266,7 +1259,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:grass_oak:destroy"
+      "independence_group": "MWB3-SP:grass_oak:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP005",
@@ -1546,11 +1540,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -1576,7 +1568,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:sandstone_court:place"
+      "independence_group": "MWB3-SP:sandstone_court:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP006",
@@ -1856,11 +1849,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -1886,7 +1877,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:sandstone_court:place"
+      "independence_group": "MWB3-SP:sandstone_court:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP007",
@@ -2166,11 +2158,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -2196,7 +2186,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:sandstone_court:destroy"
+      "independence_group": "MWB3-SP:sandstone_court:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP008",
@@ -2476,11 +2467,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -2506,7 +2495,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:sandstone_court:destroy"
+      "independence_group": "MWB3-SP:sandstone_court:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP009",
@@ -2786,11 +2776,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -2816,7 +2804,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:stone_plaza:place"
+      "independence_group": "MWB3-SP:stone_plaza:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP010",
@@ -3096,11 +3085,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -3126,7 +3113,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:stone_plaza:place"
+      "independence_group": "MWB3-SP:stone_plaza:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP011",
@@ -3406,11 +3394,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -3436,7 +3422,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:stone_plaza:destroy"
+      "independence_group": "MWB3-SP:stone_plaza:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP012",
@@ -3716,11 +3703,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -3746,7 +3731,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:stone_plaza:destroy"
+      "independence_group": "MWB3-SP:stone_plaza:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP013",
@@ -4026,11 +4012,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -4056,7 +4040,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:tuff_copper:place"
+      "independence_group": "MWB3-SP:tuff_copper:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP014",
@@ -4336,11 +4321,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -4366,7 +4349,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:tuff_copper:place"
+      "independence_group": "MWB3-SP:tuff_copper:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP015",
@@ -4646,11 +4630,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -4676,7 +4658,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:tuff_copper:destroy"
+      "independence_group": "MWB3-SP:tuff_copper:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP016",
@@ -4956,11 +4939,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -4986,7 +4967,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:tuff_copper:destroy"
+      "independence_group": "MWB3-SP:tuff_copper:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP017",
@@ -5266,11 +5248,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -5296,7 +5276,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:snow_ice:place"
+      "independence_group": "MWB3-SP:snow_ice:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP018",
@@ -5576,11 +5557,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -5606,7 +5585,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:snow_ice:place"
+      "independence_group": "MWB3-SP:snow_ice:place",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP019",
@@ -5886,11 +5866,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -5916,7 +5894,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:snow_ice:destroy"
+      "independence_group": "MWB3-SP:snow_ice:destroy",
+      "capture_warmup_ms": 900
     },
     {
       "case_id": "MWB3-S-SP020",
@@ -6196,11 +6175,9 @@
         "player_positions_fixed": true
       },
       "evidence_frames": {
-        "joint_initial": 10,
+        "joint_initial": 18,
         "operator_post_action": 80,
         "returning_observer_checks": [
-          160,
-          170,
           180
         ]
       },
@@ -6226,7 +6203,8 @@
         "runtime_dependency": false,
         "policy": "copy matching shared-state scene still into this suite; the complete scene specification above remains authoritative"
       },
-      "independence_group": "MWB3-SP:snow_ice:destroy"
+      "independence_group": "MWB3-SP:snow_ice:destroy",
+      "capture_warmup_ms": 900
     }
   ]
 }

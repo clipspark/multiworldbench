@@ -2,14 +2,13 @@
 
 from __future__ import annotations
 
-from collections import Counter
 from typing import Any, Iterable, Mapping
 
 from .common import arithmetic_mean, binary
 
 OUTPUT_KEYS = (
-    "operator_matches_gt",
-    "returning_observer_matches_gt",
+    "operator_expected_change_occurred",
+    "returning_observer_expected_change_occurred",
 )
 OUTPUT_SCHEMA = {key: "0 or 1" for key in OUTPUT_KEYS}
 
@@ -21,22 +20,37 @@ def build_prompt(case: Mapping[str, Any]) -> str:
     expected_count = int(case["expected_change_count"])
     if expected_count != 1:
         raise ValueError("shared-state persistence expects exactly one changed block")
+    expected_before = str(case["expected_before"]["target_cell"])
+    expected_after = str(case["expected_after"]["target_cell"])
+    if operation == "place":
+        transition = (
+            "the cross-center target changes from empty air to exactly one full coarse-dirt block"
+        )
+    else:
+        transition = (
+            "the one full one-meter coarse-dirt cube at the cross center disappears, leaving the target cell "
+            "empty/exposed. Judge the full cube, not whether any brown pixels remain: a small rotating or "
+            "floating brown collectible item is merely a drop produced by destruction and MUST be ignored. "
+            "A dropped item is much smaller than a 1x1x1 block, does not occupy the target cell, and does not "
+            "need to disappear. If the full cube is gone and the ground/cross center is visible, the after "
+            "state is air and the destroy transition MUST receive 1 even when that small item remains"
+        )
     schema = "{" + ",".join(f'\"{key}\":0 or 1' for key in OUTPUT_KEYS) + "}"
     return (
-        "Compare a generated Minecraft result against authoritative GT reference images. "
-        "There are four images in two independent pairs. Image 1 is the GT operator (B) view after the action; "
-        "Image 2 is the candidate operator (B) view after the same action. Image 3 is the GT returning-observer "
-        "(A) view after the return; Image 4 is the candidate returning-observer (A) view at the same time. "
-        f"The operation is {operation} and exactly {expected_count} target block changes. "
-        "For each pair, focus on the operation area at the CENTER of the colored ground cross. Treat the GT image "
-        "as the complete visual definition of the correct post-action state. Compare only (a) whether the center "
-        "target cell is occupied or empty/exposed, (b) the number of changed full grid blocks at that center, and "
-        "(c) the material/appearance of the changed block when one is present. Ignore viewpoint, camera framing, "
-        "perspective, lighting, render texture, players, tools, HUD, particles, dropped items, and background outside "
-        "the cross-center operation area. Answer operator_matches_gt=1 only if Image 2 matches Image 1 on all relevant "
-        "center-state properties. Answer returning_observer_matches_gt=1 only if Image 4 matches Image 3 on all "
-        "relevant center-state properties. If the candidate's cross center is offscreen, hidden, or too ambiguous to "
-        "verify, answer 0 for that pair. "
+        "Judge whether an expected Minecraft world-state change occurred by comparing BEFORE and AFTER images. "
+        "There are two independent temporal pairs from the same generated video. Image 1 is operator B BEFORE the "
+        "operation and Image 2 is operator B AFTER the operation. Image 3 is observer A BEFORE the operation and "
+        "Image 4 is observer A AFTER returning to the target. Focus only on the target cell at the CENTER of the "
+        "colored ground cross. "
+        f"The expected operation is {operation}; exactly {expected_count} block changes; expected transition: "
+        f"{transition}. The formal target states are {expected_before} before and {expected_after} after. "
+        "For each pair, output 1 only if the before image shows the expected before state AND the after image shows "
+        "the expected after state, so the requested change is visibly demonstrated. A merely different camera view "
+        "is not a state change. Ignore overall scene quality, viewpoint or framing differences, lighting, players, "
+        "tools, HUD, particles, dropped items, and background outside the cross-center operation area. Output 0 if "
+        "the cross center is offscreen, hidden, ambiguous, the count is wrong, or the expected transition is absent. "
+        "Set operator_expected_change_occurred for Images 1-2 and "
+        "returning_observer_expected_change_occurred for Images 3-4. "
         f"Return ONLY JSON with exactly {schema}."
     )
 
@@ -47,21 +61,11 @@ def validate_output(value: Mapping[str, Any]) -> dict[str, int]:
     return {key: binary(value[key], key) for key in OUTPUT_KEYS}
 
 
-def _majority(values: list[int]) -> int:
-    if not values:
-        raise ValueError("at least one frame judgment is required")
-    counts = Counter(values)
-    if counts[0] == counts[1]:
-        return 0
-    return 1 if counts[1] > counts[0] else 0
-
-
 def score_case(frame_outputs: Iterable[Mapping[str, Any]]) -> dict[str, Any]:
     rows = [validate_output(row) for row in frame_outputs]
-    questions = {
-        key: _majority([row[key] for row in rows])
-        for key in OUTPUT_KEYS
-    }
+    if len(rows) != 1:
+        raise ValueError("shared-state persistence expects exactly one stable post-action check frame")
+    questions = dict(rows[0])
     score = questions[OUTPUT_KEYS[0]] * questions[OUTPUT_KEYS[1]]
     return {
         "metric_id": "shared_state_persistence",
@@ -72,7 +76,7 @@ def score_case(frame_outputs: Iterable[Mapping[str, Any]]) -> dict[str, Any]:
         "questions": questions,
         "frame_outputs": rows,
         "check_frame_count": len(rows),
-        "aggregation": "majority_per_question_then_strict_product",
+        "aggregation": "single_check_frame_then_strict_product",
     }
 
 

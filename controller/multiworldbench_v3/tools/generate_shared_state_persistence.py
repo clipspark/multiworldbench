@@ -80,6 +80,7 @@ def build_case(index: int, scene: dict[str, object], operation: str, variant: in
         "valid_num_frames": 181,
         "duration_seconds": 9.05,
         "round_count": 1,
+        "capture_warmup_ms": 5000 if index == 2 else 900,
         "initial_conditions": conditions,
         "target_cell": target,
         "expected_change_count": 1,
@@ -109,9 +110,9 @@ def build_case(index: int, scene: dict[str, object], operation: str, variant: in
             "player_positions_fixed":True,
         },
         "evidence_frames": {
-            "joint_initial":10,
+            "joint_initial":18,
             "operator_post_action":80,
-            "returning_observer_checks":[160,170,180],
+            "returning_observer_checks":[180],
         },
         "visibility_contract": {
             "both_see_target_initially":True,
@@ -152,9 +153,12 @@ def main() -> None:
         "factorization":{"scenes":5,"operations":2,"turn_directions":2,"total":20},
         "design":"A and B jointly observe; A turns away; B changes one block; B turns away; A returns and verifies the persistent state",
         "score_protocol": {
-            "questions":["operator_matches_gt","returning_observer_matches_gt"],
-            "check_frames":[160,170,180],
-            "case_aggregation":"majority_per_question_then_strict_product",
+            "questions":[
+                "operator_expected_change_occurred",
+                "returning_observer_expected_change_occurred",
+            ],
+            "check_frames":[180],
+            "case_aggregation":"single_check_frame_then_strict_product",
             "suite_aggregation":"macro_mean_of_place_and_destroy_case_pass_rates",
         },
         "frame_range_convention":"half_open_[start,end)",

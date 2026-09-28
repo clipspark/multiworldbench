@@ -138,44 +138,46 @@ class MetricTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             shared_state_synchronization.score_case({"operation": "move"})
 
-    def test_shared_state_persistence_strict_majority(self):
+    def test_shared_state_persistence_single_comparison(self):
         passed = shared_state_persistence.score_case([
-            {"operator_matches_gt": 1, "returning_observer_matches_gt": 1},
-            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
-            {"operator_matches_gt": 0, "returning_observer_matches_gt": 1},
+            {"operator_expected_change_occurred": 1, "returning_observer_expected_change_occurred": 1},
         ])
         self.assertEqual(passed["questions"], {
-            "operator_matches_gt": 1,
-            "returning_observer_matches_gt": 1,
+            "operator_expected_change_occurred": 1,
+            "returning_observer_expected_change_occurred": 1,
         })
         self.assertEqual(passed["score"], 1)
         failed = shared_state_persistence.score_case([
-            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
-            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
-            {"operator_matches_gt": 1, "returning_observer_matches_gt": 1},
+            {"operator_expected_change_occurred": 1, "returning_observer_expected_change_occurred": 0},
         ])
         self.assertEqual(failed["score"], 0)
         with self.assertRaises(ValueError):
             shared_state_persistence.validate_output({
-                "operator_matches_gt": 1,
-                "returning_observer_matches_gt": 1,
+                "operator_expected_change_occurred": 1,
+                "returning_observer_expected_change_occurred": 1,
                 "extra": 0,
             })
         with self.assertRaises(ValueError):
             shared_state_persistence.score_case([])
+        with self.assertRaises(ValueError):
+            shared_state_persistence.score_case([
+                {"operator_expected_change_occurred": 1, "returning_observer_expected_change_occurred": 1},
+                {"operator_expected_change_occurred": 1, "returning_observer_expected_change_occurred": 1},
+            ])
 
     def test_shared_state_persistence_prompt_and_macro_average(self):
         prompt = shared_state_persistence.build_prompt({
             "operation": "place",
             "expected_change_count": 1,
+            "expected_before": {"target_cell": "minecraft:air"},
             "expected_after": {"target_cell": "minecraft:coarse_dirt"},
             "reference_marker": {"center_material": "minecraft:red_concrete"},
         })
-        self.assertIn("authoritative GT reference images", prompt)
-        self.assertIn("exactly 1 target block", prompt)
+        self.assertIn("BEFORE and AFTER images", prompt)
+        self.assertIn("exactly 1 block", prompt)
         self.assertIn("CENTER of the colored ground cross", prompt)
-        self.assertIn("operator_matches_gt", prompt)
-        self.assertNotIn("minecraft:coarse_dirt", prompt)
+        self.assertIn("operator_expected_change_occurred", prompt)
+        self.assertIn("minecraft:coarse_dirt", prompt)
         aggregate = shared_state_persistence.aggregate_cases([
             {"operation": "place", "score": 1},
             {"operation": "place", "score": 0},
