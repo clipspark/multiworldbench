@@ -91,12 +91,12 @@ def aggregate()->None:
     for model in models:
       scored=[]
       for case in cases:
-        cid=case['case_id'];rows=[]
+        cid=case['case_id'];rows=[];evidence=[]
         for frame in CHECK_FRAMES:
           p=RUN/f'evaluation/vlm/{model}_{cid}_{frame}.json'
           if not p.is_file() or load(p).get('measurement') is None:raise RuntimeError(f'missing {p}')
-          rows.append({'frame':frame,**load(p)['measurement']})
-        result=metric.score_case(rows);result.update({'case_id':cid,'scene':case['scene'],'scene_name_zh':case['scene_name_zh'],'operation':case['operation'],'variant':case['variant']});scored.append(result)
+          measurement=load(p)['measurement'];rows.append(measurement);evidence.append({'frame':frame,**measurement})
+        result=metric.score_case(rows);result['frame_evidence']=evidence;result.update({'case_id':cid,'scene':case['scene'],'scene_name_zh':case['scene_name_zh'],'operation':case['operation'],'variant':case['variant']});scored.append(result)
       out['models'][model]={'cases':scored,'aggregate':metric.aggregate_cases(scored)}
     dump(RUN/'scores.json',out);print(json.dumps({m:v['aggregate'] for m,v in out['models'].items()},ensure_ascii=False))
 
