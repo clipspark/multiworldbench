@@ -8,10 +8,15 @@ GAMMA_BIN=${GAMMA_BIN:-/data2/xuzhangbo/.conda/envs/gamma-world/bin}
 SOLARIS=${SOLARIS_ROOT:-/data2/xuzhangbo/multihuman-animate/solaris}
 SOLARIS_PY=${SOLARIS_PY:-/data2/xuzhangbo/.conda/envs/solaris/bin/python}
 SOURCE="$RUN/assets/reveal"
-N_SHARDS=8
 N_CASES=75
 FRAMES=129
-MAX_SHARD=10
+IFS=',' read -r -a GPU_IDS <<< "${MWB3_INFERENCE_GPUS:-0,1,2,3,4,5,6,7}"
+GPU_COUNT=${#GPU_IDS[@]}
+(( GPU_COUNT >= 3 )) || { echo "at least three GPUs are required" >&2; exit 2; }
+N_SHARDS=$GPU_COUNT
+GAMMA_WORKERS=$((GPU_COUNT-2))
+GAMMA_GPU_CSV=$(IFS=,; echo "${GPU_IDS[*]:0:GAMMA_WORKERS}")
+MAX_SHARD=$(((N_CASES+N_SHARDS-1)/N_SHARDS))
 EVAL_NAME=eval_mwb3_building_reveal_129
 
 test -f "$RUN/.gt_capture_complete"
@@ -78,8 +83,8 @@ start_solaris(){
 
 (
   cd "$GAMMA"
-  CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 OMP_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false \
-    "$GAMMA_BIN/torchrun" --standalone --nproc-per-node=6 --master-port=29765 scripts/inference.py \
+  CUDA_VISIBLE_DEVICES="$GAMMA_GPU_CSV" OMP_NUM_THREADS=4 TOKENIZERS_PARALLELISM=false \
+    "$GAMMA_BIN/torchrun" --standalone --nproc-per-node="$GAMMA_WORKERS" --master-port=29765 scripts/inference.py \
     --mode causal_few_step \
     --checkpoint /data2/xuzhangbo/models/Gamma-World/causal-few-step/model.safetensors \
     --vae /data2/xuzhangbo/models/Gamma-World/tokenizer.pth \
@@ -90,18 +95,19 @@ start_solaris(){
     --cache-text-embeddings --text-encoder-offload release \
     >"$RUN/logs/gamma/inference.log" 2>&1
 ) & gamma_pid=$!
-echo "[$(date -Is)] gamma_start pid=$gamma_pid gpus=0-5"
+echo "[$(date -Is)] gamma_start pid=$gamma_pid gpus=$GAMMA_GPU_CSV"
 
 declare -a solaris_pids
-start_solaris 6 6; solaris_pids[6]=$LAST_PID
-start_solaris 7 7; solaris_pids[7]=$LAST_PID
+for i in $(seq "$GAMMA_WORKERS" $((N_SHARDS-1))); do
+  start_solaris "$i" "${GPU_IDS[$i]}"; solaris_pids[$i]=$LAST_PID
+ done
 
 gamma_status=0; wait "$gamma_pid" || gamma_status=$?
 gamma_count=$(find "$RUN/models/gamma/reveal" -type f -name generated.mp4 | wc -l)
 echo "[$(date -Is)] gamma_end status=$gamma_status outputs=$gamma_count"
 (( gamma_status == 0 && gamma_count == N_CASES )) || exit 20
 
-for i in $(seq 0 5); do start_solaris "$i" "$i"; solaris_pids[$i]=$LAST_PID; done
+for i in $(seq 0 $((GAMMA_WORKERS-1))); do start_solaris "$i" "${GPU_IDS[$i]}"; solaris_pids[$i]=$LAST_PID; done
 failed=0
 for i in $(seq 0 $((N_SHARDS-1))); do wait "${solaris_pids[$i]}" || failed=1; done
 (( failed == 0 )) || exit 21
