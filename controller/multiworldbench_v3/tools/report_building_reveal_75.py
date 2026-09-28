@@ -146,7 +146,7 @@ code{{color:#ffd181}}h2{{margin-top:32px}}
 <p class="muted">75 case = 5 个富几何场景 × 5 种建筑 × 3 个角色夹角（20° / 30° / 40°）。A 原先被单个泥土块完全遮挡并执行原生破坏动作；挖开后 GT 中至少约 60% 的完整建筑可见；静止的 B 始终看到 A 与建筑。</p>
 <div class="cards">{''.join(cards)}</div>
 <h2>评分口径</h2><p>跨视角结构一致性：80、100、120 帧分别用 VLM 判断遮挡是否移除、A 是否看见至少约 60% 的完整建筑、生成 A 与 GT A 是否为同一建筑、生成 A 与生成 B 是否为同一建筑；逐项多数票，case 取四项最小值（0/1）。空间推理复用前三项门控，再取 SAM2 投影面积一致性和相机视角对齐分的较低值（0–100）。</p>
-<p class="muted">VLM 主评使用 Qwen2.5-VL-72B-Instruct-AWQ；本次 {{fallback_count}}/{{total_vlm}} 条采用 Qwen2.5-VL-3B-Instruct 回退，原始 72B 尝试保留在证据文件中。</p><h2>代表视频</h2><div class="videos">{''.join(videos)}</div>
+<p class="muted">VLM 主评使用 Qwen2.5-VL-72B-Instruct-AWQ；本次 {{fallback_count}}/{{total_vlm}} 条因主评连续三次未返回有效二值 JSON，采用 Qwen2.5-VL-3B-Instruct 回退。回退不改变问题、输入图像或评分规则。</p><h2>代表视频</h2><div class="videos">{''.join(videos)}</div>
 <h2>75 个 case 完整评分表</h2><div class="table-wrap"><table><thead><tr>
 <th>Case</th><th>场景</th><th>建筑</th><th>角度</th>
 <th>Solaris 结构</th><th>S 前提</th><th>S 建筑问题</th><th>S 空间</th><th>S 面积</th><th>S 视角</th>
