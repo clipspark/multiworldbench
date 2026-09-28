@@ -135,73 +135,93 @@ def generate() -> dict:
     cases = []
     lookup = {}
     number = 0
-    for scene in SCENES:
-        for pair in BLOCK_PAIRS:
-            group = f"MWB3-SW-RC-G{len(lookup) // 4 + 1:02d}"
-            for visibility in VISIBILITY:
-                number += 1
-                case_id = f"MWB3-SW-RC{number:03d}"
-                col, row = (number - 1) % 10, (number - 1) // 10
-                tx, ty, tz = 1000 + 24 * col, 91, 24 * row
-                cx, cz = tx + 0.5, tz + 0.5
-                alpha = [cx + visibility["alpha_offset"][0], ty, cz + visibility["alpha_offset"][1]]
-                bravo = [cx + visibility["bravo_offset"][0], ty, cz + visibility["bravo_offset"][1]]
-                case = {
-                    "id": case_id,
-                    "case_id": case_id,
-                    "title": (
-                        f"并发放置竞态 · {scene['name_zh']} · {visibility['name_zh']} · "
-                        f"{pair['alpha']} vs {pair['bravo']}"
-                    ),
-                    "metrics": ["race_condition_consistency"],
-                    "scene_id": scene["id"],
-                    "block_pair_id": pair["id"],
-                    "visibility_class": visibility["id"],
-                    "expected_agent_visibility": {
-                        "alpha_sees_bravo": visibility["alpha_sees_bravo"],
-                        "bravo_sees_alpha": visibility["bravo_sees_alpha"],
+    visibility_by_id = {row["id"]: row for row in VISIBILITY}
+    for scene_index, scene in enumerate(SCENES):
+        pair_order = [
+            BLOCK_PAIRS[scene_index % 3],
+            BLOCK_PAIRS[(scene_index + 1) % 3],
+            BLOCK_PAIRS[(scene_index + 2) % 3],
+        ]
+        selected_cells = [
+            (pair_order[0], visibility_by_id["mutual"]),
+            (pair_order[0], visibility_by_id["mutual_invisible"]),
+            (pair_order[1], visibility_by_id["mutual"]),
+            (pair_order[1], visibility_by_id["mutual_invisible"]),
+            (pair_order[2], visibility_by_id["alpha_sees_bravo"]),
+            (pair_order[2], visibility_by_id["bravo_sees_alpha"]),
+        ]
+        for pair, visibility in selected_cells:
+            pair_index = next(i for i, row in enumerate(BLOCK_PAIRS) if row["id"] == pair["id"])
+            group = f"MWB3-SW-RC-G{scene_index * 3 + pair_index + 1:02d}"
+            number += 1
+            case_id = f"MWB3-SW-RC{number:03d}"
+            col, row = (number - 1) % 10, (number - 1) // 10
+            tx, ty, tz = 1000 + 24 * col, 91, 24 * row
+            cx, cz = tx + 0.5, tz + 0.5
+            alpha = [cx + visibility["alpha_offset"][0], ty, cz + visibility["alpha_offset"][1]]
+            bravo = [cx + visibility["bravo_offset"][0], ty, cz + visibility["bravo_offset"][1]]
+            case = {
+                "id": case_id,
+                "case_id": case_id,
+                "title": (
+                    f"并发放置竞态 · {scene['name_zh']} · {visibility['name_zh']} · "
+                    f"{pair['alpha']} vs {pair['bravo']}"
+                ),
+                "metrics": ["race_condition_consistency"],
+                "scene_id": scene["id"],
+                "block_pair_id": pair["id"],
+                "visibility_class": visibility["id"],
+                "expected_agent_visibility": {
+                    "alpha_sees_bravo": visibility["alpha_sees_bravo"],
+                    "bravo_sees_alpha": visibility["bravo_sees_alpha"],
+                },
+                "independence_group": group,
+                "world": {
+                    "target_cell": [tx, ty, tz],
+                    "support_cell": [tx, ty - 1, tz],
+                    "alpha_position": alpha,
+                    "bravo_position": bravo,
+                },
+                "intended_materials": {"alpha": pair["alpha"], "bravo": pair["bravo"]},
+                "simultaneous_action": {
+                    "native_action": "use",
+                    "active_frame_range": [21, 22],
+                    "same_frames_for_both_roles": True,
+                    "placements_per_role": 1,
+                    "target": "same target_cell",
+                },
+                "num_frames": 101,
+                "fps": 20,
+                "gt_collected": False,
+                "capture_spec": {
+                    "conditioning_only": True,
+                    "initial_frames": {
+                        "alpha": f"outputs/{case_id}/alpha_first_frame.png",
+                        "bravo": f"outputs/{case_id}/bravo_first_frame.png",
                     },
-                    "independence_group": group,
-                    "world": {
-                        "target_cell": [tx, ty, tz],
-                        "support_cell": [tx, ty - 1, tz],
-                        "alpha_position": alpha,
-                        "bravo_position": bravo,
+                    "generated_videos": {
+                        "alpha": f"outputs/{case_id}/alpha_generated.mp4",
+                        "bravo": f"outputs/{case_id}/bravo_generated.mp4",
                     },
-                    "intended_materials": {"alpha": pair["alpha"], "bravo": pair["bravo"]},
-                    "simultaneous_action": {
-                        "native_action": "use",
-                        "active_frame_range": [21, 22],
-                        "same_frames_for_both_roles": True,
-                        "placements_per_role": 1,
-                        "target": "same target_cell",
-                    },
-                    "num_frames": 101,
-                    "fps": 20,
-                    "gt_collected": False,
-                    "capture_spec": {
-                        "conditioning_only": True,
-                        "initial_frames": {
-                            "alpha": f"outputs/{case_id}/alpha_first_frame.png",
-                            "bravo": f"outputs/{case_id}/bravo_first_frame.png",
-                        },
-                        "generated_videos": {
-                            "alpha": f"outputs/{case_id}/alpha_generated.mp4",
-                            "bravo": f"outputs/{case_id}/bravo_generated.mp4",
-                        },
-                    },
-                    "block_reference_images": {
-                        "alpha": f"assets/block_references/{pair['alpha']}.png",
-                        "bravo": f"assets/block_references/{pair['bravo']}.png",
-                    },
-                }
-                cases.append(case)
-                lookup[(scene["id"], pair["id"], visibility["id"])] = case
+                },
+                "block_reference_images": {
+                    "alpha": f"assets/block_references/{pair['alpha']}.png",
+                    "bravo": f"assets/block_references/{pair['bravo']}.png",
+                },
+            }
+            cases.append(case)
+            lookup[(scene["id"], pair["id"], visibility["id"])] = case
 
     for scene in SCENES:
-        for pair in BLOCK_PAIRS:
-            alpha_case = lookup[(scene["id"], pair["id"], "alpha_sees_bravo")]
-            bravo_case = lookup[(scene["id"], pair["id"], "bravo_sees_alpha")]
+        one_way_pairs = {
+            case["block_pair_id"]
+            for case in cases
+            if case["scene_id"] == scene["id"]
+            and case["visibility_class"] == "alpha_sees_bravo"
+        }
+        for pair_id in one_way_pairs:
+            alpha_case = lookup[(scene["id"], pair_id, "alpha_sees_bravo")]
+            bravo_case = lookup[(scene["id"], pair_id, "bravo_sees_alpha")]
             alpha_case["counter_case_of"] = bravo_case["case_id"]
             bravo_case["counter_case_of"] = alpha_case["case_id"]
 
@@ -220,8 +240,9 @@ def generate() -> dict:
             "visibility_classes": 4,
             "scenes": 5,
             "block_pairs": 3,
-            "total_cases": 60,
-            "cross_product": "4 visibility classes × 5 scenes × 3 A/B block pairs",
+            "factor_grid_size": 60,
+            "selected_cases": 30,
+            "sampling": "per scene: 2 mutual + 2 mutual-invisible + 1 one-way counter pair",
         },
         "visibility_catalog": [
             {key: value for key, value in row.items() if key not in {"alpha_offset", "bravo_offset"}}

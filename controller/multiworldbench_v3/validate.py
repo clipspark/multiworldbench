@@ -485,12 +485,13 @@ def validate(project_root: Path) -> dict[str, Any]:
         "visibility_classes": 4,
         "scenes": 5,
         "block_pairs": 3,
-        "total_cases": 60,
-        "cross_product": "4 visibility classes × 5 scenes × 3 A/B block pairs",
+        "factor_grid_size": 60,
+        "selected_cases": 30,
+        "sampling": "per scene: 2 mutual + 2 mutual-invisible + 1 one-way counter pair",
     }:
-        raise ValueError("race-condition factor design must be 4 × 5 × 3 = 60")
-    if race.get("case_count") != 60 or len(race["cases"]) != 60:
-        raise ValueError("race-condition suite must contain exactly 60 cases")
+        raise ValueError("race-condition factor design must be the stratified 30-case subset")
+    if race.get("case_count") != 30 or len(race["cases"]) != 30:
+        raise ValueError("race-condition suite must contain exactly 30 cases")
     scene_ids = {row["id"] for row in race.get("scene_catalog", [])}
     pair_ids = {row["id"] for row in race.get("block_pair_catalog", [])}
     if len(scene_ids) != 5 or len(pair_ids) != 3:
@@ -582,22 +583,42 @@ def validate(project_root: Path) -> dict[str, Any]:
         elif counter_id is not None:
             raise ValueError(f"only one-way race cases may declare counters: {case_id}")
 
-    expected_combinations = {
-        (scene_id, pair_id, visibility_class)
-        for scene_id in scene_ids
-        for pair_id in pair_ids
-        for visibility_class in expected_visibility
-    }
-    if observed_combinations != expected_combinations:
-        raise ValueError("race-condition suite does not cover the complete 4 × 5 × 3 cross product")
     visibility_counts = {
         visibility_class: sum(
             case["visibility_class"] == visibility_class for case in race["cases"]
         )
         for visibility_class in expected_visibility
     }
-    if set(visibility_counts.values()) != {15}:
-        raise ValueError(f"race visibility classes must contain 15 cases each: {visibility_counts}")
+    if visibility_counts != {
+        "mutual": 10,
+        "alpha_sees_bravo": 5,
+        "bravo_sees_alpha": 5,
+        "mutual_invisible": 10,
+    }:
+        raise ValueError(f"race visibility sampling is unbalanced: {visibility_counts}")
+    scene_counts = {
+        scene_id: sum(case["scene_id"] == scene_id for case in race["cases"])
+        for scene_id in scene_ids
+    }
+    pair_counts = {
+        pair_id: sum(case["block_pair_id"] == pair_id for case in race["cases"])
+        for pair_id in pair_ids
+    }
+    if set(scene_counts.values()) != {6} or set(pair_counts.values()) != {10}:
+        raise ValueError(f"race scene/pair sampling is unbalanced: {scene_counts}, {pair_counts}")
+    for scene_id in scene_ids:
+        rows = [case for case in race["cases"] if case["scene_id"] == scene_id]
+        per_scene_visibility = {
+            visibility_class: sum(case["visibility_class"] == visibility_class for case in rows)
+            for visibility_class in expected_visibility
+        }
+        if per_scene_visibility != {
+            "mutual": 2,
+            "alpha_sees_bravo": 1,
+            "bravo_sees_alpha": 1,
+            "mutual_invisible": 2,
+        }:
+            raise ValueError(f"race visibility sampling differs within scene {scene_id}")
 
     for relative in (
         "cases/revisit/style_consistency.json",
