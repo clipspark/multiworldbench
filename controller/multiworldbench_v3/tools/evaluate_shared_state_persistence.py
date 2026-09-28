@@ -12,6 +12,8 @@ CASES_FILE=Path(os.environ.get('MWB3_PERSISTENCE_CASES',REPO/'MultiWorldBench/v3
 QWEN=Path('/data2/xuzhangbo/models/Qwen2.5-VL-72B-Instruct-AWQ')
 CHECK_FRAMES=(160,170,180)
 OPERATOR_FRAME=80
+FRAME_ROOT=RUN/'evaluation/frames'
+EVAL_ROOT=RUN/'evaluation_gt_reference'
 sys.path.insert(0,str(REPO))
 from controller.multiworldbench_v3.metrics import shared_state_persistence as metric
 
@@ -38,22 +40,22 @@ def gamma_video(cid:str)->Path:
     if len(hits)!=1:raise RuntimeError(f'{cid}: Gamma output count={len(hits)}')
     return hits[0]
 def generated(model:str,cid:str,role:str,frame:int)->Path:
-    out=RUN/f'evaluation/frames/{model}/{cid}/{role}_{frame:03d}.png'
+    out=FRAME_ROOT/f'{model}/{cid}/{role}_{frame:03d}.png'
     if model=='gt':return extract(RUN/f'models/gt/interaction/{cid}/{role}_gt.mp4',frame,out)
     if model=='solaris':return extract(RUN/f'models/solaris/interaction/{cid}/{role}_generated.mp4',frame,out)
     crop='crop=iw/2:ih:0:0' if role=='alpha' else 'crop=iw/2:ih:iw/2:0'
     return extract(gamma_video(cid),frame,out,crop)
-def conditioning(cid:str,role:str)->Path:return half(ASSETS/cid/'first_frame.png',role,RUN/f'evaluation/frames/conditioning/{cid}/{role}.png')
+def conditioning(cid:str,role:str)->Path:return half(ASSETS/cid/'first_frame.png',role,FRAME_ROOT/f'conditioning/{cid}/{role}.png')
 
 def prepare()->None:
     cases=load(CASES_FILE)['cases'];models=['gt','solaris','gamma'];req=[]
     for model in models:
       for case in cases:
-        cid=case['case_id'];operator=generated(model,cid,'bravo',OPERATOR_FRAME)
+        cid=case['case_id'];gt_operator=generated('gt',cid,'bravo',OPERATOR_FRAME);candidate_operator=generated(model,cid,'bravo',OPERATOR_FRAME)
         for frame in CHECK_FRAMES:
-          images=[conditioning(cid,'alpha'),conditioning(cid,'bravo'),operator,generated(model,cid,'alpha',frame)]
+          images=[gt_operator,candidate_operator,generated('gt',cid,'alpha',frame),generated(model,cid,'alpha',frame)]
           req.append({'request_id':f'{model}_{cid}_{frame}','model':model,'case_id':cid,'operation':case['operation'],'frame':frame,'operator_frame':OPERATOR_FRAME,'images':[str(p) for p in images],'image_sha256':[sha(p) for p in images],'prompt':metric.build_prompt(case),'keys':list(metric.OUTPUT_KEYS)})
-    dump(RUN/'evaluation/requests.json',req);dump(RUN/'evaluation/prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':models,'check_frames':list(CHECK_FRAMES),'operator_frame':OPERATOR_FRAME});print(json.dumps({'requests':len(req),'cases':len(cases),'models':models}))
+    dump(EVAL_ROOT/'requests.json',req);dump(EVAL_ROOT/'prepare_complete.json',{'request_count':len(req),'cases':len(cases),'models':models,'check_frames':list(CHECK_FRAMES),'operator_frame':OPERATOR_FRAME,'protocol':'paired_gt_reference'});print(json.dumps({'requests':len(req),'cases':len(cases),'models':models,'evaluation':str(EVAL_ROOT)}))
 
 def parse(raw:str,keys:tuple[str,...])->dict[str,int]:
     m=re.search(r'\{.*?\}',raw,re.S)
@@ -67,10 +69,10 @@ def judge(shard:int,num_shards:int,max_memory:int)->None:
     from qwen_vl_utils import process_vision_info
     sys.path.insert(0,'/data2/xuzhangbo/multihuman-animate/solaris/vlm_eval')
     from qwen_vlm_worker import QwenJudge
-    req=load(RUN/'evaluation/requests.json');selected=[r for i,r in enumerate(req) if i%num_shards==shard]
+    req=load(EVAL_ROOT/'requests.json');selected=[r for i,r in enumerate(req) if i%num_shards==shard]
     worker=QwenJudge(QWEN,120,384*28*28,'balanced',max_memory,'sdpa');torch.manual_seed(12345);completed=0
     for row in selected:
-      dst=RUN/f'evaluation/vlm/{row["request_id"]}.json'
+      dst=EVAL_ROOT/f'vlm/{row["request_id"]}.json'
       if dst.is_file() and load(dst).get('measurement') is not None:completed+=1;continue
       messages=[{'role':'user','content':[{'type':'text','text':row['prompt']}]+sum(([{'type':'text','text':f'Image {i}'},{'type':'image','image':p}] for i,p in enumerate(row['images'],1)),[])}]
       attempts=[];measurement=None
@@ -84,21 +86,21 @@ def judge(shard:int,num_shards:int,max_memory:int)->None:
         if err is None:break
         messages += [{'role':'assistant','content':raw},{'role':'user','content':'Return only the requested JSON object with exactly the specified integer 0/1 fields.'}]
       dump(dst,{'request':row,'attempts':attempts,'measurement':measurement});print(row['request_id'],measurement,flush=True);completed+=1
-    dump(RUN/f'evaluation/judge_shard_{shard:02d}_of_{num_shards:02d}.json',{'completed':completed,'total':len(selected),'cuda':os.environ.get('CUDA_VISIBLE_DEVICES')})
+    dump(EVAL_ROOT/f'judge_shard_{shard:02d}_of_{num_shards:02d}.json',{'completed':completed,'total':len(selected),'cuda':os.environ.get('CUDA_VISIBLE_DEVICES')})
 
 def aggregate()->None:
-    cases=load(CASES_FILE)['cases'];models=load(RUN/'evaluation/prepare_complete.json')['models'];out={'schema_version':'mwb.v3.shared_state_persistence.model_comparison.v1','operator_frame':OPERATOR_FRAME,'check_frames':list(CHECK_FRAMES),'models':{}}
+    cases=load(CASES_FILE)['cases'];models=load(EVAL_ROOT/'prepare_complete.json')['models'];out={'schema_version':'mwb.v3.shared_state_persistence.model_comparison.v2','reference_protocol':'paired_gt_images_cross_center_roi','operator_frame':OPERATOR_FRAME,'check_frames':list(CHECK_FRAMES),'models':{}}
     for model in models:
       scored=[]
       for case in cases:
         cid=case['case_id'];rows=[];evidence=[]
         for frame in CHECK_FRAMES:
-          p=RUN/f'evaluation/vlm/{model}_{cid}_{frame}.json'
+          p=EVAL_ROOT/f'vlm/{model}_{cid}_{frame}.json'
           if not p.is_file() or load(p).get('measurement') is None:raise RuntimeError(f'missing {p}')
           measurement=load(p)['measurement'];rows.append(measurement);evidence.append({'frame':frame,**measurement})
         result=metric.score_case(rows);result['frame_evidence']=evidence;result.update({'case_id':cid,'scene':case['scene'],'scene_name_zh':case['scene_name_zh'],'operation':case['operation'],'variant':case['variant']});scored.append(result)
       out['models'][model]={'cases':scored,'aggregate':metric.aggregate_cases(scored)}
-    dump(RUN/'scores.json',out);print(json.dumps({m:v['aggregate'] for m,v in out['models'].items()},ensure_ascii=False))
+    dump(RUN/'scores_gt_reference.json',out);print(json.dumps({m:v['aggregate'] for m,v in out['models'].items()},ensure_ascii=False))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('mode',choices=('prepare','judge','aggregate'));p.add_argument('--shard',type=int,default=0);p.add_argument('--num-shards',type=int,default=1);p.add_argument('--max-memory-gib',type=int,default=43);a=p.parse_args();{'prepare':prepare,'judge':lambda:judge(a.shard,a.num_shards,a.max_memory_gib),'aggregate':aggregate}[a.mode]()

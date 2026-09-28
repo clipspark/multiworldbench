@@ -140,25 +140,25 @@ class MetricTests(unittest.TestCase):
 
     def test_shared_state_persistence_strict_majority(self):
         passed = shared_state_persistence.score_case([
-            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 1},
-            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
-            {"operator_observed_expected_change": 0, "returning_observer_observed_same_change": 1},
+            {"operator_matches_gt": 1, "returning_observer_matches_gt": 1},
+            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
+            {"operator_matches_gt": 0, "returning_observer_matches_gt": 1},
         ])
         self.assertEqual(passed["questions"], {
-            "operator_observed_expected_change": 1,
-            "returning_observer_observed_same_change": 1,
+            "operator_matches_gt": 1,
+            "returning_observer_matches_gt": 1,
         })
         self.assertEqual(passed["score"], 1)
         failed = shared_state_persistence.score_case([
-            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
-            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 0},
-            {"operator_observed_expected_change": 1, "returning_observer_observed_same_change": 1},
+            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
+            {"operator_matches_gt": 1, "returning_observer_matches_gt": 0},
+            {"operator_matches_gt": 1, "returning_observer_matches_gt": 1},
         ])
         self.assertEqual(failed["score"], 0)
         with self.assertRaises(ValueError):
             shared_state_persistence.validate_output({
-                "operator_observed_expected_change": 1,
-                "returning_observer_observed_same_change": 1,
+                "operator_matches_gt": 1,
+                "returning_observer_matches_gt": 1,
                 "extra": 0,
             })
         with self.assertRaises(ValueError):
@@ -171,9 +171,11 @@ class MetricTests(unittest.TestCase):
             "expected_after": {"target_cell": "minecraft:coarse_dirt"},
             "reference_marker": {"center_material": "minecraft:red_concrete"},
         })
-        self.assertIn("A after B has turned away", prompt)
-        self.assertIn("exactly 1 block", prompt)
-        self.assertIn("minecraft:coarse_dirt", prompt)
+        self.assertIn("authoritative GT reference images", prompt)
+        self.assertIn("exactly 1 target block", prompt)
+        self.assertIn("CENTER of the colored ground cross", prompt)
+        self.assertIn("operator_matches_gt", prompt)
+        self.assertNotIn("minecraft:coarse_dirt", prompt)
         aggregate = shared_state_persistence.aggregate_cases([
             {"operation": "place", "score": 1},
             {"operation": "place", "score": 0},

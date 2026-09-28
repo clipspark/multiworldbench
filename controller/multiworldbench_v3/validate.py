@@ -357,8 +357,8 @@ def validate(project_root: Path) -> dict[str, Any]:
         raise ValueError("shared-state persistence factorization changed")
     if persistence.get("score_protocol") != {
         "questions": [
-            "operator_observed_expected_change",
-            "returning_observer_observed_same_change",
+            "operator_matches_gt",
+            "returning_observer_matches_gt",
         ],
         "check_frames": [160, 170, 180],
         "case_aggregation": "majority_per_question_then_strict_product",

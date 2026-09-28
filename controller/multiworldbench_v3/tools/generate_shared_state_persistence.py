@@ -152,7 +152,7 @@ def main() -> None:
         "factorization":{"scenes":5,"operations":2,"turn_directions":2,"total":20},
         "design":"A and B jointly observe; A turns away; B changes one block; B turns away; A returns and verifies the persistent state",
         "score_protocol": {
-            "questions":["operator_observed_expected_change","returning_observer_observed_same_change"],
+            "questions":["operator_matches_gt","returning_observer_matches_gt"],
             "check_frames":[160,170,180],
             "case_aggregation":"majority_per_question_then_strict_product",
             "suite_aggregation":"macro_mean_of_place_and_destroy_case_pass_rates",

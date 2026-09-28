@@ -18,7 +18,7 @@ export MWB3_PERSISTENCE_RUN="$RUN" MWB3_PERSISTENCE_CASES="$CASES" MWB3_PERSISTE
 actual=$("$PY" - <<'PY'
 import json,os
 from pathlib import Path
-print(len(json.loads((Path(os.environ['MWB3_PERSISTENCE_RUN'])/'evaluation/requests.json').read_text())))
+print(len(json.loads((Path(os.environ['MWB3_PERSISTENCE_RUN'])/'evaluation_gt_reference/requests.json').read_text())))
 PY
 )
 [[ "$actual" == "$EXPECTED" ]] || { echo "expected $EXPECTED requests, got $actual"; exit 30; }
@@ -34,9 +34,9 @@ done
 failed=0
 for i in $(seq 0 $((SHARDS-1))); do wait "${pids[$i]}" || failed=1; done
 (( failed==0 )) || exit 31
-outputs=$(find "$RUN/evaluation/vlm" -type f -name '*.json' | wc -l)
+outputs=$(find "$RUN/evaluation_gt_reference/vlm" -type f -name '*.json' | wc -l)
 [[ "$outputs" == "$EXPECTED" ]] || { echo "expected $EXPECTED outputs, got $outputs"; exit 32; }
 "$PY" controller/multiworldbench_v3/tools/evaluate_shared_state_persistence.py aggregate
 "$PY" controller/multiworldbench_v3/tools/report_shared_state_persistence.py
-touch "$RUN/.evaluation_complete"
+touch "$RUN/.evaluation_gt_reference_complete"
 echo "[$(date -Is)] vlm_manager_complete outputs=$outputs"

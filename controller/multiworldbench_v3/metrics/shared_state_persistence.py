@@ -8,8 +8,8 @@ from typing import Any, Iterable, Mapping
 from .common import arithmetic_mean, binary
 
 OUTPUT_KEYS = (
-    "operator_observed_expected_change",
-    "returning_observer_observed_same_change",
+    "operator_matches_gt",
+    "returning_observer_matches_gt",
 )
 OUTPUT_SCHEMA = {key: "0 or 1" for key in OUTPUT_KEYS}
 
@@ -21,21 +21,22 @@ def build_prompt(case: Mapping[str, Any]) -> str:
     expected_count = int(case["expected_change_count"])
     if expected_count != 1:
         raise ValueError("shared-state persistence expects exactly one changed block")
-    expected_after = str(case["expected_after"]["target_cell"])
-    marker = str(case["reference_marker"]["center_material"])
-    verb = "placed" if operation == "place" else "destroyed"
     schema = "{" + ",".join(f'\"{key}\":0 or 1' for key in OUTPUT_KEYS) + "}"
     return (
-        "Judge persistence of one Minecraft shared-world change from four images. "
-        "Image 1 is A's initial view and Image 2 is B's initial view of the same colored cross center. "
-        "Image 3 is B immediately after B performs the action, before B turns away. "
-        "Image 4 is A after B has turned away and A has returned to the target. "
-        f"Operation: {operation}; exactly {expected_count} block must be {verb}; expected target state: "
-        f"{expected_after}; cross-center marker: {marker}. "
-        "Answer operator_observed_expected_change=1 only when Image 3 visibly shows the exact expected "
-        "change at the marked target. Answer returning_observer_observed_same_change=1 only when Image 4 "
-        "shows that same correct changed state at the same marked target. Count only full world-grid blocks; "
-        "ignore dropped items, particles, tools, players, and HUD icons. Hidden, ambiguous, or wrong evidence is 0. "
+        "Compare a generated Minecraft result against authoritative GT reference images. "
+        "There are four images in two independent pairs. Image 1 is the GT operator (B) view after the action; "
+        "Image 2 is the candidate operator (B) view after the same action. Image 3 is the GT returning-observer "
+        "(A) view after the return; Image 4 is the candidate returning-observer (A) view at the same time. "
+        f"The operation is {operation} and exactly {expected_count} target block changes. "
+        "For each pair, focus on the operation area at the CENTER of the colored ground cross. Treat the GT image "
+        "as the complete visual definition of the correct post-action state. Compare only (a) whether the center "
+        "target cell is occupied or empty/exposed, (b) the number of changed full grid blocks at that center, and "
+        "(c) the material/appearance of the changed block when one is present. Ignore viewpoint, camera framing, "
+        "perspective, lighting, render texture, players, tools, HUD, particles, dropped items, and background outside "
+        "the cross-center operation area. Answer operator_matches_gt=1 only if Image 2 matches Image 1 on all relevant "
+        "center-state properties. Answer returning_observer_matches_gt=1 only if Image 4 matches Image 3 on all "
+        "relevant center-state properties. If the candidate's cross center is offscreen, hidden, or too ambiguous to "
+        "verify, answer 0 for that pair. "
         f"Return ONLY JSON with exactly {schema}."
     )
 
