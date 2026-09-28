@@ -44,9 +44,10 @@ def frame(model:str,cid:str,role:str,number:int)->Path:
 def conditioning(cid:str,role:str)->Path:
     return half(RUN/'assets/reveal'/cid/'first_frame.png',role,RUN/'evaluation/frames/conditioning'/cid/f'{role}.png')
 
-def prepare()->None:
+def prepare(model_filter:str|None=None)->None:
     suite=load(CASE_FILE);requests=[]
-    for model in ('solaris','gamma'):
+    models=(model_filter,) if model_filter else ('solaris','gamma')
+    for model in models:
         for case in suite['cases']:
             cid=case['case_id']
             for number in CHECK_FRAMES:
