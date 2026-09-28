@@ -21,7 +21,7 @@ function normalize2(x, z) {
 function observerFocus(bravo, alpha, building) {
   const toActor = normalize2(alpha[0] - bravo[0], alpha[2] - bravo[2]);
   const toBuilding = normalize2(building[0] - bravo[0], building[2] - bravo[2]);
-  const bisector = normalize2(toActor[0] + toBuilding[0], toActor[1] + toBuilding[1]);
+  const bisector = normalize2(toActor[0] + 1.5 * toBuilding[0], toActor[1] + 1.5 * toBuilding[1]);
   return [bravo[0] + bisector[0] * 25, 67.5, bravo[2] + bisector[1] * 25];
 }
 const scenes = candidates.map(({scene_id, scene, ground, sceneBuild}) => ({scene_id, scene, ground, sceneBuild}));
@@ -53,12 +53,11 @@ async function main() {
   const repo = path.resolve(__dirname, '../../..');
   const output = path.join(repo, 'MultiWorldBench/v3/cases/shared_world/building_reveal_shared.json');
   const cases = [];
-  let ordinal = 0;
   for (let si=0; si<scenes.length; si++) {
     for (let bi=0; bi<buildings.length; bi++) {
       for (const angle of ANGLES) {
         const scene=scenes[si], building=buildings[bi];
-        const cx=7200 + ordinal*80;
+        const cx=16000;
         const alpha=[cx+0.5,64,ALPHA_Z];
         const focus=[cx+0.5,BUILDING_FOCUS_Y,CENTER_Z];
         const rad=angle*Math.PI/180;
@@ -98,7 +97,6 @@ async function main() {
           camera_angle_tolerance_deg:30,
           output_directory:`outputs/shared_world/building_reveal/${caseId}`
         });
-        ordinal++;
       }
     }
   }

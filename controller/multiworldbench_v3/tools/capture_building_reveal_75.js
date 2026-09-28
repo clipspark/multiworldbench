@@ -45,7 +45,7 @@ async function main(){
       await Promise.all([senders.alpha.focus(),senders.bravo.focus()]);await sleep(150);await Promise.all([senders.alpha.release(),senders.bravo.release()]);
       await sendInit(`setblock ${spec.reveal.occluder.position.join(' ')} minecraft:dirt`);
       for(const [role,name] of [['alpha','CameraAlpha'],['bravo','CameraBravo']]){const pose=spec.initial_poses[role];await sendInit(`clear ${name}`);await sendInit(`tp ${name} ${pose.position.join(' ')} ${pose.native_yaw_deg} ${pose.native_pitch_deg}`);}
-      await Promise.all([senders.alpha.send([]),senders.bravo.send([])]);await sleep(1200);
+      await Promise.all([senders.alpha.send([]),senders.bravo.send([])]);await sleep(4000);
       const rawA=path.join(caseDir,'alpha_raw.mp4'),rawB=path.join(caseDir,'bravo_raw.mp4');const videoA=startVideo(':130.0',rawA),videoB=startVideo(':131.0',rawB);
       const start=nowMs()+250,actions={alpha:[],bravo:[]};
       for(let frame=0;frame<129;frame++){const remaining=start+frame*50-nowMs();if(remaining>0)await sleep(remaining);const active=frame>=21&&frame<=60;const epoch=nowMs();const [a,b]=await Promise.all([senders.alpha.send(active?[1]:[]),senders.bravo.send([])]);actions.alpha.push(actionRow(frame,epoch,a,active));actions.bravo.push(actionRow(frame,epoch,b,false));}
