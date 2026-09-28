@@ -22,6 +22,16 @@ async function main() {
   const output = path.resolve(process.argv[3]);
   if (fs.existsSync(output)) throw new Error(`Refusing to overwrite ${output}`);
   const suite = JSON.parse(fs.readFileSync(path.join(repo, 'MultiWorldBench/v3/cases/shared_world/race_condition_consistency.json')));
+  const scenes = new Map(suite.scene_catalog.map((scene) => [scene.id, scene]));
+  const targets = suite.cases.map((spec) => spec.world.target_cell);
+  const xs = targets.map((target) => target[0]);
+  const zs = targets.map((target) => target[2]);
+  const loadedBounds = {
+    minX: Math.min(...xs) - 10,
+    maxX: Math.max(...xs) + 10,
+    minZ: Math.min(...zs) - 10,
+    maxZ: Math.max(...zs) + 10,
+  };
   fs.mkdirSync(output, { recursive: true });
   const rcon = await Rcon.connect({ host: '127.0.0.1', port: 25721, password: process.env.RCON_PASSWORD, timeout: 10000 });
   const log = path.join(output, 'initialization.jsonl');
@@ -36,14 +46,12 @@ async function main() {
   try {
     const online = await rcon.send('list');
     if (!online.includes('CameraAlpha') || !online.includes('CameraBravo')) throw new Error(`camera clients unavailable: ${online}`);
-    await send('forceload add 690 -8 770 8');
+    await send(`forceload add ${loadedBounds.minX} ${loadedBounds.minZ} ${loadedBounds.maxX} ${loadedBounds.maxZ}`);
     await send('difficulty peaceful');
     await send('gamerule doDaylightCycle false');
     await send('gamerule doWeatherCycle false');
     await send('weather clear');
     await send('time set noon');
-    await send('fill 690 90 -8 770 90 8 minecraft:grass_block');
-    await send('fill 690 91 -8 770 98 8 minecraft:air');
     await rcon.send('team add mwb3race');
     await send('team modify mwb3race collisionRule never');
     await send('team modify mwb3race nametagVisibility never');
@@ -55,12 +63,19 @@ async function main() {
       const caseDir = path.join(output, spec.case_id);
       fs.mkdirSync(caseDir);
       const [tx, ty, tz] = spec.world.target_cell;
-      await send(`fill ${tx - 5} 91 ${tz - 5} ${tx + 5} 97 ${tz + 5} minecraft:air`);
+      const scene = scenes.get(spec.scene_id);
+      if (!scene) throw new Error(`${spec.case_id} references unknown scene ${spec.scene_id}`);
+      await send(`fill ${tx - 10} ${ty - 1} ${tz - 10} ${tx + 10} ${ty + 7} ${tz + 10} minecraft:air`);
+      for (const element of scene.geometry) {
+        const [x1, y1, z1] = element.from;
+        const [x2, y2, z2] = element.to;
+        await send(`fill ${tx + x1} ${ty - 1 + y1} ${tz + z1} ${tx + x2} ${ty - 1 + y2} ${tz + z2} minecraft:${element.material}`);
+      }
       await send(`setblock ${tx} ${ty - 1} ${tz} minecraft:smooth_quartz`);
       await send(`setblock ${tx} ${ty} ${tz} minecraft:air`);
-      // Low floor markers identify the contested support without adding objects above it.
-      for (const [dx, dz] of [[-1,-1],[-1,1],[1,-1],[1,1]]) {
-        await send(`setblock ${tx + dx} ${ty - 1} ${tz + dz} minecraft:yellow_concrete`);
+      // A colored ground cross locates the contested cell while leaving it unobstructed.
+      for (const [dx, dz] of [[-2,0],[-1,0],[1,0],[2,0],[0,-2],[0,-1],[0,1],[0,2]]) {
+        await send(`setblock ${tx + dx} ${ty - 1} ${tz + dz} minecraft:${scene.cross_material}`);
       }
       const poses = {};
       for (const [role, name] of [['alpha', 'CameraAlpha'], ['bravo', 'CameraBravo']]) {
@@ -104,7 +119,7 @@ async function main() {
           geometricVisibility.bravo_sees_alpha !== spec.expected_agent_visibility.bravo_sees_alpha) {
         throw new Error(`${spec.case_id} visibility geometry mismatch: ${JSON.stringify(geometricVisibility)}`);
       }
-      const row = { case_id: spec.case_id, visibility_class: spec.visibility_class, poses, images, geometric_visibility: geometricVisibility, intended_materials: spec.intended_materials, target_cell: spec.world.target_cell };
+      const row = { case_id: spec.case_id, scene_id: spec.scene_id, block_pair_id: spec.block_pair_id, visibility_class: spec.visibility_class, poses, images, geometric_visibility: geometricVisibility, intended_materials: spec.intended_materials, target_cell: spec.world.target_cell };
       fs.writeFileSync(path.join(caseDir, 'capture.json'), JSON.stringify(row, null, 2));
       captures.push(row);
       console.log(`${spec.case_id} ${spec.visibility_class}`);

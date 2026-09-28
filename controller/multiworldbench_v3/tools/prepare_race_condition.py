@@ -42,7 +42,9 @@ for spec in suite["cases"]:
         write(dest/f"{role}_solaris_actions.json",canon)
     cases.append({
         "case_id":cid,"num_frames":spec["num_frames"],"fps":spec["fps"],
+        "scene_id":spec["scene_id"],"block_pair_id":spec["block_pair_id"],
         "visibility_class":spec["visibility_class"],"intended_materials":spec["intended_materials"],
+        "counter_case_of":spec.get("counter_case_of"),
         "block_reference_images":{
             role:str((dest/f"{role}_block_reference.png").resolve())
             for role in ("alpha","bravo")

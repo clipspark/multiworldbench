@@ -126,9 +126,16 @@
       "name": "竞态条件一致性",
       "status": "implemented",
       "case_file": "cases/shared_world/race_condition_consistency.json",
-      "case_count": 6,
+      "case_count": 60,
       "implementation": "controller.multiworldbench_v3.metrics.race_condition_consistency",
-      "ranking_ready": false
+      "ranking_ready": false,
+      "suite_design": {
+        "visibility_classes": 4,
+        "scenes": 5,
+        "block_pairs": 3,
+        "cross_product_cases": 60,
+        "gt_collected": false
+      }
     },
     {
       "id": "style_consistency",

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -367,6 +368,7 @@ def validate(project_root: Path) -> dict[str, Any]:
     }:
         raise ValueError("shared-state persistence factorization changed")
     if persistence.get("score_protocol") != {
+        "visual_inputs": "two labelled full-frame BEFORE/AFTER comparisons without GT reference images: operator B and returning observer A",
         "questions": [
             "operator_expected_change_occurred",
             "returning_observer_expected_change_occurred",
@@ -472,17 +474,84 @@ def validate(project_root: Path) -> dict[str, Any]:
         raise ValueError("race-condition judge must contain exactly count, type, and intended-block questions")
     if race["check_frames"] != [60, 80, 100]:
         raise ValueError("race-condition check frames changed")
-    visibility_classes = [case["visibility_class"] for case in race["cases"]]
-    if visibility_classes.count("mutual") != 3:
-        raise ValueError("race-condition suite must contain three mutual-visibility cases")
-    if sum(value != "mutual" for value in visibility_classes) != 3:
-        raise ValueError("race-condition suite must contain three one-way-visibility cases")
+    expected_visibility = {
+        "mutual": {"alpha_sees_bravo": True, "bravo_sees_alpha": True},
+        "alpha_sees_bravo": {"alpha_sees_bravo": True, "bravo_sees_alpha": False},
+        "bravo_sees_alpha": {"alpha_sees_bravo": False, "bravo_sees_alpha": True},
+        "mutual_invisible": {"alpha_sees_bravo": False, "bravo_sees_alpha": False},
+    }
+    factor_design = race.get("factor_design", {})
+    if factor_design != {
+        "visibility_classes": 4,
+        "scenes": 5,
+        "block_pairs": 3,
+        "total_cases": 60,
+        "cross_product": "4 visibility classes × 5 scenes × 3 A/B block pairs",
+    }:
+        raise ValueError("race-condition factor design must be 4 × 5 × 3 = 60")
+    if race.get("case_count") != 60 or len(race["cases"]) != 60:
+        raise ValueError("race-condition suite must contain exactly 60 cases")
+    scene_ids = {row["id"] for row in race.get("scene_catalog", [])}
+    pair_ids = {row["id"] for row in race.get("block_pair_catalog", [])}
+    if len(scene_ids) != 5 or len(pair_ids) != 3:
+        raise ValueError("race-condition suite must define five scenes and three block pairs")
+    scene_catalog = {row["id"]: row for row in race["scene_catalog"]}
+    for scene_id, scene in scene_catalog.items():
+        geometry = scene.get("geometry", [])
+        if len(geometry) < 8 or not scene.get("floor_material") or not scene.get("cross_material"):
+            raise ValueError(f"race scene is not geometry-rich: {scene_id}")
+    observed_combinations: set[tuple[str, str, str]] = set()
+    case_by_id = {case["case_id"]: case for case in race["cases"]}
+
+    def other_agent_angle(position: list[float], other: list[float], center: tuple[float, float]) -> float:
+        target_ray = (center[0] - position[0], center[1] - position[2])
+        other_ray = (other[0] - position[0], other[2] - position[2])
+        denominator = math.hypot(*target_ray) * math.hypot(*other_ray)
+        if denominator == 0:
+            raise ValueError("race-condition player positions must be distinct from target and each other")
+        cosine = sum(a * b for a, b in zip(target_ray, other_ray)) / denominator
+        return math.degrees(math.acos(max(-1.0, min(1.0, cosine))))
+
     for case in race["cases"]:
+        case_id = case["case_id"]
+        visibility_class = case.get("visibility_class")
+        if visibility_class not in expected_visibility:
+            raise ValueError(f"unknown race visibility class: {case_id}")
+        if case.get("expected_agent_visibility") != expected_visibility[visibility_class]:
+            raise ValueError(f"race visibility contract mismatch: {case_id}")
+        target = case["world"]["target_cell"]
+        center = (target[0] + 0.5, target[2] + 0.5)
+        alpha = case["world"]["alpha_position"]
+        bravo = case["world"]["bravo_position"]
+        geometric_visibility = {
+            "alpha_sees_bravo": other_agent_angle(alpha, bravo, center) <= 51.0,
+            "bravo_sees_alpha": other_agent_angle(bravo, alpha, center) <= 51.0,
+        }
+        if geometric_visibility != expected_visibility[visibility_class]:
+            raise ValueError(f"race visibility geometry mismatch: {case_id}")
+        for role, position in (("alpha", alpha), ("bravo", bravo)):
+            eye_to_target = (
+                center[0] - position[0],
+                target[1] - (position[1] + 1.62),
+                center[1] - position[2],
+            )
+            if math.dist((0.0, 0.0, 0.0), eye_to_target) > 4.5:
+                raise ValueError(f"race target is out of native reach for {role}: {case_id}")
+        combination = (case.get("scene_id"), case.get("block_pair_id"), visibility_class)
+        if combination[0] not in scene_ids or combination[1] not in pair_ids:
+            raise ValueError(f"unknown race factor value: {case_id}")
+        if combination in observed_combinations:
+            raise ValueError(f"duplicate race factor combination: {combination}")
+        observed_combinations.add(combination)
         action = case["simultaneous_action"]
         _check_range(action["active_frame_range"], case["num_frames"], case["case_id"])
         if action.get("native_action") != "use" or action.get("same_frames_for_both_roles") is not True:
             raise ValueError(f"race action is not simultaneous native use: {case['case_id']}")
-        if action["active_frame_range"][1] - action["active_frame_range"][0] != 1:
+        if (
+            action["active_frame_range"][1] - action["active_frame_range"][0] != 1
+            or action.get("placements_per_role") != 1
+            or action.get("target") != "same target_cell"
+        ):
             raise ValueError(f"race action must contain exactly one use frame: {case['case_id']}")
         references = case.get("block_reference_images", {})
         if set(references) != {"alpha", "bravo"}:
@@ -495,6 +564,40 @@ def validate(project_root: Path) -> dict[str, Any]:
             raise ValueError(f"race case unexpectedly declares GT: {case['case_id']}")
         if any(frame >= case["num_frames"] for frame in race["check_frames"]):
             raise ValueError(f"invalid race check frame: {case['case_id']}")
+        counter_id = case.get("counter_case_of")
+        if visibility_class in {"alpha_sees_bravo", "bravo_sees_alpha"}:
+            counter = case_by_id.get(counter_id)
+            expected_counter_class = (
+                "bravo_sees_alpha" if visibility_class == "alpha_sees_bravo" else "alpha_sees_bravo"
+            )
+            if (
+                counter is None
+                or counter.get("counter_case_of") != case_id
+                or counter.get("visibility_class") != expected_counter_class
+                or counter.get("scene_id") != case.get("scene_id")
+                or counter.get("block_pair_id") != case.get("block_pair_id")
+                or counter.get("intended_materials") != case.get("intended_materials")
+            ):
+                raise ValueError(f"invalid reciprocal one-way counter: {case_id}")
+        elif counter_id is not None:
+            raise ValueError(f"only one-way race cases may declare counters: {case_id}")
+
+    expected_combinations = {
+        (scene_id, pair_id, visibility_class)
+        for scene_id in scene_ids
+        for pair_id in pair_ids
+        for visibility_class in expected_visibility
+    }
+    if observed_combinations != expected_combinations:
+        raise ValueError("race-condition suite does not cover the complete 4 × 5 × 3 cross product")
+    visibility_counts = {
+        visibility_class: sum(
+            case["visibility_class"] == visibility_class for case in race["cases"]
+        )
+        for visibility_class in expected_visibility
+    }
+    if set(visibility_counts.values()) != {15}:
+        raise ValueError(f"race visibility classes must contain 15 cases each: {visibility_counts}")
 
     for relative in (
         "cases/revisit/style_consistency.json",
