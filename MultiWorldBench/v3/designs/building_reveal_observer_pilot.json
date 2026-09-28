@@ -32,7 +32,7 @@
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
       "actor_radius": 21.85,
-      "observer_radius": 30,
+      "observer_radius": 26,
       "world_x_offset": 15000,
       "setup_commands": [
         "fill 14966 60 -30 15034 62 30 minecraft:dirt",
@@ -113,8 +113,8 @@
         "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
         "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
         "fill 14999 64 -21 15001 66 -19 minecraft:air",
-        "fill 15009 63 -27 15011 63 -25 minecraft:grass_block",
-        "fill 15009 64 -27 15011 66 -25 minecraft:air",
+        "fill 15008 63 -23 15010 63 -21 minecraft:grass_block",
+        "fill 15008 64 -23 15010 66 -21 minecraft:air",
         "setblock 15000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -136,16 +136,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            15010.76060429977,
+            15009.392523726467,
             64,
-            -25.690778623577252
+            -21.93200814043362
           ],
-          "native_yaw_deg": 39.14252266352303,
-          "native_pitch_deg": -4.300548217398899,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            14994.97931468308,
+            14991.137130434887,
             67.5,
-            -6.30132535552071
+            -4.8515919929923434
           ]
         }
       },
@@ -244,7 +244,7 @@
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
       "actor_radius": 21.85,
-      "observer_radius": 30,
+      "observer_radius": 26,
       "world_x_offset": 15000,
       "setup_commands": [
         "fill 14966 60 -30 15034 62 30 minecraft:dirt",
@@ -325,8 +325,8 @@
         "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
         "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
         "fill 14999 64 -21 15001 66 -19 minecraft:air",
-        "fill 15014 63 -25 15016 63 -23 minecraft:grass_block",
-        "fill 15014 64 -25 15016 66 -23 minecraft:air",
+        "fill 15012 63 -22 15014 63 -20 minecraft:grass_block",
+        "fill 15012 64 -22 15014 66 -20 minecraft:air",
         "setblock 15000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -348,16 +348,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            15015.5,
+            15013.5,
             64,
-            -23.48076211353316
+            -20.016660498395407
           ],
-          "native_yaw_deg": 52.30164428140421,
-          "native_pitch_deg": -4.300548217398943,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            14995.718972941982,
+            14992.176663481518,
             67.5,
-            -8.1931537809659
+            -6.966169330645309
           ]
         }
       },
@@ -456,7 +456,7 @@
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
       "actor_radius": 21.85,
-      "observer_radius": 30,
+      "observer_radius": 26,
       "world_x_offset": 15000,
       "setup_commands": [
         "fill 14966 60 -30 15034 62 30 minecraft:dirt",
@@ -537,8 +537,8 @@
         "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
         "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
         "fill 14999 64 -21 15001 66 -19 minecraft:air",
-        "fill 15018 63 -22 15020 63 -20 minecraft:grass_block",
-        "fill 15018 64 -22 15020 66 -20 minecraft:air",
+        "fill 15016 63 -19 15018 63 -17 minecraft:grass_block",
+        "fill 15016 64 -19 15018 66 -17 minecraft:air",
         "setblock 15000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -560,16 +560,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            15019.783628290596,
+            15017.21247785185,
             64,
-            -20.48133329356934
+            -17.417155521093427
           ],
-          "native_yaw_deg": 63.32120787761788,
-          "native_pitch_deg": -4.300548217398999,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            14997.445187257232,
+            14993.984396949021,
             67.5,
-            -9.256626072491539
+            -8.172900138876123
           ]
         }
       },
@@ -668,7 +668,7 @@
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 50,
       "actor_radius": 21.85,
-      "observer_radius": 30,
+      "observer_radius": 26,
       "world_x_offset": 15000,
       "setup_commands": [
         "fill 14966 60 -30 15034 62 30 minecraft:dirt",
@@ -749,8 +749,8 @@
         "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
         "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
         "fill 14999 64 -21 15001 66 -19 minecraft:air",
-        "fill 15022 63 -18 15024 63 -16 minecraft:grass_block",
-        "fill 15022 64 -18 15024 66 -16 minecraft:air",
+        "fill 15019 63 -16 15021 63 -14 minecraft:grass_block",
+        "fill 15019 64 -16 15021 66 -14 minecraft:air",
         "setblock 15000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -772,16 +772,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            15023.48133329357,
+            15020.417155521094,
             64,
-            -16.78362829059618
+            -14.212477851850025
           ],
-          "native_yaw_deg": 73.18596754012187,
-          "native_pitch_deg": -4.300548217398837,
+          "native_yaw_deg": 77.23192534892841,
+          "native_pitch_deg": -4.300548217398872,
           "focus": [
-            14999.550116261444,
+            14996.03533926394,
             67.5,
-            -9.551972092926178
+            -8.687350160797333
           ]
         }
       },
