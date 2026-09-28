@@ -1,0 +1,870 @@
+{
+  "schema_version": "mwb.v3.shared_building_reveal.observer_pilot.v1",
+  "benchmark_version": "3",
+  "status": "pilot_not_collected",
+  "self_contained": true,
+  "case_count": 4,
+  "factorization": {
+    "scenes": 1,
+    "buildings": 1,
+    "relative_agent_angles_deg": [
+      20,
+      30,
+      40,
+      50
+    ],
+    "total": 4
+  },
+  "description": "Observer-layout pilot. Stationary B is farther from the target and aims at the angular bisector so that the building and occluded actor A are simultaneously visible.",
+  "common_visibility_requirement": "B must simultaneously show the building and A in the same native GT frame before and after reveal.",
+  "cases": [
+    {
+      "case_id": "MWB3-S-RV-PILOT-S01-B01-A20",
+      "id": "MWB3-S-RV-PILOT-S01-B01-A20",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "pilot": true,
+      "scene_id": "MWB3-RV-SC01",
+      "scene_name": "云杉峡谷工场",
+      "building_id": "MWB3-RV-BL01",
+      "building_name": "偏置水轮磨坊",
+      "relative_agent_angle_deg": 20,
+      "actor_radius": 21.85,
+      "observer_radius": 30,
+      "world_x_offset": 15000,
+      "setup_commands": [
+        "fill 14966 60 -30 15034 62 30 minecraft:dirt",
+        "fill 14966 63 -30 15034 63 30 minecraft:grass_block",
+        "fill 14966 64 -30 15000 91 0 minecraft:air",
+        "fill 14966 92 -30 15000 120 0 minecraft:air",
+        "fill 14966 64 1 15000 91 30 minecraft:air",
+        "fill 14966 92 1 15000 120 30 minecraft:air",
+        "fill 15001 64 -30 15034 91 0 minecraft:air",
+        "fill 15001 92 -30 15034 120 0 minecraft:air",
+        "fill 15001 64 1 15034 91 30 minecraft:air",
+        "fill 15001 92 1 15034 120 30 minecraft:air",
+        "fill 14967 64 15 14981 70 29 minecraft:stone",
+        "fill 15020 64 13 15033 73 29 minecraft:andesite",
+        "fill 14969 64 -24 14978 68 3 minecraft:mossy_cobblestone",
+        "fill 15023 64 -24 15032 69 2 minecraft:stone",
+        "fill 14982 63 -27 14986 63 29 minecraft:water",
+        "fill 14979 65 -4 14989 66 0 minecraft:spruce_planks",
+        "fill 14980 64 -4 14980 66 -4 minecraft:spruce_log",
+        "fill 14980 64 0 14980 66 0 minecraft:spruce_log",
+        "fill 14987 64 -4 14987 66 -4 minecraft:spruce_log",
+        "fill 14987 64 0 14987 66 0 minecraft:spruce_log",
+        "fill 14971 64 -18 14971 71 -18 minecraft:spruce_log",
+        "fill 14969 69 -20 14973 71 -16 minecraft:spruce_leaves",
+        "fill 14970 72 -19 14972 73 -17 minecraft:spruce_leaves",
+        "fill 14976 64 8 14976 73 8 minecraft:spruce_log",
+        "fill 14974 71 6 14978 73 10 minecraft:spruce_leaves",
+        "fill 14975 74 7 14977 75 9 minecraft:spruce_leaves",
+        "fill 15028 64 -17 15028 72 -17 minecraft:spruce_log",
+        "fill 15026 70 -19 15030 72 -15 minecraft:spruce_leaves",
+        "fill 15027 73 -18 15029 74 -16 minecraft:spruce_leaves",
+        "fill 15025 64 7 15025 75 7 minecraft:spruce_log",
+        "fill 15023 73 5 15027 75 9 minecraft:spruce_leaves",
+        "fill 15024 76 6 15026 77 8 minecraft:spruce_leaves",
+        "fill 15018 64 24 15018 71 24 minecraft:spruce_log",
+        "fill 15016 69 22 15020 71 26 minecraft:spruce_leaves",
+        "fill 15017 72 23 15019 73 25 minecraft:spruce_leaves",
+        "fill 14990 64 18 14990 67 18 minecraft:cobblestone_wall",
+        "setblock 14990 68 18 minecraft:lantern",
+        "fill 15013 64 18 15013 67 18 minecraft:cobblestone_wall",
+        "setblock 15013 68 18 minecraft:lantern",
+        "fill 15019 64 -10 15019 67 -10 minecraft:cobblestone_wall",
+        "setblock 15019 68 -10 minecraft:lantern",
+        "fill 14973 64 12 14973 67 12 minecraft:cobblestone_wall",
+        "setblock 14973 68 12 minecraft:lantern",
+        "fill 14991 64 20 14998 65 23 minecraft:stripped_spruce_log",
+        "fill 15012 64 21 15018 66 23 minecraft:spruce_planks",
+        "fill 14996 64 -2 15004 68 -2 minecraft:cobblestone",
+        "fill 14996 64 5 15004 68 5 minecraft:cobblestone",
+        "fill 14996 64 -2 14996 68 5 minecraft:cobblestone",
+        "fill 15004 64 -2 15004 68 5 minecraft:cobblestone",
+        "fill 14997 69 -1 15003 72 4 minecraft:spruce_planks",
+        "fill 14999 64 -2 15001 67 -2 minecraft:air",
+        "fill 14997 66 -2 14998 67 -2 minecraft:glass",
+        "fill 15002 66 -2 15003 67 -2 minecraft:glass",
+        "fill 14995 73 -3 15005 73 -3 minecraft:dark_oak_planks",
+        "fill 14995 73 6 15005 73 6 minecraft:dark_oak_planks",
+        "fill 14996 74 -2 15004 74 -2 minecraft:dark_oak_planks",
+        "fill 14996 74 5 15004 74 5 minecraft:dark_oak_planks",
+        "fill 14997 75 -1 15003 75 -1 minecraft:dark_oak_planks",
+        "fill 14997 75 4 15003 75 4 minecraft:dark_oak_planks",
+        "fill 14998 76 0 15002 76 0 minecraft:dark_oak_planks",
+        "fill 14998 76 3 15002 76 3 minecraft:dark_oak_planks",
+        "fill 14999 77 1 15001 77 1 minecraft:dark_oak_planks",
+        "fill 14999 77 2 15001 77 2 minecraft:dark_oak_planks",
+        "fill 14998 73 -1 15000 75 -1 minecraft:red_terracotta",
+        "fill 14998 73 2 15000 75 2 minecraft:red_terracotta",
+        "fill 14998 73 -1 14998 75 2 minecraft:red_terracotta",
+        "fill 15000 73 -1 15000 75 2 minecraft:red_terracotta",
+        "setblock 14999 74 -1 minecraft:glass",
+        "fill 15005 64 -1 15005 69 3 minecraft:dark_oak_log",
+        "setblock 15006 65 -1 minecraft:dark_oak_planks",
+        "setblock 15006 65 3 minecraft:dark_oak_planks",
+        "setblock 15006 69 -1 minecraft:dark_oak_planks",
+        "setblock 15006 69 3 minecraft:dark_oak_planks",
+        "fill 15006 65 1 15006 69 1 minecraft:dark_oak_log",
+        "fill 15006 67 -1 15006 67 3 minecraft:dark_oak_log",
+        "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
+        "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
+        "fill 14999 64 -21 15001 66 -19 minecraft:air",
+        "fill 15009 63 -27 15011 63 -25 minecraft:grass_block",
+        "fill 15009 64 -27 15011 66 -25 minecraft:air",
+        "setblock 15000 65 -19 minecraft:dirt"
+      ],
+      "initial_poses": {
+        "alpha": {
+          "role": "actor",
+          "position": [
+            15000.5,
+            64,
+            -19.35
+          ],
+          "native_yaw_deg": 0,
+          "native_pitch_deg": -8.793447376413935,
+          "focus": [
+            15000.5,
+            69,
+            2.5
+          ]
+        },
+        "bravo": {
+          "role": "stationary_observer",
+          "position": [
+            15010.76060429977,
+            64,
+            -25.690778623577252
+          ],
+          "native_yaw_deg": 39.14252266352303,
+          "native_pitch_deg": -4.300548217398899,
+          "focus": [
+            14994.97931468308,
+            67.5,
+            -6.30132535552071
+          ]
+        }
+      },
+      "visibility_contract": {
+        "before_action": {
+          "alpha_sees_building": false,
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        },
+        "after_action": {
+          "alpha_sees_building": true,
+          "alpha_visible_building_fraction": [
+            0.6,
+            0.8
+          ],
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        }
+      },
+      "reveal": {
+        "actor": "alpha",
+        "occluder": {
+          "material": "minecraft:dirt",
+          "position": [
+            15000,
+            65,
+            -19
+          ],
+          "count": 1
+        },
+        "reveal_visibility_target": {
+          "minimum_fraction": 0.6,
+          "preferred_range": [
+            0.6,
+            0.8
+          ],
+          "basis": "whole_building_visible_in_native_gt_alpha"
+        },
+        "required_native_action": "hold_attack",
+        "action_frames": [
+          21,
+          60
+        ]
+      },
+      "recording": {
+        "fps": 20,
+        "frames": 129,
+        "check_frames": [
+          80,
+          100,
+          120
+        ]
+      },
+      "action_timeline": [
+        {
+          "frames": [
+            0,
+            20
+          ],
+          "alpha": "idle",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            21,
+            60
+          ],
+          "alpha": "attack_hold",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            61,
+            128
+          ],
+          "alpha": "idle_after_reveal",
+          "bravo": "idle"
+        }
+      ],
+      "camera_angle_tolerance_deg": 30,
+      "output_directory": "outputs/shared_world/building_reveal_pilot/MWB3-S-RV-PILOT-S01-B01-A20"
+    },
+    {
+      "case_id": "MWB3-S-RV-PILOT-S01-B01-A30",
+      "id": "MWB3-S-RV-PILOT-S01-B01-A30",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "pilot": true,
+      "scene_id": "MWB3-RV-SC01",
+      "scene_name": "云杉峡谷工场",
+      "building_id": "MWB3-RV-BL01",
+      "building_name": "偏置水轮磨坊",
+      "relative_agent_angle_deg": 30,
+      "actor_radius": 21.85,
+      "observer_radius": 30,
+      "world_x_offset": 15000,
+      "setup_commands": [
+        "fill 14966 60 -30 15034 62 30 minecraft:dirt",
+        "fill 14966 63 -30 15034 63 30 minecraft:grass_block",
+        "fill 14966 64 -30 15000 91 0 minecraft:air",
+        "fill 14966 92 -30 15000 120 0 minecraft:air",
+        "fill 14966 64 1 15000 91 30 minecraft:air",
+        "fill 14966 92 1 15000 120 30 minecraft:air",
+        "fill 15001 64 -30 15034 91 0 minecraft:air",
+        "fill 15001 92 -30 15034 120 0 minecraft:air",
+        "fill 15001 64 1 15034 91 30 minecraft:air",
+        "fill 15001 92 1 15034 120 30 minecraft:air",
+        "fill 14967 64 15 14981 70 29 minecraft:stone",
+        "fill 15020 64 13 15033 73 29 minecraft:andesite",
+        "fill 14969 64 -24 14978 68 3 minecraft:mossy_cobblestone",
+        "fill 15023 64 -24 15032 69 2 minecraft:stone",
+        "fill 14982 63 -27 14986 63 29 minecraft:water",
+        "fill 14979 65 -4 14989 66 0 minecraft:spruce_planks",
+        "fill 14980 64 -4 14980 66 -4 minecraft:spruce_log",
+        "fill 14980 64 0 14980 66 0 minecraft:spruce_log",
+        "fill 14987 64 -4 14987 66 -4 minecraft:spruce_log",
+        "fill 14987 64 0 14987 66 0 minecraft:spruce_log",
+        "fill 14971 64 -18 14971 71 -18 minecraft:spruce_log",
+        "fill 14969 69 -20 14973 71 -16 minecraft:spruce_leaves",
+        "fill 14970 72 -19 14972 73 -17 minecraft:spruce_leaves",
+        "fill 14976 64 8 14976 73 8 minecraft:spruce_log",
+        "fill 14974 71 6 14978 73 10 minecraft:spruce_leaves",
+        "fill 14975 74 7 14977 75 9 minecraft:spruce_leaves",
+        "fill 15028 64 -17 15028 72 -17 minecraft:spruce_log",
+        "fill 15026 70 -19 15030 72 -15 minecraft:spruce_leaves",
+        "fill 15027 73 -18 15029 74 -16 minecraft:spruce_leaves",
+        "fill 15025 64 7 15025 75 7 minecraft:spruce_log",
+        "fill 15023 73 5 15027 75 9 minecraft:spruce_leaves",
+        "fill 15024 76 6 15026 77 8 minecraft:spruce_leaves",
+        "fill 15018 64 24 15018 71 24 minecraft:spruce_log",
+        "fill 15016 69 22 15020 71 26 minecraft:spruce_leaves",
+        "fill 15017 72 23 15019 73 25 minecraft:spruce_leaves",
+        "fill 14990 64 18 14990 67 18 minecraft:cobblestone_wall",
+        "setblock 14990 68 18 minecraft:lantern",
+        "fill 15013 64 18 15013 67 18 minecraft:cobblestone_wall",
+        "setblock 15013 68 18 minecraft:lantern",
+        "fill 15019 64 -10 15019 67 -10 minecraft:cobblestone_wall",
+        "setblock 15019 68 -10 minecraft:lantern",
+        "fill 14973 64 12 14973 67 12 minecraft:cobblestone_wall",
+        "setblock 14973 68 12 minecraft:lantern",
+        "fill 14991 64 20 14998 65 23 minecraft:stripped_spruce_log",
+        "fill 15012 64 21 15018 66 23 minecraft:spruce_planks",
+        "fill 14996 64 -2 15004 68 -2 minecraft:cobblestone",
+        "fill 14996 64 5 15004 68 5 minecraft:cobblestone",
+        "fill 14996 64 -2 14996 68 5 minecraft:cobblestone",
+        "fill 15004 64 -2 15004 68 5 minecraft:cobblestone",
+        "fill 14997 69 -1 15003 72 4 minecraft:spruce_planks",
+        "fill 14999 64 -2 15001 67 -2 minecraft:air",
+        "fill 14997 66 -2 14998 67 -2 minecraft:glass",
+        "fill 15002 66 -2 15003 67 -2 minecraft:glass",
+        "fill 14995 73 -3 15005 73 -3 minecraft:dark_oak_planks",
+        "fill 14995 73 6 15005 73 6 minecraft:dark_oak_planks",
+        "fill 14996 74 -2 15004 74 -2 minecraft:dark_oak_planks",
+        "fill 14996 74 5 15004 74 5 minecraft:dark_oak_planks",
+        "fill 14997 75 -1 15003 75 -1 minecraft:dark_oak_planks",
+        "fill 14997 75 4 15003 75 4 minecraft:dark_oak_planks",
+        "fill 14998 76 0 15002 76 0 minecraft:dark_oak_planks",
+        "fill 14998 76 3 15002 76 3 minecraft:dark_oak_planks",
+        "fill 14999 77 1 15001 77 1 minecraft:dark_oak_planks",
+        "fill 14999 77 2 15001 77 2 minecraft:dark_oak_planks",
+        "fill 14998 73 -1 15000 75 -1 minecraft:red_terracotta",
+        "fill 14998 73 2 15000 75 2 minecraft:red_terracotta",
+        "fill 14998 73 -1 14998 75 2 minecraft:red_terracotta",
+        "fill 15000 73 -1 15000 75 2 minecraft:red_terracotta",
+        "setblock 14999 74 -1 minecraft:glass",
+        "fill 15005 64 -1 15005 69 3 minecraft:dark_oak_log",
+        "setblock 15006 65 -1 minecraft:dark_oak_planks",
+        "setblock 15006 65 3 minecraft:dark_oak_planks",
+        "setblock 15006 69 -1 minecraft:dark_oak_planks",
+        "setblock 15006 69 3 minecraft:dark_oak_planks",
+        "fill 15006 65 1 15006 69 1 minecraft:dark_oak_log",
+        "fill 15006 67 -1 15006 67 3 minecraft:dark_oak_log",
+        "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
+        "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
+        "fill 14999 64 -21 15001 66 -19 minecraft:air",
+        "fill 15014 63 -25 15016 63 -23 minecraft:grass_block",
+        "fill 15014 64 -25 15016 66 -23 minecraft:air",
+        "setblock 15000 65 -19 minecraft:dirt"
+      ],
+      "initial_poses": {
+        "alpha": {
+          "role": "actor",
+          "position": [
+            15000.5,
+            64,
+            -19.35
+          ],
+          "native_yaw_deg": 0,
+          "native_pitch_deg": -8.793447376413935,
+          "focus": [
+            15000.5,
+            69,
+            2.5
+          ]
+        },
+        "bravo": {
+          "role": "stationary_observer",
+          "position": [
+            15015.5,
+            64,
+            -23.48076211353316
+          ],
+          "native_yaw_deg": 52.30164428140421,
+          "native_pitch_deg": -4.300548217398943,
+          "focus": [
+            14995.718972941982,
+            67.5,
+            -8.1931537809659
+          ]
+        }
+      },
+      "visibility_contract": {
+        "before_action": {
+          "alpha_sees_building": false,
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        },
+        "after_action": {
+          "alpha_sees_building": true,
+          "alpha_visible_building_fraction": [
+            0.6,
+            0.8
+          ],
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        }
+      },
+      "reveal": {
+        "actor": "alpha",
+        "occluder": {
+          "material": "minecraft:dirt",
+          "position": [
+            15000,
+            65,
+            -19
+          ],
+          "count": 1
+        },
+        "reveal_visibility_target": {
+          "minimum_fraction": 0.6,
+          "preferred_range": [
+            0.6,
+            0.8
+          ],
+          "basis": "whole_building_visible_in_native_gt_alpha"
+        },
+        "required_native_action": "hold_attack",
+        "action_frames": [
+          21,
+          60
+        ]
+      },
+      "recording": {
+        "fps": 20,
+        "frames": 129,
+        "check_frames": [
+          80,
+          100,
+          120
+        ]
+      },
+      "action_timeline": [
+        {
+          "frames": [
+            0,
+            20
+          ],
+          "alpha": "idle",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            21,
+            60
+          ],
+          "alpha": "attack_hold",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            61,
+            128
+          ],
+          "alpha": "idle_after_reveal",
+          "bravo": "idle"
+        }
+      ],
+      "camera_angle_tolerance_deg": 30,
+      "output_directory": "outputs/shared_world/building_reveal_pilot/MWB3-S-RV-PILOT-S01-B01-A30"
+    },
+    {
+      "case_id": "MWB3-S-RV-PILOT-S01-B01-A40",
+      "id": "MWB3-S-RV-PILOT-S01-B01-A40",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "pilot": true,
+      "scene_id": "MWB3-RV-SC01",
+      "scene_name": "云杉峡谷工场",
+      "building_id": "MWB3-RV-BL01",
+      "building_name": "偏置水轮磨坊",
+      "relative_agent_angle_deg": 40,
+      "actor_radius": 21.85,
+      "observer_radius": 30,
+      "world_x_offset": 15000,
+      "setup_commands": [
+        "fill 14966 60 -30 15034 62 30 minecraft:dirt",
+        "fill 14966 63 -30 15034 63 30 minecraft:grass_block",
+        "fill 14966 64 -30 15000 91 0 minecraft:air",
+        "fill 14966 92 -30 15000 120 0 minecraft:air",
+        "fill 14966 64 1 15000 91 30 minecraft:air",
+        "fill 14966 92 1 15000 120 30 minecraft:air",
+        "fill 15001 64 -30 15034 91 0 minecraft:air",
+        "fill 15001 92 -30 15034 120 0 minecraft:air",
+        "fill 15001 64 1 15034 91 30 minecraft:air",
+        "fill 15001 92 1 15034 120 30 minecraft:air",
+        "fill 14967 64 15 14981 70 29 minecraft:stone",
+        "fill 15020 64 13 15033 73 29 minecraft:andesite",
+        "fill 14969 64 -24 14978 68 3 minecraft:mossy_cobblestone",
+        "fill 15023 64 -24 15032 69 2 minecraft:stone",
+        "fill 14982 63 -27 14986 63 29 minecraft:water",
+        "fill 14979 65 -4 14989 66 0 minecraft:spruce_planks",
+        "fill 14980 64 -4 14980 66 -4 minecraft:spruce_log",
+        "fill 14980 64 0 14980 66 0 minecraft:spruce_log",
+        "fill 14987 64 -4 14987 66 -4 minecraft:spruce_log",
+        "fill 14987 64 0 14987 66 0 minecraft:spruce_log",
+        "fill 14971 64 -18 14971 71 -18 minecraft:spruce_log",
+        "fill 14969 69 -20 14973 71 -16 minecraft:spruce_leaves",
+        "fill 14970 72 -19 14972 73 -17 minecraft:spruce_leaves",
+        "fill 14976 64 8 14976 73 8 minecraft:spruce_log",
+        "fill 14974 71 6 14978 73 10 minecraft:spruce_leaves",
+        "fill 14975 74 7 14977 75 9 minecraft:spruce_leaves",
+        "fill 15028 64 -17 15028 72 -17 minecraft:spruce_log",
+        "fill 15026 70 -19 15030 72 -15 minecraft:spruce_leaves",
+        "fill 15027 73 -18 15029 74 -16 minecraft:spruce_leaves",
+        "fill 15025 64 7 15025 75 7 minecraft:spruce_log",
+        "fill 15023 73 5 15027 75 9 minecraft:spruce_leaves",
+        "fill 15024 76 6 15026 77 8 minecraft:spruce_leaves",
+        "fill 15018 64 24 15018 71 24 minecraft:spruce_log",
+        "fill 15016 69 22 15020 71 26 minecraft:spruce_leaves",
+        "fill 15017 72 23 15019 73 25 minecraft:spruce_leaves",
+        "fill 14990 64 18 14990 67 18 minecraft:cobblestone_wall",
+        "setblock 14990 68 18 minecraft:lantern",
+        "fill 15013 64 18 15013 67 18 minecraft:cobblestone_wall",
+        "setblock 15013 68 18 minecraft:lantern",
+        "fill 15019 64 -10 15019 67 -10 minecraft:cobblestone_wall",
+        "setblock 15019 68 -10 minecraft:lantern",
+        "fill 14973 64 12 14973 67 12 minecraft:cobblestone_wall",
+        "setblock 14973 68 12 minecraft:lantern",
+        "fill 14991 64 20 14998 65 23 minecraft:stripped_spruce_log",
+        "fill 15012 64 21 15018 66 23 minecraft:spruce_planks",
+        "fill 14996 64 -2 15004 68 -2 minecraft:cobblestone",
+        "fill 14996 64 5 15004 68 5 minecraft:cobblestone",
+        "fill 14996 64 -2 14996 68 5 minecraft:cobblestone",
+        "fill 15004 64 -2 15004 68 5 minecraft:cobblestone",
+        "fill 14997 69 -1 15003 72 4 minecraft:spruce_planks",
+        "fill 14999 64 -2 15001 67 -2 minecraft:air",
+        "fill 14997 66 -2 14998 67 -2 minecraft:glass",
+        "fill 15002 66 -2 15003 67 -2 minecraft:glass",
+        "fill 14995 73 -3 15005 73 -3 minecraft:dark_oak_planks",
+        "fill 14995 73 6 15005 73 6 minecraft:dark_oak_planks",
+        "fill 14996 74 -2 15004 74 -2 minecraft:dark_oak_planks",
+        "fill 14996 74 5 15004 74 5 minecraft:dark_oak_planks",
+        "fill 14997 75 -1 15003 75 -1 minecraft:dark_oak_planks",
+        "fill 14997 75 4 15003 75 4 minecraft:dark_oak_planks",
+        "fill 14998 76 0 15002 76 0 minecraft:dark_oak_planks",
+        "fill 14998 76 3 15002 76 3 minecraft:dark_oak_planks",
+        "fill 14999 77 1 15001 77 1 minecraft:dark_oak_planks",
+        "fill 14999 77 2 15001 77 2 minecraft:dark_oak_planks",
+        "fill 14998 73 -1 15000 75 -1 minecraft:red_terracotta",
+        "fill 14998 73 2 15000 75 2 minecraft:red_terracotta",
+        "fill 14998 73 -1 14998 75 2 minecraft:red_terracotta",
+        "fill 15000 73 -1 15000 75 2 minecraft:red_terracotta",
+        "setblock 14999 74 -1 minecraft:glass",
+        "fill 15005 64 -1 15005 69 3 minecraft:dark_oak_log",
+        "setblock 15006 65 -1 minecraft:dark_oak_planks",
+        "setblock 15006 65 3 minecraft:dark_oak_planks",
+        "setblock 15006 69 -1 minecraft:dark_oak_planks",
+        "setblock 15006 69 3 minecraft:dark_oak_planks",
+        "fill 15006 65 1 15006 69 1 minecraft:dark_oak_log",
+        "fill 15006 67 -1 15006 67 3 minecraft:dark_oak_log",
+        "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
+        "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
+        "fill 14999 64 -21 15001 66 -19 minecraft:air",
+        "fill 15018 63 -22 15020 63 -20 minecraft:grass_block",
+        "fill 15018 64 -22 15020 66 -20 minecraft:air",
+        "setblock 15000 65 -19 minecraft:dirt"
+      ],
+      "initial_poses": {
+        "alpha": {
+          "role": "actor",
+          "position": [
+            15000.5,
+            64,
+            -19.35
+          ],
+          "native_yaw_deg": 0,
+          "native_pitch_deg": -8.793447376413935,
+          "focus": [
+            15000.5,
+            69,
+            2.5
+          ]
+        },
+        "bravo": {
+          "role": "stationary_observer",
+          "position": [
+            15019.783628290596,
+            64,
+            -20.48133329356934
+          ],
+          "native_yaw_deg": 63.32120787761788,
+          "native_pitch_deg": -4.300548217398999,
+          "focus": [
+            14997.445187257232,
+            67.5,
+            -9.256626072491539
+          ]
+        }
+      },
+      "visibility_contract": {
+        "before_action": {
+          "alpha_sees_building": false,
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        },
+        "after_action": {
+          "alpha_sees_building": true,
+          "alpha_visible_building_fraction": [
+            0.6,
+            0.8
+          ],
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        }
+      },
+      "reveal": {
+        "actor": "alpha",
+        "occluder": {
+          "material": "minecraft:dirt",
+          "position": [
+            15000,
+            65,
+            -19
+          ],
+          "count": 1
+        },
+        "reveal_visibility_target": {
+          "minimum_fraction": 0.6,
+          "preferred_range": [
+            0.6,
+            0.8
+          ],
+          "basis": "whole_building_visible_in_native_gt_alpha"
+        },
+        "required_native_action": "hold_attack",
+        "action_frames": [
+          21,
+          60
+        ]
+      },
+      "recording": {
+        "fps": 20,
+        "frames": 129,
+        "check_frames": [
+          80,
+          100,
+          120
+        ]
+      },
+      "action_timeline": [
+        {
+          "frames": [
+            0,
+            20
+          ],
+          "alpha": "idle",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            21,
+            60
+          ],
+          "alpha": "attack_hold",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            61,
+            128
+          ],
+          "alpha": "idle_after_reveal",
+          "bravo": "idle"
+        }
+      ],
+      "camera_angle_tolerance_deg": 30,
+      "output_directory": "outputs/shared_world/building_reveal_pilot/MWB3-S-RV-PILOT-S01-B01-A40"
+    },
+    {
+      "case_id": "MWB3-S-RV-PILOT-S01-B01-A50",
+      "id": "MWB3-S-RV-PILOT-S01-B01-A50",
+      "metrics": [
+        "cross_view_structural_coherence",
+        "spatial_reasoning"
+      ],
+      "pilot": true,
+      "scene_id": "MWB3-RV-SC01",
+      "scene_name": "云杉峡谷工场",
+      "building_id": "MWB3-RV-BL01",
+      "building_name": "偏置水轮磨坊",
+      "relative_agent_angle_deg": 50,
+      "actor_radius": 21.85,
+      "observer_radius": 30,
+      "world_x_offset": 15000,
+      "setup_commands": [
+        "fill 14966 60 -30 15034 62 30 minecraft:dirt",
+        "fill 14966 63 -30 15034 63 30 minecraft:grass_block",
+        "fill 14966 64 -30 15000 91 0 minecraft:air",
+        "fill 14966 92 -30 15000 120 0 minecraft:air",
+        "fill 14966 64 1 15000 91 30 minecraft:air",
+        "fill 14966 92 1 15000 120 30 minecraft:air",
+        "fill 15001 64 -30 15034 91 0 minecraft:air",
+        "fill 15001 92 -30 15034 120 0 minecraft:air",
+        "fill 15001 64 1 15034 91 30 minecraft:air",
+        "fill 15001 92 1 15034 120 30 minecraft:air",
+        "fill 14967 64 15 14981 70 29 minecraft:stone",
+        "fill 15020 64 13 15033 73 29 minecraft:andesite",
+        "fill 14969 64 -24 14978 68 3 minecraft:mossy_cobblestone",
+        "fill 15023 64 -24 15032 69 2 minecraft:stone",
+        "fill 14982 63 -27 14986 63 29 minecraft:water",
+        "fill 14979 65 -4 14989 66 0 minecraft:spruce_planks",
+        "fill 14980 64 -4 14980 66 -4 minecraft:spruce_log",
+        "fill 14980 64 0 14980 66 0 minecraft:spruce_log",
+        "fill 14987 64 -4 14987 66 -4 minecraft:spruce_log",
+        "fill 14987 64 0 14987 66 0 minecraft:spruce_log",
+        "fill 14971 64 -18 14971 71 -18 minecraft:spruce_log",
+        "fill 14969 69 -20 14973 71 -16 minecraft:spruce_leaves",
+        "fill 14970 72 -19 14972 73 -17 minecraft:spruce_leaves",
+        "fill 14976 64 8 14976 73 8 minecraft:spruce_log",
+        "fill 14974 71 6 14978 73 10 minecraft:spruce_leaves",
+        "fill 14975 74 7 14977 75 9 minecraft:spruce_leaves",
+        "fill 15028 64 -17 15028 72 -17 minecraft:spruce_log",
+        "fill 15026 70 -19 15030 72 -15 minecraft:spruce_leaves",
+        "fill 15027 73 -18 15029 74 -16 minecraft:spruce_leaves",
+        "fill 15025 64 7 15025 75 7 minecraft:spruce_log",
+        "fill 15023 73 5 15027 75 9 minecraft:spruce_leaves",
+        "fill 15024 76 6 15026 77 8 minecraft:spruce_leaves",
+        "fill 15018 64 24 15018 71 24 minecraft:spruce_log",
+        "fill 15016 69 22 15020 71 26 minecraft:spruce_leaves",
+        "fill 15017 72 23 15019 73 25 minecraft:spruce_leaves",
+        "fill 14990 64 18 14990 67 18 minecraft:cobblestone_wall",
+        "setblock 14990 68 18 minecraft:lantern",
+        "fill 15013 64 18 15013 67 18 minecraft:cobblestone_wall",
+        "setblock 15013 68 18 minecraft:lantern",
+        "fill 15019 64 -10 15019 67 -10 minecraft:cobblestone_wall",
+        "setblock 15019 68 -10 minecraft:lantern",
+        "fill 14973 64 12 14973 67 12 minecraft:cobblestone_wall",
+        "setblock 14973 68 12 minecraft:lantern",
+        "fill 14991 64 20 14998 65 23 minecraft:stripped_spruce_log",
+        "fill 15012 64 21 15018 66 23 minecraft:spruce_planks",
+        "fill 14996 64 -2 15004 68 -2 minecraft:cobblestone",
+        "fill 14996 64 5 15004 68 5 minecraft:cobblestone",
+        "fill 14996 64 -2 14996 68 5 minecraft:cobblestone",
+        "fill 15004 64 -2 15004 68 5 minecraft:cobblestone",
+        "fill 14997 69 -1 15003 72 4 minecraft:spruce_planks",
+        "fill 14999 64 -2 15001 67 -2 minecraft:air",
+        "fill 14997 66 -2 14998 67 -2 minecraft:glass",
+        "fill 15002 66 -2 15003 67 -2 minecraft:glass",
+        "fill 14995 73 -3 15005 73 -3 minecraft:dark_oak_planks",
+        "fill 14995 73 6 15005 73 6 minecraft:dark_oak_planks",
+        "fill 14996 74 -2 15004 74 -2 minecraft:dark_oak_planks",
+        "fill 14996 74 5 15004 74 5 minecraft:dark_oak_planks",
+        "fill 14997 75 -1 15003 75 -1 minecraft:dark_oak_planks",
+        "fill 14997 75 4 15003 75 4 minecraft:dark_oak_planks",
+        "fill 14998 76 0 15002 76 0 minecraft:dark_oak_planks",
+        "fill 14998 76 3 15002 76 3 minecraft:dark_oak_planks",
+        "fill 14999 77 1 15001 77 1 minecraft:dark_oak_planks",
+        "fill 14999 77 2 15001 77 2 minecraft:dark_oak_planks",
+        "fill 14998 73 -1 15000 75 -1 minecraft:red_terracotta",
+        "fill 14998 73 2 15000 75 2 minecraft:red_terracotta",
+        "fill 14998 73 -1 14998 75 2 minecraft:red_terracotta",
+        "fill 15000 73 -1 15000 75 2 minecraft:red_terracotta",
+        "setblock 14999 74 -1 minecraft:glass",
+        "fill 15005 64 -1 15005 69 3 minecraft:dark_oak_log",
+        "setblock 15006 65 -1 minecraft:dark_oak_planks",
+        "setblock 15006 65 3 minecraft:dark_oak_planks",
+        "setblock 15006 69 -1 minecraft:dark_oak_planks",
+        "setblock 15006 69 3 minecraft:dark_oak_planks",
+        "fill 15006 65 1 15006 69 1 minecraft:dark_oak_log",
+        "fill 15006 67 -1 15006 67 3 minecraft:dark_oak_log",
+        "fill 15004 64 5 15010 64 7 minecraft:oak_planks",
+        "fill 14999 63 -21 15001 63 -19 minecraft:grass_block",
+        "fill 14999 64 -21 15001 66 -19 minecraft:air",
+        "fill 15022 63 -18 15024 63 -16 minecraft:grass_block",
+        "fill 15022 64 -18 15024 66 -16 minecraft:air",
+        "setblock 15000 65 -19 minecraft:dirt"
+      ],
+      "initial_poses": {
+        "alpha": {
+          "role": "actor",
+          "position": [
+            15000.5,
+            64,
+            -19.35
+          ],
+          "native_yaw_deg": 0,
+          "native_pitch_deg": -8.793447376413935,
+          "focus": [
+            15000.5,
+            69,
+            2.5
+          ]
+        },
+        "bravo": {
+          "role": "stationary_observer",
+          "position": [
+            15023.48133329357,
+            64,
+            -16.78362829059618
+          ],
+          "native_yaw_deg": 73.18596754012187,
+          "native_pitch_deg": -4.300548217398837,
+          "focus": [
+            14999.550116261444,
+            67.5,
+            -9.551972092926178
+          ]
+        }
+      },
+      "visibility_contract": {
+        "before_action": {
+          "alpha_sees_building": false,
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        },
+        "after_action": {
+          "alpha_sees_building": true,
+          "alpha_visible_building_fraction": [
+            0.6,
+            0.8
+          ],
+          "bravo_sees_building": true,
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
+        }
+      },
+      "reveal": {
+        "actor": "alpha",
+        "occluder": {
+          "material": "minecraft:dirt",
+          "position": [
+            15000,
+            65,
+            -19
+          ],
+          "count": 1
+        },
+        "reveal_visibility_target": {
+          "minimum_fraction": 0.6,
+          "preferred_range": [
+            0.6,
+            0.8
+          ],
+          "basis": "whole_building_visible_in_native_gt_alpha"
+        },
+        "required_native_action": "hold_attack",
+        "action_frames": [
+          21,
+          60
+        ]
+      },
+      "recording": {
+        "fps": 20,
+        "frames": 129,
+        "check_frames": [
+          80,
+          100,
+          120
+        ]
+      },
+      "action_timeline": [
+        {
+          "frames": [
+            0,
+            20
+          ],
+          "alpha": "idle",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            21,
+            60
+          ],
+          "alpha": "attack_hold",
+          "bravo": "idle"
+        },
+        {
+          "frames": [
+            61,
+            128
+          ],
+          "alpha": "idle_after_reveal",
+          "bravo": "idle"
+        }
+      ],
+      "camera_angle_tolerance_deg": 30,
+      "output_directory": "outputs/shared_world/building_reveal_pilot/MWB3-S-RV-PILOT-S01-B01-A50"
+    }
+  ]
+}
