@@ -11,6 +11,74 @@ OUTPUT_KEYS = (
     "returning_observer_expected_change_occurred",
 )
 OUTPUT_SCHEMA = {key: "0 or 1" for key in OUTPUT_KEYS}
+SINGLE_OUTPUT_KEYS = ("expected_change_occurred",)
+SINGLE_OUTPUT_SCHEMA = {"expected_change_occurred": "0 or 1"}
+
+
+def build_single_view_prompt(case: Mapping[str, Any], role: str) -> str:
+    """Build one focused binary judgment for one labelled BEFORE/AFTER pair."""
+    if role not in {"operator", "observer"}:
+        raise ValueError(f"unsupported role: {role!r}")
+    operation = str(case["operation"])
+    if operation not in {"place", "destroy"}:
+        raise ValueError(f"unsupported operation: {operation!r}")
+    expected_before = str(case["expected_before"]["target_cell"])
+    expected_after = str(case["expected_after"]["target_cell"])
+    block_id = expected_after if operation == "place" else expected_before
+    block_name = str(case.get("block_name_zh", block_id))
+    if operation == "place":
+        transition = (
+            f"the center cell changes from empty air to one full {block_name} cube ({block_id})"
+        )
+    else:
+        transition = (
+            f"the full {block_name} cube ({block_id}) disappears from the center cell. A tiny floating or "
+            "rotating dropped item is not a block and must be ignored"
+        )
+    viewpoint = "operator B immediately after acting" if role == "operator" else "observer A after returning"
+    return (
+        "Image 1 is one Minecraft BEFORE/AFTER comparison: BEFORE is the left panel and AFTER is the right "
+        f"panel. It shows {viewpoint}. Judge only the operation cell at the intersection of the colored ground "
+        "cross. First require that the colored cross and its center cell are visible in both panels; otherwise "
+        "answer 0. The expected visible change is: " + transition + ". Answer 1 only when the left panel shows "
+        "the expected before state and the right panel visibly shows the expected after state. Ignore the player, "
+        "hand, tool, HUD, particles, lighting, background, and tiny dropped items. Camera/framing change alone is "
+        "not evidence. Return ONLY JSON exactly as {\"expected_change_occurred\":0} or "
+        "{\"expected_change_occurred\":1}."
+    )
+
+
+def build_reference_prompt(case: Mapping[str, Any]) -> str:
+    """Judge both views against matching native GT BEFORE/AFTER references."""
+    operation = str(case["operation"])
+    expected_before = str(case["expected_before"]["target_cell"])
+    expected_after = str(case["expected_after"]["target_cell"])
+    block_id = expected_after if operation == "place" else expected_before
+    block_name = str(case.get("block_name_zh", block_id))
+    if operation == "place":
+        transition = f"empty air becomes one full {block_name} cube ({block_id})"
+    elif operation == "destroy":
+        transition = (
+            f"the full {block_name} cube ({block_id}) disappears and leaves the cell empty/exposed; "
+            "ignore any tiny floating or rotating dropped item"
+        )
+    else:
+        raise ValueError(f"unsupported operation: {operation!r}")
+    schema = "{" + ",".join(f'\"{key}\":0 or 1' for key in OUTPUT_KEYS) + "}"
+    return (
+        "Judge Minecraft shared-state persistence using native GT as a visual reference. Every image is a labelled "
+        "full-frame comparison whose left panel is BEFORE and right panel is AFTER. Image 1 is native GT for "
+        "operator B; Image 2 is the candidate for operator B. Image 3 is native GT for returning observer A; "
+        "Image 4 is the candidate for returning observer A. Focus only on the operation cell at the intersection "
+        "of the colored ground cross. The expected change is: " + transition + ". For each candidate, output 1 "
+        "only if the colored cross and center cell are visible in both candidate panels AND the candidate shows the "
+        "same center-cell before-to-after state change as its matching GT reference. Output 0 if the cross/center is "
+        "missing, the target change is absent, the block count/material is wrong for placement, or only the camera "
+        "view changes. For destruction, a tiny dropped item is not a full block and must be ignored. Ignore players, "
+        "hands, tools, HUD, particles, lighting, and background outside the cross center. Set "
+        "operator_expected_change_occurred from Images 1-2 and returning_observer_expected_change_occurred from "
+        f"Images 3-4. Return ONLY JSON with exactly {schema}."
+    )
 
 
 def build_prompt(case: Mapping[str, Any]) -> str:
@@ -22,25 +90,31 @@ def build_prompt(case: Mapping[str, Any]) -> str:
         raise ValueError("shared-state persistence expects exactly one changed block")
     expected_before = str(case["expected_before"]["target_cell"])
     expected_after = str(case["expected_after"]["target_cell"])
+    block_id = expected_after if operation == "place" else expected_before
+    block_name = str(case.get("block_name_zh", block_id))
     if operation == "place":
         transition = (
-            "the cross-center target changes from empty air to exactly one full coarse-dirt block"
+            f"the cross-center target changes from empty air to exactly one full {block_name} block "
+            f"({block_id}); the placed cube must visibly occupy the center cell"
         )
     else:
         transition = (
-            "the one full one-meter coarse-dirt cube at the cross center disappears, leaving the target cell "
-            "empty/exposed. Judge the full cube, not whether any brown pixels remain: a small rotating or "
-            "floating brown collectible item is merely a drop produced by destruction and MUST be ignored. "
-            "A dropped item is much smaller than a 1x1x1 block, does not occupy the target cell, and does not "
-            "need to disappear. If the full cube is gone and the ground/cross center is visible, the after "
-            "state is air and the destroy transition MUST receive 1 even when that small item remains"
+            f"the one full one-meter {block_name} cube ({block_id}) at the cross center disappears, "
+            "leaving the target cell empty/exposed. Judge the full cube, not whether any same-colored pixels "
+            "remain: a small rotating or floating collectible item is merely a drop produced by destruction "
+            "and MUST be ignored. A dropped item is much smaller than a 1x1x1 block, does not occupy the target "
+            "cell, and does not need to disappear"
         )
     schema = "{" + ",".join(f'\"{key}\":0 or 1' for key in OUTPUT_KEYS) + "}"
     return (
         "Judge whether an expected Minecraft world-state change occurred by comparing BEFORE and AFTER images. "
-        "There are two independent temporal pairs from the same generated video. Image 1 is operator B BEFORE the "
-        "operation and Image 2 is operator B AFTER the operation. Image 3 is observer A BEFORE the operation and "
-        "Image 4 is observer A AFTER returning to the target. Focus only on the target cell at the CENTER of the "
+        "There are two independent temporal comparisons from the same generated video. Image 1 is a labelled "
+        "side-by-side comparison for operator B: its left panel is BEFORE and its right panel is AFTER the operation. "
+        "Image 2 is the same labelled BEFORE/AFTER comparison for observer A after returning to the target. First "
+        "apply a visibility gate independently to each comparison: the "
+        "pair: the colored ground cross and its center operation cell must be clearly visible in BOTH images of that "
+        "pair. If the cross or center is absent, offscreen, hidden, or ambiguous, that pair MUST receive 0 and you "
+        "must not infer success from hallucinated disappearance. Focus only on the target cell at the CENTER of the "
         "colored ground cross. "
         f"The expected operation is {operation}; exactly {expected_count} block changes; expected transition: "
         f"{transition}. The formal target states are {expected_before} before and {expected_after} after. "
@@ -48,9 +122,9 @@ def build_prompt(case: Mapping[str, Any]) -> str:
         "the expected after state, so the requested change is visibly demonstrated. A merely different camera view "
         "is not a state change. Ignore overall scene quality, viewpoint or framing differences, lighting, players, "
         "tools, HUD, particles, dropped items, and background outside the cross-center operation area. Output 0 if "
-        "the cross center is offscreen, hidden, ambiguous, the count is wrong, or the expected transition is absent. "
-        "Set operator_expected_change_occurred for Images 1-2 and "
-        "returning_observer_expected_change_occurred for Images 3-4. "
+        "the count is wrong or the expected transition is absent. Set operator_expected_change_occurred from the "
+        "left/right panels of Image 1 and returning_observer_expected_change_occurred from the left/right panels of "
+        "Image 2. "
         f"Return ONLY JSON with exactly {schema}."
     )
 

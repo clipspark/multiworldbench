@@ -18,10 +18,10 @@ font_path='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc';font=ImageFon
 def score_row(model,cid):return next(x for x in SCORES['models'][model]['cases'] if x['case_id']==cid)
 def make_sheet(case):
     cid=case['case_id'];cell=(400,267);head=52;left=190;canvas=Image.new('RGB',(left+4*cell[0],head+3*(cell[1]+40)),(22,25,31));d=ImageDraw.Draw(canvas)
-    for col,label in enumerate(('B 操作前 f18','B 操作后 f80','A 操作前 f18','A 回访 f180')):d.text((left+col*cell[0]+8,12),label,font=small,fill='white')
+    for col,label in enumerate(('B 操作前 f18','B 操作后 f100','A 操作前 f18','A 回访 f180')):d.text((left+col*cell[0]+8,12),label,font=small,fill='white')
     for row,model in enumerate(MODELS):
         y=head+row*(cell[1]+40);s=score_row(model,cid);q=s['questions'];d.text((10,y+12),LABELS[model],font=font,fill='white');d.text((10,y+54),f"得分 {s['score_0_100']:.0f}",font=small,fill='#8ee3a2' if s['score'] else '#ff9c9c');d.text((10,y+82),f"B变化 {q['operator_expected_change_occurred']} / A变化 {q['returning_observer_expected_change_occurred']}",font=small,fill='#d5d9e2')
-        paths=[FRAME_ROOT/f'{model}/{cid}/bravo_018.png',FRAME_ROOT/f'{model}/{cid}/bravo_080.png',FRAME_ROOT/f'{model}/{cid}/alpha_018.png',FRAME_ROOT/f'{model}/{cid}/alpha_180.png']
+        paths=[FRAME_ROOT/f'{model}/{cid}/bravo_018.png',FRAME_ROOT/f'{model}/{cid}/bravo_100.png',FRAME_ROOT/f'{model}/{cid}/alpha_018.png',FRAME_ROOT/f'{model}/{cid}/alpha_180.png']
         for col,p in enumerate(paths):
             with Image.open(p).convert('RGB') as im:canvas.paste(im.resize(cell,Image.Resampling.LANCZOS),(left+col*cell[0],y))
     out=RESULTS/f'{cid}.jpg';canvas.save(out,quality=90);return out
@@ -33,6 +33,7 @@ def gamma_video(cid):
 
 def make_video(case):
     cid=case['case_id'];out=RESULTS/f'{cid}.mp4'
+    if out.is_file() and out.stat().st_size>0:return out
     inputs=[RUN/f'models/gt/interaction/{cid}/alpha_gt.mp4',RUN/f'models/gt/interaction/{cid}/bravo_gt.mp4',RUN/f'models/solaris/interaction/{cid}/alpha_generated.mp4',RUN/f'models/solaris/interaction/{cid}/bravo_generated.mp4',gamma_video(cid)]
     font='/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
     graph=(
@@ -61,11 +62,11 @@ for m in MODELS:
 cards=[]
 for case in CASES:
     cid=case['case_id'];badges=' '.join(f"<span>{LABELS[m]} {score_row(m,cid)['score_0_100']:.0f}</span>" for m in MODELS)
-    cards.append(f"<article><h3>{cid} · {html.escape(case['scene_name_zh'])} · {case['operation']} · 方向{case['variant']+1}</h3><div class='badges'>{badges}</div><video controls preload='metadata' src='{cid}.mp4'></video><details><summary>查看评分帧</summary><a href='{cid}.jpg'><img loading='lazy' src='{cid}.jpg'></a></details></article>")
+    cards.append(f"<article><h3>{cid} · {html.escape(case['scene_name_zh'])} · {html.escape(case['block_name_zh'])} · {case['operation']}</h3><div class='badges'>{badges}</div><video controls preload='metadata' src='{cid}.mp4'></video><details><summary>查看评分帧</summary><a href='{cid}.jpg'><img loading='lazy' src='{cid}.jpg'></a></details></article>")
 gt_score=SCORES['models']['gt']['aggregate']['score_0_100'];calibration=(f"<p class='warning'>GT 的操作前后变化检测得分为 {gt_score:.2f}，低于 90 分校准阈值；需要结合逐 case 证据检查判分器或 GT 操作。</p>" if gt_score<90 else f"<p>GT 操作前后变化检测校准：{gt_score:.2f}，达到 90 分接受阈值。</p>")
 page=f'''<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>共享状态持久性：GT / Solaris / Gamma World</title><style>
 body{{margin:0;background:#10131a;color:#eef1f6;font-family:system-ui,"Noto Sans CJK SC",sans-serif}}main{{max-width:1500px;margin:auto;padding:30px}}h1{{margin:0 0 8px}}p{{color:#aeb6c5}}.warning{{color:#ffd181;background:#2a2417;border:1px solid #625020;border-radius:10px;padding:12px 14px}}.summary{{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}}.metric,article{{background:#1a1f29;border:1px solid #30394a;border-radius:12px;padding:16px}}.metric strong{{display:block;font-size:38px;margin:8px 0;color:#8ee3a2}}.metric span{{display:block;color:#cbd2de;margin-top:4px}}.badges span{{color:#cbd2de}}article{{margin:18px 0}}h3{{margin:0 0 10px}}.badges{{display:flex;gap:18px;margin-bottom:12px}}video,img{{width:100%;height:auto;border-radius:8px;display:block;background:#000}}details{{margin-top:12px}}summary{{cursor:pointer;color:#cbd2de;margin-bottom:10px}}code{{color:#ffd181}}@media(max-width:900px){{.summary{{grid-template-columns:1fr}}}}
-</style></head><body><main><h1>共享状态持久性：操作前后变化检测</h1><p>20 个 case；每段视频从上到下依次为 GT、Solaris、Gamma World，每行左侧 A、右侧 B。VLM 不再比较模型画面与 GT 外观，而是在每个视频内部比较两组操作前后：B 的 f18→f80，以及 A 的 f18→稳定回访终帧 f180。它只判断彩色十字中心是否出现 case 指定的变化，例如摧毁时完整粗泥方块从存在变为消失、放置时中心从空变为一个粗泥方块；摧毁后的小型掉落物不算方块。B 与 A 两项都通过时 case 得 1。</p>{calibration}<div class="summary">{''.join(summary)}</div>{''.join(cards)}</main></body></html>'''
+</style></head><body><main><h1>共享状态持久性：操作前后变化检测</h1><p>50 个 case；每段视频从上到下依次为 GT、Solaris、Gamma World，每行左侧 A、右侧 B。VLM 对照同一 case、同一视角的 GT 前后画面，判断 B 的 f18→f100 以及 A 的 f18→稳定回访终帧 f180 是否发生相同变化。所有输入均为带 BEFORE/AFTER 标签的完整画面，完整画面同时用于十字可见性门控和中心操作格判断。它只判断彩色十字中心是否出现 case 指定的变化，例如摧毁时指定的完整方块从存在变为消失、放置时中心从空变为指定材质的一种方块；摧毁后的小型掉落物不算方块。B 与 A 两项都通过时 case 得 1。</p>{calibration}<div class="summary">{''.join(summary)}</div>{''.join(cards)}</main></body></html>'''
 (RESULTS/'index.html').write_text(page,encoding='utf-8')
 missing=[]
 for case in CASES:

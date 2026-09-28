@@ -81,18 +81,19 @@
       "id": "shared_state_persistence",
       "domain": "shared_world",
       "name": "共享状态持久性",
-      "status": "implemented_uncollected",
+      "status": "implemented_evaluated",
       "case_file": "cases/shared_world/shared_state_persistence.json",
-      "case_count": 20,
+      "case_count": 50,
       "implementation": "controller.multiworldbench_v3.metrics.shared_state_persistence",
       "ranking_ready": false,
       "score_range": [
         0,
         1
       ],
-      "aggregation": "majority per binary question across frames 160/170/180, strict product per case, macro-mean of placement and destruction pass rates",
-      "suite_definition": "5 geometry-rich scenes × 2 operations × 2 turn-away directions",
-      "gt_collected": false
+      "aggregation": "single stable check frame, strict product per case, macro-mean of placement and destruction pass rates",
+      "suite_definition": "5 geometry-rich scenes × 5 visually distinct block types × 2 operations (placement/destruction)",
+      "gt_collected": true,
+      "evaluation_protocol": "GT-referenced labelled full-frame BEFORE/AFTER comparisons; VLM binary operator and returning-observer judgments; strict product per case"
     },
     {
       "id": "cross_view_structural_coherence",

@@ -8,7 +8,7 @@ SOLARIS=${SOLARIS_ROOT:-/data2/xuzhangbo/multihuman-animate/solaris}
 SOLARIS_PY=${SOLARIS_PY:-/data2/xuzhangbo/.conda/envs/solaris/bin/python}
 SOURCE="$RUN/assets/interaction"
 N_SHARDS=8
-N_CASES=20
+N_CASES=50
 FRAMES=181
 GAMMA_FRAMES=189
 

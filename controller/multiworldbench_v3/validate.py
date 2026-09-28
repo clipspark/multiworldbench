@@ -253,37 +253,48 @@ def validate(project_root: Path) -> dict[str, Any]:
     ):
         if removed_path.exists():
             raise ValueError(f"separate reveal case file must not remain: {removed_path}")
-    expected_contract = {
-        "alpha_faces_building_but_building_is_fully_occluded": True,
-        "bravo_initially_sees_building": True,
-        "alpha_must_remove_occluding_dirt": True,
-        "alpha_should_see_building_after_removal": True,
-        "bravo_remains_stationary": True,
-    }
     for case in reveal["cases"]:
         if case.get("metrics") != expected_reveal_metrics:
             raise ValueError(f"shared metric binding mismatch: {case['case_id']}")
-        frames = case["timeline"]["video_frames"]
+        recording = case.get("recording", {})
+        frames = recording.get("frames")
         if any(
             type(frame) is not int or not 0 <= frame < frames
             for frame in reveal["check_frames"]
         ):
             raise ValueError(f"invalid building-reveal frame for {case['case_id']}")
-        if case.get("visibility_contract") != expected_contract:
+        if recording.get("check_frames") != reveal["check_frames"]:
+            raise ValueError(f"invalid building-reveal recording contract: {case['case_id']}")
+        contract = case.get("visibility_contract", {})
+        if contract.get("before_action") != {
+            "alpha_sees_building": False,
+            "bravo_sees_building": True,
+            "bravo_sees_alpha": True,
+            "bravo_sees_building_and_alpha_simultaneously": True,
+        } or contract.get("after_action") != {
+            "alpha_sees_building": True,
+            "alpha_visible_building_fraction": [0.6, 0.8],
+            "bravo_sees_building": True,
+            "bravo_sees_alpha": True,
+            "bravo_sees_building_and_alpha_simultaneously": True,
+        }:
             raise ValueError(f"invalid building-reveal contract: {case['case_id']}")
-        phases = case["timeline"]["frames"]
-        if phases[1] != {
-            "range": [20, 60],
-            "actor": "alpha",
-            "action": "destroy_occluding_dirt",
+        phases = case.get("action_timeline", [])
+        if len(phases) != 3 or phases[1] != {
+            "frames": [21, 60],
+            "alpha": "attack_hold",
+            "bravo": "idle",
         }:
             raise ValueError(f"invalid building-reveal action: {case['case_id']}")
-        occluder = case.get("occluder", {})
+        reveal_action = case.get("reveal", {})
+        occluder = reveal_action.get("occluder", {})
         if (
-            occluder.get("actor") != "alpha"
-            or occluder.get("material") != "dirt"
-            or "target_block" not in occluder
-            or "remaining_pedestal" not in occluder
+            reveal_action.get("actor") != "alpha"
+            or reveal_action.get("required_native_action") != "hold_attack"
+            or reveal_action.get("action_frames") != [21, 60]
+            or occluder.get("material") != "minecraft:dirt"
+            or occluder.get("count") != 1
+            or "position" not in occluder
         ):
             raise ValueError(f"missing building-reveal occluder: {case['case_id']}")
 
@@ -344,15 +355,15 @@ def validate(project_root: Path) -> dict[str, Any]:
     persistence = _load(persistence_path)
     if persistence.get("metric_id") != "shared_state_persistence":
         raise ValueError("shared-state persistence metric binding changed")
-    if persistence.get("gt_collected") is not False:
-        raise ValueError("shared-state persistence design must remain uncollected")
-    if persistence.get("first_frames_materialized") is not False:
-        raise ValueError("shared-state persistence must not claim first-frame materialization")
+    if persistence.get("gt_collected") is not True:
+        raise ValueError("shared-state persistence must record completed native GT collection")
+    if persistence.get("first_frames_materialized") is not True:
+        raise ValueError("shared-state persistence must record materialized first frames")
     if persistence.get("factorization") != {
         "scenes": 5,
+        "block_types": 5,
         "operations": 2,
-        "turn_directions": 2,
-        "total": 20,
+        "total": 50,
     }:
         raise ValueError("shared-state persistence factorization changed")
     if persistence.get("score_protocol") != {
@@ -366,18 +377,19 @@ def validate(project_root: Path) -> dict[str, Any]:
     }:
         raise ValueError("shared-state persistence score protocol changed")
     expected_persistence_cells = {
-        (scene, operation, variant)
+        (scene, block_type, operation)
         for scene in {case["scene"] for case in persistence["cases"]}
+        for block_type in {case["block_type"] for case in persistence["cases"]}
         for operation in ("place", "destroy")
-        for variant in (0, 1)
     }
     actual_persistence_cells = {
-        (case["scene"], case["operation"], case["variant"])
+        (case["scene"], case["block_type"], case["operation"])
         for case in persistence["cases"]
     }
     if (
-        len(persistence.get("cases", [])) != 20
+        len(persistence.get("cases", [])) != 50
         or len({case["scene"] for case in persistence["cases"]}) != 5
+        or len({case["block_type"] for case in persistence["cases"]}) != 5
         or actual_persistence_cells != expected_persistence_cells
     ):
         raise ValueError("shared-state persistence factorial cells are incomplete")
@@ -405,7 +417,7 @@ def validate(project_root: Path) -> dict[str, Any]:
         if phase_by_name["joint_observe"]["range"] != [0, 20]:
             raise ValueError(f"invalid joint-observation range: {case_id}")
         operate = phase_by_name["bravo_operates"]
-        expected_operation_range = [60, 61] if case["operation"] == "place" else [60, 68]
+        expected_operation_range = [55, 56] if case["operation"] == "place" else [55, 95]
         expected_action = "use_once" if case["operation"] == "place" else "hold_attack"
         if operate["range"] != expected_operation_range or operate["bravo"].get("action") != expected_action:
             raise ValueError(f"invalid persistence operation: {case_id}")
@@ -417,12 +429,11 @@ def validate(project_root: Path) -> dict[str, Any]:
             raise ValueError(f"bravo turn-away direction changed: {case_id}")
         if case.get("evidence_frames") != {
             "joint_initial": 18,
-            "operator_post_action": 80,
+            "operator_post_action": 100,
             "returning_observer_checks": [180],
         }:
             raise ValueError(f"invalid persistence evidence frames: {case_id}")
-        expected_warmup_ms = 5000 if case_id == "MWB3-S-SP002" else 900
-        if case.get("capture_warmup_ms") != expected_warmup_ms:
+        if case.get("capture_warmup_ms") != 5000:
             raise ValueError(f"invalid persistence capture warmup: {case_id}")
         contract = case.get("visibility_contract", {})
         for key in (
@@ -435,15 +446,19 @@ def validate(project_root: Path) -> dict[str, Any]:
             contract.get("both_see_target_initially") is not True
             or contract.get("alpha_returns_to_initial_yaw") is not True
             or contract.get("minimum_contiguous_hidden_frames") != 20
-            or contract.get("both_target_hidden_range") != [110, 130]
+            or contract.get("both_target_hidden_range") != [125, 145]
         ):
             raise ValueError(f"invalid persistence visibility contract: {case_id}")
         marker = case.get("reference_marker", {})
         if marker.get("shape") != "ground_cross" or not marker.get("center_material"):
             raise ValueError(f"persistence case lacks colored ground cross: {case_id}")
-        reuse = case.get("first_frame_reuse", {})
-        if reuse.get("runtime_dependency") is not False:
-            raise ValueError(f"persistence case must be runtime-independent: {case_id}")
+        protocol = case.get("native_action_protocol", {})
+        if (
+            protocol.get("input") != "X11_XTest"
+            or protocol.get("only_bravo_changes_world") is not True
+            or protocol.get("player_positions_fixed") is not True
+        ):
+            raise ValueError(f"invalid persistence native-action protocol: {case_id}")
 
     race_path = v3 / "cases/shared_world/race_condition_consistency.json"
     race = _load(race_path)

@@ -5,7 +5,7 @@ REPO=${MWB3_REPO:-/data2/xuzhangbo/MultiWorldBench-modelscope/runtime-local/work
 PY=${QWEN_JUDGE_PY:-/data2/xuzhangbo/.venvs/qwen-judge/bin/python}
 CASES=${MWB3_PERSISTENCE_CASES:-$REPO/MultiWorldBench/v3/cases/shared_world/shared_state_persistence.json}
 ASSETS=${MWB3_PERSISTENCE_ASSETS:-$RUN/assets/interaction}
-EXPECTED=60
+EXPECTED=150
 IFS=',' read -r -a GPUS <<<"${MWB3_VLM_GPUS:-0,1,2,3,4,5,6,7}"
 SHARDS=${#GPUS[@]}
 (( SHARDS > 0 )) || { echo "MWB3_VLM_GPUS contains no GPUs"; exit 29; }

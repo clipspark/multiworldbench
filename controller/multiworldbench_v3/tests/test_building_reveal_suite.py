@@ -45,6 +45,7 @@ def test_building_reveal_full_factorial_and_contract() -> None:
             "alpha_sees_building": False,
             "bravo_sees_building": True,
             "bravo_sees_alpha": True,
+            "bravo_sees_building_and_alpha_simultaneously": True,
         }
         alpha = case["initial_poses"]["alpha"]["position"]
         bravo = case["initial_poses"]["bravo"]["position"]
