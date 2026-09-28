@@ -104,7 +104,7 @@
       "implementation": "controller.multiworldbench_v3.metrics.cross_view_structural_coherence",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B sees A and building"
+      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B at radius 26 simultaneously sees A and building"
     },
     {
       "id": "spatial_reasoning",
@@ -116,7 +116,7 @@
       "implementation": "controller.multiworldbench_v3.metrics.spatial_reasoning",
       "ranking_ready": false,
       "shared_case_suite": true,
-      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B sees A and building",
+      "suite_definition": "5 geometry-rich scenes × 5 distinctive buildings × 3 relative agent angles (20°, 30°, 40°); A reveals, stationary B at radius 26 simultaneously sees A and building",
       "depends_on": "cross_view_structural_coherence.questions.same_building_gt"
     },
     {

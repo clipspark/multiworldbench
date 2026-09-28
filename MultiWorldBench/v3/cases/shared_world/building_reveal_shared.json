@@ -1,5 +1,5 @@
 {
-  "schema_version": "mwb.v3.shared_building_reveal.v3",
+  "schema_version": "mwb.v3.shared_building_reveal.v4",
   "benchmark_version": "3",
   "metric_ids": [
     "cross_view_structural_coherence",
@@ -20,7 +20,7 @@
     ],
     "total": 75
   },
-  "description": "A is initially blocked by one near-camera dirt block and destroys it with native attack input. The unobstructed GT view must expose at least 60% of the whole building. Stationary observer B sees A and the building throughout. The same fully crossed suite supplies both metrics.",
+  "description": "A is initially blocked by one near-camera dirt block and destroys it with native attack input. The unobstructed GT view must expose at least 60% of the whole building. Stationary observer B stays 26 blocks from the building and simultaneously sees A and the building throughout. The same fully crossed suite supplies both metrics.",
   "check_frames": [
     80,
     100,
@@ -129,7 +129,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7200,
       "setup_commands": [
         "fill 7166 60 -30 7234 62 30 minecraft:dirt",
@@ -210,8 +211,8 @@
         "fill 7204 64 5 7210 64 7 minecraft:oak_planks",
         "fill 7199 63 -21 7201 63 -19 minecraft:grass_block",
         "fill 7199 64 -21 7201 66 -19 minecraft:air",
-        "fill 7207 63 -21 7209 63 -19 minecraft:grass_block",
-        "fill 7207 64 -21 7209 66 -19 minecraft:air",
+        "fill 7208 63 -23 7210 63 -21 minecraft:grass_block",
+        "fill 7208 64 -23 7210 66 -21 minecraft:air",
         "setblock 7200 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -233,16 +234,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7208.36646329649,
+            7209.3925237264675,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.90448264880559,
+          "native_pitch_deg": -4.300548217398915,
           "focus": [
-            7200.5,
+            7191.137130434888,
             67.5,
-            -8.425
+            -4.851591992992891
           ]
         }
       },
@@ -250,7 +251,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -259,7 +261,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -338,7 +341,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7280,
       "setup_commands": [
         "fill 7246 60 -30 7314 62 30 minecraft:dirt",
@@ -419,8 +423,8 @@
         "fill 7284 64 5 7290 64 7 minecraft:oak_planks",
         "fill 7279 63 -21 7281 63 -19 minecraft:grass_block",
         "fill 7279 64 -21 7281 66 -19 minecraft:air",
-        "fill 7291 63 -19 7293 63 -17 minecraft:grass_block",
-        "fill 7291 64 -19 7293 66 -17 minecraft:air",
+        "fill 7292 63 -22 7294 63 -20 minecraft:grass_block",
+        "fill 7292 64 -22 7294 66 -20 minecraft:air",
         "setblock 7280 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -442,16 +446,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7292,
+            7293.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405599,
+          "native_pitch_deg": -4.30054821739893,
           "focus": [
-            7280.5,
+            7272.176663481517,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -459,7 +463,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -468,7 +473,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -547,7 +553,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7360,
       "setup_commands": [
         "fill 7326 60 -30 7394 62 30 minecraft:dirt",
@@ -628,8 +635,8 @@
         "fill 7364 64 5 7370 64 7 minecraft:oak_planks",
         "fill 7359 63 -21 7361 63 -19 minecraft:grass_block",
         "fill 7359 64 -21 7361 66 -19 minecraft:air",
-        "fill 7374 63 -17 7376 63 -15 minecraft:grass_block",
-        "fill 7374 64 -17 7376 66 -15 minecraft:air",
+        "fill 7376 63 -19 7378 63 -17 minecraft:grass_block",
+        "fill 7376 64 -19 7378 66 -17 minecraft:air",
         "setblock 7360 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -651,16 +658,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7375.2841150227905,
+            7377.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            7360.5,
+            7353.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -668,7 +675,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -677,7 +685,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -756,7 +765,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7440,
       "setup_commands": [
         "fill 7406 60 -30 7474 62 30 minecraft:dirt",
@@ -827,8 +837,8 @@
         "fill 7445 70 4 7449 70 4 minecraft:dark_oak_log",
         "fill 7439 63 -21 7441 63 -19 minecraft:grass_block",
         "fill 7439 64 -21 7441 66 -19 minecraft:air",
-        "fill 7447 63 -21 7449 63 -19 minecraft:grass_block",
-        "fill 7447 64 -21 7449 66 -19 minecraft:air",
+        "fill 7448 63 -23 7450 63 -21 minecraft:grass_block",
+        "fill 7448 64 -23 7450 66 -21 minecraft:air",
         "setblock 7440 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -850,16 +860,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7448.36646329649,
+            7449.3925237264675,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.90448264880559,
+          "native_pitch_deg": -4.300548217398915,
           "focus": [
-            7440.5,
+            7431.137130434888,
             67.5,
-            -8.425
+            -4.851591992992891
           ]
         }
       },
@@ -867,7 +877,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -876,7 +887,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -955,7 +967,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7520,
       "setup_commands": [
         "fill 7486 60 -30 7554 62 30 minecraft:dirt",
@@ -1026,8 +1039,8 @@
         "fill 7525 70 4 7529 70 4 minecraft:dark_oak_log",
         "fill 7519 63 -21 7521 63 -19 minecraft:grass_block",
         "fill 7519 64 -21 7521 66 -19 minecraft:air",
-        "fill 7531 63 -19 7533 63 -17 minecraft:grass_block",
-        "fill 7531 64 -19 7533 66 -17 minecraft:air",
+        "fill 7532 63 -22 7534 63 -20 minecraft:grass_block",
+        "fill 7532 64 -22 7534 66 -20 minecraft:air",
         "setblock 7520 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -1049,16 +1062,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7532,
+            7533.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405599,
+          "native_pitch_deg": -4.30054821739893,
           "focus": [
-            7520.5,
+            7512.176663481517,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -1066,7 +1079,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -1075,7 +1089,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -1154,7 +1169,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7600,
       "setup_commands": [
         "fill 7566 60 -30 7634 62 30 minecraft:dirt",
@@ -1225,8 +1241,8 @@
         "fill 7605 70 4 7609 70 4 minecraft:dark_oak_log",
         "fill 7599 63 -21 7601 63 -19 minecraft:grass_block",
         "fill 7599 64 -21 7601 66 -19 minecraft:air",
-        "fill 7614 63 -17 7616 63 -15 minecraft:grass_block",
-        "fill 7614 64 -17 7616 66 -15 minecraft:air",
+        "fill 7616 63 -19 7618 63 -17 minecraft:grass_block",
+        "fill 7616 64 -19 7618 66 -17 minecraft:air",
         "setblock 7600 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -1248,16 +1264,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7615.2841150227905,
+            7617.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            7600.5,
+            7593.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -1265,7 +1281,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -1274,7 +1291,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -1353,7 +1371,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7680,
       "setup_commands": [
         "fill 7646 60 -30 7714 62 30 minecraft:dirt",
@@ -1419,8 +1438,8 @@
         "fill 7679 66 -3 7681 67 -3 minecraft:purple_concrete",
         "fill 7679 63 -21 7681 63 -19 minecraft:grass_block",
         "fill 7679 64 -21 7681 66 -19 minecraft:air",
-        "fill 7687 63 -21 7689 63 -19 minecraft:grass_block",
-        "fill 7687 64 -21 7689 66 -19 minecraft:air",
+        "fill 7688 63 -23 7690 63 -21 minecraft:grass_block",
+        "fill 7688 64 -23 7690 66 -21 minecraft:air",
         "setblock 7680 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -1442,16 +1461,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7688.36646329649,
+            7689.3925237264675,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.90448264880559,
+          "native_pitch_deg": -4.300548217398915,
           "focus": [
-            7680.5,
+            7671.137130434888,
             67.5,
-            -8.425
+            -4.851591992992891
           ]
         }
       },
@@ -1459,7 +1478,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -1468,7 +1488,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -1547,7 +1568,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7760,
       "setup_commands": [
         "fill 7726 60 -30 7794 62 30 minecraft:dirt",
@@ -1613,8 +1635,8 @@
         "fill 7759 66 -3 7761 67 -3 minecraft:purple_concrete",
         "fill 7759 63 -21 7761 63 -19 minecraft:grass_block",
         "fill 7759 64 -21 7761 66 -19 minecraft:air",
-        "fill 7771 63 -19 7773 63 -17 minecraft:grass_block",
-        "fill 7771 64 -19 7773 66 -17 minecraft:air",
+        "fill 7772 63 -22 7774 63 -20 minecraft:grass_block",
+        "fill 7772 64 -22 7774 66 -20 minecraft:air",
         "setblock 7760 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -1636,16 +1658,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7772,
+            7773.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405599,
+          "native_pitch_deg": -4.30054821739893,
           "focus": [
-            7760.5,
+            7752.176663481517,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -1653,7 +1675,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -1662,7 +1685,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -1741,7 +1765,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7840,
       "setup_commands": [
         "fill 7806 60 -30 7874 62 30 minecraft:dirt",
@@ -1807,8 +1832,8 @@
         "fill 7839 66 -3 7841 67 -3 minecraft:purple_concrete",
         "fill 7839 63 -21 7841 63 -19 minecraft:grass_block",
         "fill 7839 64 -21 7841 66 -19 minecraft:air",
-        "fill 7854 63 -17 7856 63 -15 minecraft:grass_block",
-        "fill 7854 64 -17 7856 66 -15 minecraft:air",
+        "fill 7856 63 -19 7858 63 -17 minecraft:grass_block",
+        "fill 7856 64 -19 7858 66 -17 minecraft:air",
         "setblock 7840 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -1830,16 +1855,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7855.2841150227905,
+            7857.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            7840.5,
+            7833.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -1847,7 +1872,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -1856,7 +1882,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -1935,7 +1962,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 7920,
       "setup_commands": [
         "fill 7886 60 -30 7954 62 30 minecraft:dirt",
@@ -2009,8 +2037,8 @@
         "setblock 7923 68 5 minecraft:lantern",
         "fill 7919 63 -21 7921 63 -19 minecraft:grass_block",
         "fill 7919 64 -21 7921 66 -19 minecraft:air",
-        "fill 7927 63 -21 7929 63 -19 minecraft:grass_block",
-        "fill 7927 64 -21 7929 66 -19 minecraft:air",
+        "fill 7928 63 -23 7930 63 -21 minecraft:grass_block",
+        "fill 7928 64 -23 7930 66 -21 minecraft:air",
         "setblock 7920 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -2032,16 +2060,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            7928.36646329649,
+            7929.3925237264675,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.90448264880559,
+          "native_pitch_deg": -4.300548217398915,
           "focus": [
-            7920.5,
+            7911.137130434888,
             67.5,
-            -8.425
+            -4.851591992992891
           ]
         }
       },
@@ -2049,7 +2077,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -2058,7 +2087,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -2137,7 +2167,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8000,
       "setup_commands": [
         "fill 7966 60 -30 8034 62 30 minecraft:dirt",
@@ -2211,8 +2242,8 @@
         "setblock 8003 68 5 minecraft:lantern",
         "fill 7999 63 -21 8001 63 -19 minecraft:grass_block",
         "fill 7999 64 -21 8001 66 -19 minecraft:air",
-        "fill 8011 63 -19 8013 63 -17 minecraft:grass_block",
-        "fill 8011 64 -19 8013 66 -17 minecraft:air",
+        "fill 8012 63 -22 8014 63 -20 minecraft:grass_block",
+        "fill 8012 64 -22 8014 66 -20 minecraft:air",
         "setblock 8000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -2234,16 +2265,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8012,
+            8013.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405599,
+          "native_pitch_deg": -4.30054821739893,
           "focus": [
-            8000.5,
+            7992.176663481517,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -2251,7 +2282,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -2260,7 +2292,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -2339,7 +2372,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8080,
       "setup_commands": [
         "fill 8046 60 -30 8114 62 30 minecraft:dirt",
@@ -2413,8 +2447,8 @@
         "setblock 8083 68 5 minecraft:lantern",
         "fill 8079 63 -21 8081 63 -19 minecraft:grass_block",
         "fill 8079 64 -21 8081 66 -19 minecraft:air",
-        "fill 8094 63 -17 8096 63 -15 minecraft:grass_block",
-        "fill 8094 64 -17 8096 66 -15 minecraft:air",
+        "fill 8096 63 -19 8098 63 -17 minecraft:grass_block",
+        "fill 8096 64 -19 8098 66 -17 minecraft:air",
         "setblock 8080 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -2436,16 +2470,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8095.2841150227905,
+            8097.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            8080.5,
+            8073.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -2453,7 +2487,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -2462,7 +2497,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -2541,7 +2577,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8160,
       "setup_commands": [
         "fill 8126 60 -30 8194 62 30 minecraft:dirt",
@@ -2615,8 +2652,8 @@
         "fill 8167 66 -2 8167 66 5 minecraft:exposed_copper",
         "fill 8159 63 -21 8161 63 -19 minecraft:grass_block",
         "fill 8159 64 -21 8161 66 -19 minecraft:air",
-        "fill 8167 63 -21 8169 63 -19 minecraft:grass_block",
-        "fill 8167 64 -21 8169 66 -19 minecraft:air",
+        "fill 8168 63 -23 8170 63 -21 minecraft:grass_block",
+        "fill 8168 64 -23 8170 66 -21 minecraft:air",
         "setblock 8160 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -2638,16 +2675,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8168.36646329649,
+            8169.3925237264675,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.90448264880559,
+          "native_pitch_deg": -4.300548217398915,
           "focus": [
-            8160.5,
+            8151.137130434888,
             67.5,
-            -8.425
+            -4.851591992992891
           ]
         }
       },
@@ -2655,7 +2692,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -2664,7 +2702,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -2743,7 +2782,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8240,
       "setup_commands": [
         "fill 8206 60 -30 8274 62 30 minecraft:dirt",
@@ -2817,8 +2857,8 @@
         "fill 8247 66 -2 8247 66 5 minecraft:exposed_copper",
         "fill 8239 63 -21 8241 63 -19 minecraft:grass_block",
         "fill 8239 64 -21 8241 66 -19 minecraft:air",
-        "fill 8251 63 -19 8253 63 -17 minecraft:grass_block",
-        "fill 8251 64 -19 8253 66 -17 minecraft:air",
+        "fill 8252 63 -22 8254 63 -20 minecraft:grass_block",
+        "fill 8252 64 -22 8254 66 -20 minecraft:air",
         "setblock 8240 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -2840,16 +2880,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8252,
+            8253.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            8240.5,
+            8232.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -2857,7 +2897,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -2866,7 +2907,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -2945,7 +2987,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8320,
       "setup_commands": [
         "fill 8286 60 -30 8354 62 30 minecraft:dirt",
@@ -3019,8 +3062,8 @@
         "fill 8327 66 -2 8327 66 5 minecraft:exposed_copper",
         "fill 8319 63 -21 8321 63 -19 minecraft:grass_block",
         "fill 8319 64 -21 8321 66 -19 minecraft:air",
-        "fill 8334 63 -17 8336 63 -15 minecraft:grass_block",
-        "fill 8334 64 -17 8336 66 -15 minecraft:air",
+        "fill 8336 63 -19 8338 63 -17 minecraft:grass_block",
+        "fill 8336 64 -19 8338 66 -17 minecraft:air",
         "setblock 8320 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -3042,16 +3085,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8335.28411502279,
+            8337.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            8320.5,
+            8313.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -3059,7 +3102,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -3068,7 +3112,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -3147,7 +3192,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8400,
       "setup_commands": [
         "fill 8366 60 -30 8434 62 30 minecraft:dirt",
@@ -3224,8 +3270,8 @@
         "fill 8404 64 5 8410 64 7 minecraft:oak_planks",
         "fill 8399 63 -21 8401 63 -19 minecraft:sand",
         "fill 8399 64 -21 8401 66 -19 minecraft:air",
-        "fill 8407 63 -21 8409 63 -19 minecraft:sand",
-        "fill 8407 64 -21 8409 66 -19 minecraft:air",
+        "fill 8408 63 -23 8410 63 -21 minecraft:sand",
+        "fill 8408 64 -23 8410 66 -21 minecraft:air",
         "setblock 8400 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -3247,16 +3293,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8408.36646329649,
+            8409.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            8400.5,
+            8391.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -3264,7 +3310,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -3273,7 +3320,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -3352,7 +3400,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8480,
       "setup_commands": [
         "fill 8446 60 -30 8514 62 30 minecraft:dirt",
@@ -3429,8 +3478,8 @@
         "fill 8484 64 5 8490 64 7 minecraft:oak_planks",
         "fill 8479 63 -21 8481 63 -19 minecraft:sand",
         "fill 8479 64 -21 8481 66 -19 minecraft:air",
-        "fill 8491 63 -19 8493 63 -17 minecraft:sand",
-        "fill 8491 64 -19 8493 66 -17 minecraft:air",
+        "fill 8492 63 -22 8494 63 -20 minecraft:sand",
+        "fill 8492 64 -22 8494 66 -20 minecraft:air",
         "setblock 8480 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -3452,16 +3501,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8492,
+            8493.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            8480.5,
+            8472.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -3469,7 +3518,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -3478,7 +3528,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -3557,7 +3608,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8560,
       "setup_commands": [
         "fill 8526 60 -30 8594 62 30 minecraft:dirt",
@@ -3634,8 +3686,8 @@
         "fill 8564 64 5 8570 64 7 minecraft:oak_planks",
         "fill 8559 63 -21 8561 63 -19 minecraft:sand",
         "fill 8559 64 -21 8561 66 -19 minecraft:air",
-        "fill 8574 63 -17 8576 63 -15 minecraft:sand",
-        "fill 8574 64 -17 8576 66 -15 minecraft:air",
+        "fill 8576 63 -19 8578 63 -17 minecraft:sand",
+        "fill 8576 64 -19 8578 66 -17 minecraft:air",
         "setblock 8560 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -3657,16 +3709,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8575.28411502279,
+            8577.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            8560.5,
+            8553.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -3674,7 +3726,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -3683,7 +3736,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -3762,7 +3816,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8640,
       "setup_commands": [
         "fill 8606 60 -30 8674 62 30 minecraft:dirt",
@@ -3829,8 +3884,8 @@
         "fill 8645 70 4 8649 70 4 minecraft:dark_oak_log",
         "fill 8639 63 -21 8641 63 -19 minecraft:sand",
         "fill 8639 64 -21 8641 66 -19 minecraft:air",
-        "fill 8647 63 -21 8649 63 -19 minecraft:sand",
-        "fill 8647 64 -21 8649 66 -19 minecraft:air",
+        "fill 8648 63 -23 8650 63 -21 minecraft:sand",
+        "fill 8648 64 -23 8650 66 -21 minecraft:air",
         "setblock 8640 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -3852,16 +3907,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8648.36646329649,
+            8649.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            8640.5,
+            8631.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -3869,7 +3924,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -3878,7 +3934,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -3957,7 +4014,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8720,
       "setup_commands": [
         "fill 8686 60 -30 8754 62 30 minecraft:dirt",
@@ -4024,8 +4082,8 @@
         "fill 8725 70 4 8729 70 4 minecraft:dark_oak_log",
         "fill 8719 63 -21 8721 63 -19 minecraft:sand",
         "fill 8719 64 -21 8721 66 -19 minecraft:air",
-        "fill 8731 63 -19 8733 63 -17 minecraft:sand",
-        "fill 8731 64 -19 8733 66 -17 minecraft:air",
+        "fill 8732 63 -22 8734 63 -20 minecraft:sand",
+        "fill 8732 64 -22 8734 66 -20 minecraft:air",
         "setblock 8720 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -4047,16 +4105,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8732,
+            8733.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            8720.5,
+            8712.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -4064,7 +4122,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -4073,7 +4132,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -4152,7 +4212,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8800,
       "setup_commands": [
         "fill 8766 60 -30 8834 62 30 minecraft:dirt",
@@ -4219,8 +4280,8 @@
         "fill 8805 70 4 8809 70 4 minecraft:dark_oak_log",
         "fill 8799 63 -21 8801 63 -19 minecraft:sand",
         "fill 8799 64 -21 8801 66 -19 minecraft:air",
-        "fill 8814 63 -17 8816 63 -15 minecraft:sand",
-        "fill 8814 64 -17 8816 66 -15 minecraft:air",
+        "fill 8816 63 -19 8818 63 -17 minecraft:sand",
+        "fill 8816 64 -19 8818 66 -17 minecraft:air",
         "setblock 8800 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -4242,16 +4303,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8815.28411502279,
+            8817.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            8800.5,
+            8793.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -4259,7 +4320,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -4268,7 +4330,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -4347,7 +4410,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8880,
       "setup_commands": [
         "fill 8846 60 -30 8914 62 30 minecraft:dirt",
@@ -4409,8 +4473,8 @@
         "fill 8879 66 -3 8881 67 -3 minecraft:purple_concrete",
         "fill 8879 63 -21 8881 63 -19 minecraft:sand",
         "fill 8879 64 -21 8881 66 -19 minecraft:air",
-        "fill 8887 63 -21 8889 63 -19 minecraft:sand",
-        "fill 8887 64 -21 8889 66 -19 minecraft:air",
+        "fill 8888 63 -23 8890 63 -21 minecraft:sand",
+        "fill 8888 64 -23 8890 66 -21 minecraft:air",
         "setblock 8880 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -4432,16 +4496,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8888.36646329649,
+            8889.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            8880.5,
+            8871.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -4449,7 +4513,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -4458,7 +4523,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -4537,7 +4603,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 8960,
       "setup_commands": [
         "fill 8926 60 -30 8994 62 30 minecraft:dirt",
@@ -4599,8 +4666,8 @@
         "fill 8959 66 -3 8961 67 -3 minecraft:purple_concrete",
         "fill 8959 63 -21 8961 63 -19 minecraft:sand",
         "fill 8959 64 -21 8961 66 -19 minecraft:air",
-        "fill 8971 63 -19 8973 63 -17 minecraft:sand",
-        "fill 8971 64 -19 8973 66 -17 minecraft:air",
+        "fill 8972 63 -22 8974 63 -20 minecraft:sand",
+        "fill 8972 64 -22 8974 66 -20 minecraft:air",
         "setblock 8960 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -4622,16 +4689,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            8972,
+            8973.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            8960.5,
+            8952.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -4639,7 +4706,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -4648,7 +4716,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -4727,7 +4796,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9040,
       "setup_commands": [
         "fill 9006 60 -30 9074 62 30 minecraft:dirt",
@@ -4789,8 +4859,8 @@
         "fill 9039 66 -3 9041 67 -3 minecraft:purple_concrete",
         "fill 9039 63 -21 9041 63 -19 minecraft:sand",
         "fill 9039 64 -21 9041 66 -19 minecraft:air",
-        "fill 9054 63 -17 9056 63 -15 minecraft:sand",
-        "fill 9054 64 -17 9056 66 -15 minecraft:air",
+        "fill 9056 63 -19 9058 63 -17 minecraft:sand",
+        "fill 9056 64 -19 9058 66 -17 minecraft:air",
         "setblock 9040 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -4812,16 +4882,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9055.28411502279,
+            9057.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            9040.5,
+            9033.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -4829,7 +4899,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -4838,7 +4909,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -4917,7 +4989,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9120,
       "setup_commands": [
         "fill 9086 60 -30 9154 62 30 minecraft:dirt",
@@ -4987,8 +5060,8 @@
         "setblock 9123 68 5 minecraft:lantern",
         "fill 9119 63 -21 9121 63 -19 minecraft:sand",
         "fill 9119 64 -21 9121 66 -19 minecraft:air",
-        "fill 9127 63 -21 9129 63 -19 minecraft:sand",
-        "fill 9127 64 -21 9129 66 -19 minecraft:air",
+        "fill 9128 63 -23 9130 63 -21 minecraft:sand",
+        "fill 9128 64 -23 9130 66 -21 minecraft:air",
         "setblock 9120 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -5010,16 +5083,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9128.36646329649,
+            9129.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            9120.5,
+            9111.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -5027,7 +5100,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -5036,7 +5110,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -5115,7 +5190,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9200,
       "setup_commands": [
         "fill 9166 60 -30 9234 62 30 minecraft:dirt",
@@ -5185,8 +5261,8 @@
         "setblock 9203 68 5 minecraft:lantern",
         "fill 9199 63 -21 9201 63 -19 minecraft:sand",
         "fill 9199 64 -21 9201 66 -19 minecraft:air",
-        "fill 9211 63 -19 9213 63 -17 minecraft:sand",
-        "fill 9211 64 -19 9213 66 -17 minecraft:air",
+        "fill 9212 63 -22 9214 63 -20 minecraft:sand",
+        "fill 9212 64 -22 9214 66 -20 minecraft:air",
         "setblock 9200 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -5208,16 +5284,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9212,
+            9213.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            9200.5,
+            9192.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -5225,7 +5301,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -5234,7 +5311,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -5313,7 +5391,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9280,
       "setup_commands": [
         "fill 9246 60 -30 9314 62 30 minecraft:dirt",
@@ -5383,8 +5462,8 @@
         "setblock 9283 68 5 minecraft:lantern",
         "fill 9279 63 -21 9281 63 -19 minecraft:sand",
         "fill 9279 64 -21 9281 66 -19 minecraft:air",
-        "fill 9294 63 -17 9296 63 -15 minecraft:sand",
-        "fill 9294 64 -17 9296 66 -15 minecraft:air",
+        "fill 9296 63 -19 9298 63 -17 minecraft:sand",
+        "fill 9296 64 -19 9298 66 -17 minecraft:air",
         "setblock 9280 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -5406,16 +5485,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9295.28411502279,
+            9297.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            9280.5,
+            9273.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -5423,7 +5502,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -5432,7 +5512,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -5511,7 +5592,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9360,
       "setup_commands": [
         "fill 9326 60 -30 9394 62 30 minecraft:dirt",
@@ -5581,8 +5663,8 @@
         "fill 9367 66 -2 9367 66 5 minecraft:exposed_copper",
         "fill 9359 63 -21 9361 63 -19 minecraft:sand",
         "fill 9359 64 -21 9361 66 -19 minecraft:air",
-        "fill 9367 63 -21 9369 63 -19 minecraft:sand",
-        "fill 9367 64 -21 9369 66 -19 minecraft:air",
+        "fill 9368 63 -23 9370 63 -21 minecraft:sand",
+        "fill 9368 64 -23 9370 66 -21 minecraft:air",
         "setblock 9360 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -5604,16 +5686,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9368.36646329649,
+            9369.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            9360.5,
+            9351.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -5621,7 +5703,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -5630,7 +5713,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -5709,7 +5793,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9440,
       "setup_commands": [
         "fill 9406 60 -30 9474 62 30 minecraft:dirt",
@@ -5779,8 +5864,8 @@
         "fill 9447 66 -2 9447 66 5 minecraft:exposed_copper",
         "fill 9439 63 -21 9441 63 -19 minecraft:sand",
         "fill 9439 64 -21 9441 66 -19 minecraft:air",
-        "fill 9451 63 -19 9453 63 -17 minecraft:sand",
-        "fill 9451 64 -19 9453 66 -17 minecraft:air",
+        "fill 9452 63 -22 9454 63 -20 minecraft:sand",
+        "fill 9452 64 -22 9454 66 -20 minecraft:air",
         "setblock 9440 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -5802,16 +5887,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9452,
+            9453.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            9440.5,
+            9432.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -5819,7 +5904,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -5828,7 +5914,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -5907,7 +5994,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9520,
       "setup_commands": [
         "fill 9486 60 -30 9554 62 30 minecraft:dirt",
@@ -5977,8 +6065,8 @@
         "fill 9527 66 -2 9527 66 5 minecraft:exposed_copper",
         "fill 9519 63 -21 9521 63 -19 minecraft:sand",
         "fill 9519 64 -21 9521 66 -19 minecraft:air",
-        "fill 9534 63 -17 9536 63 -15 minecraft:sand",
-        "fill 9534 64 -17 9536 66 -15 minecraft:air",
+        "fill 9536 63 -19 9538 63 -17 minecraft:sand",
+        "fill 9536 64 -19 9538 66 -17 minecraft:air",
         "setblock 9520 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -6000,16 +6088,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9535.28411502279,
+            9537.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            9520.5,
+            9513.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -6017,7 +6105,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -6026,7 +6115,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -6105,7 +6195,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9600,
       "setup_commands": [
         "fill 9566 60 -30 9634 62 30 minecraft:dirt",
@@ -6190,8 +6281,8 @@
         "fill 9604 64 5 9610 64 7 minecraft:oak_planks",
         "fill 9599 63 -21 9601 63 -19 minecraft:snow_block",
         "fill 9599 64 -21 9601 66 -19 minecraft:air",
-        "fill 9607 63 -21 9609 63 -19 minecraft:snow_block",
-        "fill 9607 64 -21 9609 66 -19 minecraft:air",
+        "fill 9608 63 -23 9610 63 -21 minecraft:snow_block",
+        "fill 9608 64 -23 9610 66 -21 minecraft:air",
         "setblock 9600 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -6213,16 +6304,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9608.36646329649,
+            9609.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            9600.5,
+            9591.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -6230,7 +6321,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -6239,7 +6331,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -6318,7 +6411,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9680,
       "setup_commands": [
         "fill 9646 60 -30 9714 62 30 minecraft:dirt",
@@ -6403,8 +6497,8 @@
         "fill 9684 64 5 9690 64 7 minecraft:oak_planks",
         "fill 9679 63 -21 9681 63 -19 minecraft:snow_block",
         "fill 9679 64 -21 9681 66 -19 minecraft:air",
-        "fill 9691 63 -19 9693 63 -17 minecraft:snow_block",
-        "fill 9691 64 -19 9693 66 -17 minecraft:air",
+        "fill 9692 63 -22 9694 63 -20 minecraft:snow_block",
+        "fill 9692 64 -22 9694 66 -20 minecraft:air",
         "setblock 9680 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -6426,16 +6520,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9692,
+            9693.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            9680.5,
+            9672.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -6443,7 +6537,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -6452,7 +6547,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -6531,7 +6627,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9760,
       "setup_commands": [
         "fill 9726 60 -30 9794 62 30 minecraft:dirt",
@@ -6616,8 +6713,8 @@
         "fill 9764 64 5 9770 64 7 minecraft:oak_planks",
         "fill 9759 63 -21 9761 63 -19 minecraft:snow_block",
         "fill 9759 64 -21 9761 66 -19 minecraft:air",
-        "fill 9774 63 -17 9776 63 -15 minecraft:snow_block",
-        "fill 9774 64 -17 9776 66 -15 minecraft:air",
+        "fill 9776 63 -19 9778 63 -17 minecraft:snow_block",
+        "fill 9776 64 -19 9778 66 -17 minecraft:air",
         "setblock 9760 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -6639,16 +6736,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9775.28411502279,
+            9777.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            9760.5,
+            9753.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -6656,7 +6753,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -6665,7 +6763,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -6744,7 +6843,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9840,
       "setup_commands": [
         "fill 9806 60 -30 9874 62 30 minecraft:dirt",
@@ -6819,8 +6919,8 @@
         "fill 9845 70 4 9849 70 4 minecraft:dark_oak_log",
         "fill 9839 63 -21 9841 63 -19 minecraft:snow_block",
         "fill 9839 64 -21 9841 66 -19 minecraft:air",
-        "fill 9847 63 -21 9849 63 -19 minecraft:snow_block",
-        "fill 9847 64 -21 9849 66 -19 minecraft:air",
+        "fill 9848 63 -23 9850 63 -21 minecraft:snow_block",
+        "fill 9848 64 -23 9850 66 -21 minecraft:air",
         "setblock 9840 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -6842,16 +6942,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9848.36646329649,
+            9849.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            9840.5,
+            9831.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -6859,7 +6959,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -6868,7 +6969,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -6947,7 +7049,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 9920,
       "setup_commands": [
         "fill 9886 60 -30 9954 62 30 minecraft:dirt",
@@ -7022,8 +7125,8 @@
         "fill 9925 70 4 9929 70 4 minecraft:dark_oak_log",
         "fill 9919 63 -21 9921 63 -19 minecraft:snow_block",
         "fill 9919 64 -21 9921 66 -19 minecraft:air",
-        "fill 9931 63 -19 9933 63 -17 minecraft:snow_block",
-        "fill 9931 64 -19 9933 66 -17 minecraft:air",
+        "fill 9932 63 -22 9934 63 -20 minecraft:snow_block",
+        "fill 9932 64 -22 9934 66 -20 minecraft:air",
         "setblock 9920 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -7045,16 +7148,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            9932,
+            9933.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            9920.5,
+            9912.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -7062,7 +7165,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -7071,7 +7175,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -7150,7 +7255,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10000,
       "setup_commands": [
         "fill 9966 60 -30 10034 62 30 minecraft:dirt",
@@ -7225,8 +7331,8 @@
         "fill 10005 70 4 10009 70 4 minecraft:dark_oak_log",
         "fill 9999 63 -21 10001 63 -19 minecraft:snow_block",
         "fill 9999 64 -21 10001 66 -19 minecraft:air",
-        "fill 10014 63 -17 10016 63 -15 minecraft:snow_block",
-        "fill 10014 64 -17 10016 66 -15 minecraft:air",
+        "fill 10016 63 -19 10018 63 -17 minecraft:snow_block",
+        "fill 10016 64 -19 10018 66 -17 minecraft:air",
         "setblock 10000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -7248,16 +7354,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10015.28411502279,
+            10017.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            10000.5,
+            9993.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -7265,7 +7371,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -7274,7 +7381,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -7353,7 +7461,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10080,
       "setup_commands": [
         "fill 10046 60 -30 10114 62 30 minecraft:dirt",
@@ -7423,8 +7532,8 @@
         "fill 10079 66 -3 10081 67 -3 minecraft:purple_concrete",
         "fill 10079 63 -21 10081 63 -19 minecraft:snow_block",
         "fill 10079 64 -21 10081 66 -19 minecraft:air",
-        "fill 10087 63 -21 10089 63 -19 minecraft:snow_block",
-        "fill 10087 64 -21 10089 66 -19 minecraft:air",
+        "fill 10088 63 -23 10090 63 -21 minecraft:snow_block",
+        "fill 10088 64 -23 10090 66 -21 minecraft:air",
         "setblock 10080 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -7446,16 +7555,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10088.36646329649,
+            10089.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            10080.5,
+            10071.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -7463,7 +7572,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -7472,7 +7582,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -7551,7 +7662,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10160,
       "setup_commands": [
         "fill 10126 60 -30 10194 62 30 minecraft:dirt",
@@ -7621,8 +7733,8 @@
         "fill 10159 66 -3 10161 67 -3 minecraft:purple_concrete",
         "fill 10159 63 -21 10161 63 -19 minecraft:snow_block",
         "fill 10159 64 -21 10161 66 -19 minecraft:air",
-        "fill 10171 63 -19 10173 63 -17 minecraft:snow_block",
-        "fill 10171 64 -19 10173 66 -17 minecraft:air",
+        "fill 10172 63 -22 10174 63 -20 minecraft:snow_block",
+        "fill 10172 64 -22 10174 66 -20 minecraft:air",
         "setblock 10160 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -7644,16 +7756,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10172,
+            10173.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            10160.5,
+            10152.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -7661,7 +7773,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -7670,7 +7783,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -7749,7 +7863,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10240,
       "setup_commands": [
         "fill 10206 60 -30 10274 62 30 minecraft:dirt",
@@ -7819,8 +7934,8 @@
         "fill 10239 66 -3 10241 67 -3 minecraft:purple_concrete",
         "fill 10239 63 -21 10241 63 -19 minecraft:snow_block",
         "fill 10239 64 -21 10241 66 -19 minecraft:air",
-        "fill 10254 63 -17 10256 63 -15 minecraft:snow_block",
-        "fill 10254 64 -17 10256 66 -15 minecraft:air",
+        "fill 10256 63 -19 10258 63 -17 minecraft:snow_block",
+        "fill 10256 64 -19 10258 66 -17 minecraft:air",
         "setblock 10240 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -7842,16 +7957,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10255.28411502279,
+            10257.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            10240.5,
+            10233.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -7859,7 +7974,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -7868,7 +7984,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -7947,7 +8064,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10320,
       "setup_commands": [
         "fill 10286 60 -30 10354 62 30 minecraft:dirt",
@@ -8025,8 +8143,8 @@
         "setblock 10323 68 5 minecraft:lantern",
         "fill 10319 63 -21 10321 63 -19 minecraft:snow_block",
         "fill 10319 64 -21 10321 66 -19 minecraft:air",
-        "fill 10327 63 -21 10329 63 -19 minecraft:snow_block",
-        "fill 10327 64 -21 10329 66 -19 minecraft:air",
+        "fill 10328 63 -23 10330 63 -21 minecraft:snow_block",
+        "fill 10328 64 -23 10330 66 -21 minecraft:air",
         "setblock 10320 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -8048,16 +8166,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10328.36646329649,
+            10329.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            10320.5,
+            10311.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -8065,7 +8183,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -8074,7 +8193,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -8153,7 +8273,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10400,
       "setup_commands": [
         "fill 10366 60 -30 10434 62 30 minecraft:dirt",
@@ -8231,8 +8352,8 @@
         "setblock 10403 68 5 minecraft:lantern",
         "fill 10399 63 -21 10401 63 -19 minecraft:snow_block",
         "fill 10399 64 -21 10401 66 -19 minecraft:air",
-        "fill 10411 63 -19 10413 63 -17 minecraft:snow_block",
-        "fill 10411 64 -19 10413 66 -17 minecraft:air",
+        "fill 10412 63 -22 10414 63 -20 minecraft:snow_block",
+        "fill 10412 64 -22 10414 66 -20 minecraft:air",
         "setblock 10400 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -8254,16 +8375,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10412,
+            10413.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            10400.5,
+            10392.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -8271,7 +8392,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -8280,7 +8402,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -8359,7 +8482,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10480,
       "setup_commands": [
         "fill 10446 60 -30 10514 62 30 minecraft:dirt",
@@ -8437,8 +8561,8 @@
         "setblock 10483 68 5 minecraft:lantern",
         "fill 10479 63 -21 10481 63 -19 minecraft:snow_block",
         "fill 10479 64 -21 10481 66 -19 minecraft:air",
-        "fill 10494 63 -17 10496 63 -15 minecraft:snow_block",
-        "fill 10494 64 -17 10496 66 -15 minecraft:air",
+        "fill 10496 63 -19 10498 63 -17 minecraft:snow_block",
+        "fill 10496 64 -19 10498 66 -17 minecraft:air",
         "setblock 10480 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -8460,16 +8584,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10495.28411502279,
+            10497.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            10480.5,
+            10473.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -8477,7 +8601,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -8486,7 +8611,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -8565,7 +8691,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10560,
       "setup_commands": [
         "fill 10526 60 -30 10594 62 30 minecraft:dirt",
@@ -8643,8 +8770,8 @@
         "fill 10567 66 -2 10567 66 5 minecraft:exposed_copper",
         "fill 10559 63 -21 10561 63 -19 minecraft:snow_block",
         "fill 10559 64 -21 10561 66 -19 minecraft:air",
-        "fill 10567 63 -21 10569 63 -19 minecraft:snow_block",
-        "fill 10567 64 -21 10569 66 -19 minecraft:air",
+        "fill 10568 63 -23 10570 63 -21 minecraft:snow_block",
+        "fill 10568 64 -23 10570 66 -21 minecraft:air",
         "setblock 10560 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -8666,16 +8793,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10568.36646329649,
+            10569.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            10560.5,
+            10551.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -8683,7 +8810,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -8692,7 +8820,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -8771,7 +8900,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10640,
       "setup_commands": [
         "fill 10606 60 -30 10674 62 30 minecraft:dirt",
@@ -8849,8 +8979,8 @@
         "fill 10647 66 -2 10647 66 5 minecraft:exposed_copper",
         "fill 10639 63 -21 10641 63 -19 minecraft:snow_block",
         "fill 10639 64 -21 10641 66 -19 minecraft:air",
-        "fill 10651 63 -19 10653 63 -17 minecraft:snow_block",
-        "fill 10651 64 -19 10653 66 -17 minecraft:air",
+        "fill 10652 63 -22 10654 63 -20 minecraft:snow_block",
+        "fill 10652 64 -22 10654 66 -20 minecraft:air",
         "setblock 10640 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -8872,16 +9002,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10652,
+            10653.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            10640.5,
+            10632.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -8889,7 +9019,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -8898,7 +9029,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -8977,7 +9109,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10720,
       "setup_commands": [
         "fill 10686 60 -30 10754 62 30 minecraft:dirt",
@@ -9055,8 +9188,8 @@
         "fill 10727 66 -2 10727 66 5 minecraft:exposed_copper",
         "fill 10719 63 -21 10721 63 -19 minecraft:snow_block",
         "fill 10719 64 -21 10721 66 -19 minecraft:air",
-        "fill 10734 63 -17 10736 63 -15 minecraft:snow_block",
-        "fill 10734 64 -17 10736 66 -15 minecraft:air",
+        "fill 10736 63 -19 10738 63 -17 minecraft:snow_block",
+        "fill 10736 64 -19 10738 66 -17 minecraft:air",
         "setblock 10720 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -9078,16 +9211,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10735.28411502279,
+            10737.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            10720.5,
+            10713.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -9095,7 +9228,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -9104,7 +9238,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -9183,7 +9318,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10800,
       "setup_commands": [
         "fill 10766 60 -30 10834 62 30 minecraft:dirt",
@@ -9292,8 +9428,8 @@
         "fill 10804 64 5 10810 64 7 minecraft:oak_planks",
         "fill 10799 63 -21 10801 63 -19 minecraft:mud",
         "fill 10799 64 -21 10801 66 -19 minecraft:air",
-        "fill 10807 63 -21 10809 63 -19 minecraft:mud",
-        "fill 10807 64 -21 10809 66 -19 minecraft:air",
+        "fill 10808 63 -23 10810 63 -21 minecraft:mud",
+        "fill 10808 64 -23 10810 66 -21 minecraft:air",
         "setblock 10800 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -9315,16 +9451,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10808.36646329649,
+            10809.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            10800.5,
+            10791.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -9332,7 +9468,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -9341,7 +9478,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -9420,7 +9558,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10880,
       "setup_commands": [
         "fill 10846 60 -30 10914 62 30 minecraft:dirt",
@@ -9529,8 +9668,8 @@
         "fill 10884 64 5 10890 64 7 minecraft:oak_planks",
         "fill 10879 63 -21 10881 63 -19 minecraft:mud",
         "fill 10879 64 -21 10881 66 -19 minecraft:air",
-        "fill 10891 63 -19 10893 63 -17 minecraft:mud",
-        "fill 10891 64 -19 10893 66 -17 minecraft:air",
+        "fill 10892 63 -22 10894 63 -20 minecraft:mud",
+        "fill 10892 64 -22 10894 66 -20 minecraft:air",
         "setblock 10880 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -9552,16 +9691,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10892,
+            10893.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            10880.5,
+            10872.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -9569,7 +9708,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -9578,7 +9718,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -9657,7 +9798,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 10960,
       "setup_commands": [
         "fill 10926 60 -30 10994 62 30 minecraft:dirt",
@@ -9766,8 +9908,8 @@
         "fill 10964 64 5 10970 64 7 minecraft:oak_planks",
         "fill 10959 63 -21 10961 63 -19 minecraft:mud",
         "fill 10959 64 -21 10961 66 -19 minecraft:air",
-        "fill 10974 63 -17 10976 63 -15 minecraft:mud",
-        "fill 10974 64 -17 10976 66 -15 minecraft:air",
+        "fill 10976 63 -19 10978 63 -17 minecraft:mud",
+        "fill 10976 64 -19 10978 66 -17 minecraft:air",
         "setblock 10960 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -9789,16 +9931,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            10975.28411502279,
+            10977.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            10960.5,
+            10953.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -9806,7 +9948,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -9815,7 +9958,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -9894,7 +10038,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11040,
       "setup_commands": [
         "fill 11006 60 -30 11074 62 30 minecraft:dirt",
@@ -9993,8 +10138,8 @@
         "fill 11045 70 4 11049 70 4 minecraft:dark_oak_log",
         "fill 11039 63 -21 11041 63 -19 minecraft:mud",
         "fill 11039 64 -21 11041 66 -19 minecraft:air",
-        "fill 11047 63 -21 11049 63 -19 minecraft:mud",
-        "fill 11047 64 -21 11049 66 -19 minecraft:air",
+        "fill 11048 63 -23 11050 63 -21 minecraft:mud",
+        "fill 11048 64 -23 11050 66 -21 minecraft:air",
         "setblock 11040 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -10016,16 +10161,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11048.36646329649,
+            11049.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            11040.5,
+            11031.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -10033,7 +10178,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -10042,7 +10188,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -10121,7 +10268,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11120,
       "setup_commands": [
         "fill 11086 60 -30 11154 62 30 minecraft:dirt",
@@ -10220,8 +10368,8 @@
         "fill 11125 70 4 11129 70 4 minecraft:dark_oak_log",
         "fill 11119 63 -21 11121 63 -19 minecraft:mud",
         "fill 11119 64 -21 11121 66 -19 minecraft:air",
-        "fill 11131 63 -19 11133 63 -17 minecraft:mud",
-        "fill 11131 64 -19 11133 66 -17 minecraft:air",
+        "fill 11132 63 -22 11134 63 -20 minecraft:mud",
+        "fill 11132 64 -22 11134 66 -20 minecraft:air",
         "setblock 11120 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -10243,16 +10391,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11132,
+            11133.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            11120.5,
+            11112.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -10260,7 +10408,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -10269,7 +10418,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -10348,7 +10498,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11200,
       "setup_commands": [
         "fill 11166 60 -30 11234 62 30 minecraft:dirt",
@@ -10447,8 +10598,8 @@
         "fill 11205 70 4 11209 70 4 minecraft:dark_oak_log",
         "fill 11199 63 -21 11201 63 -19 minecraft:mud",
         "fill 11199 64 -21 11201 66 -19 minecraft:air",
-        "fill 11214 63 -17 11216 63 -15 minecraft:mud",
-        "fill 11214 64 -17 11216 66 -15 minecraft:air",
+        "fill 11216 63 -19 11218 63 -17 minecraft:mud",
+        "fill 11216 64 -19 11218 66 -17 minecraft:air",
         "setblock 11200 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -10470,16 +10621,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11215.28411502279,
+            11217.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            11200.5,
+            11193.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -10487,7 +10638,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -10496,7 +10648,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -10575,7 +10728,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11280,
       "setup_commands": [
         "fill 11246 60 -30 11314 62 30 minecraft:dirt",
@@ -10669,8 +10823,8 @@
         "fill 11279 66 -3 11281 67 -3 minecraft:purple_concrete",
         "fill 11279 63 -21 11281 63 -19 minecraft:mud",
         "fill 11279 64 -21 11281 66 -19 minecraft:air",
-        "fill 11287 63 -21 11289 63 -19 minecraft:mud",
-        "fill 11287 64 -21 11289 66 -19 minecraft:air",
+        "fill 11288 63 -23 11290 63 -21 minecraft:mud",
+        "fill 11288 64 -23 11290 66 -21 minecraft:air",
         "setblock 11280 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -10692,16 +10846,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11288.36646329649,
+            11289.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            11280.5,
+            11271.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -10709,7 +10863,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -10718,7 +10873,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -10797,7 +10953,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11360,
       "setup_commands": [
         "fill 11326 60 -30 11394 62 30 minecraft:dirt",
@@ -10891,8 +11048,8 @@
         "fill 11359 66 -3 11361 67 -3 minecraft:purple_concrete",
         "fill 11359 63 -21 11361 63 -19 minecraft:mud",
         "fill 11359 64 -21 11361 66 -19 minecraft:air",
-        "fill 11371 63 -19 11373 63 -17 minecraft:mud",
-        "fill 11371 64 -19 11373 66 -17 minecraft:air",
+        "fill 11372 63 -22 11374 63 -20 minecraft:mud",
+        "fill 11372 64 -22 11374 66 -20 minecraft:air",
         "setblock 11360 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -10914,16 +11071,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11372,
+            11373.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            11360.5,
+            11352.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -10931,7 +11088,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -10940,7 +11098,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -11019,7 +11178,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11440,
       "setup_commands": [
         "fill 11406 60 -30 11474 62 30 minecraft:dirt",
@@ -11113,8 +11273,8 @@
         "fill 11439 66 -3 11441 67 -3 minecraft:purple_concrete",
         "fill 11439 63 -21 11441 63 -19 minecraft:mud",
         "fill 11439 64 -21 11441 66 -19 minecraft:air",
-        "fill 11454 63 -17 11456 63 -15 minecraft:mud",
-        "fill 11454 64 -17 11456 66 -15 minecraft:air",
+        "fill 11456 63 -19 11458 63 -17 minecraft:mud",
+        "fill 11456 64 -19 11458 66 -17 minecraft:air",
         "setblock 11440 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -11136,16 +11296,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11455.28411502279,
+            11457.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            11440.5,
+            11433.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -11153,7 +11313,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -11162,7 +11323,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -11241,7 +11403,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11520,
       "setup_commands": [
         "fill 11486 60 -30 11554 62 30 minecraft:dirt",
@@ -11343,8 +11506,8 @@
         "setblock 11523 68 5 minecraft:lantern",
         "fill 11519 63 -21 11521 63 -19 minecraft:mud",
         "fill 11519 64 -21 11521 66 -19 minecraft:air",
-        "fill 11527 63 -21 11529 63 -19 minecraft:mud",
-        "fill 11527 64 -21 11529 66 -19 minecraft:air",
+        "fill 11528 63 -23 11530 63 -21 minecraft:mud",
+        "fill 11528 64 -23 11530 66 -21 minecraft:air",
         "setblock 11520 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -11366,16 +11529,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11528.36646329649,
+            11529.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            11520.5,
+            11511.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -11383,7 +11546,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -11392,7 +11556,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -11471,7 +11636,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11600,
       "setup_commands": [
         "fill 11566 60 -30 11634 62 30 minecraft:dirt",
@@ -11573,8 +11739,8 @@
         "setblock 11603 68 5 minecraft:lantern",
         "fill 11599 63 -21 11601 63 -19 minecraft:mud",
         "fill 11599 64 -21 11601 66 -19 minecraft:air",
-        "fill 11611 63 -19 11613 63 -17 minecraft:mud",
-        "fill 11611 64 -19 11613 66 -17 minecraft:air",
+        "fill 11612 63 -22 11614 63 -20 minecraft:mud",
+        "fill 11612 64 -22 11614 66 -20 minecraft:air",
         "setblock 11600 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -11596,16 +11762,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11612,
+            11613.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            11600.5,
+            11592.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -11613,7 +11779,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -11622,7 +11789,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -11701,7 +11869,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11680,
       "setup_commands": [
         "fill 11646 60 -30 11714 62 30 minecraft:dirt",
@@ -11803,8 +11972,8 @@
         "setblock 11683 68 5 minecraft:lantern",
         "fill 11679 63 -21 11681 63 -19 minecraft:mud",
         "fill 11679 64 -21 11681 66 -19 minecraft:air",
-        "fill 11694 63 -17 11696 63 -15 minecraft:mud",
-        "fill 11694 64 -17 11696 66 -15 minecraft:air",
+        "fill 11696 63 -19 11698 63 -17 minecraft:mud",
+        "fill 11696 64 -19 11698 66 -17 minecraft:air",
         "setblock 11680 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -11826,16 +11995,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11695.28411502279,
+            11697.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            11680.5,
+            11673.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -11843,7 +12012,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -11852,7 +12022,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -11931,7 +12102,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11760,
       "setup_commands": [
         "fill 11726 60 -30 11794 62 30 minecraft:dirt",
@@ -12033,8 +12205,8 @@
         "fill 11767 66 -2 11767 66 5 minecraft:exposed_copper",
         "fill 11759 63 -21 11761 63 -19 minecraft:mud",
         "fill 11759 64 -21 11761 66 -19 minecraft:air",
-        "fill 11767 63 -21 11769 63 -19 minecraft:mud",
-        "fill 11767 64 -21 11769 66 -19 minecraft:air",
+        "fill 11768 63 -23 11770 63 -21 minecraft:mud",
+        "fill 11768 64 -23 11770 66 -21 minecraft:air",
         "setblock 11760 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -12056,16 +12228,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11768.36646329649,
+            11769.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            11760.5,
+            11751.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -12073,7 +12245,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -12082,7 +12255,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -12161,7 +12335,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11840,
       "setup_commands": [
         "fill 11806 60 -30 11874 62 30 minecraft:dirt",
@@ -12263,8 +12438,8 @@
         "fill 11847 66 -2 11847 66 5 minecraft:exposed_copper",
         "fill 11839 63 -21 11841 63 -19 minecraft:mud",
         "fill 11839 64 -21 11841 66 -19 minecraft:air",
-        "fill 11851 63 -19 11853 63 -17 minecraft:mud",
-        "fill 11851 64 -19 11853 66 -17 minecraft:air",
+        "fill 11852 63 -22 11854 63 -20 minecraft:mud",
+        "fill 11852 64 -22 11854 66 -20 minecraft:air",
         "setblock 11840 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -12286,16 +12461,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11852,
+            11853.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            11840.5,
+            11832.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -12303,7 +12478,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -12312,7 +12488,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -12391,7 +12568,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 11920,
       "setup_commands": [
         "fill 11886 60 -30 11954 62 30 minecraft:dirt",
@@ -12493,8 +12671,8 @@
         "fill 11927 66 -2 11927 66 5 minecraft:exposed_copper",
         "fill 11919 63 -21 11921 63 -19 minecraft:mud",
         "fill 11919 64 -21 11921 66 -19 minecraft:air",
-        "fill 11934 63 -17 11936 63 -15 minecraft:mud",
-        "fill 11934 64 -17 11936 66 -15 minecraft:air",
+        "fill 11936 63 -19 11938 63 -17 minecraft:mud",
+        "fill 11936 64 -19 11938 66 -17 minecraft:air",
         "setblock 11920 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -12516,16 +12694,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            11935.28411502279,
+            11937.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            11920.5,
+            11913.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -12533,7 +12711,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -12542,7 +12721,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -12621,7 +12801,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12000,
       "setup_commands": [
         "fill 11966 60 -30 12034 62 30 minecraft:dirt",
@@ -12711,8 +12892,8 @@
         "fill 12004 64 5 12010 64 7 minecraft:oak_planks",
         "fill 11999 63 -21 12001 63 -19 minecraft:red_sand",
         "fill 11999 64 -21 12001 66 -19 minecraft:air",
-        "fill 12007 63 -21 12009 63 -19 minecraft:red_sand",
-        "fill 12007 64 -21 12009 66 -19 minecraft:air",
+        "fill 12008 63 -23 12010 63 -21 minecraft:red_sand",
+        "fill 12008 64 -23 12010 66 -21 minecraft:air",
         "setblock 12000 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -12734,16 +12915,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12008.36646329649,
+            12009.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            12000.5,
+            11991.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -12751,7 +12932,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -12760,7 +12942,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -12839,7 +13022,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12080,
       "setup_commands": [
         "fill 12046 60 -30 12114 62 30 minecraft:dirt",
@@ -12929,8 +13113,8 @@
         "fill 12084 64 5 12090 64 7 minecraft:oak_planks",
         "fill 12079 63 -21 12081 63 -19 minecraft:red_sand",
         "fill 12079 64 -21 12081 66 -19 minecraft:air",
-        "fill 12091 63 -19 12093 63 -17 minecraft:red_sand",
-        "fill 12091 64 -19 12093 66 -17 minecraft:air",
+        "fill 12092 63 -22 12094 63 -20 minecraft:red_sand",
+        "fill 12092 64 -22 12094 66 -20 minecraft:air",
         "setblock 12080 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -12952,16 +13136,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12092,
+            12093.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            12080.5,
+            12072.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -12969,7 +13153,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -12978,7 +13163,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -13057,7 +13243,8 @@
       "building_id": "MWB3-RV-BL01",
       "building_name": "偏置水轮磨坊",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12160,
       "setup_commands": [
         "fill 12126 60 -30 12194 62 30 minecraft:dirt",
@@ -13147,8 +13334,8 @@
         "fill 12164 64 5 12170 64 7 minecraft:oak_planks",
         "fill 12159 63 -21 12161 63 -19 minecraft:red_sand",
         "fill 12159 64 -21 12161 66 -19 minecraft:air",
-        "fill 12174 63 -17 12176 63 -15 minecraft:red_sand",
-        "fill 12174 64 -17 12176 66 -15 minecraft:air",
+        "fill 12176 63 -19 12178 63 -17 minecraft:red_sand",
+        "fill 12176 64 -19 12178 66 -17 minecraft:air",
         "setblock 12160 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -13170,16 +13357,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12175.28411502279,
+            12177.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            12160.5,
+            12153.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -13187,7 +13374,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -13196,7 +13384,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -13275,7 +13464,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12240,
       "setup_commands": [
         "fill 12206 60 -30 12274 62 30 minecraft:dirt",
@@ -13355,8 +13545,8 @@
         "fill 12245 70 4 12249 70 4 minecraft:dark_oak_log",
         "fill 12239 63 -21 12241 63 -19 minecraft:red_sand",
         "fill 12239 64 -21 12241 66 -19 minecraft:air",
-        "fill 12247 63 -21 12249 63 -19 minecraft:red_sand",
-        "fill 12247 64 -21 12249 66 -19 minecraft:air",
+        "fill 12248 63 -23 12250 63 -21 minecraft:red_sand",
+        "fill 12248 64 -23 12250 66 -21 minecraft:air",
         "setblock 12240 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -13378,16 +13568,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12248.36646329649,
+            12249.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            12240.5,
+            12231.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -13395,7 +13585,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -13404,7 +13595,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -13483,7 +13675,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12320,
       "setup_commands": [
         "fill 12286 60 -30 12354 62 30 minecraft:dirt",
@@ -13563,8 +13756,8 @@
         "fill 12325 70 4 12329 70 4 minecraft:dark_oak_log",
         "fill 12319 63 -21 12321 63 -19 minecraft:red_sand",
         "fill 12319 64 -21 12321 66 -19 minecraft:air",
-        "fill 12331 63 -19 12333 63 -17 minecraft:red_sand",
-        "fill 12331 64 -19 12333 66 -17 minecraft:air",
+        "fill 12332 63 -22 12334 63 -20 minecraft:red_sand",
+        "fill 12332 64 -22 12334 66 -20 minecraft:air",
         "setblock 12320 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -13586,16 +13779,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12332,
+            12333.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            12320.5,
+            12312.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -13603,7 +13796,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -13612,7 +13806,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -13691,7 +13886,8 @@
       "building_id": "MWB3-RV-BL02",
       "building_name": "高低双塔门楼",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12400,
       "setup_commands": [
         "fill 12366 60 -30 12434 62 30 minecraft:dirt",
@@ -13771,8 +13967,8 @@
         "fill 12405 70 4 12409 70 4 minecraft:dark_oak_log",
         "fill 12399 63 -21 12401 63 -19 minecraft:red_sand",
         "fill 12399 64 -21 12401 66 -19 minecraft:air",
-        "fill 12414 63 -17 12416 63 -15 minecraft:red_sand",
-        "fill 12414 64 -17 12416 66 -15 minecraft:air",
+        "fill 12416 63 -19 12418 63 -17 minecraft:red_sand",
+        "fill 12416 64 -19 12418 66 -17 minecraft:air",
         "setblock 12400 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -13794,16 +13990,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12415.28411502279,
+            12417.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            12400.5,
+            12393.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -13811,7 +14007,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -13820,7 +14017,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -13899,7 +14097,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12480,
       "setup_commands": [
         "fill 12446 60 -30 12514 62 30 minecraft:dirt",
@@ -13974,8 +14173,8 @@
         "fill 12479 66 -3 12481 67 -3 minecraft:purple_concrete",
         "fill 12479 63 -21 12481 63 -19 minecraft:red_sand",
         "fill 12479 64 -21 12481 66 -19 minecraft:air",
-        "fill 12487 63 -21 12489 63 -19 minecraft:red_sand",
-        "fill 12487 64 -21 12489 66 -19 minecraft:air",
+        "fill 12488 63 -23 12490 63 -21 minecraft:red_sand",
+        "fill 12488 64 -23 12490 66 -21 minecraft:air",
         "setblock 12480 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -13997,16 +14196,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12488.36646329649,
+            12489.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            12480.5,
+            12471.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -14014,7 +14213,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -14023,7 +14223,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -14102,7 +14303,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12560,
       "setup_commands": [
         "fill 12526 60 -30 12594 62 30 minecraft:dirt",
@@ -14177,8 +14379,8 @@
         "fill 12559 66 -3 12561 67 -3 minecraft:purple_concrete",
         "fill 12559 63 -21 12561 63 -19 minecraft:red_sand",
         "fill 12559 64 -21 12561 66 -19 minecraft:air",
-        "fill 12571 63 -19 12573 63 -17 minecraft:red_sand",
-        "fill 12571 64 -19 12573 66 -17 minecraft:air",
+        "fill 12572 63 -22 12574 63 -20 minecraft:red_sand",
+        "fill 12572 64 -22 12574 66 -20 minecraft:air",
         "setblock 12560 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -14200,16 +14402,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12572,
+            12573.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            12560.5,
+            12552.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -14217,7 +14419,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -14226,7 +14429,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -14305,7 +14509,8 @@
       "building_id": "MWB3-RV-BL03",
       "building_name": "阶梯星象台",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12640,
       "setup_commands": [
         "fill 12606 60 -30 12674 62 30 minecraft:dirt",
@@ -14380,8 +14585,8 @@
         "fill 12639 66 -3 12641 67 -3 minecraft:purple_concrete",
         "fill 12639 63 -21 12641 63 -19 minecraft:red_sand",
         "fill 12639 64 -21 12641 66 -19 minecraft:air",
-        "fill 12654 63 -17 12656 63 -15 minecraft:red_sand",
-        "fill 12654 64 -17 12656 66 -15 minecraft:air",
+        "fill 12656 63 -19 12658 63 -17 minecraft:red_sand",
+        "fill 12656 64 -19 12658 66 -17 minecraft:air",
         "setblock 12640 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -14403,16 +14608,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12655.28411502279,
+            12657.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            12640.5,
+            12633.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -14420,7 +14625,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -14429,7 +14635,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -14508,7 +14715,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12720,
       "setup_commands": [
         "fill 12686 60 -30 12754 62 30 minecraft:dirt",
@@ -14591,8 +14799,8 @@
         "setblock 12723 68 5 minecraft:lantern",
         "fill 12719 63 -21 12721 63 -19 minecraft:red_sand",
         "fill 12719 64 -21 12721 66 -19 minecraft:air",
-        "fill 12727 63 -21 12729 63 -19 minecraft:red_sand",
-        "fill 12727 64 -21 12729 66 -19 minecraft:air",
+        "fill 12728 63 -23 12730 63 -21 minecraft:red_sand",
+        "fill 12728 64 -23 12730 66 -21 minecraft:air",
         "setblock 12720 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -14614,16 +14822,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12728.36646329649,
+            12729.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            12720.5,
+            12711.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -14631,7 +14839,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -14640,7 +14849,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -14719,7 +14929,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12800,
       "setup_commands": [
         "fill 12766 60 -30 12834 62 30 minecraft:dirt",
@@ -14802,8 +15013,8 @@
         "setblock 12803 68 5 minecraft:lantern",
         "fill 12799 63 -21 12801 63 -19 minecraft:red_sand",
         "fill 12799 64 -21 12801 66 -19 minecraft:air",
-        "fill 12811 63 -19 12813 63 -17 minecraft:red_sand",
-        "fill 12811 64 -19 12813 66 -17 minecraft:air",
+        "fill 12812 63 -22 12814 63 -20 minecraft:red_sand",
+        "fill 12812 64 -22 12814 66 -20 minecraft:air",
         "setblock 12800 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -14825,16 +15036,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12812,
+            12813.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            12800.5,
+            12792.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -14842,7 +15053,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -14851,7 +15063,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -14930,7 +15143,8 @@
       "building_id": "MWB3-RV-BL04",
       "building_name": "高脚信号屋",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12880,
       "setup_commands": [
         "fill 12846 60 -30 12914 62 30 minecraft:dirt",
@@ -15013,8 +15227,8 @@
         "setblock 12883 68 5 minecraft:lantern",
         "fill 12879 63 -21 12881 63 -19 minecraft:red_sand",
         "fill 12879 64 -21 12881 66 -19 minecraft:air",
-        "fill 12894 63 -17 12896 63 -15 minecraft:red_sand",
-        "fill 12894 64 -17 12896 66 -15 minecraft:air",
+        "fill 12896 63 -19 12898 63 -17 minecraft:red_sand",
+        "fill 12896 64 -19 12898 66 -17 minecraft:air",
         "setblock 12880 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -15036,16 +15250,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12895.28411502279,
+            12897.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            12880.5,
+            12873.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -15053,7 +15267,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -15062,7 +15277,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -15141,7 +15357,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 20,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 12960,
       "setup_commands": [
         "fill 12926 60 -30 12994 62 30 minecraft:dirt",
@@ -15224,8 +15441,8 @@
         "fill 12967 66 -2 12967 66 5 minecraft:exposed_copper",
         "fill 12959 63 -21 12961 63 -19 minecraft:red_sand",
         "fill 12959 64 -21 12961 66 -19 minecraft:air",
-        "fill 12967 63 -21 12969 63 -19 minecraft:red_sand",
-        "fill 12967 64 -21 12969 66 -19 minecraft:air",
+        "fill 12968 63 -23 12970 63 -21 minecraft:red_sand",
+        "fill 12968 64 -23 12970 66 -21 minecraft:air",
         "setblock 12960 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -15247,16 +15464,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            12968.36646329649,
+            12969.392523726467,
             64,
-            -19.112930278075893
+            -21.93200814043362
           ],
-          "native_yaw_deg": 36.353578088059436,
-          "native_pitch_deg": -8.06314255476669,
+          "native_yaw_deg": 46.904482648804674,
+          "native_pitch_deg": -4.30054821739885,
           "focus": [
-            12960.5,
+            12951.137130434887,
             67.5,
-            -8.425
+            -4.8515919929923434
           ]
         }
       },
@@ -15264,7 +15481,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -15273,7 +15491,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -15352,7 +15571,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 30,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 13040,
       "setup_commands": [
         "fill 13006 60 -30 13074 62 30 minecraft:dirt",
@@ -15435,8 +15655,8 @@
         "fill 13047 66 -2 13047 66 5 minecraft:exposed_copper",
         "fill 13039 63 -21 13041 63 -19 minecraft:red_sand",
         "fill 13039 64 -21 13041 66 -19 minecraft:air",
-        "fill 13051 63 -19 13053 63 -17 minecraft:red_sand",
-        "fill 13051 64 -19 13053 66 -17 minecraft:air",
+        "fill 13052 63 -22 13054 63 -20 minecraft:red_sand",
+        "fill 13052 64 -22 13054 66 -20 minecraft:air",
         "setblock 13040 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -15458,16 +15678,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            13052,
+            13053.5,
             64,
-            -17.41858428704209
+            -20.016660498395407
           ],
-          "native_yaw_deg": 51.97278615483666,
-          "native_pitch_deg": -7.337869679007023,
+          "native_yaw_deg": 58.53217683405491,
+          "native_pitch_deg": -4.300548217399063,
           "focus": [
-            13040.5,
+            13032.176663481518,
             67.5,
-            -8.425
+            -6.966169330645309
           ]
         }
       },
@@ -15475,7 +15695,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -15484,7 +15705,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
@@ -15563,7 +15785,8 @@
       "building_id": "MWB3-RV-BL05",
       "building_name": "锯齿顶铸造厂",
       "relative_agent_angle_deg": 40,
-      "observer_radius": 23,
+      "actor_radius": 21.85,
+      "observer_radius": 26,
       "world_x_offset": 13120,
       "setup_commands": [
         "fill 13086 60 -30 13154 62 30 minecraft:dirt",
@@ -15646,8 +15869,8 @@
         "fill 13127 66 -2 13127 66 5 minecraft:exposed_copper",
         "fill 13119 63 -21 13121 63 -19 minecraft:red_sand",
         "fill 13119 64 -21 13121 66 -19 minecraft:air",
-        "fill 13134 63 -17 13136 63 -15 minecraft:red_sand",
-        "fill 13134 64 -17 13136 66 -15 minecraft:air",
+        "fill 13136 63 -19 13138 63 -17 minecraft:red_sand",
+        "fill 13136 64 -19 13138 66 -17 minecraft:air",
         "setblock 13120 65 -19 minecraft:dirt"
       ],
       "initial_poses": {
@@ -15669,16 +15892,16 @@
         "bravo": {
           "role": "stationary_observer",
           "position": [
-            13135.28411502279,
+            13137.21247785185,
             64,
-            -15.119022191736494
+            -17.417155521093427
           ],
-          "native_yaw_deg": 65.63970627666481,
-          "native_pitch_deg": -6.607811439572785,
+          "native_yaw_deg": 68.29855343355689,
+          "native_pitch_deg": -4.3005482173988945,
           "focus": [
-            13120.5,
+            13113.984396949021,
             67.5,
-            -8.425
+            -8.172900138876123
           ]
         }
       },
@@ -15686,7 +15909,8 @@
         "before_action": {
           "alpha_sees_building": false,
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         },
         "after_action": {
           "alpha_sees_building": true,
@@ -15695,7 +15919,8 @@
             0.8
           ],
           "bravo_sees_building": true,
-          "bravo_sees_alpha": true
+          "bravo_sees_alpha": true,
+          "bravo_sees_building_and_alpha_simultaneously": true
         }
       },
       "reveal": {
