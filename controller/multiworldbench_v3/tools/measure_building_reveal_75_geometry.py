@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Automatic SAM2 area and feature-alignment camera-angle evidence for V3 reveal cases."""
 from __future__ import annotations
-import json, math, os, sys
+import argparse, json, math, os, sys
 from pathlib import Path
 from typing import Any
 import cv2, numpy as np, torch
@@ -58,10 +58,17 @@ def camera_measure(cid:str,model:str,n:int)->dict[str,Any]:
         return {'status':'evaluable','method':'ECC_euclidean_camera_alignment_fallback','correlation':float(cc),'yaw_proxy_deg':yaw,'pitch_proxy_deg':pitch,'roll_deg':roll,'angle_error_deg':error,'score_0_100':100*max(0,1-error/30)}
     except cv2.error as exc:return {'status':'not_evaluable','reason':str(exc).split('\n')[0]}
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--shard-index',type=int,default=0)
+    parser.add_argument('--num-shards',type=int,default=1)
+    args=parser.parse_args()
+    if not 0 <= args.shard_index < args.num_shards:
+        raise ValueError('shard-index must be in [0, num-shards)')
     suite=load(CASE_FILE);sys.path.insert(0,str(SAM_ROOT));from sam2.build_sam import build_sam2;from sam2.sam2_image_predictor import SAM2ImagePredictor
     model=build_sam2('configs/sam2.1/sam2.1_hiera_l.yaml',str(SAM_CHECKPOINT),device='cuda');predictor=SAM2ImagePredictor(model);gt_cache={};result={'protocol':{'area':'SAM2.1 Hiera Large; fixed camera-centered box and positive point; median of 80/100/120; score=100*min(area)/max(area)','camera_angle':'SIFT-RANSAC image alignment with ECC fallback; transform center shift and roll converted to angular error; zero at 30 degrees','frames':list(FRAMES)},'solaris':{},'gamma':{}}
     for candidate in ('solaris','gamma'):
         for ci,case in enumerate(suite['cases'],1):
+            if (ci-1)%args.num_shards != args.shard_index:continue
             cid=case['case_id'];rows=[];areas=[];angles=[]
             for n in FRAMES:
                 key=(cid,n)
@@ -71,5 +78,6 @@ def main():
                 areas.append(area);rows.append({'frame':n,'gt':gt,'predicted':pred,'projected_area_score_0_100':area,'camera':camera})
             result[candidate][cid]={'status':'evaluable' if len(angles)==3 else 'partially_evaluable','projected_area_score_0_100':float(np.median(areas)),'camera_angle_score_0_100':None if not angles else float(np.median(angles)),'camera_evaluable_frames':len(angles),'frames':rows}
             print(candidate,ci,cid,result[candidate][cid]['projected_area_score_0_100'],result[candidate][cid]['camera_angle_score_0_100'],flush=True)
-    dump(RUN/'evaluation/spatial_geometry.json',result)
+    out=(RUN/'evaluation/spatial_geometry.json') if args.num_shards==1 else (RUN/'evaluation'/f'spatial_geometry_shard_{args.shard_index:02d}_of_{args.num_shards:02d}.json')
+    dump(out,result)
 if __name__=='__main__':main()
