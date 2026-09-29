@@ -132,3 +132,39 @@ python controller/multiworldbench_v3/tools/evaluate_shared_state_comparison.py a
 ## 复现记录
 
 保存 case 配置、原始原生动作、首帧/GT、模型及权重版本、随机种子、生成视频、评测帧映射、VLM prompt 与原始 JSON、几何证据、汇总与覆盖率。GT 和模型视频要使用同一份有效 case；调整 case 后应明确重跑的范围。场景初始化与正式动作录制分开记录，禁止为让 case 成功而修改游戏规则。
+
+## V3 模型推断结果下载
+
+完整结果存放在 **[ModelScope：MultiWorldBench-model_results](https://modelscope.cn/datasets/faraway333/MultiWorldBench-model_results)**（私有数据集，需要授权账号访问）。
+
+2026-09-29 快照包含 **475 个独立 case、950 个模型–case 组合、1,425 个视频文件**。Solaris 保留 A/B 两路独立视频，Gamma-World 保留原始双视角视频。
+
+| 结果套件 | Case 数 | 主要评价 |
+|---|---:|---|
+| 联合导航 | 180 | 控制隔离度、协同公平性 |
+| 共享状态同步 | 120 | 放置 / 摧毁后的双视角状态一致性 |
+| 共享状态持久性 | 50 | 操作与回访时的预期变化 |
+| 建筑揭示 | 75 | 跨视角结构一致性、空间推理 |
+| 竞态条件 | 30 | 数量、类型、预期材质三个条件同时成立 |
+| 跨玩家回访 | 20 | 风格一致性、ID 一致性 |
+
+同一套 case 可以服务多个指标，表中 case 数不按指标重复累加。这里描述的是已发布的模型结果，不等同于主分支注册表中的全部配置；20-case 回访对应 `codex/revisit-handoff-20` 分支。
+
+- `videos/<suite>_<model>.tar`：按套件和模型打包的正式推断视频。
+- `scores/<suite>/`：原始评分汇总及已有的 case 清单。
+- `evidence/<suite>.tar.gz`：VLM 请求、输出 JSON 和可用的数值评测证据。
+- `inventory.jsonl`：每个视频的 case ID、模型、来源、大小与 SHA-256。
+- `release.json`：精确来源目录与版本说明。
+- `SHA256SUMS`：发布文件的校验清单。
+
+本快照采用 fixed-world v5 建筑揭示、20-case handoff 回访和持久性前后帧联合判断版本。导航提供当前两个指标的评分，不补造跨视角运动一致性分数。评分沿用各自原始单位、门控及不可评状态；诊断项不自动成为正式总分。本次发布不包含模型权重、GT 视频、重复原始渲染或旧试验版本。审计文件保留原执行路径，离线重评时需映射到下载目录。
+
+下载后可校验并解包：
+
+```bash
+sha256sum -c SHA256SUMS
+mkdir -p extracted
+tar -xf videos/navigation_solaris.tar -C extracted
+```
+
+可使用 ModelScope 网页或官方 `modelscope-hub` SDK 下载；认证令牌应通过环境变量或本机凭据管理提供，不应写进脚本、README 或 Git。
