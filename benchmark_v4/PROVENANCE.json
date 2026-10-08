@@ -1,0 +1,89 @@
+{
+  "controller/multiworldbench_v3/engines/control_isolation_pose.py": "e730b4199c59e40eba0a9d215ad731b065a183b4226061326f26f9acad8d4ef9",
+  "controller/multiworldbench_v3/engines/navigation_core.py": "444087986d0626bba26f06053840aa81a6226e9054f758d3e640e3c76ff2e25a",
+  "controller/multiworldbench_v3/engines/rotation.py": "77f5bedf0eeddc3dc3d08ee8c15d5c0cda1954b2327be77e3a95a6abeb3a875d",
+  "controller/multiworldbench_v3/engines/mcv_map_tracker.py": "b49968eda98644428fc7b794c0463f590f615ee9201f2276061f3b89c06ca0dc",
+  "controller/multiworldbench_v3/engines/pose_short_gap.py": "feed878bd17d6b624b9c09113fe89bf749b14e9cf64759dbba7027adaa716dbf",
+  "controller/multiworldbench_v3/engines/pose_scale_calibration.py": "7c6794d5df01733482e79e660993bc9a0318d968a4b9bdb2524e27ee9a79fe9b",
+  "controller/multiworldbench_v3/metrics/common.py": "dd58a5c8a7b77e5d015a9e9292992d56e079e3302e5e3bfbe2eeeb1fef3ba91f",
+  "controller/multiworldbench_v3/metrics/coordination_fairness.py": "10413faad46d81ea5a6ef7fd5c4a17c94fe524baef0580a1f307625d4878929b",
+  "controller/multiworldbench_v3/metrics/single_agent_control_consistency.py": "d50e902ec662abd3ed4df9a81f5165a849d780bd3f1d3ca21e676969b51c4f24",
+  "controller/multiworldbench_v3/tools/score_navigation90_mcv.py": "c9acae600b78d210174678b170ee55801f31751dc80392ac527f45a70d2ae58f",
+  "controller/multiworldbench_v3/tools/estimate_navigation_mcv18.py": "68175e0209db55f1db90807b0b0f6e602faf7f32246b6c3448904db05aee2a3d",
+  "controller/multiworldbench_v3/tools/score_cross_view_translation20_direct.py": "187b2f89cefab0518ccd99620263563e62216d70988cd37ebebb06ae8305d8cb",
+  "navigation180": {
+    "cases.json": "7d934be859ad017556df0bbef25f26a7c5548d7d5fbeafad525d9c12803ef1ce"
+  },
+  "cross_view20": {
+    "cases.json": "f134df9fc12719ed79fe9b60e35e222a269e36a523ee36b7fb9678f217b7790b"
+  },
+  "mcv_solver_sha256": "62e76ab01d5ab9e58e4f0cf53fa3f907562b91a8004c0feb0a1030f201cdd6a4",
+  "controller/multiworldbench_v3/metrics/shared_state_synchronization.py": {
+    "source_sha256": "cec27be21dc573a7aee79e4ab5cf6ea1e483d93eae08f8933439b532438c89ff",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/shared_state_persistence.py": {
+    "source_sha256": "4756ca3d63417ad302e0582c50aa02029b70050d7a2f9da305389ca00c1cd069",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/building_reveal.py": {
+    "source_sha256": "2310e633834dc9c86c7057f87cf618c324901f229c47bdad8d632196b0a974cf",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/cross_view_structural_coherence.py": {
+    "source_sha256": "d21d2e7603c8f2296f976f25a12342e453281f52f94461f33a101a5bed99773e",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/spatial_reasoning.py": {
+    "source_sha256": "ffd04d2174e393509fa28523dab9cab9f4c37f4a7139fa4e240f1aeea7389676",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/race_condition_consistency_v4.py": {
+    "source_sha256": "3f5418be5ccc5defbed9ea461fb07c34ff97d47518eae2211dfecefa38515a8f",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/style_consistency.py": {
+    "source_sha256": "d0de8d7ac68e87f2b494eb4d74ba657846c726ae530c2ac24832013485ef36d0",
+    "source": "latest controller"
+  },
+  "controller/multiworldbench_v3/metrics/id_consistency.py": {
+    "source_sha256": "e8457814eb934f79054a2ace9e54d824f080aed7c89827694affd0f02cd5e60a",
+    "source": "latest revisit worktree"
+  },
+  "configs/shared_world/synchronization_source.json": {
+    "source_sha256": "74a089f8de18b9ef641aa49d33c8ee59751438aa8a9df10aabfcecc719876752",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "configs/shared_world/synchronization_mutual40.json": {
+    "source_sha256": "cc1768ddd785c3d0ae02341bf30a7339941e22c56110cfe0ee5bacda2cca735c",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "configs/shared_world/persistence50.json": {
+    "source_sha256": "a43f50c52083e8ff49cd8805362bb66fe0c94c643c505469addd5f016ef9c7e7",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "configs/shared_world/building75.json": {
+    "source_sha256": "7d6dfe6f5733e00894aed423679b1a50ff3681b94e62e19d6d2df732f2d0314c",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "configs/shared_world/race30.json": {
+    "source_sha256": "41a7eb2fd42001d8c82836ac2eeaf73b56884fad547794eede1a0460149d86dd",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "configs/revisit/handoff20.json": {
+    "source_sha256": "ce72d8f27736eefbba0f1541b3afe81e9fa72c4fb0b973d3ebcfa00ceabb0b50",
+    "note": "machine-specific gt_run/native_root removed"
+  },
+  "measure_building_geometry.py": {
+    "source_sha256": "5d4795ed944b270e1d1a2c5176b319b5e9921f3e2f4ace88e08b5b2bcc8b98c5",
+    "source": "latest deployed building geometry proxy"
+  },
+  "release_note": "Source hashes refer to source files before portability edits and removal of machine-specific paths and historical capture status.",
+  "configs/shared_world/synchronization120.json": {
+    "derivation": "Replace 40 source cases by source_case_id from synchronization_mutual40; retain other 80. No action edits."
+  },
+  "controller/multiworldbench_v3/metrics/control_isolation.py": {
+    "source_sha256": "a96197e16d103edddce498deefc36f56969bc487db02ba936d669d9cc540d5b8",
+    "source": "latest controller"
+  }
+}

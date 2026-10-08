@@ -1,0 +1,6304 @@
+{
+  "commands": [
+    {
+      "command": "setblock 4163 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4163 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4169 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4169 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4169 65 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4170 65 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4175 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4176 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4175 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4181 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4181 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4181 65 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4182 65 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4187 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4188 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4187 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4193 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4194 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4193 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4193 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4194 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4199 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4199 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4205 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4205 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4205 65 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4206 65 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4211 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4212 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4211 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4217 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4217 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4217 65 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4218 65 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4166 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4164 65 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4165 65 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4170 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4172 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4176 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4178 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4176 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4176 65 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4177 65 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4184 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4188 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4190 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4188 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4188 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4189 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4194 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4196 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4194 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4202 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4200 65 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4201 65 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4206 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4208 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4212 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4214 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4212 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4212 65 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4213 65 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4220 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4166 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4167 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4172 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4173 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4171 65 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4172 65 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4178 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4179 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4184 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4185 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4183 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4184 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4189 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4190 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4191 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4196 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4197 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4195 65 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4196 65 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4201 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4202 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4203 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4208 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4209 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4207 65 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4208 65 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4214 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4215 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4220 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4221 64 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4219 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4220 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4163 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4163 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4163 65 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4164 65 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4169 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4169 64 -7 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4175 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4176 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4175 64 -7 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4175 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4176 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4181 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4181 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4187 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4188 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4187 64 -7 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4187 65 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4188 65 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4193 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4194 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4193 64 -7 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4199 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4199 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4199 65 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4200 65 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4205 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4205 64 -7 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4211 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4212 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4211 64 -7 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4211 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4212 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4217 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4217 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4165 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4166 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4164 64 -3 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4171 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4172 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 64 -3 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4170 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4171 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4176 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4177 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4178 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4176 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4183 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4184 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4182 64 -3 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4182 65 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4183 65 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4188 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4190 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4188 64 -3 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4194 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4196 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4194 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4194 65 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4195 65 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4202 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4200 64 -3 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4208 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -3 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4206 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4207 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4212 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4213 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4214 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4212 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -4 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4219 64 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4220 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4218 64 -3 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4218 65 -4 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4219 65 -4 minecraft:bricks"
+    },
+    {
+      "command": "fill 4173 64 -25 4173 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4174 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4173 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4178 64 -25 4178 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4179 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4178 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4183 64 -25 4183 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4184 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4183 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4189 64 -25 4189 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4190 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4189 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4195 64 -25 4195 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4196 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4201 64 -25 4201 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4202 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4201 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4206 64 -25 4206 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4207 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4206 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4211 64 -25 4211 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4212 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4211 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4173 64 -22 4173 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4174 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4173 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4178 64 -22 4178 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4179 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4178 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4183 64 -22 4183 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4184 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4183 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4189 64 -22 4189 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4190 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4189 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4195 64 -22 4195 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4196 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4195 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4201 64 -22 4201 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4202 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4201 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4206 64 -22 4206 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4207 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4206 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4211 64 -22 4211 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4212 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4211 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4173 64 -12 4173 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4174 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4173 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4178 64 -12 4178 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4179 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4178 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4183 64 -12 4183 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4184 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4189 64 -12 4189 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4190 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4189 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4195 64 -12 4195 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4196 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4195 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4201 64 -12 4201 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4202 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4201 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4206 64 -12 4206 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4207 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4206 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4211 64 -12 4211 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4212 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4211 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4173 64 -9 4173 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4174 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4173 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4178 64 -9 4178 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4179 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4178 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4183 64 -9 4183 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4184 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4183 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4189 64 -9 4189 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4190 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4189 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4195 64 -9 4195 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4196 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4195 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4201 64 -9 4201 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4202 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4201 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4206 64 -9 4206 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4207 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4211 64 -9 4211 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4212 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4211 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4170 64 -20 4170 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4170 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4170 64 -16 4170 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4170 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4170 64 -13 4170 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4170 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4214 64 -20 4214 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4214 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4214 64 -16 4214 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4214 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4214 64 -13 4214 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4214 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4356 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4358 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4356 64 -24 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4356 65 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4357 65 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4362 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4364 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4362 64 -24 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4368 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4368 64 -24 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4368 65 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4369 65 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4374 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4376 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4374 64 -24 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4380 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4382 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4380 64 -24 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4380 65 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4381 65 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4386 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4388 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4386 64 -24 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4392 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4394 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4392 64 -24 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4392 65 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4393 65 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4398 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4400 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -24 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4404 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4406 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4404 64 -24 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4404 65 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4405 65 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4410 64 -25 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -25 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4412 64 -25 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4410 64 -24 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4358 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4359 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -21 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4364 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4365 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -21 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4363 65 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4364 65 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4369 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4371 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -21 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4376 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4377 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -21 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4375 65 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4376 65 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4381 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4382 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4383 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -21 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4388 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4389 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -21 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4387 65 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4388 65 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4393 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4394 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4395 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -21 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4400 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4401 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -21 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4399 65 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4400 65 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4405 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4406 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4407 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -21 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -22 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4412 64 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4413 64 -22 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -21 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4411 65 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4412 65 -22 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4355 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4356 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4355 64 -11 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4355 65 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4356 65 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4361 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4362 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4361 64 -11 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4367 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4368 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4367 64 -11 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4367 65 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4368 65 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4373 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4374 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4373 64 -11 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4379 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4380 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4379 64 -11 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4379 65 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4380 65 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4385 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4386 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4385 64 -11 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4391 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4392 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4391 64 -11 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4391 65 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4392 65 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4397 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4397 64 -11 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4403 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4404 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4403 64 -11 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4403 65 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4404 65 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4409 64 -12 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4410 64 -12 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -12 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4409 64 -11 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4356 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4358 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4356 64 -7 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4362 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4364 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4362 64 -7 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4362 65 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4363 65 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4368 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4368 64 -7 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4374 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4376 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4374 64 -7 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4374 65 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4375 65 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4380 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4382 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4380 64 -7 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4386 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4388 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4386 64 -7 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4386 65 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4387 65 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4392 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4394 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4392 64 -7 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4400 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -7 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4398 65 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4399 65 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4404 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4406 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4404 64 -7 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4410 64 -8 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4412 64 -8 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4410 64 -7 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4410 65 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4411 65 -8 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4357 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4358 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4359 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4357 64 -3 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4357 65 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4358 65 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4363 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4364 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4365 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4363 64 -3 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4371 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4369 64 -3 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4369 65 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4370 65 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4375 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4376 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4377 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -3 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4382 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4383 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4381 64 -3 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4381 65 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4382 65 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4387 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4388 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4389 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4387 64 -3 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4394 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4395 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -3 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4393 65 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4394 65 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4399 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4400 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4401 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4399 64 -3 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4406 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4407 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4405 64 -3 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4405 65 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4406 65 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4411 64 -4 minecraft:iron_block"
+    },
+    {
+      "command": "setblock 4412 64 -4 minecraft:cut_copper"
+    },
+    {
+      "command": "setblock 4413 64 -4 minecraft:deepslate_bricks"
+    },
+    {
+      "command": "setblock 4411 64 -3 minecraft:iron_block"
+    },
+    {
+      "command": "fill 4365 64 -25 4365 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4366 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4365 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4370 64 -25 4370 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4371 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4375 64 -25 4375 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4376 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4375 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4381 64 -25 4381 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4382 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4381 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4387 64 -25 4387 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4388 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4387 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4393 64 -25 4393 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4394 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4393 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4398 64 -25 4398 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4399 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4403 64 -25 4403 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4404 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4403 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4365 64 -22 4365 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4366 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4365 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4370 64 -22 4370 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4371 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4370 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4375 64 -22 4375 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4376 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4375 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4381 64 -22 4381 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4382 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4381 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4387 64 -22 4387 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4388 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4387 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4393 64 -22 4393 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4394 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4393 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4398 64 -22 4398 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4399 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4398 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4403 64 -22 4403 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4404 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4403 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4365 64 -12 4365 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4366 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4365 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4370 64 -12 4370 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4371 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4370 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4375 64 -12 4375 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4376 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4375 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4381 64 -12 4381 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4382 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4381 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4387 64 -12 4387 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4388 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4387 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4393 64 -12 4393 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4394 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4393 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4398 64 -12 4398 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4399 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4398 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4403 64 -12 4403 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4404 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4403 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4365 64 -9 4365 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4366 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4365 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4370 64 -9 4370 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4371 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4370 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4375 64 -9 4375 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4376 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4375 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4381 64 -9 4381 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4382 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4381 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4387 64 -9 4387 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4388 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4387 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4393 64 -9 4393 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4394 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4393 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4398 64 -9 4398 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4399 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4398 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4403 64 -9 4403 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4404 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4403 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4362 64 -20 4362 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4362 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4362 64 -16 4362 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4362 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4362 64 -13 4362 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4362 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4406 64 -20 4406 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4406 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4406 64 -16 4406 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4406 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4406 64 -13 4406 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4406 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4453 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4454 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4455 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -24 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4460 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4461 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4459 65 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4460 65 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4465 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4466 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4467 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -24 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4472 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4473 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -24 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4471 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4472 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4477 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4478 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4479 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4477 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4495 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4496 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4497 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4495 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4495 65 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4496 65 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4501 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4502 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4503 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -24 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -25 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4508 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4509 64 -25 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -24 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4507 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4508 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4451 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4452 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4451 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4451 65 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4452 65 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4457 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4458 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4457 64 -21 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4463 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4464 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4463 64 -21 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4463 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4464 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4469 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4470 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4469 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4481 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4482 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4483 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4481 64 -21 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4493 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4494 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4495 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4493 64 -21 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4499 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4500 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4499 64 -21 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4499 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4500 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4505 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4506 64 -22 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -22 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4505 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4452 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4454 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4452 64 -11 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4458 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4460 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4458 64 -11 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4458 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4459 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4464 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4466 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4464 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4470 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4472 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4470 64 -11 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4470 65 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4471 65 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4476 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4477 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4478 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4476 64 -11 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4482 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4483 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4484 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4482 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4482 65 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4483 65 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4488 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4489 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4490 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4488 64 -11 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4494 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4495 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4496 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4494 64 -11 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4494 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4495 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4500 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4502 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4500 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4506 64 -12 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4508 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4506 64 -11 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4506 65 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4507 65 -12 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4454 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4455 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -7 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4453 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4454 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4459 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4460 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4461 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4466 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4467 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -7 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4465 65 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4466 65 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4472 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4473 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -7 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4477 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4478 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4479 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4477 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4477 65 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4478 65 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4483 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4484 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4485 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4483 64 -7 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4489 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4490 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4491 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4489 64 -7 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4489 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4490 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4495 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4496 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4497 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4495 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4502 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4503 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -7 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4501 65 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4502 65 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -8 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4508 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4509 64 -8 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -7 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4451 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4452 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4453 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4451 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4457 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4458 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4459 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4457 64 -3 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4457 65 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4458 65 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4463 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4464 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4465 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4463 64 -3 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4469 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4470 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4471 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4469 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4469 65 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4470 65 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4475 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4476 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4477 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4475 64 -3 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4481 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4482 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4483 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4481 64 -3 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4481 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4482 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4487 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4488 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4489 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4487 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4493 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4494 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4495 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4493 64 -3 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4493 65 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4494 65 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4499 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4500 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4501 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4499 64 -3 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4505 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4506 64 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4507 64 -4 minecraft:cobblestone"
+    },
+    {
+      "command": "setblock 4505 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4505 65 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "setblock 4506 65 -4 minecraft:mossy_cobblestone"
+    },
+    {
+      "command": "fill 4461 64 -25 4461 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4462 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4461 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4466 64 -25 4466 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4467 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4466 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4471 64 -25 4471 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4472 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4471 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4477 64 -25 4477 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4478 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4477 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4483 64 -25 4483 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4484 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4483 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4489 64 -25 4489 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4490 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4489 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4494 64 -25 4494 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4495 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4494 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4499 64 -25 4499 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4500 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4499 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4461 64 -22 4461 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4462 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4461 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4466 64 -22 4466 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4467 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4466 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4471 64 -22 4471 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4472 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4471 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4477 64 -22 4477 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4478 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4477 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4483 64 -22 4483 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4484 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4483 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4489 64 -22 4489 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4490 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4489 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4494 64 -22 4494 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4495 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4494 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4499 64 -22 4499 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4500 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4499 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4461 64 -12 4461 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4462 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4461 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4466 64 -12 4466 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4467 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4466 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4471 64 -12 4471 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4472 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4471 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4477 64 -12 4477 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4478 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4477 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4483 64 -12 4483 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4484 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4483 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4489 64 -12 4489 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4490 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4489 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4494 64 -12 4494 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4495 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4494 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4499 64 -12 4499 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4500 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4499 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4461 64 -9 4461 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4462 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4461 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4466 64 -9 4466 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4467 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4466 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4471 64 -9 4471 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4472 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4471 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4477 64 -9 4477 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4478 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4477 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4483 64 -9 4483 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4484 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4483 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4489 64 -9 4489 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4490 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4489 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4494 64 -9 4494 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4495 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4494 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4499 64 -9 4499 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4500 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4499 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4458 64 -20 4458 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4458 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4458 64 -16 4458 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4458 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4458 64 -13 4458 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4458 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4502 64 -20 4502 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4502 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4502 64 -16 4502 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4502 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4502 64 -13 4502 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4502 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4643 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4644 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4645 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4643 64 -24 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4643 65 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4644 65 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4649 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4650 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4651 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4649 64 -24 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4655 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4656 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4655 64 -24 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4655 65 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4656 65 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4673 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4674 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4673 64 -24 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4679 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4680 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4681 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4679 64 -24 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4679 65 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4680 65 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4685 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4686 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4687 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4685 64 -24 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4691 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4692 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4691 64 -24 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4691 65 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4692 65 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4697 64 -25 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4698 64 -25 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4699 64 -25 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4697 64 -24 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4644 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4645 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4646 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4644 64 -21 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4650 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4651 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4652 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4650 64 -21 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4650 65 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4651 65 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4656 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4658 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4656 64 -21 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4674 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4676 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4674 64 -21 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4674 65 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4675 65 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4686 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4687 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4688 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4686 64 -21 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4686 65 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4687 65 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4692 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4694 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4692 64 -21 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4698 64 -22 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4699 64 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4700 64 -22 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4698 64 -21 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4698 65 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4699 65 -22 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4645 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4646 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4647 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4645 64 -11 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4645 65 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4646 65 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4651 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4652 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4653 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4651 64 -11 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4658 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4659 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -11 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4657 65 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4658 65 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4663 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4664 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4665 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4663 64 -11 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4669 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4670 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4671 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4669 64 -11 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4669 65 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4670 65 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4675 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4676 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4677 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -11 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4681 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4682 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4683 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4681 64 -11 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4681 65 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4682 65 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4687 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4688 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4689 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4687 64 -11 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4694 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4695 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -11 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4693 65 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4694 65 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4699 64 -12 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4700 64 -12 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4701 64 -12 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4699 64 -11 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4643 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4644 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4645 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4643 64 -7 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4649 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4650 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4651 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4649 64 -7 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4649 65 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4650 65 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4655 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4656 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4655 64 -7 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4661 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4662 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4663 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4661 64 -7 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4661 65 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4662 65 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4667 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4668 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4669 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4667 64 -7 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4673 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4674 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4673 64 -7 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4673 65 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4674 65 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4679 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4680 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4681 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4679 64 -7 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4685 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4686 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4687 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4685 64 -7 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4685 65 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4686 65 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4691 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4692 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4691 64 -7 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4697 64 -8 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4698 64 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4699 64 -8 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4697 64 -7 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4697 65 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4698 65 -8 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4644 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4645 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4646 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4644 64 -3 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4644 65 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4645 65 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4650 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4651 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4652 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4650 64 -3 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4656 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4657 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4658 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4656 64 -3 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4656 65 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4657 65 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4662 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4663 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4664 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4662 64 -3 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4668 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4669 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4670 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4668 64 -3 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4668 65 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4669 65 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4674 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4676 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4674 64 -3 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4680 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4681 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4682 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4680 64 -3 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4680 65 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4681 65 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4686 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4687 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4688 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4686 64 -3 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4692 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4693 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4694 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4692 64 -3 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4692 65 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4693 65 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4698 64 -4 minecraft:red_terracotta"
+    },
+    {
+      "command": "setblock 4699 64 -4 minecraft:tuff"
+    },
+    {
+      "command": "setblock 4700 64 -4 minecraft:mossy_stone_bricks"
+    },
+    {
+      "command": "setblock 4698 64 -3 minecraft:red_terracotta"
+    },
+    {
+      "command": "fill 4653 64 -25 4653 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4654 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4653 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4658 64 -25 4658 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4659 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4658 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4663 64 -25 4663 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4664 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4663 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4669 64 -25 4669 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4670 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4669 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4675 64 -25 4675 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4676 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4681 64 -25 4681 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4682 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4681 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4686 64 -25 4686 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4687 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4686 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4691 64 -25 4691 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4692 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4691 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4653 64 -22 4653 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4654 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4653 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4658 64 -22 4658 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4659 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4658 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4663 64 -22 4663 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4664 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4663 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4669 64 -22 4669 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4670 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4669 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4675 64 -22 4675 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4676 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4675 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4681 64 -22 4681 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4682 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4681 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4686 64 -22 4686 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4687 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4686 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4691 64 -22 4691 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4692 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4691 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4653 64 -12 4653 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4654 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4653 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4658 64 -12 4658 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4659 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4658 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4663 64 -12 4663 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4664 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4663 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4669 64 -12 4669 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4670 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4669 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4675 64 -12 4675 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4676 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4675 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4681 64 -12 4681 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4682 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4681 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4686 64 -12 4686 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4687 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4686 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4691 64 -12 4691 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4692 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4691 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4653 64 -9 4653 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4654 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4653 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4658 64 -9 4658 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4659 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4658 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4663 64 -9 4663 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4664 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4663 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4669 64 -9 4669 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4670 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4669 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4675 64 -9 4675 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4676 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4675 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4681 64 -9 4681 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4682 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4681 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4686 64 -9 4686 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4687 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4686 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4691 64 -9 4691 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4692 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4691 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4650 64 -20 4650 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4650 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4650 64 -16 4650 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4650 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4650 64 -13 4650 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4650 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4694 64 -20 4694 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4694 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4694 64 -16 4694 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4694 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4694 64 -13 4694 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4694 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4740 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4742 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4740 64 -24 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4746 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4748 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4746 64 -24 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4746 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4747 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4752 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4754 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4752 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4758 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4760 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4758 64 -24 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4758 65 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4759 65 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4764 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4766 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4764 64 -24 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4770 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4772 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4770 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4770 65 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4771 65 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4776 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4778 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4776 64 -24 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4782 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4784 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4782 64 -24 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4782 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4783 65 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4788 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4790 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4788 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4794 64 -25 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4796 64 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4794 64 -24 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4794 65 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4795 65 -25 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4741 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4742 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4743 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -21 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4741 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4742 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4747 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4748 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4749 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4754 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4755 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -21 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4753 65 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4754 65 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4759 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4760 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4761 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -21 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4766 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4767 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4765 65 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4766 65 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4771 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4772 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4773 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -21 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4778 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4779 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -21 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4777 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4778 65 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4783 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4784 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4785 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4790 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4791 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -21 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4789 65 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4790 65 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4795 64 -22 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4796 64 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4797 64 -22 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -21 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4739 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4740 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4739 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4745 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4746 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4745 64 -11 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4745 65 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4746 65 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4751 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4752 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4751 64 -11 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4757 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4758 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4757 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4757 65 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4758 65 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4763 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4764 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4763 64 -11 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4769 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4770 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4769 64 -11 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4769 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4770 65 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4775 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4776 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4775 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4781 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4782 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4781 64 -11 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4781 65 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4782 65 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4787 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4788 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4787 64 -11 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4793 64 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4794 64 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -12 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4793 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4793 65 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4794 65 -12 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4740 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4742 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4740 64 -7 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4740 65 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4741 65 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4746 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4748 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4746 64 -7 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4752 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4754 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4752 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4752 65 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4753 65 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4758 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4760 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4758 64 -7 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4764 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4766 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4764 64 -7 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4764 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4765 65 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4770 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4772 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4770 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4776 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4778 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4776 64 -7 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4776 65 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4777 65 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4782 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4784 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4782 64 -7 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4788 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4790 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4788 64 -7 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4788 65 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4789 65 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4794 64 -8 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -8 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4796 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4794 64 -7 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4742 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4743 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4741 64 -3 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4748 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4749 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4747 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4747 65 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4748 65 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4753 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4754 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4755 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4753 64 -3 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4760 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4761 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4759 64 -3 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4759 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4760 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4765 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4766 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4767 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4765 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4772 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4773 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -3 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4771 65 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4772 65 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4777 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4778 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4779 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4777 64 -3 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4784 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4785 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4783 64 -3 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4783 65 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4784 65 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4789 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4790 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4791 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4789 64 -3 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -4 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4796 64 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4797 64 -4 minecraft:spruce_planks"
+    },
+    {
+      "command": "setblock 4795 64 -3 minecraft:stripped_spruce_log"
+    },
+    {
+      "command": "setblock 4795 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4796 65 -4 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4749 64 -25 4749 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4750 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4749 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4754 64 -25 4754 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4755 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4754 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4759 64 -25 4759 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4760 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4759 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4765 64 -25 4765 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4766 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4765 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4771 64 -25 4771 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4772 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4777 64 -25 4777 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4778 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4777 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4782 64 -25 4782 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4783 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4782 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4787 64 -25 4787 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4788 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4787 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4749 64 -22 4749 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4750 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4749 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4754 64 -22 4754 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4755 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4754 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4759 64 -22 4759 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4760 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4759 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4765 64 -22 4765 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4766 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4765 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4771 64 -22 4771 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4772 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4771 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4777 64 -22 4777 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4778 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4777 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4782 64 -22 4782 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4783 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4782 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4787 64 -22 4787 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4788 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4787 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4749 64 -12 4749 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4750 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4749 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4754 64 -12 4754 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4755 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4754 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4759 64 -12 4759 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4760 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4759 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4765 64 -12 4765 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4766 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4765 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4771 64 -12 4771 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4772 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4771 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4777 64 -12 4777 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4778 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4777 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4782 64 -12 4782 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4783 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4782 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4787 64 -12 4787 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4788 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4787 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4749 64 -9 4749 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4750 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4749 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4754 64 -9 4754 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4755 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4754 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4759 64 -9 4759 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4760 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4759 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4765 64 -9 4765 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4766 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4765 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4771 64 -9 4771 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4772 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4771 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4777 64 -9 4777 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4778 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4777 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4782 64 -9 4782 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4783 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4782 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4787 64 -9 4787 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4788 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4787 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4746 64 -20 4746 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4746 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4746 64 -16 4746 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4746 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4746 64 -13 4746 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4746 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4790 64 -20 4790 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4790 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4790 64 -16 4790 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4790 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4790 64 -13 4790 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4790 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4837 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4838 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4839 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -24 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4837 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4838 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4843 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4844 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4845 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4850 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4851 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -24 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4849 65 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4850 65 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4855 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4856 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4857 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -24 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4862 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4863 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4861 65 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4862 65 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4867 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4868 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4869 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -24 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4874 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4875 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -24 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4873 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4874 65 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4879 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4880 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4881 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -24 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4886 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4887 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -24 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4885 65 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4886 65 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4891 64 -25 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4892 64 -25 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4893 64 -25 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -24 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4835 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4836 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4835 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4841 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4842 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4841 64 -21 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4841 65 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4842 65 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4847 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4848 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4847 64 -21 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4853 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4854 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4853 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4853 65 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4854 65 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4859 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4860 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4859 64 -21 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4865 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4866 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4865 64 -21 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4865 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4866 65 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4871 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4872 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4871 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4877 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4878 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4877 64 -21 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4877 65 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4878 65 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4883 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4884 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4883 64 -21 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4889 64 -22 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4890 64 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -22 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4889 64 -21 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4889 65 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4890 65 -22 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4836 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4838 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4836 64 -11 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4836 65 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4837 65 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4842 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4844 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4842 64 -11 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4848 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4850 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4848 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4848 65 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4849 65 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4854 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4856 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4854 64 -11 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4860 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4862 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4860 64 -11 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4860 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4861 65 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4866 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4868 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4866 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4872 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4874 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4872 64 -11 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4872 65 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4873 65 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4878 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4880 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4878 64 -11 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4884 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4886 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4884 64 -11 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4884 65 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4885 65 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4890 64 -12 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -12 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4892 64 -12 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4890 64 -11 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4838 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4839 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -7 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4844 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4845 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4843 65 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4844 65 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4849 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4850 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4851 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -7 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4856 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4857 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -7 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4855 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4856 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4861 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4862 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4863 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4868 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4869 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -7 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4867 65 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4868 65 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4873 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4874 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4875 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -7 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4880 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4881 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -7 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4879 65 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4880 65 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4885 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4886 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4887 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -7 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -8 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4892 64 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4893 64 -8 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -7 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4891 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4892 65 -8 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4835 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4836 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4837 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4835 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4835 65 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4836 65 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4841 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4842 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4843 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4841 64 -3 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4847 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4848 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4849 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4847 64 -3 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4847 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4848 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4853 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4854 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4855 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4853 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4859 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4860 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4861 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4859 64 -3 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4859 65 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4860 65 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4865 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4866 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4867 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4865 64 -3 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4871 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4872 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4873 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4871 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4871 65 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4872 65 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4877 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4878 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4879 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4877 64 -3 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4883 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4884 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4885 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4883 64 -3 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4883 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4884 65 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4889 64 -4 minecraft:calcite"
+    },
+    {
+      "command": "setblock 4890 64 -4 minecraft:amethyst_block"
+    },
+    {
+      "command": "setblock 4891 64 -4 minecraft:polished_basalt"
+    },
+    {
+      "command": "setblock 4889 64 -3 minecraft:calcite"
+    },
+    {
+      "command": "fill 4845 64 -25 4845 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4846 66 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4845 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4850 64 -25 4850 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4851 67 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4850 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4855 64 -25 4855 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4856 68 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4855 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4861 64 -25 4861 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4862 69 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4861 64 -24 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4867 64 -25 4867 66 -25 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4868 66 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4867 64 -24 minecraft:bricks"
+    },
+    {
+      "command": "fill 4873 64 -25 4873 67 -25 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4874 67 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4873 64 -24 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4878 64 -25 4878 68 -25 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4879 68 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4878 64 -24 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4883 64 -25 4883 69 -25 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4884 69 -25 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4883 64 -24 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4845 64 -22 4845 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4846 68 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4845 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4850 64 -22 4850 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4851 69 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4850 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4855 64 -22 4855 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4856 66 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4855 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4861 64 -22 4861 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4862 67 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4861 64 -21 minecraft:bricks"
+    },
+    {
+      "command": "fill 4867 64 -22 4867 68 -22 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4868 68 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4867 64 -21 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4873 64 -22 4873 69 -22 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4874 69 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4873 64 -21 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4878 64 -22 4878 66 -22 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4879 66 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4878 64 -21 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4883 64 -22 4883 67 -22 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4884 67 -22 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4883 64 -21 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4845 64 -12 4845 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4846 66 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4845 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4850 64 -12 4850 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4851 67 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4850 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4855 64 -12 4855 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4856 68 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4855 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4861 64 -12 4861 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4862 69 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4861 64 -11 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4867 64 -12 4867 66 -12 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4868 66 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4867 64 -11 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4873 64 -12 4873 67 -12 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4874 67 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4873 64 -11 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4878 64 -12 4878 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4879 68 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4878 64 -11 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4883 64 -12 4883 69 -12 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4884 69 -12 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4883 64 -11 minecraft:bricks"
+    },
+    {
+      "command": "fill 4845 64 -9 4845 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4846 68 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4845 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4850 64 -9 4850 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4851 69 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4850 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4855 64 -9 4855 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4856 66 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4855 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4861 64 -9 4861 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4862 67 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4861 64 -8 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4867 64 -9 4867 68 -9 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4868 68 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4867 64 -8 minecraft:polished_andesite"
+    },
+    {
+      "command": "fill 4873 64 -9 4873 69 -9 minecraft:oak_planks"
+    },
+    {
+      "command": "setblock 4874 69 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4873 64 -8 minecraft:stone_bricks"
+    },
+    {
+      "command": "fill 4878 64 -9 4878 66 -9 minecraft:polished_andesite"
+    },
+    {
+      "command": "setblock 4879 66 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4878 64 -8 minecraft:bricks"
+    },
+    {
+      "command": "fill 4883 64 -9 4883 67 -9 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4884 67 -9 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4883 64 -8 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "fill 4842 64 -20 4842 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4842 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4842 64 -16 4842 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4842 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4842 64 -13 4842 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4842 68 -12 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4886 64 -20 4886 66 -20 minecraft:stone_bricks"
+    },
+    {
+      "command": "setblock 4886 66 -19 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4886 64 -16 4886 67 -16 minecraft:bricks"
+    },
+    {
+      "command": "setblock 4886 67 -15 minecraft:oak_planks"
+    },
+    {
+      "command": "fill 4886 64 -13 4886 68 -13 minecraft:chiseled_stone_bricks"
+    },
+    {
+      "command": "setblock 4886 68 -12 minecraft:oak_planks"
+    }
+  ]
+}

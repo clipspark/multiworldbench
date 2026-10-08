@@ -1,0 +1,8539 @@
+{
+  "schema_version": "mwb.v4.shared_state.case_set.v1",
+  "case_count": 40,
+  "selection": {
+    "method": "fixed_balanced_sample",
+    "selected_candidates": [
+      "MWB3-SS-SC01",
+      "MWB3-SS-SC02",
+      "MWB3-SS-SC03",
+      "MWB3-SS-SC05",
+      "MWB3-SS-SC07"
+    ],
+    "seed": 20260927
+  },
+  "factorization": {
+    "scenes": 5,
+    "visibility_classes": 1,
+    "interaction_types": 4,
+    "variants_per_condition": 2,
+    "total": 40
+  },
+  "visibility_classes": {
+    "mutual": "A and B mutually visible",
+    "one_way": "variant 0 A sees B; variant 1 B sees A",
+    "none": "A and B mutually invisible"
+  },
+  "interaction_types": [
+    "single_place",
+    "single_destroy",
+    "dual_place",
+    "dual_destroy"
+  ],
+  "action_evidence_policy": "native_x11_xtest_gt_with_versioned_model_actions",
+  "cases": [
+    {
+      "case_id": "MWB4-S-SS005",
+      "id": "MWB4-S-SS005",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6200.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6199.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6199,
+              92,
+              0
+            ],
+            "support_cell": [
+              6199,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6200.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6201.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6201,
+              92,
+              0
+            ],
+            "support_cell": [
+              6201,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6199,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6199,
+          92,
+          0
+        ],
+        [
+          6201,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6200,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6199,
+            91,
+            0
+          ],
+          [
+            6201,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6200,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "grass_oak:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS005",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6199,
+          91,
+          0
+        ],
+        [
+          6201,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS006",
+      "id": "MWB4-S-SS006",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6240.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6239.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6239,
+              92,
+              0
+            ],
+            "support_cell": [
+              6239,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6240.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6241.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6241,
+              92,
+              0
+            ],
+            "support_cell": [
+              6241,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6239,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6239,
+          92,
+          0
+        ],
+        [
+          6241,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6240,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6239,
+            91,
+            0
+          ],
+          [
+            6241,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6240,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "grass_oak:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS006",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6239,
+          91,
+          0
+        ],
+        [
+          6241,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS007",
+      "id": "MWB4-S-SS007",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6280.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6279.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6279,
+              92,
+              0
+            ],
+            "support_cell": [
+              6279,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6280.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6281.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6281,
+              92,
+              0
+            ],
+            "support_cell": [
+              6281,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6279,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6279,
+          92,
+          0
+        ],
+        [
+          6281,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6280,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6279,
+            91,
+            0
+          ],
+          [
+            6281,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6280,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "grass_oak:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS007",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6279,
+          91,
+          0
+        ],
+        [
+          6281,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS008",
+      "id": "MWB4-S-SS008",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6320.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6319.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6319,
+              92,
+              0
+            ],
+            "support_cell": [
+              6319,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6320.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6321.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6321,
+              92,
+              0
+            ],
+            "support_cell": [
+              6321,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6319,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6319,
+          92,
+          0
+        ],
+        [
+          6321,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6320,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6319,
+            91,
+            0
+          ],
+          [
+            6321,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6320,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "grass_oak:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS008",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6319,
+          91,
+          0
+        ],
+        [
+          6321,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS029",
+      "id": "MWB4-S-SS029",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7160.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7159.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7159,
+              92,
+              0
+            ],
+            "support_cell": [
+              7159,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7160.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7161.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7161,
+              92,
+              0
+            ],
+            "support_cell": [
+              7161,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7159,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7159,
+          92,
+          0
+        ],
+        [
+          7161,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7160,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7159,
+            91,
+            0
+          ],
+          [
+            7161,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7160,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "sandstone_court:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS029",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7159,
+          91,
+          0
+        ],
+        [
+          7161,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS030",
+      "id": "MWB4-S-SS030",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7200.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7199.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7199,
+              92,
+              0
+            ],
+            "support_cell": [
+              7199,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7200.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7201.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7201,
+              92,
+              0
+            ],
+            "support_cell": [
+              7201,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7199,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7199,
+          92,
+          0
+        ],
+        [
+          7201,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7200,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7199,
+            91,
+            0
+          ],
+          [
+            7201,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7200,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "sandstone_court:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS030",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7199,
+          91,
+          0
+        ],
+        [
+          7201,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS031",
+      "id": "MWB4-S-SS031",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7240.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7239.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7239,
+              92,
+              0
+            ],
+            "support_cell": [
+              7239,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7240.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7241.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7241,
+              92,
+              0
+            ],
+            "support_cell": [
+              7241,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7239,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7239,
+          92,
+          0
+        ],
+        [
+          7241,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7240,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7239,
+            91,
+            0
+          ],
+          [
+            7241,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7240,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "sandstone_court:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS031",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7239,
+          91,
+          0
+        ],
+        [
+          7241,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS032",
+      "id": "MWB4-S-SS032",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7280.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7279.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7279,
+              92,
+              0
+            ],
+            "support_cell": [
+              7279,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7280.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7281.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7281,
+              92,
+              0
+            ],
+            "support_cell": [
+              7281,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7279,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7279,
+          92,
+          0
+        ],
+        [
+          7281,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7280,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7279,
+            91,
+            0
+          ],
+          [
+            7281,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7280,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "sandstone_court:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS032",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7279,
+          91,
+          0
+        ],
+        [
+          7281,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS053",
+      "id": "MWB4-S-SS053",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8120.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8119.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8119,
+              92,
+              0
+            ],
+            "support_cell": [
+              8119,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8120.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8121.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8121,
+              92,
+              0
+            ],
+            "support_cell": [
+              8121,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8119,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8119,
+          92,
+          0
+        ],
+        [
+          8121,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8120,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8119,
+            91,
+            0
+          ],
+          [
+            8121,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8120,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "stone_plaza:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS053",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8119,
+          91,
+          0
+        ],
+        [
+          8121,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS054",
+      "id": "MWB4-S-SS054",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8160.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8159.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8159,
+              92,
+              0
+            ],
+            "support_cell": [
+              8159,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8160.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8161.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8161,
+              92,
+              0
+            ],
+            "support_cell": [
+              8161,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8159,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8159,
+          92,
+          0
+        ],
+        [
+          8161,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8160,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8159,
+            91,
+            0
+          ],
+          [
+            8161,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8160,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "stone_plaza:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS054",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8159,
+          91,
+          0
+        ],
+        [
+          8161,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS055",
+      "id": "MWB4-S-SS055",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8200.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8199.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8199,
+              92,
+              0
+            ],
+            "support_cell": [
+              8199,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8200.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8201.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8201,
+              92,
+              0
+            ],
+            "support_cell": [
+              8201,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8199,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8199,
+          92,
+          0
+        ],
+        [
+          8201,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8200,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8199,
+            91,
+            0
+          ],
+          [
+            8201,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8200,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "stone_plaza:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS055",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8199,
+          91,
+          0
+        ],
+        [
+          8201,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS056",
+      "id": "MWB4-S-SS056",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8240.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8239.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8239,
+              92,
+              0
+            ],
+            "support_cell": [
+              8239,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8240.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8241.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8241,
+              92,
+              0
+            ],
+            "support_cell": [
+              8241,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8239,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8239,
+          92,
+          0
+        ],
+        [
+          8241,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8240,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8239,
+            91,
+            0
+          ],
+          [
+            8241,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8240,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "stone_plaza:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS056",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8239,
+          91,
+          0
+        ],
+        [
+          8241,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS077",
+      "id": "MWB4-S-SS077",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9080.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9079.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9079,
+              92,
+              0
+            ],
+            "support_cell": [
+              9079,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9080.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9081.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9081,
+              92,
+              0
+            ],
+            "support_cell": [
+              9081,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9079,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9079,
+          92,
+          0
+        ],
+        [
+          9081,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9080,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9079,
+            91,
+            0
+          ],
+          [
+            9081,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9080,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "tuff_copper:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS077",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9079,
+          91,
+          0
+        ],
+        [
+          9081,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS078",
+      "id": "MWB4-S-SS078",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9120.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9119.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9119,
+              92,
+              0
+            ],
+            "support_cell": [
+              9119,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9120.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9121.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9121,
+              92,
+              0
+            ],
+            "support_cell": [
+              9121,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9119,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9119,
+          92,
+          0
+        ],
+        [
+          9121,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9120,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9119,
+            91,
+            0
+          ],
+          [
+            9121,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9120,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "tuff_copper:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS078",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9119,
+          91,
+          0
+        ],
+        [
+          9121,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS079",
+      "id": "MWB4-S-SS079",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9160.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9159.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9159,
+              92,
+              0
+            ],
+            "support_cell": [
+              9159,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9160.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9161.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9161,
+              92,
+              0
+            ],
+            "support_cell": [
+              9161,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9159,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9159,
+          92,
+          0
+        ],
+        [
+          9161,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9160,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9159,
+            91,
+            0
+          ],
+          [
+            9161,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9160,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "tuff_copper:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS079",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9159,
+          91,
+          0
+        ],
+        [
+          9161,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS080",
+      "id": "MWB4-S-SS080",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9200.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9199.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9199,
+              92,
+              0
+            ],
+            "support_cell": [
+              9199,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9200.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9201.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9201,
+              92,
+              0
+            ],
+            "support_cell": [
+              9201,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9199,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9199,
+          92,
+          0
+        ],
+        [
+          9201,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9200,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9199,
+            91,
+            0
+          ],
+          [
+            9201,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9200,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "tuff_copper:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS080",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9199,
+          91,
+          0
+        ],
+        [
+          9201,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS101",
+      "id": "MWB4-S-SS101",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              10040.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              10039.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10039,
+              92,
+              0
+            ],
+            "support_cell": [
+              10039,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              10040.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              10041.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10041,
+              92,
+              0
+            ],
+            "support_cell": [
+              10041,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        10039,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          10039,
+          92,
+          0
+        ],
+        [
+          10041,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          10040,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            10039,
+            91,
+            0
+          ],
+          [
+            10041,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          10040,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "snow_ice:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS101",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          10039,
+          91,
+          0
+        ],
+        [
+          10041,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS102",
+      "id": "MWB4-S-SS102",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_place",
+      "operation": "place",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              10080.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              10079.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10079,
+              92,
+              0
+            ],
+            "support_cell": [
+              10079,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              10080.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              10081.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10081,
+              92,
+              0
+            ],
+            "support_cell": [
+              10081,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        10079,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          10079,
+          92,
+          0
+        ],
+        [
+          10081,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          10080,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            10079,
+            91,
+            0
+          ],
+          [
+            10081,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          10080,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "snow_ice:mutual:dual_place",
+      "source_case_id": "MWB3-S-SS102",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          10079,
+          91,
+          0
+        ],
+        [
+          10081,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS103",
+      "id": "MWB4-S-SS103",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 0,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              10120.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10119.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10119,
+              92,
+              0
+            ],
+            "support_cell": [
+              10119,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              10120.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10121.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10121,
+              92,
+              0
+            ],
+            "support_cell": [
+              10121,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        10119,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          10119,
+          92,
+          0
+        ],
+        [
+          10121,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          10120,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            10119,
+            91,
+            0
+          ],
+          [
+            10121,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          10120,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "snow_ice:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS103",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          10119,
+          91,
+          0
+        ],
+        [
+          10121,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS104",
+      "id": "MWB4-S-SS104",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "dual_destroy",
+      "operation": "destroy",
+      "actor_mode": "dual",
+      "variant": 1,
+      "active_roles": [
+        "alpha",
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              10160.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10159.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10159,
+              92,
+              0
+            ],
+            "support_cell": [
+              10159,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              10160.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": -21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10161.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10161,
+              92,
+              0
+            ],
+            "support_cell": [
+              10161,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        10159,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          10159,
+          92,
+          0
+        ],
+        [
+          10161,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 2,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          10160,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            10159,
+            91,
+            0
+          ],
+          [
+            10161,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          10160,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "snow_ice:mutual:dual_destroy",
+      "source_case_id": "MWB3-S-SS104",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          10159,
+          91,
+          0
+        ],
+        [
+          10161,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS001",
+      "id": "MWB4-S-SS001",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6041.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6040.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6040,
+              92,
+              0
+            ],
+            "support_cell": [
+              6040,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6041.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6040.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              6040,
+              92,
+              0
+            ],
+            "support_cell": [
+              6040,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6040,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6040,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6040,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6040,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6040,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "grass_oak:mutual:single_place",
+      "source_case_id": "MWB3-S-SS001",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6040,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS002",
+      "id": "MWB4-S-SS002",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6081.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6080.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              6080,
+              92,
+              0
+            ],
+            "support_cell": [
+              6080,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6081.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              6080.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6080,
+              92,
+              0
+            ],
+            "support_cell": [
+              6080,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6080,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6080,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6080,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6080,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6080,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "grass_oak:mutual:single_place",
+      "source_case_id": "MWB3-S-SS002",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6080,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS003",
+      "id": "MWB4-S-SS003",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6121.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6120.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6120,
+              92,
+              0
+            ],
+            "support_cell": [
+              6120,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6121.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6120.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              6120,
+              92,
+              0
+            ],
+            "support_cell": [
+              6120,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6120,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6120,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6120,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6120,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6120,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "grass_oak:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS003",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6120,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS004",
+      "id": "MWB4-S-SS004",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "grass_oak",
+      "scene_name_zh": "草地木构",
+      "source_candidate": "MWB3-SS-SC01",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              6161.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6160.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              6160,
+              92,
+              0
+            ],
+            "support_cell": [
+              6160,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              6161.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              6160.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              6160,
+              92,
+              0
+            ],
+            "support_cell": [
+              6160,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        6160,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          6160,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          6160,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            6160,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:red_concrete",
+        "arm_material": "minecraft:white_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          6160,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:grass_block",
+        "cross_material": "minecraft:white_concrete",
+        "marker_material": "minecraft:red_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:oak_log"
+          ],
+          [
+            -6,
+            0,
+            -6,
+            -2,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            2,
+            0,
+            -6,
+            6,
+            0,
+            -6,
+            "minecraft:mossy_cobblestone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:red_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "grass_oak:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS004",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          6160,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS025",
+      "id": "MWB4-S-SS025",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7001.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7000.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7000,
+              92,
+              0
+            ],
+            "support_cell": [
+              7000,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7001.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7000.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              7000,
+              92,
+              0
+            ],
+            "support_cell": [
+              7000,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7000,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7000,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7000,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7000,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7000,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "sandstone_court:mutual:single_place",
+      "source_case_id": "MWB3-S-SS025",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7000,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS026",
+      "id": "MWB4-S-SS026",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7041.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7040.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              7040,
+              92,
+              0
+            ],
+            "support_cell": [
+              7040,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7041.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7040.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7040,
+              92,
+              0
+            ],
+            "support_cell": [
+              7040,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7040,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7040,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7040,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7040,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7040,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "sandstone_court:mutual:single_place",
+      "source_case_id": "MWB3-S-SS026",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7040,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS027",
+      "id": "MWB4-S-SS027",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7081.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7080.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7080,
+              92,
+              0
+            ],
+            "support_cell": [
+              7080,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7081.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7080.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              7080,
+              92,
+              0
+            ],
+            "support_cell": [
+              7080,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7080,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7080,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7080,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7080,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7080,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "sandstone_court:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS027",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7080,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS028",
+      "id": "MWB4-S-SS028",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "sandstone_court",
+      "scene_name_zh": "砂岩庭院",
+      "source_candidate": "MWB3-SS-SC02",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7121.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7120.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              7120,
+              92,
+              0
+            ],
+            "support_cell": [
+              7120,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7121.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              7120.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7120,
+              92,
+              0
+            ],
+            "support_cell": [
+              7120,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7120,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7120,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7120,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7120,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:blue_concrete",
+        "arm_material": "minecraft:yellow_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7120,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:smooth_sandstone",
+        "cross_material": "minecraft:yellow_concrete",
+        "marker_material": "minecraft:blue_concrete",
+        "geometry_relative": [
+          [
+            -4,
+            0,
+            -6,
+            -4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            4,
+            0,
+            -6,
+            4,
+            3,
+            -6,
+            "minecraft:cut_sandstone"
+          ],
+          [
+            -4,
+            4,
+            -6,
+            4,
+            4,
+            -6,
+            "minecraft:smooth_sandstone"
+          ],
+          [
+            -9,
+            0,
+            -4,
+            -7,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            7,
+            0,
+            -4,
+            9,
+            1,
+            -4,
+            "minecraft:sandstone"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "sandstone_court:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS028",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7120,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS049",
+      "id": "MWB4-S-SS049",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              7961.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7960.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              7960,
+              92,
+              0
+            ],
+            "support_cell": [
+              7960,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              7961.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              7960.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              7960,
+              92,
+              0
+            ],
+            "support_cell": [
+              7960,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        7960,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          7960,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          7960,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            7960,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          7960,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "stone_plaza:mutual:single_place",
+      "source_case_id": "MWB3-S-SS049",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          7960,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS050",
+      "id": "MWB4-S-SS050",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8001.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8000.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              8000,
+              92,
+              0
+            ],
+            "support_cell": [
+              8000,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8001.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8000.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8000,
+              92,
+              0
+            ],
+            "support_cell": [
+              8000,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8000,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8000,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8000,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8000,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8000,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "stone_plaza:mutual:single_place",
+      "source_case_id": "MWB3-S-SS050",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8000,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS051",
+      "id": "MWB4-S-SS051",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8041.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8040.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8040,
+              92,
+              0
+            ],
+            "support_cell": [
+              8040,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8041.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8040.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              8040,
+              92,
+              0
+            ],
+            "support_cell": [
+              8040,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8040,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8040,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8040,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8040,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8040,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "stone_plaza:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS051",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8040,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS052",
+      "id": "MWB4-S-SS052",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "stone_plaza",
+      "scene_name_zh": "石砖广场",
+      "source_candidate": "MWB3-SS-SC03",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8081.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8080.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              8080,
+              92,
+              0
+            ],
+            "support_cell": [
+              8080,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8081.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              8080.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8080,
+              92,
+              0
+            ],
+            "support_cell": [
+              8080,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8080,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8080,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8080,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8080,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:orange_concrete",
+        "arm_material": "minecraft:cyan_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8080,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:stone_bricks",
+        "cross_material": "minecraft:cyan_concrete",
+        "marker_material": "minecraft:orange_concrete",
+        "geometry_relative": [
+          [
+            -8,
+            0,
+            -6,
+            -8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            8,
+            0,
+            -6,
+            8,
+            3,
+            -6,
+            "minecraft:polished_andesite"
+          ],
+          [
+            -5,
+            0,
+            -7,
+            -5,
+            1,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            5,
+            0,
+            -7,
+            5,
+            2,
+            -7,
+            "minecraft:chiseled_stone_bricks"
+          ],
+          [
+            -3,
+            0,
+            -6,
+            3,
+            0,
+            -6,
+            "minecraft:mossy_stone_bricks"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:orange_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "stone_plaza:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS052",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8080,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS073",
+      "id": "MWB4-S-SS073",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8921.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8920.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8920,
+              92,
+              0
+            ],
+            "support_cell": [
+              8920,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8921.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8920.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              8920,
+              92,
+              0
+            ],
+            "support_cell": [
+              8920,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8920,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8920,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8920,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8920,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8920,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "tuff_copper:mutual:single_place",
+      "source_case_id": "MWB3-S-SS073",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8920,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS074",
+      "id": "MWB4-S-SS074",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              8961.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8960.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              8960,
+              92,
+              0
+            ],
+            "support_cell": [
+              8960,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              8961.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              8960.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              8960,
+              92,
+              0
+            ],
+            "support_cell": [
+              8960,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        8960,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          8960,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          8960,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            8960,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          8960,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "tuff_copper:mutual:single_place",
+      "source_case_id": "MWB3-S-SS074",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          8960,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS075",
+      "id": "MWB4-S-SS075",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9001.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9000.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9000,
+              92,
+              0
+            ],
+            "support_cell": [
+              9000,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9001.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9000.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              9000,
+              92,
+              0
+            ],
+            "support_cell": [
+              9000,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9000,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9000,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9000,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9000,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9000,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "tuff_copper:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS075",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9000,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS076",
+      "id": "MWB4-S-SS076",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "tuff_copper",
+      "scene_name_zh": "凝灰铜庭",
+      "source_candidate": "MWB3-SS-SC05",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9041.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9040.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              9040,
+              92,
+              0
+            ],
+            "support_cell": [
+              9040,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9041.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9040.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9040,
+              92,
+              0
+            ],
+            "support_cell": [
+              9040,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9040,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9040,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9040,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9040,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:light_blue_concrete",
+        "arm_material": "minecraft:orange_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9040,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:tuff",
+        "cross_material": "minecraft:orange_concrete",
+        "marker_material": "minecraft:light_blue_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:oxidized_copper"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:cut_copper"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:tuff_bricks"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:exposed_copper"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:weathered_copper"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:light_blue_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "tuff_copper:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS076",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9040,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS097",
+      "id": "MWB4-S-SS097",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9881.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9880.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9880,
+              92,
+              0
+            ],
+            "support_cell": [
+              9880,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9881.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9880.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              9880,
+              92,
+              0
+            ],
+            "support_cell": [
+              9880,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9880,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9880,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9880,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9880,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9880,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "snow_ice:mutual:single_place",
+      "source_case_id": "MWB3-S-SS097",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9880,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS098",
+      "id": "MWB4-S-SS098",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_place",
+      "operation": "place",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9921.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9920.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              9920,
+              92,
+              0
+            ],
+            "support_cell": [
+              9920,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9921.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 12.967032915520441,
+            "aim_point": [
+              9920.5,
+              92,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9920,
+              92,
+              0
+            ],
+            "support_cell": [
+              9920,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9920,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9920,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:coarse_dirt"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9920,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9920,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9920,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 11,
+        "button": "right"
+      },
+      "independence_group": "snow_ice:mutual:single_place",
+      "source_case_id": "MWB3-S-SS098",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9920,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS099",
+      "id": "MWB4-S-SS099",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 0,
+      "active_roles": [
+        "alpha"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              9961.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9960.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              9960,
+              92,
+              0
+            ],
+            "support_cell": [
+              9960,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              9961.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              9960.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              9960,
+              92,
+              0
+            ],
+            "support_cell": [
+              9960,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        9960,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          9960,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          9960,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            9960,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          9960,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "snow_ice:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS099",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          9960,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    },
+    {
+      "case_id": "MWB4-S-SS100",
+      "id": "MWB4-S-SS100",
+      "metrics": [
+        "shared_state_synchronization"
+      ],
+      "scene": "snow_ice",
+      "scene_name_zh": "冰雪庭院",
+      "source_candidate": "MWB3-SS-SC07",
+      "visibility_class": "mutual",
+      "visibility_direction": "bidirectional",
+      "interaction_type": "single_destroy",
+      "operation": "destroy",
+      "actor_mode": "single",
+      "variant": 1,
+      "active_roles": [
+        "bravo"
+      ],
+      "fps": 20,
+      "num_frames": 81,
+      "valid_num_frames": 81,
+      "duration_seconds": 4.05,
+      "round_count": 1,
+      "initial_conditions": {
+        "alpha": {
+          "pose": {
+            "position": [
+              10001.5,
+              91,
+              3
+            ],
+            "native_yaw_deg": 158.19859051364818,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10000.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": false,
+            "target_cell": [
+              10000,
+              92,
+              0
+            ],
+            "support_cell": [
+              10000,
+              91,
+              0
+            ]
+          }
+        },
+        "bravo": {
+          "pose": {
+            "position": [
+              10001.5,
+              91,
+              -2
+            ],
+            "native_yaw_deg": 21.80140948635181,
+            "native_pitch_deg": 2.551805619272883,
+            "aim_point": [
+              10000.5,
+              92.5,
+              0.5
+            ],
+            "aim_role": "marked_target",
+            "active": true,
+            "target_cell": [
+              10000,
+              92,
+              0
+            ],
+            "support_cell": [
+              10000,
+              91,
+              0
+            ]
+          }
+        }
+      },
+      "target_cell": [
+        10000,
+        92,
+        0
+      ],
+      "target_cells": [
+        [
+          10000,
+          92,
+          0
+        ]
+      ],
+      "expected_change_count": 1,
+      "expected_after": {
+        "marked_targets": "minecraft:air"
+      },
+      "reference_marker": {
+        "shape": "ground_cross",
+        "center_cell": [
+          10000,
+          90,
+          0
+        ],
+        "target_support_cells": [
+          [
+            10000,
+            91,
+            0
+          ]
+        ],
+        "center_material": "minecraft:lime_concrete",
+        "arm_material": "minecraft:magenta_concrete",
+        "arm_radius_blocks": 4
+      },
+      "scene_spec": {
+        "origin": [
+          10000,
+          91,
+          0
+        ],
+        "floor_material": "minecraft:snow_block",
+        "cross_material": "minecraft:magenta_concrete",
+        "marker_material": "minecraft:lime_concrete",
+        "geometry_relative": [
+          [
+            -7,
+            0,
+            -6,
+            -7,
+            3,
+            -6,
+            "minecraft:packed_ice"
+          ],
+          [
+            7,
+            0,
+            -6,
+            7,
+            3,
+            -6,
+            "minecraft:blue_ice"
+          ],
+          [
+            -7,
+            4,
+            -6,
+            7,
+            4,
+            -6,
+            "minecraft:spruce_log"
+          ],
+          [
+            -4,
+            0,
+            -7,
+            -2,
+            1,
+            -7,
+            "minecraft:packed_ice"
+          ],
+          [
+            2,
+            0,
+            -7,
+            4,
+            1,
+            -7,
+            "minecraft:blue_ice"
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            "minecraft:lime_concrete"
+          ]
+        ],
+        "visibility_occluder": null
+      },
+      "action_protocol": {
+        "native_input": "X11_XTest",
+        "start_frame": 10,
+        "end_frame_exclusive": 18,
+        "button": "left"
+      },
+      "independence_group": "snow_ice:mutual:single_destroy",
+      "source_case_id": "MWB3-S-SS100",
+      "benchmark_version": "v4",
+      "support_cells": [
+        [
+          10000,
+          91,
+          0
+        ]
+      ],
+      "layout_version": "face_to_face_side_targets_v1"
+    }
+  ],
+  "limitations": "Placement and destruction are evaluated separately and normalized to [0,1]. Material is evaluated only for placement. All formal actions are native X11 XTest inputs; RCON is used only for scene setup and validation.",
+  "benchmark_version": "v4",
+  "source_v3_case_count": 120
+}

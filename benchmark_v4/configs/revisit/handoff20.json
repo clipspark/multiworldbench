@@ -1,0 +1,2807 @@
+{
+  "protocol": "cross_player_delayed_revisit_handoff",
+  "fps": 20,
+  "frames": 180,
+  "cases": [
+    {
+      "case_id": "MWB3-R-H01P",
+      "id": "MWB3-R-H01P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S01",
+        "environment": "desert_oasis",
+        "ground": "sand",
+        "path": "smooth_sandstone",
+        "vegetation": "dead_bush",
+        "building_id": "sandstone_asymmetric_arch",
+        "building_style": "asymmetric_arch",
+        "primary": "sandstone",
+        "accent": "cut_sandstone",
+        "detail": "oak_log",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H01P",
+      "counter_case_id": "MWB3-R-H01C",
+      "independence_group": "MWB3-R-H01",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H01P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H01P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4300,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4296,
+            "z": -13
+          },
+          "bravo": {
+            "x": 4304,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": -166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H01C",
+      "id": "MWB3-R-H01C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S01",
+        "environment": "desert_oasis",
+        "ground": "sand",
+        "path": "smooth_sandstone",
+        "vegetation": "dead_bush",
+        "building_id": "sandstone_asymmetric_arch",
+        "building_style": "asymmetric_arch",
+        "primary": "sandstone",
+        "accent": "cut_sandstone",
+        "detail": "oak_log",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H01P",
+      "counter_case_of": "MWB3-R-H01P",
+      "independence_group": "MWB3-R-H01",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H01C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H01C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4300,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4296,
+            "z": -13
+          },
+          "bravo": {
+            "x": 4304,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "bravo": 13.240519915187205,
+          "alpha": 166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H02P",
+      "id": "MWB3-R-H02P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S02",
+        "environment": "temperate_meadow",
+        "ground": "grass_block",
+        "path": "gravel",
+        "vegetation": "oak_leaves",
+        "building_id": "stone_watchtower",
+        "building_style": "watchtower",
+        "primary": "stone_bricks",
+        "accent": "mossy_stone_bricks",
+        "detail": "spruce_log",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H02P",
+      "counter_case_id": "MWB3-R-H02C",
+      "independence_group": "MWB3-R-H02",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H02P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H02P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4480,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4475,
+            "z": -14
+          },
+          "bravo": {
+            "x": 4485,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": -164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H02C",
+      "id": "MWB3-R-H02C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S02",
+        "environment": "temperate_meadow",
+        "ground": "grass_block",
+        "path": "gravel",
+        "vegetation": "oak_leaves",
+        "building_id": "stone_watchtower",
+        "building_style": "watchtower",
+        "primary": "stone_bricks",
+        "accent": "mossy_stone_bricks",
+        "detail": "spruce_log",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H02P",
+      "counter_case_of": "MWB3-R-H02P",
+      "independence_group": "MWB3-R-H02",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H02C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H02C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4480,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4475,
+            "z": -14
+          },
+          "bravo": {
+            "x": 4485,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "bravo": 15.524110996754256,
+          "alpha": 164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H03P",
+      "id": "MWB3-R-H03P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S03",
+        "environment": "snowy_spruce",
+        "ground": "snow_block",
+        "path": "packed_ice",
+        "vegetation": "spruce_leaves",
+        "building_id": "spruce_chalet",
+        "building_style": "chalet",
+        "primary": "spruce_planks",
+        "accent": "dark_oak_log",
+        "detail": "cobblestone",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H03P",
+      "counter_case_id": "MWB3-R-H03C",
+      "independence_group": "MWB3-R-H03",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H03P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H03P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4660,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4656,
+            "z": -13
+          },
+          "bravo": {
+            "x": 4664,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": -166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H03C",
+      "id": "MWB3-R-H03C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S03",
+        "environment": "snowy_spruce",
+        "ground": "snow_block",
+        "path": "packed_ice",
+        "vegetation": "spruce_leaves",
+        "building_id": "spruce_chalet",
+        "building_style": "chalet",
+        "primary": "spruce_planks",
+        "accent": "dark_oak_log",
+        "detail": "cobblestone",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H03P",
+      "counter_case_of": "MWB3-R-H03P",
+      "independence_group": "MWB3-R-H03",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H03C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H03C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4660,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4656,
+            "z": -13
+          },
+          "bravo": {
+            "x": 4664,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "bravo": 13.240519915187205,
+          "alpha": 166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H04P",
+      "id": "MWB3-R-H04P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S04",
+        "environment": "badlands_plateau",
+        "ground": "red_sand",
+        "path": "orange_terracotta",
+        "vegetation": "dead_bush",
+        "building_id": "terracotta_stepped_shrine",
+        "building_style": "stepped_shrine",
+        "primary": "orange_terracotta",
+        "accent": "red_terracotta",
+        "detail": "yellow_terracotta",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H04P",
+      "counter_case_id": "MWB3-R-H04C",
+      "independence_group": "MWB3-R-H04",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H04P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H04P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4840,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4835,
+            "z": -14
+          },
+          "bravo": {
+            "x": 4845,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": -164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H04C",
+      "id": "MWB3-R-H04C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S04",
+        "environment": "badlands_plateau",
+        "ground": "red_sand",
+        "path": "orange_terracotta",
+        "vegetation": "dead_bush",
+        "building_id": "terracotta_stepped_shrine",
+        "building_style": "stepped_shrine",
+        "primary": "orange_terracotta",
+        "accent": "red_terracotta",
+        "detail": "yellow_terracotta",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H04P",
+      "counter_case_of": "MWB3-R-H04P",
+      "independence_group": "MWB3-R-H04",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H04C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H04C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          4840,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 4835,
+            "z": -14
+          },
+          "bravo": {
+            "x": 4845,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "bravo": 15.524110996754256,
+          "alpha": 164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H05P",
+      "id": "MWB3-R-H05P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S05",
+        "environment": "rocky_coast",
+        "ground": "stone",
+        "path": "smooth_stone",
+        "vegetation": "sea_lantern",
+        "building_id": "prismarine_lighthouse",
+        "building_style": "lighthouse",
+        "primary": "prismarine_bricks",
+        "accent": "dark_prismarine",
+        "detail": "quartz_block",
+        "distance": 15,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H05P",
+      "counter_case_id": "MWB3-R-H05C",
+      "independence_group": "MWB3-R-H05",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H05P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H05P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5020,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5015,
+            "z": -15
+          },
+          "bravo": {
+            "x": 5025,
+            "z": -15
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": 14.743562836470735
+        },
+        "initial_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": -165.2564371635292
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H05C",
+      "id": "MWB3-R-H05C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S05",
+        "environment": "rocky_coast",
+        "ground": "stone",
+        "path": "smooth_stone",
+        "vegetation": "sea_lantern",
+        "building_id": "prismarine_lighthouse",
+        "building_style": "lighthouse",
+        "primary": "prismarine_bricks",
+        "accent": "dark_prismarine",
+        "detail": "quartz_block",
+        "distance": 15,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H05P",
+      "counter_case_of": "MWB3-R-H05P",
+      "independence_group": "MWB3-R-H05",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H05C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H05C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5020,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5015,
+            "z": -15
+          },
+          "bravo": {
+            "x": 5025,
+            "z": -15
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": 14.743562836470735
+        },
+        "initial_yaw_deg": {
+          "bravo": 14.743562836470735,
+          "alpha": 165.2564371635292
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H06P",
+      "id": "MWB3-R-H06P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S06",
+        "environment": "cherry_grove",
+        "ground": "grass_block",
+        "path": "pink_terracotta",
+        "vegetation": "cherry_leaves",
+        "building_id": "quartz_pavilion",
+        "building_style": "pavilion",
+        "primary": "quartz_block",
+        "accent": "cherry_planks",
+        "detail": "gold_block",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H06P",
+      "counter_case_id": "MWB3-R-H06C",
+      "independence_group": "MWB3-R-H06",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H06P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H06P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5200,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5196,
+            "z": -13
+          },
+          "bravo": {
+            "x": 5204,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": -166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H06C",
+      "id": "MWB3-R-H06C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S06",
+        "environment": "cherry_grove",
+        "ground": "grass_block",
+        "path": "pink_terracotta",
+        "vegetation": "cherry_leaves",
+        "building_id": "quartz_pavilion",
+        "building_style": "pavilion",
+        "primary": "quartz_block",
+        "accent": "cherry_planks",
+        "detail": "gold_block",
+        "distance": 13,
+        "lateral": 4
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H06P",
+      "counter_case_of": "MWB3-R-H06P",
+      "independence_group": "MWB3-R-H06",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H06C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H06C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5200,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5196,
+            "z": -13
+          },
+          "bravo": {
+            "x": 5204,
+            "z": -13
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -13.240519915187205,
+          "bravo": 13.240519915187205
+        },
+        "initial_yaw_deg": {
+          "bravo": 13.240519915187205,
+          "alpha": 166.75948008481282
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H07P",
+      "id": "MWB3-R-H07P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S07",
+        "environment": "mossy_swamp",
+        "ground": "mud",
+        "path": "moss_block",
+        "vegetation": "mangrove_leaves",
+        "building_id": "mossy_ruined_gate",
+        "building_style": "ruined_gate",
+        "primary": "mossy_stone_bricks",
+        "accent": "cracked_stone_bricks",
+        "detail": "mangrove_log",
+        "distance": 12,
+        "lateral": 4
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H07P",
+      "counter_case_id": "MWB3-R-H07C",
+      "independence_group": "MWB3-R-H07",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H07P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H07P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5380,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5376,
+            "z": -12
+          },
+          "bravo": {
+            "x": 5384,
+            "z": -12
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.036243467926477,
+          "bravo": 14.036243467926477
+        },
+        "initial_yaw_deg": {
+          "alpha": -14.036243467926477,
+          "bravo": -165.9637565320735
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H07C",
+      "id": "MWB3-R-H07C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S07",
+        "environment": "mossy_swamp",
+        "ground": "mud",
+        "path": "moss_block",
+        "vegetation": "mangrove_leaves",
+        "building_id": "mossy_ruined_gate",
+        "building_style": "ruined_gate",
+        "primary": "mossy_stone_bricks",
+        "accent": "cracked_stone_bricks",
+        "detail": "mangrove_log",
+        "distance": 12,
+        "lateral": 4
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H07P",
+      "counter_case_of": "MWB3-R-H07P",
+      "independence_group": "MWB3-R-H07",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H07C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H07C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5380,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5376,
+            "z": -12
+          },
+          "bravo": {
+            "x": 5384,
+            "z": -12
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.036243467926477,
+          "bravo": 14.036243467926477
+        },
+        "initial_yaw_deg": {
+          "bravo": 14.036243467926477,
+          "alpha": 165.9637565320735
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H08P",
+      "id": "MWB3-R-H08P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S08",
+        "environment": "basalt_field",
+        "ground": "smooth_basalt",
+        "path": "polished_blackstone",
+        "vegetation": "magma_block",
+        "building_id": "basalt_twin_gate",
+        "building_style": "twin_gate",
+        "primary": "deepslate_bricks",
+        "accent": "polished_basalt",
+        "detail": "crying_obsidian",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H08P",
+      "counter_case_id": "MWB3-R-H08C",
+      "independence_group": "MWB3-R-H08",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H08P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H08P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5560,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5555,
+            "z": -14
+          },
+          "bravo": {
+            "x": 5565,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": -164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H08C",
+      "id": "MWB3-R-H08C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S08",
+        "environment": "basalt_field",
+        "ground": "smooth_basalt",
+        "path": "polished_blackstone",
+        "vegetation": "magma_block",
+        "building_id": "basalt_twin_gate",
+        "building_style": "twin_gate",
+        "primary": "deepslate_bricks",
+        "accent": "polished_basalt",
+        "detail": "crying_obsidian",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H08P",
+      "counter_case_of": "MWB3-R-H08P",
+      "independence_group": "MWB3-R-H08",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H08C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H08C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5560,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5555,
+            "z": -14
+          },
+          "bravo": {
+            "x": 5565,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "bravo": 15.524110996754256,
+          "alpha": 164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H09P",
+      "id": "MWB3-R-H09P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S09",
+        "environment": "copper_workyard",
+        "ground": "tuff",
+        "path": "polished_andesite",
+        "vegetation": "copper_block",
+        "building_id": "copper_tuff_gantry",
+        "building_style": "gantry",
+        "primary": "tuff_bricks",
+        "accent": "cut_copper",
+        "detail": "exposed_copper",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H09P",
+      "counter_case_id": "MWB3-R-H09C",
+      "independence_group": "MWB3-R-H09",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H09P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H09P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5740,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5735,
+            "z": -14
+          },
+          "bravo": {
+            "x": 5745,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": -164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H09C",
+      "id": "MWB3-R-H09C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S09",
+        "environment": "copper_workyard",
+        "ground": "tuff",
+        "path": "polished_andesite",
+        "vegetation": "copper_block",
+        "building_id": "copper_tuff_gantry",
+        "building_style": "gantry",
+        "primary": "tuff_bricks",
+        "accent": "cut_copper",
+        "detail": "exposed_copper",
+        "distance": 14,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H09P",
+      "counter_case_of": "MWB3-R-H09P",
+      "independence_group": "MWB3-R-H09",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H09C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H09C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5740,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5735,
+            "z": -14
+          },
+          "bravo": {
+            "x": 5745,
+            "z": -14
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -15.524110996754256,
+          "bravo": 15.524110996754256
+        },
+        "initial_yaw_deg": {
+          "bravo": 15.524110996754256,
+          "alpha": 164.4758890032458
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H10P",
+      "id": "MWB3-R-H10P",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S10",
+        "environment": "crimson_outpost",
+        "ground": "netherrack",
+        "path": "blackstone",
+        "vegetation": "shroomlight",
+        "building_id": "red_nether_bastion",
+        "building_style": "bastion",
+        "primary": "red_nether_bricks",
+        "accent": "polished_blackstone_bricks",
+        "detail": "nether_bricks",
+        "distance": 15,
+        "lateral": 5
+      },
+      "role_swapped": false,
+      "primary_case_id": "MWB3-R-H10P",
+      "counter_case_id": "MWB3-R-H10C",
+      "independence_group": "MWB3-R-H10",
+      "first_observer": "alpha",
+      "delayed_observer": "bravo",
+      "initial_visibility": {
+        "alpha": "building_visible",
+        "bravo": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "bravo",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "alpha",
+        "initial_frame": 20,
+        "return_role": "bravo",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H10P/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H10P/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5920,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5915,
+            "z": -15
+          },
+          "bravo": {
+            "x": 5925,
+            "z": -15
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": 14.743562836470735
+        },
+        "initial_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": -165.2564371635292
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    },
+    {
+      "case_id": "MWB3-R-H10C",
+      "id": "MWB3-R-H10C",
+      "metrics": [
+        "style_consistency",
+        "id_consistency"
+      ],
+      "protocol": "cross_player_delayed_revisit_handoff",
+      "scene": {
+        "scene_id": "RH-S10",
+        "environment": "crimson_outpost",
+        "ground": "netherrack",
+        "path": "blackstone",
+        "vegetation": "shroomlight",
+        "building_id": "red_nether_bastion",
+        "building_style": "bastion",
+        "primary": "red_nether_bricks",
+        "accent": "polished_blackstone_bricks",
+        "detail": "nether_bricks",
+        "distance": 15,
+        "lateral": 5
+      },
+      "role_swapped": true,
+      "primary_case_id": "MWB3-R-H10P",
+      "counter_case_of": "MWB3-R-H10P",
+      "independence_group": "MWB3-R-H10",
+      "first_observer": "bravo",
+      "delayed_observer": "alpha",
+      "initial_visibility": {
+        "bravo": "building_visible",
+        "alpha": "building_out_of_view"
+      },
+      "timeline": [
+        {
+          "name": "first_observer_views_building",
+          "frames": [
+            0,
+            40
+          ]
+        },
+        {
+          "name": "first_observer_turns_away",
+          "frames": [
+            40,
+            55
+          ]
+        },
+        {
+          "name": "second_observer_idle",
+          "frames": [
+            55,
+            125
+          ],
+          "duration_seconds": 3.5
+        },
+        {
+          "name": "second_observer_turns_to_building",
+          "frames": [
+            125,
+            140
+          ]
+        },
+        {
+          "name": "second_observer_views_building",
+          "frames": [
+            140,
+            180
+          ]
+        }
+      ],
+      "idle_contract": {
+        "role": "alpha",
+        "frames": [
+          55,
+          125
+        ],
+        "duration_seconds": 3.5,
+        "required_actions": "all_false_and_zero_camera"
+      },
+      "visibility_contract": {
+        "first_evidence_frame": 20,
+        "handoff_hidden_range": [
+          55,
+          125
+        ],
+        "second_evidence_frame": 155,
+        "first_observer_building_visible_at_first_evidence": true,
+        "delayed_observer_building_hidden_before_turn": true,
+        "first_observer_building_hidden_at_second_evidence": true,
+        "delayed_observer_building_visible_at_second_evidence": true,
+        "minimum_continuous_hidden_frames_before_handoff": 70,
+        "simultaneous_visibility_prohibited": true
+      },
+      "evidence_pair": {
+        "pair_id": "cross_player_handoff",
+        "initial_role": "bravo",
+        "initial_frame": 20,
+        "return_role": "alpha",
+        "return_frame": 155
+      },
+      "capture_spec": {
+        "fps": 20,
+        "frames": 180,
+        "native_input": "X11_XTest",
+        "scene_setup": "RCON_initialization_only",
+        "videos": {
+          "alpha": "outputs/MWB3-R-H10C/alpha_gt.mp4",
+          "bravo": "outputs/MWB3-R-H10C/bravo_gt.mp4"
+        }
+      },
+      "world": {
+        "building_center": [
+          5920,
+          64,
+          4
+        ],
+        "poses": {
+          "alpha": {
+            "x": 5915,
+            "z": -15
+          },
+          "bravo": {
+            "x": 5925,
+            "z": -15
+          }
+        },
+        "target_yaw_deg": {
+          "alpha": -14.743562836470735,
+          "bravo": 14.743562836470735
+        },
+        "initial_yaw_deg": {
+          "bravo": 14.743562836470735,
+          "alpha": 165.2564371635292
+        }
+      },
+      "video_action_offset_frames": {
+        "alpha": 5,
+        "bravo": 5
+      }
+    }
+  ]
+}

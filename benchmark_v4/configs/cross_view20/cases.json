@@ -1,0 +1,1414 @@
+{
+  "cases": [
+    {
+      "id": "MWB4-CV-TR20-S01-01",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10000.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10000.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S01",
+        "name": "stone_courtyard"
+      },
+      "scene_initialization_commands": [
+        "forceload add 9980 -20 10020 20",
+        "fill 9980 91 -20 10020 104 20 air",
+        "fill 9980 90 -20 10020 90 20 smooth_stone",
+        "fill 9982 90 -18 9982 90 18 polished_andesite",
+        "fill 9986 90 -18 9986 90 18 polished_andesite",
+        "fill 9990 90 -18 9990 90 18 polished_andesite",
+        "fill 9994 90 -18 9994 90 18 polished_andesite",
+        "fill 9998 90 -18 9998 90 18 polished_andesite",
+        "fill 10002 90 -18 10002 90 18 polished_andesite",
+        "fill 10006 90 -18 10006 90 18 polished_andesite",
+        "fill 10010 90 -18 10010 90 18 polished_andesite",
+        "fill 10014 90 -18 10014 90 18 polished_andesite",
+        "fill 10018 90 -18 10018 90 18 polished_andesite",
+        "fill 9990 91 -12 9991 93 -11 stone_bricks",
+        "fill 9995 91 -12 9996 93 -11 stone_bricks",
+        "fill 10005 91 -12 10006 93 -11 stone_bricks",
+        "fill 10010 91 -12 10011 93 -11 stone_bricks",
+        "fill 9986 91 -12 9988 92 -10 red_concrete",
+        "fill 10012 91 -12 10014 92 -10 blue_concrete",
+        "fill 9990 91 12 9991 93 13 stone_bricks",
+        "fill 9995 91 12 9996 93 13 stone_bricks",
+        "fill 10005 91 12 10006 93 13 stone_bricks",
+        "fill 10010 91 12 10011 93 13 stone_bricks",
+        "fill 9986 91 12 9988 92 14 red_concrete",
+        "fill 10012 91 12 10014 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S01-02",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10000.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10000.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S01",
+        "name": "stone_courtyard"
+      },
+      "scene_initialization_commands": [
+        "forceload add 9980 -20 10020 20",
+        "fill 9980 91 -20 10020 104 20 air",
+        "fill 9980 90 -20 10020 90 20 smooth_stone",
+        "fill 9982 90 -18 9982 90 18 polished_andesite",
+        "fill 9986 90 -18 9986 90 18 polished_andesite",
+        "fill 9990 90 -18 9990 90 18 polished_andesite",
+        "fill 9994 90 -18 9994 90 18 polished_andesite",
+        "fill 9998 90 -18 9998 90 18 polished_andesite",
+        "fill 10002 90 -18 10002 90 18 polished_andesite",
+        "fill 10006 90 -18 10006 90 18 polished_andesite",
+        "fill 10010 90 -18 10010 90 18 polished_andesite",
+        "fill 10014 90 -18 10014 90 18 polished_andesite",
+        "fill 10018 90 -18 10018 90 18 polished_andesite",
+        "fill 9990 91 -12 9991 93 -11 stone_bricks",
+        "fill 9995 91 -12 9996 93 -11 stone_bricks",
+        "fill 10005 91 -12 10006 93 -11 stone_bricks",
+        "fill 10010 91 -12 10011 93 -11 stone_bricks",
+        "fill 9986 91 -12 9988 92 -10 red_concrete",
+        "fill 10012 91 -12 10014 92 -10 blue_concrete",
+        "fill 9990 91 12 9991 93 13 stone_bricks",
+        "fill 9995 91 12 9996 93 13 stone_bricks",
+        "fill 10005 91 12 10006 93 13 stone_bricks",
+        "fill 10010 91 12 10011 93 13 stone_bricks",
+        "fill 9986 91 12 9988 92 14 red_concrete",
+        "fill 10012 91 12 10014 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S01-03",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10000.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10000.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S01",
+        "name": "stone_courtyard"
+      },
+      "scene_initialization_commands": [
+        "forceload add 9980 -20 10020 20",
+        "fill 9980 91 -20 10020 104 20 air",
+        "fill 9980 90 -20 10020 90 20 smooth_stone",
+        "fill 9982 90 -18 9982 90 18 polished_andesite",
+        "fill 9986 90 -18 9986 90 18 polished_andesite",
+        "fill 9990 90 -18 9990 90 18 polished_andesite",
+        "fill 9994 90 -18 9994 90 18 polished_andesite",
+        "fill 9998 90 -18 9998 90 18 polished_andesite",
+        "fill 10002 90 -18 10002 90 18 polished_andesite",
+        "fill 10006 90 -18 10006 90 18 polished_andesite",
+        "fill 10010 90 -18 10010 90 18 polished_andesite",
+        "fill 10014 90 -18 10014 90 18 polished_andesite",
+        "fill 10018 90 -18 10018 90 18 polished_andesite",
+        "fill 9990 91 -12 9991 93 -11 stone_bricks",
+        "fill 9995 91 -12 9996 93 -11 stone_bricks",
+        "fill 10005 91 -12 10006 93 -11 stone_bricks",
+        "fill 10010 91 -12 10011 93 -11 stone_bricks",
+        "fill 9986 91 -12 9988 92 -10 red_concrete",
+        "fill 10012 91 -12 10014 92 -10 blue_concrete",
+        "fill 9990 91 12 9991 93 13 stone_bricks",
+        "fill 9995 91 12 9996 93 13 stone_bricks",
+        "fill 10005 91 12 10006 93 13 stone_bricks",
+        "fill 10010 91 12 10011 93 13 stone_bricks",
+        "fill 9986 91 12 9988 92 14 red_concrete",
+        "fill 10012 91 12 10014 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S01-04",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10000.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10000.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S01",
+        "name": "stone_courtyard"
+      },
+      "scene_initialization_commands": [
+        "forceload add 9980 -20 10020 20",
+        "fill 9980 91 -20 10020 104 20 air",
+        "fill 9980 90 -20 10020 90 20 smooth_stone",
+        "fill 9982 90 -18 9982 90 18 polished_andesite",
+        "fill 9986 90 -18 9986 90 18 polished_andesite",
+        "fill 9990 90 -18 9990 90 18 polished_andesite",
+        "fill 9994 90 -18 9994 90 18 polished_andesite",
+        "fill 9998 90 -18 9998 90 18 polished_andesite",
+        "fill 10002 90 -18 10002 90 18 polished_andesite",
+        "fill 10006 90 -18 10006 90 18 polished_andesite",
+        "fill 10010 90 -18 10010 90 18 polished_andesite",
+        "fill 10014 90 -18 10014 90 18 polished_andesite",
+        "fill 10018 90 -18 10018 90 18 polished_andesite",
+        "fill 9990 91 -12 9991 93 -11 stone_bricks",
+        "fill 9995 91 -12 9996 93 -11 stone_bricks",
+        "fill 10005 91 -12 10006 93 -11 stone_bricks",
+        "fill 10010 91 -12 10011 93 -11 stone_bricks",
+        "fill 9986 91 -12 9988 92 -10 red_concrete",
+        "fill 10012 91 -12 10014 92 -10 blue_concrete",
+        "fill 9990 91 12 9991 93 13 stone_bricks",
+        "fill 9995 91 12 9996 93 13 stone_bricks",
+        "fill 10005 91 12 10006 93 13 stone_bricks",
+        "fill 10010 91 12 10011 93 13 stone_bricks",
+        "fill 9986 91 12 9988 92 14 red_concrete",
+        "fill 10012 91 12 10014 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S02-01",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10096.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10096.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S02",
+        "name": "sandstone_plaza"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10076 -20 10116 20",
+        "fill 10076 91 -20 10116 104 20 air",
+        "fill 10076 90 -20 10116 90 20 smooth_sandstone",
+        "fill 10078 90 -18 10078 90 18 cut_sandstone",
+        "fill 10082 90 -18 10082 90 18 cut_sandstone",
+        "fill 10086 90 -18 10086 90 18 cut_sandstone",
+        "fill 10090 90 -18 10090 90 18 cut_sandstone",
+        "fill 10094 90 -18 10094 90 18 cut_sandstone",
+        "fill 10098 90 -18 10098 90 18 cut_sandstone",
+        "fill 10102 90 -18 10102 90 18 cut_sandstone",
+        "fill 10106 90 -18 10106 90 18 cut_sandstone",
+        "fill 10110 90 -18 10110 90 18 cut_sandstone",
+        "fill 10114 90 -18 10114 90 18 cut_sandstone",
+        "fill 10086 91 -12 10087 93 -11 chiseled_sandstone",
+        "fill 10091 91 -12 10092 93 -11 chiseled_sandstone",
+        "fill 10101 91 -12 10102 93 -11 chiseled_sandstone",
+        "fill 10106 91 -12 10107 93 -11 chiseled_sandstone",
+        "fill 10082 91 -12 10084 92 -10 red_concrete",
+        "fill 10108 91 -12 10110 92 -10 blue_concrete",
+        "fill 10086 91 12 10087 93 13 chiseled_sandstone",
+        "fill 10091 91 12 10092 93 13 chiseled_sandstone",
+        "fill 10101 91 12 10102 93 13 chiseled_sandstone",
+        "fill 10106 91 12 10107 93 13 chiseled_sandstone",
+        "fill 10082 91 12 10084 92 14 red_concrete",
+        "fill 10108 91 12 10110 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S02-02",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10096.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10096.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S02",
+        "name": "sandstone_plaza"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10076 -20 10116 20",
+        "fill 10076 91 -20 10116 104 20 air",
+        "fill 10076 90 -20 10116 90 20 smooth_sandstone",
+        "fill 10078 90 -18 10078 90 18 cut_sandstone",
+        "fill 10082 90 -18 10082 90 18 cut_sandstone",
+        "fill 10086 90 -18 10086 90 18 cut_sandstone",
+        "fill 10090 90 -18 10090 90 18 cut_sandstone",
+        "fill 10094 90 -18 10094 90 18 cut_sandstone",
+        "fill 10098 90 -18 10098 90 18 cut_sandstone",
+        "fill 10102 90 -18 10102 90 18 cut_sandstone",
+        "fill 10106 90 -18 10106 90 18 cut_sandstone",
+        "fill 10110 90 -18 10110 90 18 cut_sandstone",
+        "fill 10114 90 -18 10114 90 18 cut_sandstone",
+        "fill 10086 91 -12 10087 93 -11 chiseled_sandstone",
+        "fill 10091 91 -12 10092 93 -11 chiseled_sandstone",
+        "fill 10101 91 -12 10102 93 -11 chiseled_sandstone",
+        "fill 10106 91 -12 10107 93 -11 chiseled_sandstone",
+        "fill 10082 91 -12 10084 92 -10 red_concrete",
+        "fill 10108 91 -12 10110 92 -10 blue_concrete",
+        "fill 10086 91 12 10087 93 13 chiseled_sandstone",
+        "fill 10091 91 12 10092 93 13 chiseled_sandstone",
+        "fill 10101 91 12 10102 93 13 chiseled_sandstone",
+        "fill 10106 91 12 10107 93 13 chiseled_sandstone",
+        "fill 10082 91 12 10084 92 14 red_concrete",
+        "fill 10108 91 12 10110 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S02-03",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10096.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10096.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S02",
+        "name": "sandstone_plaza"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10076 -20 10116 20",
+        "fill 10076 91 -20 10116 104 20 air",
+        "fill 10076 90 -20 10116 90 20 smooth_sandstone",
+        "fill 10078 90 -18 10078 90 18 cut_sandstone",
+        "fill 10082 90 -18 10082 90 18 cut_sandstone",
+        "fill 10086 90 -18 10086 90 18 cut_sandstone",
+        "fill 10090 90 -18 10090 90 18 cut_sandstone",
+        "fill 10094 90 -18 10094 90 18 cut_sandstone",
+        "fill 10098 90 -18 10098 90 18 cut_sandstone",
+        "fill 10102 90 -18 10102 90 18 cut_sandstone",
+        "fill 10106 90 -18 10106 90 18 cut_sandstone",
+        "fill 10110 90 -18 10110 90 18 cut_sandstone",
+        "fill 10114 90 -18 10114 90 18 cut_sandstone",
+        "fill 10086 91 -12 10087 93 -11 chiseled_sandstone",
+        "fill 10091 91 -12 10092 93 -11 chiseled_sandstone",
+        "fill 10101 91 -12 10102 93 -11 chiseled_sandstone",
+        "fill 10106 91 -12 10107 93 -11 chiseled_sandstone",
+        "fill 10082 91 -12 10084 92 -10 red_concrete",
+        "fill 10108 91 -12 10110 92 -10 blue_concrete",
+        "fill 10086 91 12 10087 93 13 chiseled_sandstone",
+        "fill 10091 91 12 10092 93 13 chiseled_sandstone",
+        "fill 10101 91 12 10102 93 13 chiseled_sandstone",
+        "fill 10106 91 12 10107 93 13 chiseled_sandstone",
+        "fill 10082 91 12 10084 92 14 red_concrete",
+        "fill 10108 91 12 10110 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S02-04",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10096.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10096.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S02",
+        "name": "sandstone_plaza"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10076 -20 10116 20",
+        "fill 10076 91 -20 10116 104 20 air",
+        "fill 10076 90 -20 10116 90 20 smooth_sandstone",
+        "fill 10078 90 -18 10078 90 18 cut_sandstone",
+        "fill 10082 90 -18 10082 90 18 cut_sandstone",
+        "fill 10086 90 -18 10086 90 18 cut_sandstone",
+        "fill 10090 90 -18 10090 90 18 cut_sandstone",
+        "fill 10094 90 -18 10094 90 18 cut_sandstone",
+        "fill 10098 90 -18 10098 90 18 cut_sandstone",
+        "fill 10102 90 -18 10102 90 18 cut_sandstone",
+        "fill 10106 90 -18 10106 90 18 cut_sandstone",
+        "fill 10110 90 -18 10110 90 18 cut_sandstone",
+        "fill 10114 90 -18 10114 90 18 cut_sandstone",
+        "fill 10086 91 -12 10087 93 -11 chiseled_sandstone",
+        "fill 10091 91 -12 10092 93 -11 chiseled_sandstone",
+        "fill 10101 91 -12 10102 93 -11 chiseled_sandstone",
+        "fill 10106 91 -12 10107 93 -11 chiseled_sandstone",
+        "fill 10082 91 -12 10084 92 -10 red_concrete",
+        "fill 10108 91 -12 10110 92 -10 blue_concrete",
+        "fill 10086 91 12 10087 93 13 chiseled_sandstone",
+        "fill 10091 91 12 10092 93 13 chiseled_sandstone",
+        "fill 10101 91 12 10102 93 13 chiseled_sandstone",
+        "fill 10106 91 12 10107 93 13 chiseled_sandstone",
+        "fill 10082 91 12 10084 92 14 red_concrete",
+        "fill 10108 91 12 10110 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S03-01",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10192.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10192.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S03",
+        "name": "wooden_deck"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10172 -20 10212 20",
+        "fill 10172 91 -20 10212 104 20 air",
+        "fill 10172 90 -20 10212 90 20 oak_planks",
+        "fill 10174 90 -18 10174 90 18 spruce_planks",
+        "fill 10178 90 -18 10178 90 18 spruce_planks",
+        "fill 10182 90 -18 10182 90 18 spruce_planks",
+        "fill 10186 90 -18 10186 90 18 spruce_planks",
+        "fill 10190 90 -18 10190 90 18 spruce_planks",
+        "fill 10194 90 -18 10194 90 18 spruce_planks",
+        "fill 10198 90 -18 10198 90 18 spruce_planks",
+        "fill 10202 90 -18 10202 90 18 spruce_planks",
+        "fill 10206 90 -18 10206 90 18 spruce_planks",
+        "fill 10210 90 -18 10210 90 18 spruce_planks",
+        "fill 10182 91 -12 10183 93 -11 stripped_oak_log",
+        "fill 10187 91 -12 10188 93 -11 stripped_oak_log",
+        "fill 10197 91 -12 10198 93 -11 stripped_oak_log",
+        "fill 10202 91 -12 10203 93 -11 stripped_oak_log",
+        "fill 10178 91 -12 10180 92 -10 red_concrete",
+        "fill 10204 91 -12 10206 92 -10 blue_concrete",
+        "fill 10182 91 12 10183 93 13 stripped_oak_log",
+        "fill 10187 91 12 10188 93 13 stripped_oak_log",
+        "fill 10197 91 12 10198 93 13 stripped_oak_log",
+        "fill 10202 91 12 10203 93 13 stripped_oak_log",
+        "fill 10178 91 12 10180 92 14 red_concrete",
+        "fill 10204 91 12 10206 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S03-02",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10192.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10192.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S03",
+        "name": "wooden_deck"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10172 -20 10212 20",
+        "fill 10172 91 -20 10212 104 20 air",
+        "fill 10172 90 -20 10212 90 20 oak_planks",
+        "fill 10174 90 -18 10174 90 18 spruce_planks",
+        "fill 10178 90 -18 10178 90 18 spruce_planks",
+        "fill 10182 90 -18 10182 90 18 spruce_planks",
+        "fill 10186 90 -18 10186 90 18 spruce_planks",
+        "fill 10190 90 -18 10190 90 18 spruce_planks",
+        "fill 10194 90 -18 10194 90 18 spruce_planks",
+        "fill 10198 90 -18 10198 90 18 spruce_planks",
+        "fill 10202 90 -18 10202 90 18 spruce_planks",
+        "fill 10206 90 -18 10206 90 18 spruce_planks",
+        "fill 10210 90 -18 10210 90 18 spruce_planks",
+        "fill 10182 91 -12 10183 93 -11 stripped_oak_log",
+        "fill 10187 91 -12 10188 93 -11 stripped_oak_log",
+        "fill 10197 91 -12 10198 93 -11 stripped_oak_log",
+        "fill 10202 91 -12 10203 93 -11 stripped_oak_log",
+        "fill 10178 91 -12 10180 92 -10 red_concrete",
+        "fill 10204 91 -12 10206 92 -10 blue_concrete",
+        "fill 10182 91 12 10183 93 13 stripped_oak_log",
+        "fill 10187 91 12 10188 93 13 stripped_oak_log",
+        "fill 10197 91 12 10198 93 13 stripped_oak_log",
+        "fill 10202 91 12 10203 93 13 stripped_oak_log",
+        "fill 10178 91 12 10180 92 14 red_concrete",
+        "fill 10204 91 12 10206 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S03-03",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10192.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10192.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S03",
+        "name": "wooden_deck"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10172 -20 10212 20",
+        "fill 10172 91 -20 10212 104 20 air",
+        "fill 10172 90 -20 10212 90 20 oak_planks",
+        "fill 10174 90 -18 10174 90 18 spruce_planks",
+        "fill 10178 90 -18 10178 90 18 spruce_planks",
+        "fill 10182 90 -18 10182 90 18 spruce_planks",
+        "fill 10186 90 -18 10186 90 18 spruce_planks",
+        "fill 10190 90 -18 10190 90 18 spruce_planks",
+        "fill 10194 90 -18 10194 90 18 spruce_planks",
+        "fill 10198 90 -18 10198 90 18 spruce_planks",
+        "fill 10202 90 -18 10202 90 18 spruce_planks",
+        "fill 10206 90 -18 10206 90 18 spruce_planks",
+        "fill 10210 90 -18 10210 90 18 spruce_planks",
+        "fill 10182 91 -12 10183 93 -11 stripped_oak_log",
+        "fill 10187 91 -12 10188 93 -11 stripped_oak_log",
+        "fill 10197 91 -12 10198 93 -11 stripped_oak_log",
+        "fill 10202 91 -12 10203 93 -11 stripped_oak_log",
+        "fill 10178 91 -12 10180 92 -10 red_concrete",
+        "fill 10204 91 -12 10206 92 -10 blue_concrete",
+        "fill 10182 91 12 10183 93 13 stripped_oak_log",
+        "fill 10187 91 12 10188 93 13 stripped_oak_log",
+        "fill 10197 91 12 10198 93 13 stripped_oak_log",
+        "fill 10202 91 12 10203 93 13 stripped_oak_log",
+        "fill 10178 91 12 10180 92 14 red_concrete",
+        "fill 10204 91 12 10206 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S03-04",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10192.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10192.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S03",
+        "name": "wooden_deck"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10172 -20 10212 20",
+        "fill 10172 91 -20 10212 104 20 air",
+        "fill 10172 90 -20 10212 90 20 oak_planks",
+        "fill 10174 90 -18 10174 90 18 spruce_planks",
+        "fill 10178 90 -18 10178 90 18 spruce_planks",
+        "fill 10182 90 -18 10182 90 18 spruce_planks",
+        "fill 10186 90 -18 10186 90 18 spruce_planks",
+        "fill 10190 90 -18 10190 90 18 spruce_planks",
+        "fill 10194 90 -18 10194 90 18 spruce_planks",
+        "fill 10198 90 -18 10198 90 18 spruce_planks",
+        "fill 10202 90 -18 10202 90 18 spruce_planks",
+        "fill 10206 90 -18 10206 90 18 spruce_planks",
+        "fill 10210 90 -18 10210 90 18 spruce_planks",
+        "fill 10182 91 -12 10183 93 -11 stripped_oak_log",
+        "fill 10187 91 -12 10188 93 -11 stripped_oak_log",
+        "fill 10197 91 -12 10198 93 -11 stripped_oak_log",
+        "fill 10202 91 -12 10203 93 -11 stripped_oak_log",
+        "fill 10178 91 -12 10180 92 -10 red_concrete",
+        "fill 10204 91 -12 10206 92 -10 blue_concrete",
+        "fill 10182 91 12 10183 93 13 stripped_oak_log",
+        "fill 10187 91 12 10188 93 13 stripped_oak_log",
+        "fill 10197 91 12 10198 93 13 stripped_oak_log",
+        "fill 10202 91 12 10203 93 13 stripped_oak_log",
+        "fill 10178 91 12 10180 92 14 red_concrete",
+        "fill 10204 91 12 10206 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S04-01",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10288.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10288.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S04",
+        "name": "brick_garden"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10268 -20 10308 20",
+        "fill 10268 91 -20 10308 104 20 air",
+        "fill 10268 90 -20 10308 90 20 moss_block",
+        "fill 10270 90 -18 10270 90 18 stone_bricks",
+        "fill 10274 90 -18 10274 90 18 stone_bricks",
+        "fill 10278 90 -18 10278 90 18 stone_bricks",
+        "fill 10282 90 -18 10282 90 18 stone_bricks",
+        "fill 10286 90 -18 10286 90 18 stone_bricks",
+        "fill 10290 90 -18 10290 90 18 stone_bricks",
+        "fill 10294 90 -18 10294 90 18 stone_bricks",
+        "fill 10298 90 -18 10298 90 18 stone_bricks",
+        "fill 10302 90 -18 10302 90 18 stone_bricks",
+        "fill 10306 90 -18 10306 90 18 stone_bricks",
+        "fill 10278 91 -12 10279 93 -11 bricks",
+        "fill 10283 91 -12 10284 93 -11 bricks",
+        "fill 10293 91 -12 10294 93 -11 bricks",
+        "fill 10298 91 -12 10299 93 -11 bricks",
+        "fill 10274 91 -12 10276 92 -10 red_concrete",
+        "fill 10300 91 -12 10302 92 -10 blue_concrete",
+        "fill 10278 91 12 10279 93 13 bricks",
+        "fill 10283 91 12 10284 93 13 bricks",
+        "fill 10293 91 12 10294 93 13 bricks",
+        "fill 10298 91 12 10299 93 13 bricks",
+        "fill 10274 91 12 10276 92 14 red_concrete",
+        "fill 10300 91 12 10302 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S04-02",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10288.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10288.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S04",
+        "name": "brick_garden"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10268 -20 10308 20",
+        "fill 10268 91 -20 10308 104 20 air",
+        "fill 10268 90 -20 10308 90 20 moss_block",
+        "fill 10270 90 -18 10270 90 18 stone_bricks",
+        "fill 10274 90 -18 10274 90 18 stone_bricks",
+        "fill 10278 90 -18 10278 90 18 stone_bricks",
+        "fill 10282 90 -18 10282 90 18 stone_bricks",
+        "fill 10286 90 -18 10286 90 18 stone_bricks",
+        "fill 10290 90 -18 10290 90 18 stone_bricks",
+        "fill 10294 90 -18 10294 90 18 stone_bricks",
+        "fill 10298 90 -18 10298 90 18 stone_bricks",
+        "fill 10302 90 -18 10302 90 18 stone_bricks",
+        "fill 10306 90 -18 10306 90 18 stone_bricks",
+        "fill 10278 91 -12 10279 93 -11 bricks",
+        "fill 10283 91 -12 10284 93 -11 bricks",
+        "fill 10293 91 -12 10294 93 -11 bricks",
+        "fill 10298 91 -12 10299 93 -11 bricks",
+        "fill 10274 91 -12 10276 92 -10 red_concrete",
+        "fill 10300 91 -12 10302 92 -10 blue_concrete",
+        "fill 10278 91 12 10279 93 13 bricks",
+        "fill 10283 91 12 10284 93 13 bricks",
+        "fill 10293 91 12 10294 93 13 bricks",
+        "fill 10298 91 12 10299 93 13 bricks",
+        "fill 10274 91 12 10276 92 14 red_concrete",
+        "fill 10300 91 12 10302 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S04-03",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10288.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10288.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S04",
+        "name": "brick_garden"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10268 -20 10308 20",
+        "fill 10268 91 -20 10308 104 20 air",
+        "fill 10268 90 -20 10308 90 20 moss_block",
+        "fill 10270 90 -18 10270 90 18 stone_bricks",
+        "fill 10274 90 -18 10274 90 18 stone_bricks",
+        "fill 10278 90 -18 10278 90 18 stone_bricks",
+        "fill 10282 90 -18 10282 90 18 stone_bricks",
+        "fill 10286 90 -18 10286 90 18 stone_bricks",
+        "fill 10290 90 -18 10290 90 18 stone_bricks",
+        "fill 10294 90 -18 10294 90 18 stone_bricks",
+        "fill 10298 90 -18 10298 90 18 stone_bricks",
+        "fill 10302 90 -18 10302 90 18 stone_bricks",
+        "fill 10306 90 -18 10306 90 18 stone_bricks",
+        "fill 10278 91 -12 10279 93 -11 bricks",
+        "fill 10283 91 -12 10284 93 -11 bricks",
+        "fill 10293 91 -12 10294 93 -11 bricks",
+        "fill 10298 91 -12 10299 93 -11 bricks",
+        "fill 10274 91 -12 10276 92 -10 red_concrete",
+        "fill 10300 91 -12 10302 92 -10 blue_concrete",
+        "fill 10278 91 12 10279 93 13 bricks",
+        "fill 10283 91 12 10284 93 13 bricks",
+        "fill 10293 91 12 10294 93 13 bricks",
+        "fill 10298 91 12 10299 93 13 bricks",
+        "fill 10274 91 12 10276 92 14 red_concrete",
+        "fill 10300 91 12 10302 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S04-04",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10288.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10288.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S04",
+        "name": "brick_garden"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10268 -20 10308 20",
+        "fill 10268 91 -20 10308 104 20 air",
+        "fill 10268 90 -20 10308 90 20 moss_block",
+        "fill 10270 90 -18 10270 90 18 stone_bricks",
+        "fill 10274 90 -18 10274 90 18 stone_bricks",
+        "fill 10278 90 -18 10278 90 18 stone_bricks",
+        "fill 10282 90 -18 10282 90 18 stone_bricks",
+        "fill 10286 90 -18 10286 90 18 stone_bricks",
+        "fill 10290 90 -18 10290 90 18 stone_bricks",
+        "fill 10294 90 -18 10294 90 18 stone_bricks",
+        "fill 10298 90 -18 10298 90 18 stone_bricks",
+        "fill 10302 90 -18 10302 90 18 stone_bricks",
+        "fill 10306 90 -18 10306 90 18 stone_bricks",
+        "fill 10278 91 -12 10279 93 -11 bricks",
+        "fill 10283 91 -12 10284 93 -11 bricks",
+        "fill 10293 91 -12 10294 93 -11 bricks",
+        "fill 10298 91 -12 10299 93 -11 bricks",
+        "fill 10274 91 -12 10276 92 -10 red_concrete",
+        "fill 10300 91 -12 10302 92 -10 blue_concrete",
+        "fill 10278 91 12 10279 93 13 bricks",
+        "fill 10283 91 12 10284 93 13 bricks",
+        "fill 10293 91 12 10294 93 13 bricks",
+        "fill 10298 91 12 10299 93 13 bricks",
+        "fill 10274 91 12 10276 92 14 red_concrete",
+        "fill 10300 91 12 10302 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S05-01",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10384.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10384.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S05",
+        "name": "quartz_terrace"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10364 -20 10404 20",
+        "fill 10364 91 -20 10404 104 20 air",
+        "fill 10364 90 -20 10404 90 20 smooth_quartz",
+        "fill 10366 90 -18 10366 90 18 polished_blackstone",
+        "fill 10370 90 -18 10370 90 18 polished_blackstone",
+        "fill 10374 90 -18 10374 90 18 polished_blackstone",
+        "fill 10378 90 -18 10378 90 18 polished_blackstone",
+        "fill 10382 90 -18 10382 90 18 polished_blackstone",
+        "fill 10386 90 -18 10386 90 18 polished_blackstone",
+        "fill 10390 90 -18 10390 90 18 polished_blackstone",
+        "fill 10394 90 -18 10394 90 18 polished_blackstone",
+        "fill 10398 90 -18 10398 90 18 polished_blackstone",
+        "fill 10402 90 -18 10402 90 18 polished_blackstone",
+        "fill 10374 91 -12 10375 93 -11 quartz_pillar",
+        "fill 10379 91 -12 10380 93 -11 quartz_pillar",
+        "fill 10389 91 -12 10390 93 -11 quartz_pillar",
+        "fill 10394 91 -12 10395 93 -11 quartz_pillar",
+        "fill 10370 91 -12 10372 92 -10 red_concrete",
+        "fill 10396 91 -12 10398 92 -10 blue_concrete",
+        "fill 10374 91 12 10375 93 13 quartz_pillar",
+        "fill 10379 91 12 10380 93 13 quartz_pillar",
+        "fill 10389 91 12 10390 93 13 quartz_pillar",
+        "fill 10394 91 12 10395 93 13 quartz_pillar",
+        "fill 10370 91 12 10372 92 14 red_concrete",
+        "fill 10396 91 12 10398 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S05-02",
+      "actor_role": "A",
+      "observer_role": "B",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10384.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10384.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S05",
+        "name": "quartz_terrace"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10364 -20 10404 20",
+        "fill 10364 91 -20 10404 104 20 air",
+        "fill 10364 90 -20 10404 90 20 smooth_quartz",
+        "fill 10366 90 -18 10366 90 18 polished_blackstone",
+        "fill 10370 90 -18 10370 90 18 polished_blackstone",
+        "fill 10374 90 -18 10374 90 18 polished_blackstone",
+        "fill 10378 90 -18 10378 90 18 polished_blackstone",
+        "fill 10382 90 -18 10382 90 18 polished_blackstone",
+        "fill 10386 90 -18 10386 90 18 polished_blackstone",
+        "fill 10390 90 -18 10390 90 18 polished_blackstone",
+        "fill 10394 90 -18 10394 90 18 polished_blackstone",
+        "fill 10398 90 -18 10398 90 18 polished_blackstone",
+        "fill 10402 90 -18 10402 90 18 polished_blackstone",
+        "fill 10374 91 -12 10375 93 -11 quartz_pillar",
+        "fill 10379 91 -12 10380 93 -11 quartz_pillar",
+        "fill 10389 91 -12 10390 93 -11 quartz_pillar",
+        "fill 10394 91 -12 10395 93 -11 quartz_pillar",
+        "fill 10370 91 -12 10372 92 -10 red_concrete",
+        "fill 10396 91 -12 10398 92 -10 blue_concrete",
+        "fill 10374 91 12 10375 93 13 quartz_pillar",
+        "fill 10379 91 12 10380 93 13 quartz_pillar",
+        "fill 10389 91 12 10390 93 13 quartz_pillar",
+        "fill 10394 91 12 10395 93 13 quartz_pillar",
+        "fill 10370 91 12 10372 92 14 red_concrete",
+        "fill 10396 91 12 10398 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S05-03",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "left",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10384.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10384.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S05",
+        "name": "quartz_terrace"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10364 -20 10404 20",
+        "fill 10364 91 -20 10404 104 20 air",
+        "fill 10364 90 -20 10404 90 20 smooth_quartz",
+        "fill 10366 90 -18 10366 90 18 polished_blackstone",
+        "fill 10370 90 -18 10370 90 18 polished_blackstone",
+        "fill 10374 90 -18 10374 90 18 polished_blackstone",
+        "fill 10378 90 -18 10378 90 18 polished_blackstone",
+        "fill 10382 90 -18 10382 90 18 polished_blackstone",
+        "fill 10386 90 -18 10386 90 18 polished_blackstone",
+        "fill 10390 90 -18 10390 90 18 polished_blackstone",
+        "fill 10394 90 -18 10394 90 18 polished_blackstone",
+        "fill 10398 90 -18 10398 90 18 polished_blackstone",
+        "fill 10402 90 -18 10402 90 18 polished_blackstone",
+        "fill 10374 91 -12 10375 93 -11 quartz_pillar",
+        "fill 10379 91 -12 10380 93 -11 quartz_pillar",
+        "fill 10389 91 -12 10390 93 -11 quartz_pillar",
+        "fill 10394 91 -12 10395 93 -11 quartz_pillar",
+        "fill 10370 91 -12 10372 92 -10 red_concrete",
+        "fill 10396 91 -12 10398 92 -10 blue_concrete",
+        "fill 10374 91 12 10375 93 13 quartz_pillar",
+        "fill 10379 91 12 10380 93 13 quartz_pillar",
+        "fill 10389 91 12 10390 93 13 quartz_pillar",
+        "fill 10394 91 12 10395 93 13 quartz_pillar",
+        "fill 10370 91 12 10372 92 14 red_concrete",
+        "fill 10396 91 12 10398 92 14 blue_concrete"
+      ]
+    },
+    {
+      "id": "MWB4-CV-TR20-S05-04",
+      "actor_role": "B",
+      "observer_role": "A",
+      "control": "right",
+      "fps": 20,
+      "valid_num_frames": 80,
+      "round_count": 1,
+      "initial_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "native_initial_poses": {
+        "A": {
+          "position": [
+            10384.5,
+            91,
+            -3.5
+          ],
+          "yaw": 0,
+          "pitch": 0
+        },
+        "B": {
+          "position": [
+            10384.5,
+            91,
+            4.5
+          ],
+          "yaw": 180,
+          "pitch": 0
+        }
+      },
+      "scene": {
+        "scene_id": "TR-S05",
+        "name": "quartz_terrace"
+      },
+      "scene_initialization_commands": [
+        "forceload add 10364 -20 10404 20",
+        "fill 10364 91 -20 10404 104 20 air",
+        "fill 10364 90 -20 10404 90 20 smooth_quartz",
+        "fill 10366 90 -18 10366 90 18 polished_blackstone",
+        "fill 10370 90 -18 10370 90 18 polished_blackstone",
+        "fill 10374 90 -18 10374 90 18 polished_blackstone",
+        "fill 10378 90 -18 10378 90 18 polished_blackstone",
+        "fill 10382 90 -18 10382 90 18 polished_blackstone",
+        "fill 10386 90 -18 10386 90 18 polished_blackstone",
+        "fill 10390 90 -18 10390 90 18 polished_blackstone",
+        "fill 10394 90 -18 10394 90 18 polished_blackstone",
+        "fill 10398 90 -18 10398 90 18 polished_blackstone",
+        "fill 10402 90 -18 10402 90 18 polished_blackstone",
+        "fill 10374 91 -12 10375 93 -11 quartz_pillar",
+        "fill 10379 91 -12 10380 93 -11 quartz_pillar",
+        "fill 10389 91 -12 10390 93 -11 quartz_pillar",
+        "fill 10394 91 -12 10395 93 -11 quartz_pillar",
+        "fill 10370 91 -12 10372 92 -10 red_concrete",
+        "fill 10396 91 -12 10398 92 -10 blue_concrete",
+        "fill 10374 91 12 10375 93 13 quartz_pillar",
+        "fill 10379 91 12 10380 93 13 quartz_pillar",
+        "fill 10389 91 12 10390 93 13 quartz_pillar",
+        "fill 10394 91 12 10395 93 13 quartz_pillar",
+        "fill 10370 91 12 10372 92 14 red_concrete",
+        "fill 10396 91 12 10398 92 14 blue_concrete"
+      ]
+    }
+  ],
+  "initialization_commands": [
+    "forceload add 9980 -20 10020 20",
+    "fill 9980 91 -20 10020 104 20 air",
+    "fill 9980 90 -20 10020 90 20 smooth_stone",
+    "fill 9982 90 -18 9982 90 18 polished_andesite",
+    "fill 9986 90 -18 9986 90 18 polished_andesite",
+    "fill 9990 90 -18 9990 90 18 polished_andesite",
+    "fill 9994 90 -18 9994 90 18 polished_andesite",
+    "fill 9998 90 -18 9998 90 18 polished_andesite",
+    "fill 10002 90 -18 10002 90 18 polished_andesite",
+    "fill 10006 90 -18 10006 90 18 polished_andesite",
+    "fill 10010 90 -18 10010 90 18 polished_andesite",
+    "fill 10014 90 -18 10014 90 18 polished_andesite",
+    "fill 10018 90 -18 10018 90 18 polished_andesite",
+    "fill 9990 91 -12 9991 93 -11 stone_bricks",
+    "fill 9995 91 -12 9996 93 -11 stone_bricks",
+    "fill 10005 91 -12 10006 93 -11 stone_bricks",
+    "fill 10010 91 -12 10011 93 -11 stone_bricks",
+    "fill 9986 91 -12 9988 92 -10 red_concrete",
+    "fill 10012 91 -12 10014 92 -10 blue_concrete",
+    "fill 9990 91 12 9991 93 13 stone_bricks",
+    "fill 9995 91 12 9996 93 13 stone_bricks",
+    "fill 10005 91 12 10006 93 13 stone_bricks",
+    "fill 10010 91 12 10011 93 13 stone_bricks",
+    "fill 9986 91 12 9988 92 14 red_concrete",
+    "fill 10012 91 12 10014 92 14 blue_concrete",
+    "forceload add 10076 -20 10116 20",
+    "fill 10076 91 -20 10116 104 20 air",
+    "fill 10076 90 -20 10116 90 20 smooth_sandstone",
+    "fill 10078 90 -18 10078 90 18 cut_sandstone",
+    "fill 10082 90 -18 10082 90 18 cut_sandstone",
+    "fill 10086 90 -18 10086 90 18 cut_sandstone",
+    "fill 10090 90 -18 10090 90 18 cut_sandstone",
+    "fill 10094 90 -18 10094 90 18 cut_sandstone",
+    "fill 10098 90 -18 10098 90 18 cut_sandstone",
+    "fill 10102 90 -18 10102 90 18 cut_sandstone",
+    "fill 10106 90 -18 10106 90 18 cut_sandstone",
+    "fill 10110 90 -18 10110 90 18 cut_sandstone",
+    "fill 10114 90 -18 10114 90 18 cut_sandstone",
+    "fill 10086 91 -12 10087 93 -11 chiseled_sandstone",
+    "fill 10091 91 -12 10092 93 -11 chiseled_sandstone",
+    "fill 10101 91 -12 10102 93 -11 chiseled_sandstone",
+    "fill 10106 91 -12 10107 93 -11 chiseled_sandstone",
+    "fill 10082 91 -12 10084 92 -10 red_concrete",
+    "fill 10108 91 -12 10110 92 -10 blue_concrete",
+    "fill 10086 91 12 10087 93 13 chiseled_sandstone",
+    "fill 10091 91 12 10092 93 13 chiseled_sandstone",
+    "fill 10101 91 12 10102 93 13 chiseled_sandstone",
+    "fill 10106 91 12 10107 93 13 chiseled_sandstone",
+    "fill 10082 91 12 10084 92 14 red_concrete",
+    "fill 10108 91 12 10110 92 14 blue_concrete",
+    "forceload add 10172 -20 10212 20",
+    "fill 10172 91 -20 10212 104 20 air",
+    "fill 10172 90 -20 10212 90 20 oak_planks",
+    "fill 10174 90 -18 10174 90 18 spruce_planks",
+    "fill 10178 90 -18 10178 90 18 spruce_planks",
+    "fill 10182 90 -18 10182 90 18 spruce_planks",
+    "fill 10186 90 -18 10186 90 18 spruce_planks",
+    "fill 10190 90 -18 10190 90 18 spruce_planks",
+    "fill 10194 90 -18 10194 90 18 spruce_planks",
+    "fill 10198 90 -18 10198 90 18 spruce_planks",
+    "fill 10202 90 -18 10202 90 18 spruce_planks",
+    "fill 10206 90 -18 10206 90 18 spruce_planks",
+    "fill 10210 90 -18 10210 90 18 spruce_planks",
+    "fill 10182 91 -12 10183 93 -11 stripped_oak_log",
+    "fill 10187 91 -12 10188 93 -11 stripped_oak_log",
+    "fill 10197 91 -12 10198 93 -11 stripped_oak_log",
+    "fill 10202 91 -12 10203 93 -11 stripped_oak_log",
+    "fill 10178 91 -12 10180 92 -10 red_concrete",
+    "fill 10204 91 -12 10206 92 -10 blue_concrete",
+    "fill 10182 91 12 10183 93 13 stripped_oak_log",
+    "fill 10187 91 12 10188 93 13 stripped_oak_log",
+    "fill 10197 91 12 10198 93 13 stripped_oak_log",
+    "fill 10202 91 12 10203 93 13 stripped_oak_log",
+    "fill 10178 91 12 10180 92 14 red_concrete",
+    "fill 10204 91 12 10206 92 14 blue_concrete",
+    "forceload add 10268 -20 10308 20",
+    "fill 10268 91 -20 10308 104 20 air",
+    "fill 10268 90 -20 10308 90 20 moss_block",
+    "fill 10270 90 -18 10270 90 18 stone_bricks",
+    "fill 10274 90 -18 10274 90 18 stone_bricks",
+    "fill 10278 90 -18 10278 90 18 stone_bricks",
+    "fill 10282 90 -18 10282 90 18 stone_bricks",
+    "fill 10286 90 -18 10286 90 18 stone_bricks",
+    "fill 10290 90 -18 10290 90 18 stone_bricks",
+    "fill 10294 90 -18 10294 90 18 stone_bricks",
+    "fill 10298 90 -18 10298 90 18 stone_bricks",
+    "fill 10302 90 -18 10302 90 18 stone_bricks",
+    "fill 10306 90 -18 10306 90 18 stone_bricks",
+    "fill 10278 91 -12 10279 93 -11 bricks",
+    "fill 10283 91 -12 10284 93 -11 bricks",
+    "fill 10293 91 -12 10294 93 -11 bricks",
+    "fill 10298 91 -12 10299 93 -11 bricks",
+    "fill 10274 91 -12 10276 92 -10 red_concrete",
+    "fill 10300 91 -12 10302 92 -10 blue_concrete",
+    "fill 10278 91 12 10279 93 13 bricks",
+    "fill 10283 91 12 10284 93 13 bricks",
+    "fill 10293 91 12 10294 93 13 bricks",
+    "fill 10298 91 12 10299 93 13 bricks",
+    "fill 10274 91 12 10276 92 14 red_concrete",
+    "fill 10300 91 12 10302 92 14 blue_concrete",
+    "forceload add 10364 -20 10404 20",
+    "fill 10364 91 -20 10404 104 20 air",
+    "fill 10364 90 -20 10404 90 20 smooth_quartz",
+    "fill 10366 90 -18 10366 90 18 polished_blackstone",
+    "fill 10370 90 -18 10370 90 18 polished_blackstone",
+    "fill 10374 90 -18 10374 90 18 polished_blackstone",
+    "fill 10378 90 -18 10378 90 18 polished_blackstone",
+    "fill 10382 90 -18 10382 90 18 polished_blackstone",
+    "fill 10386 90 -18 10386 90 18 polished_blackstone",
+    "fill 10390 90 -18 10390 90 18 polished_blackstone",
+    "fill 10394 90 -18 10394 90 18 polished_blackstone",
+    "fill 10398 90 -18 10398 90 18 polished_blackstone",
+    "fill 10402 90 -18 10402 90 18 polished_blackstone",
+    "fill 10374 91 -12 10375 93 -11 quartz_pillar",
+    "fill 10379 91 -12 10380 93 -11 quartz_pillar",
+    "fill 10389 91 -12 10390 93 -11 quartz_pillar",
+    "fill 10394 91 -12 10395 93 -11 quartz_pillar",
+    "fill 10370 91 -12 10372 92 -10 red_concrete",
+    "fill 10396 91 -12 10398 92 -10 blue_concrete",
+    "fill 10374 91 12 10375 93 13 quartz_pillar",
+    "fill 10379 91 12 10380 93 13 quartz_pillar",
+    "fill 10389 91 12 10390 93 13 quartz_pillar",
+    "fill 10394 91 12 10395 93 13 quartz_pillar",
+    "fill 10370 91 12 10372 92 14 red_concrete",
+    "fill 10396 91 12 10398 92 14 blue_concrete"
+  ],
+  "reference": "controller/episode-handlers/eval/translation-eval-episode.js",
+  "design": "five scenes x four unchanged native translation sequences; direct screenshot VLM judgement",
+  "benchmark_version": "v4"
+}

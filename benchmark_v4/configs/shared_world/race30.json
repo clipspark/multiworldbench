@@ -1,0 +1,3963 @@
+{
+  "schema_version": "mwb.v3.case_set.v1",
+  "benchmark_version": "3",
+  "metric_id": "race_condition_consistency",
+  "name": "竞态条件一致性",
+  "description": "A、B 在同一帧向同一位置各放置一次不同方块，比较生成双视角中最终方块数量、类型的一致性，并判断最终方块是否属于本例 A/B 指定的候选材质。",
+  "evaluation_uses_gt": false,
+  "factor_design": {
+    "visibility_classes": 4,
+    "scenes": 5,
+    "block_pairs": 3,
+    "factor_grid_size": 60,
+    "selected_cases": 30,
+    "sampling": "per scene: 2 mutual + 2 mutual-invisible + 1 one-way counter pair"
+  },
+  "visibility_catalog": [
+    {
+      "id": "mutual",
+      "name_zh": "A、B 相互可见",
+      "alpha_sees_bravo": true,
+      "bravo_sees_alpha": true
+    },
+    {
+      "id": "alpha_sees_bravo",
+      "name_zh": "仅 A 看见 B",
+      "alpha_sees_bravo": true,
+      "bravo_sees_alpha": false
+    },
+    {
+      "id": "bravo_sees_alpha",
+      "name_zh": "仅 B 看见 A（counter）",
+      "alpha_sees_bravo": false,
+      "bravo_sees_alpha": true
+    },
+    {
+      "id": "mutual_invisible",
+      "name_zh": "A、B 互相不可见",
+      "alpha_sees_bravo": false,
+      "bravo_sees_alpha": false
+    }
+  ],
+  "scene_catalog": [
+    {
+      "id": "grass_oak_workshop",
+      "name_zh": "草地橡木工坊",
+      "floor_material": "grass_block",
+      "cross_material": "yellow_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "grass_block"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            -8
+          ],
+          "to": [
+            -8,
+            4,
+            -8
+          ],
+          "material": "oak_log"
+        },
+        {
+          "from": [
+            8,
+            1,
+            -8
+          ],
+          "to": [
+            8,
+            4,
+            -8
+          ],
+          "material": "birch_log"
+        },
+        {
+          "from": [
+            -8,
+            4,
+            -8
+          ],
+          "to": [
+            8,
+            4,
+            -8
+          ],
+          "material": "oak_planks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            3,
+            8
+          ],
+          "material": "mossy_cobblestone"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            3,
+            8
+          ],
+          "material": "cobblestone"
+        },
+        {
+          "from": [
+            -7,
+            1,
+            -8
+          ],
+          "to": [
+            -5,
+            2,
+            -8
+          ],
+          "material": "bookshelf"
+        },
+        {
+          "from": [
+            5,
+            1,
+            -8
+          ],
+          "to": [
+            7,
+            2,
+            -8
+          ],
+          "material": "bricks"
+        }
+      ]
+    },
+    {
+      "id": "sandstone_courtyard",
+      "name_zh": "砂岩庭院",
+      "floor_material": "smooth_sandstone",
+      "cross_material": "red_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "smooth_sandstone"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            3,
+            9
+          ],
+          "material": "cut_sandstone"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            3,
+            9
+          ],
+          "material": "sandstone"
+        },
+        {
+          "from": [
+            -7,
+            1,
+            -8
+          ],
+          "to": [
+            -7,
+            5,
+            -8
+          ],
+          "material": "chiseled_sandstone"
+        },
+        {
+          "from": [
+            7,
+            1,
+            -8
+          ],
+          "to": [
+            7,
+            5,
+            -8
+          ],
+          "material": "chiseled_sandstone"
+        },
+        {
+          "from": [
+            -7,
+            5,
+            -8
+          ],
+          "to": [
+            7,
+            5,
+            -8
+          ],
+          "material": "smooth_sandstone"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            8
+          ],
+          "to": [
+            -2,
+            2,
+            8
+          ],
+          "material": "orange_terracotta"
+        },
+        {
+          "from": [
+            2,
+            1,
+            8
+          ],
+          "to": [
+            4,
+            3,
+            8
+          ],
+          "material": "red_sandstone"
+        }
+      ]
+    },
+    {
+      "id": "deepslate_amethyst_ruin",
+      "name_zh": "深板岩紫晶遗迹",
+      "floor_material": "stone_bricks",
+      "cross_material": "lime_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -6,
+            3,
+            -9
+          ],
+          "material": "deepslate_bricks"
+        },
+        {
+          "from": [
+            6,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "cracked_deepslate_bricks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            5,
+            8
+          ],
+          "material": "polished_basalt"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            5,
+            8
+          ],
+          "material": "polished_basalt"
+        },
+        {
+          "from": [
+            -8,
+            5,
+            8
+          ],
+          "to": [
+            8,
+            5,
+            8
+          ],
+          "material": "deepslate_tiles"
+        },
+        {
+          "from": [
+            -3,
+            1,
+            -8
+          ],
+          "to": [
+            -1,
+            3,
+            -8
+          ],
+          "material": "amethyst_block"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            4,
+            2,
+            -8
+          ],
+          "material": "calcite"
+        }
+      ]
+    },
+    {
+      "id": "tuff_copper_foundry",
+      "name_zh": "凝灰岩铜工场",
+      "floor_material": "tuff",
+      "cross_material": "blue_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "tuff"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            4,
+            -6
+          ],
+          "material": "cut_copper"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            5,
+            -6
+          ],
+          "material": "exposed_cut_copper"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            4,
+            8
+          ],
+          "material": "oxidized_cut_copper"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "waxed_copper_block"
+        },
+        {
+          "from": [
+            -8,
+            4,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "smooth_stone"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            -8
+          ],
+          "to": [
+            -2,
+            3,
+            -8
+          ],
+          "material": "copper_block"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            5,
+            2,
+            -8
+          ],
+          "material": "mud_bricks"
+        }
+      ]
+    },
+    {
+      "id": "snowy_spruce_station",
+      "name_zh": "雪地云杉驿站",
+      "floor_material": "snow_block",
+      "cross_material": "orange_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "snow_block"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            4,
+            -9
+          ],
+          "material": "spruce_log"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "spruce_log"
+        },
+        {
+          "from": [
+            -9,
+            4,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "spruce_planks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -5,
+            3,
+            8
+          ],
+          "material": "packed_ice"
+        },
+        {
+          "from": [
+            5,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "blue_ice"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            -8
+          ],
+          "to": [
+            -2,
+            2,
+            -8
+          ],
+          "material": "stripped_spruce_log"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            4,
+            3,
+            -8
+          ],
+          "material": "stone_bricks"
+        }
+      ]
+    },
+    {
+      "id": "grass_oak_workshop__side_partition_v6",
+      "name_zh": "草地橡木工坊",
+      "floor_material": "grass_block",
+      "cross_material": "yellow_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "grass_block"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            -8
+          ],
+          "to": [
+            -8,
+            4,
+            -8
+          ],
+          "material": "oak_log"
+        },
+        {
+          "from": [
+            8,
+            1,
+            -8
+          ],
+          "to": [
+            8,
+            4,
+            -8
+          ],
+          "material": "birch_log"
+        },
+        {
+          "from": [
+            -8,
+            4,
+            -8
+          ],
+          "to": [
+            8,
+            4,
+            -8
+          ],
+          "material": "oak_planks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            3,
+            8
+          ],
+          "material": "mossy_cobblestone"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            3,
+            8
+          ],
+          "material": "cobblestone"
+        },
+        {
+          "from": [
+            -7,
+            1,
+            -8
+          ],
+          "to": [
+            -5,
+            2,
+            -8
+          ],
+          "material": "bookshelf"
+        },
+        {
+          "from": [
+            5,
+            1,
+            -8
+          ],
+          "to": [
+            7,
+            2,
+            -8
+          ],
+          "material": "bricks"
+        },
+        {
+          "from": [
+            3,
+            1,
+            0
+          ],
+          "to": [
+            3,
+            4,
+            0
+          ],
+          "material": "oak_planks"
+        }
+      ]
+    },
+    {
+      "id": "sandstone_courtyard__side_partition_v6",
+      "name_zh": "砂岩庭院",
+      "floor_material": "smooth_sandstone",
+      "cross_material": "red_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "smooth_sandstone"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            3,
+            9
+          ],
+          "material": "cut_sandstone"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            3,
+            9
+          ],
+          "material": "sandstone"
+        },
+        {
+          "from": [
+            -7,
+            1,
+            -8
+          ],
+          "to": [
+            -7,
+            5,
+            -8
+          ],
+          "material": "chiseled_sandstone"
+        },
+        {
+          "from": [
+            7,
+            1,
+            -8
+          ],
+          "to": [
+            7,
+            5,
+            -8
+          ],
+          "material": "chiseled_sandstone"
+        },
+        {
+          "from": [
+            -7,
+            5,
+            -8
+          ],
+          "to": [
+            7,
+            5,
+            -8
+          ],
+          "material": "smooth_sandstone"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            8
+          ],
+          "to": [
+            -2,
+            2,
+            8
+          ],
+          "material": "orange_terracotta"
+        },
+        {
+          "from": [
+            2,
+            1,
+            8
+          ],
+          "to": [
+            4,
+            3,
+            8
+          ],
+          "material": "red_sandstone"
+        },
+        {
+          "from": [
+            3,
+            1,
+            0
+          ],
+          "to": [
+            3,
+            4,
+            0
+          ],
+          "material": "oak_planks"
+        }
+      ]
+    },
+    {
+      "id": "deepslate_amethyst_ruin__side_partition_v6",
+      "name_zh": "深板岩紫晶遗迹",
+      "floor_material": "stone_bricks",
+      "cross_material": "lime_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -6,
+            3,
+            -9
+          ],
+          "material": "deepslate_bricks"
+        },
+        {
+          "from": [
+            6,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "cracked_deepslate_bricks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            5,
+            8
+          ],
+          "material": "polished_basalt"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            5,
+            8
+          ],
+          "material": "polished_basalt"
+        },
+        {
+          "from": [
+            -8,
+            5,
+            8
+          ],
+          "to": [
+            8,
+            5,
+            8
+          ],
+          "material": "deepslate_tiles"
+        },
+        {
+          "from": [
+            -3,
+            1,
+            -8
+          ],
+          "to": [
+            -1,
+            3,
+            -8
+          ],
+          "material": "amethyst_block"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            4,
+            2,
+            -8
+          ],
+          "material": "calcite"
+        },
+        {
+          "from": [
+            3,
+            1,
+            0
+          ],
+          "to": [
+            3,
+            4,
+            0
+          ],
+          "material": "oak_planks"
+        }
+      ]
+    },
+    {
+      "id": "tuff_copper_foundry__side_partition_v6",
+      "name_zh": "凝灰岩铜工场",
+      "floor_material": "tuff",
+      "cross_material": "blue_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "tuff"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            4,
+            -6
+          ],
+          "material": "cut_copper"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            5,
+            -6
+          ],
+          "material": "exposed_cut_copper"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -8,
+            4,
+            8
+          ],
+          "material": "oxidized_cut_copper"
+        },
+        {
+          "from": [
+            8,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "waxed_copper_block"
+        },
+        {
+          "from": [
+            -8,
+            4,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "smooth_stone"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            -8
+          ],
+          "to": [
+            -2,
+            3,
+            -8
+          ],
+          "material": "copper_block"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            5,
+            2,
+            -8
+          ],
+          "material": "mud_bricks"
+        },
+        {
+          "from": [
+            3,
+            1,
+            0
+          ],
+          "to": [
+            3,
+            4,
+            0
+          ],
+          "material": "oak_planks"
+        }
+      ]
+    },
+    {
+      "id": "snowy_spruce_station__side_partition_v6",
+      "name_zh": "雪地云杉驿站",
+      "floor_material": "snow_block",
+      "cross_material": "orange_concrete",
+      "geometry": [
+        {
+          "from": [
+            -9,
+            0,
+            -9
+          ],
+          "to": [
+            9,
+            0,
+            9
+          ],
+          "material": "snow_block"
+        },
+        {
+          "from": [
+            -9,
+            1,
+            -9
+          ],
+          "to": [
+            -9,
+            4,
+            -9
+          ],
+          "material": "spruce_log"
+        },
+        {
+          "from": [
+            9,
+            1,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "spruce_log"
+        },
+        {
+          "from": [
+            -9,
+            4,
+            -9
+          ],
+          "to": [
+            9,
+            4,
+            -9
+          ],
+          "material": "spruce_planks"
+        },
+        {
+          "from": [
+            -8,
+            1,
+            8
+          ],
+          "to": [
+            -5,
+            3,
+            8
+          ],
+          "material": "packed_ice"
+        },
+        {
+          "from": [
+            5,
+            1,
+            8
+          ],
+          "to": [
+            8,
+            4,
+            8
+          ],
+          "material": "blue_ice"
+        },
+        {
+          "from": [
+            -4,
+            1,
+            -8
+          ],
+          "to": [
+            -2,
+            2,
+            -8
+          ],
+          "material": "stripped_spruce_log"
+        },
+        {
+          "from": [
+            2,
+            1,
+            -8
+          ],
+          "to": [
+            4,
+            3,
+            -8
+          ],
+          "material": "stone_bricks"
+        },
+        {
+          "from": [
+            3,
+            1,
+            0
+          ],
+          "to": [
+            3,
+            4,
+            0
+          ],
+          "material": "oak_planks"
+        }
+      ]
+    }
+  ],
+  "block_pair_catalog": [
+    {
+      "id": "gold_vs_diamond",
+      "alpha": "gold_block",
+      "bravo": "diamond_block"
+    },
+    {
+      "id": "red_vs_blue_wool",
+      "alpha": "red_wool",
+      "bravo": "blue_wool"
+    },
+    {
+      "id": "emerald_vs_obsidian",
+      "alpha": "emerald_block",
+      "bravo": "obsidian"
+    }
+  ],
+  "check_frames": [
+    60,
+    80,
+    100
+  ],
+  "vlm_questions": [
+    {
+      "id": "same_block_count",
+      "text": "A、B 看到的目标位置方块数量是否一致？",
+      "output": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "same_block_type",
+      "text": "A、B 看到的目标位置方块类型是否一致？",
+      "output": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "matches_intended_block",
+      "text": "最终目标位置的方块是否与 A 或 B 本例指定的候选方块之一相同？",
+      "output": [
+        0,
+        1
+      ]
+    }
+  ],
+  "frame_aggregation": "at least two of three checkpoints pass all checks",
+  "case_aggregation": "same count, same material, valid one-or-two outcome, cross in both fields of view",
+  "case_count": 30,
+  "cases": [
+    {
+      "id": "MWB3-SW-RC001",
+      "case_id": "MWB3-SW-RC001",
+      "title": "并发放置竞态 · 草地橡木工坊 · A、B 相互可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G01",
+      "world": {
+        "target_cell": [
+          1000,
+          91,
+          0
+        ],
+        "support_cell": [
+          1000,
+          90,
+          0
+        ],
+        "alpha_position": [
+          997.7,
+          92,
+          -1.0
+        ],
+        "bravo_position": [
+          1003.3,
+          92,
+          -1.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              997,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1003,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC001/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC001/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC001/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC001/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC002",
+      "case_id": "MWB3-SW-RC002",
+      "title": "并发放置竞态 · 草地橡木工坊 · A、B 互相不可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop__side_partition_v6",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G01",
+      "world": {
+        "target_cell": [
+          1024,
+          91,
+          0
+        ],
+        "support_cell": [
+          1024,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1027.9,
+          92,
+          1.6
+        ],
+        "bravo_position": [
+          1027.9,
+          92,
+          -0.6
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1027,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1027,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC002/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC002/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC002/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC002/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC003",
+      "case_id": "MWB3-SW-RC003",
+      "title": "并发放置竞态 · 草地橡木工坊 · A、B 相互可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G02",
+      "world": {
+        "target_cell": [
+          1048,
+          91,
+          0
+        ],
+        "support_cell": [
+          1048,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1045.7,
+          92,
+          -1.0
+        ],
+        "bravo_position": [
+          1051.3,
+          92,
+          -1.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1045,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1051,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC003/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC003/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC003/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC003/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC004",
+      "case_id": "MWB3-SW-RC004",
+      "title": "并发放置竞态 · 草地橡木工坊 · A、B 互相不可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop__side_partition_v6",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G02",
+      "world": {
+        "target_cell": [
+          1072,
+          91,
+          0
+        ],
+        "support_cell": [
+          1072,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1075.9,
+          92,
+          1.6
+        ],
+        "bravo_position": [
+          1075.9,
+          92,
+          -0.6
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1075,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1075,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC004/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC004/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC004/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC004/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC005",
+      "case_id": "MWB3-SW-RC005",
+      "title": "并发放置竞态 · 草地橡木工坊 · 仅 A 看见 B · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G03",
+      "world": {
+        "target_cell": [
+          1096,
+          91,
+          0
+        ],
+        "support_cell": [
+          1096,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1096.5,
+          92,
+          4.0
+        ],
+        "bravo_position": [
+          1097.7,
+          92,
+          1.5
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1096,
+              91,
+              4
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1097,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC005/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC005/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC005/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC005/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      },
+      "counter_case_of": "MWB3-SW-RC006"
+    },
+    {
+      "id": "MWB3-SW-RC006",
+      "case_id": "MWB3-SW-RC006",
+      "title": "并发放置竞态 · 草地橡木工坊 · 仅 B 看见 A（counter） · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "grass_oak_workshop",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G03",
+      "world": {
+        "target_cell": [
+          1120,
+          91,
+          0
+        ],
+        "support_cell": [
+          1120,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1121.7,
+          92,
+          1.5
+        ],
+        "bravo_position": [
+          1120.5,
+          92,
+          4.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1121,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1120,
+              91,
+              4
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC006/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC006/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC006/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC006/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      },
+      "counter_case_of": "MWB3-SW-RC005"
+    },
+    {
+      "id": "MWB3-SW-RC007",
+      "case_id": "MWB3-SW-RC007",
+      "title": "并发放置竞态 · 砂岩庭院 · A、B 相互可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G05",
+      "world": {
+        "target_cell": [
+          1144,
+          91,
+          0
+        ],
+        "support_cell": [
+          1144,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1141.7,
+          92,
+          -1.0
+        ],
+        "bravo_position": [
+          1147.3,
+          92,
+          -1.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1141,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1147,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC007/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC007/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC007/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC007/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC008",
+      "case_id": "MWB3-SW-RC008",
+      "title": "并发放置竞态 · 砂岩庭院 · A、B 互相不可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard__side_partition_v6",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G05",
+      "world": {
+        "target_cell": [
+          1168,
+          91,
+          0
+        ],
+        "support_cell": [
+          1168,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1171.9,
+          92,
+          1.6
+        ],
+        "bravo_position": [
+          1171.9,
+          92,
+          -0.6
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1171,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1171,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC008/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC008/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC008/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC008/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC009",
+      "case_id": "MWB3-SW-RC009",
+      "title": "并发放置竞态 · 砂岩庭院 · A、B 相互可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G06",
+      "world": {
+        "target_cell": [
+          1192,
+          91,
+          0
+        ],
+        "support_cell": [
+          1192,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1189.7,
+          92,
+          -1.0
+        ],
+        "bravo_position": [
+          1195.3,
+          92,
+          -1.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1189,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1195,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC009/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC009/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC009/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC009/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC010",
+      "case_id": "MWB3-SW-RC010",
+      "title": "并发放置竞态 · 砂岩庭院 · A、B 互相不可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard__side_partition_v6",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G06",
+      "world": {
+        "target_cell": [
+          1216,
+          91,
+          0
+        ],
+        "support_cell": [
+          1216,
+          90,
+          0
+        ],
+        "alpha_position": [
+          1219.9,
+          92,
+          1.6
+        ],
+        "bravo_position": [
+          1219.9,
+          92,
+          -0.6
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1219,
+              91,
+              1
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1219,
+              91,
+              -1
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC010/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC010/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC010/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC010/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC011",
+      "case_id": "MWB3-SW-RC011",
+      "title": "并发放置竞态 · 砂岩庭院 · 仅 A 看见 B · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G04",
+      "world": {
+        "target_cell": [
+          1000,
+          91,
+          24
+        ],
+        "support_cell": [
+          1000,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1000.5,
+          92,
+          28.0
+        ],
+        "bravo_position": [
+          1001.7,
+          92,
+          25.5
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1000,
+              91,
+              28
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1001,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC011/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC011/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC011/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC011/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      },
+      "counter_case_of": "MWB3-SW-RC012"
+    },
+    {
+      "id": "MWB3-SW-RC012",
+      "case_id": "MWB3-SW-RC012",
+      "title": "并发放置竞态 · 砂岩庭院 · 仅 B 看见 A（counter） · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "sandstone_courtyard",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G04",
+      "world": {
+        "target_cell": [
+          1024,
+          91,
+          24
+        ],
+        "support_cell": [
+          1024,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1025.7,
+          92,
+          25.5
+        ],
+        "bravo_position": [
+          1024.5,
+          92,
+          28.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1025,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1024,
+              91,
+              28
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC012/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC012/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC012/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC012/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      },
+      "counter_case_of": "MWB3-SW-RC011"
+    },
+    {
+      "id": "MWB3-SW-RC013",
+      "case_id": "MWB3-SW-RC013",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · A、B 相互可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G09",
+      "world": {
+        "target_cell": [
+          1048,
+          91,
+          24
+        ],
+        "support_cell": [
+          1048,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1045.7,
+          92,
+          23.0
+        ],
+        "bravo_position": [
+          1051.3,
+          92,
+          23.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1045,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1051,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC013/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC013/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC013/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC013/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC014",
+      "case_id": "MWB3-SW-RC014",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · A、B 互相不可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin__side_partition_v6",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G09",
+      "world": {
+        "target_cell": [
+          1072,
+          91,
+          24
+        ],
+        "support_cell": [
+          1072,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1075.9,
+          92,
+          25.6
+        ],
+        "bravo_position": [
+          1075.9,
+          92,
+          23.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1075,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1075,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC014/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC014/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC014/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC014/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC015",
+      "case_id": "MWB3-SW-RC015",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · A、B 相互可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G07",
+      "world": {
+        "target_cell": [
+          1096,
+          91,
+          24
+        ],
+        "support_cell": [
+          1096,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1093.7,
+          92,
+          23.0
+        ],
+        "bravo_position": [
+          1099.3,
+          92,
+          23.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1093,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1099,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC015/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC015/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC015/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC015/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC016",
+      "case_id": "MWB3-SW-RC016",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · A、B 互相不可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin__side_partition_v6",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G07",
+      "world": {
+        "target_cell": [
+          1120,
+          91,
+          24
+        ],
+        "support_cell": [
+          1120,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1123.9,
+          92,
+          25.6
+        ],
+        "bravo_position": [
+          1123.9,
+          92,
+          23.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1123,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1123,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC016/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC016/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC016/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC016/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC017",
+      "case_id": "MWB3-SW-RC017",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · 仅 A 看见 B · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G08",
+      "world": {
+        "target_cell": [
+          1144,
+          91,
+          24
+        ],
+        "support_cell": [
+          1144,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1144.5,
+          92,
+          28.0
+        ],
+        "bravo_position": [
+          1145.7,
+          92,
+          25.5
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1144,
+              91,
+              28
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1145,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC017/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC017/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC017/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC017/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      },
+      "counter_case_of": "MWB3-SW-RC018"
+    },
+    {
+      "id": "MWB3-SW-RC018",
+      "case_id": "MWB3-SW-RC018",
+      "title": "并发放置竞态 · 深板岩紫晶遗迹 · 仅 B 看见 A（counter） · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "deepslate_amethyst_ruin",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G08",
+      "world": {
+        "target_cell": [
+          1168,
+          91,
+          24
+        ],
+        "support_cell": [
+          1168,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1169.7,
+          92,
+          25.5
+        ],
+        "bravo_position": [
+          1168.5,
+          92,
+          28.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1169,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1168,
+              91,
+              28
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC018/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC018/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC018/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC018/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      },
+      "counter_case_of": "MWB3-SW-RC017"
+    },
+    {
+      "id": "MWB3-SW-RC019",
+      "case_id": "MWB3-SW-RC019",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · A、B 相互可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G10",
+      "world": {
+        "target_cell": [
+          1192,
+          91,
+          24
+        ],
+        "support_cell": [
+          1192,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1189.7,
+          92,
+          23.0
+        ],
+        "bravo_position": [
+          1195.3,
+          92,
+          23.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1189,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1195,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC019/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC019/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC019/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC019/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC020",
+      "case_id": "MWB3-SW-RC020",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · A、B 互相不可见 · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry__side_partition_v6",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G10",
+      "world": {
+        "target_cell": [
+          1216,
+          91,
+          24
+        ],
+        "support_cell": [
+          1216,
+          90,
+          24
+        ],
+        "alpha_position": [
+          1219.9,
+          92,
+          25.6
+        ],
+        "bravo_position": [
+          1219.9,
+          92,
+          23.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1219,
+              91,
+              25
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1219,
+              91,
+              23
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC020/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC020/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC020/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC020/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC021",
+      "case_id": "MWB3-SW-RC021",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · A、B 相互可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G11",
+      "world": {
+        "target_cell": [
+          1000,
+          91,
+          48
+        ],
+        "support_cell": [
+          1000,
+          90,
+          48
+        ],
+        "alpha_position": [
+          997.7,
+          92,
+          47.0
+        ],
+        "bravo_position": [
+          1003.3,
+          92,
+          47.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              997,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1003,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC021/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC021/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC021/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC021/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC022",
+      "case_id": "MWB3-SW-RC022",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · A、B 互相不可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry__side_partition_v6",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G11",
+      "world": {
+        "target_cell": [
+          1024,
+          91,
+          48
+        ],
+        "support_cell": [
+          1024,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1027.9,
+          92,
+          49.6
+        ],
+        "bravo_position": [
+          1027.9,
+          92,
+          47.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1027,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1027,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC022/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC022/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC022/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC022/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC023",
+      "case_id": "MWB3-SW-RC023",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · 仅 A 看见 B · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G12",
+      "world": {
+        "target_cell": [
+          1048,
+          91,
+          48
+        ],
+        "support_cell": [
+          1048,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1048.5,
+          92,
+          52.0
+        ],
+        "bravo_position": [
+          1049.7,
+          92,
+          49.5
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1048,
+              91,
+              52
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1049,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC023/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC023/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC023/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC023/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      },
+      "counter_case_of": "MWB3-SW-RC024"
+    },
+    {
+      "id": "MWB3-SW-RC024",
+      "case_id": "MWB3-SW-RC024",
+      "title": "并发放置竞态 · 凝灰岩铜工场 · 仅 B 看见 A（counter） · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "tuff_copper_foundry",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G12",
+      "world": {
+        "target_cell": [
+          1072,
+          91,
+          48
+        ],
+        "support_cell": [
+          1072,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1073.7,
+          92,
+          49.5
+        ],
+        "bravo_position": [
+          1072.5,
+          92,
+          52.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1073,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1072,
+              91,
+              52
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC024/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC024/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC024/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC024/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      },
+      "counter_case_of": "MWB3-SW-RC023"
+    },
+    {
+      "id": "MWB3-SW-RC025",
+      "case_id": "MWB3-SW-RC025",
+      "title": "并发放置竞态 · 雪地云杉驿站 · A、B 相互可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G14",
+      "world": {
+        "target_cell": [
+          1096,
+          91,
+          48
+        ],
+        "support_cell": [
+          1096,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1093.7,
+          92,
+          47.0
+        ],
+        "bravo_position": [
+          1099.3,
+          92,
+          47.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1093,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1099,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC025/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC025/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC025/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC025/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC026",
+      "case_id": "MWB3-SW-RC026",
+      "title": "并发放置竞态 · 雪地云杉驿站 · A、B 互相不可见 · red_wool vs blue_wool",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station__side_partition_v6",
+      "block_pair_id": "red_vs_blue_wool",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G14",
+      "world": {
+        "target_cell": [
+          1120,
+          91,
+          48
+        ],
+        "support_cell": [
+          1120,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1123.9,
+          92,
+          49.6
+        ],
+        "bravo_position": [
+          1123.9,
+          92,
+          47.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1123,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1123,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "red_wool",
+        "bravo": "blue_wool"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC026/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC026/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC026/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC026/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/red_wool.png",
+        "bravo": "assets/block_references/blue_wool.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC027",
+      "case_id": "MWB3-SW-RC027",
+      "title": "并发放置竞态 · 雪地云杉驿站 · A、B 相互可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G15",
+      "world": {
+        "target_cell": [
+          1144,
+          91,
+          48
+        ],
+        "support_cell": [
+          1144,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1141.7,
+          92,
+          47.0
+        ],
+        "bravo_position": [
+          1147.3,
+          92,
+          47.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1141,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1147,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC027/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC027/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC027/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC027/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC028",
+      "case_id": "MWB3-SW-RC028",
+      "title": "并发放置竞态 · 雪地云杉驿站 · A、B 互相不可见 · emerald_block vs obsidian",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station__side_partition_v6",
+      "block_pair_id": "emerald_vs_obsidian",
+      "visibility_class": "mutual_invisible",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G15",
+      "world": {
+        "target_cell": [
+          1168,
+          91,
+          48
+        ],
+        "support_cell": [
+          1168,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1171.9,
+          92,
+          49.6
+        ],
+        "bravo_position": [
+          1171.9,
+          92,
+          47.4
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1171,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1171,
+              91,
+              47
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "emerald_block",
+        "bravo": "obsidian"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC028/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC028/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC028/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC028/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/emerald_block.png",
+        "bravo": "assets/block_references/obsidian.png"
+      }
+    },
+    {
+      "id": "MWB3-SW-RC029",
+      "case_id": "MWB3-SW-RC029",
+      "title": "并发放置竞态 · 雪地云杉驿站 · 仅 A 看见 B · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "alpha_sees_bravo",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": true,
+        "bravo_sees_alpha": false
+      },
+      "independence_group": "MWB3-SW-RC-G13",
+      "world": {
+        "target_cell": [
+          1192,
+          91,
+          48
+        ],
+        "support_cell": [
+          1192,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1192.5,
+          92,
+          52.0
+        ],
+        "bravo_position": [
+          1193.7,
+          92,
+          49.5
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1192,
+              91,
+              52
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1193,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC029/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC029/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC029/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC029/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      },
+      "counter_case_of": "MWB3-SW-RC030"
+    },
+    {
+      "id": "MWB3-SW-RC030",
+      "case_id": "MWB3-SW-RC030",
+      "title": "并发放置竞态 · 雪地云杉驿站 · 仅 B 看见 A（counter） · gold_block vs diamond_block",
+      "metrics": [
+        "race_condition_consistency"
+      ],
+      "scene_id": "snowy_spruce_station",
+      "block_pair_id": "gold_vs_diamond",
+      "visibility_class": "bravo_sees_alpha",
+      "expected_agent_visibility": {
+        "alpha_sees_bravo": false,
+        "bravo_sees_alpha": true
+      },
+      "independence_group": "MWB3-SW-RC-G13",
+      "world": {
+        "target_cell": [
+          1216,
+          91,
+          48
+        ],
+        "support_cell": [
+          1216,
+          90,
+          48
+        ],
+        "alpha_position": [
+          1217.7,
+          92,
+          49.5
+        ],
+        "bravo_position": [
+          1216.5,
+          92,
+          52.0
+        ],
+        "standing_platforms": [
+          {
+            "role": "alpha",
+            "cell": [
+              1217,
+              91,
+              49
+            ],
+            "material": "smooth_stone"
+          },
+          {
+            "role": "bravo",
+            "cell": [
+              1216,
+              91,
+              52
+            ],
+            "material": "smooth_stone"
+          }
+        ],
+        "scene_ground_y": 90
+      },
+      "intended_materials": {
+        "alpha": "gold_block",
+        "bravo": "diamond_block"
+      },
+      "simultaneous_action": {
+        "native_action": "use",
+        "active_frame_range": [
+          21,
+          22
+        ],
+        "same_frames_for_both_roles": true,
+        "placements_per_role": 1,
+        "target": "same target_cell"
+      },
+      "num_frames": 101,
+      "fps": 20,
+      "capture_spec": {
+        "initial_frames": {
+          "alpha": "outputs/MWB3-SW-RC030/alpha_first_frame.png",
+          "bravo": "outputs/MWB3-SW-RC030/bravo_first_frame.png"
+        },
+        "generated_videos": {
+          "alpha": "outputs/MWB3-SW-RC030/alpha_generated.mp4",
+          "bravo": "outputs/MWB3-SW-RC030/bravo_generated.mp4"
+        }
+      },
+      "block_reference_images": {
+        "alpha": "assets/block_references/gold_block.png",
+        "bravo": "assets/block_references/diamond_block.png"
+      },
+      "counter_case_of": "MWB3-SW-RC029"
+    }
+  ],
+  "layout_revision": "ground_flush_cross_platform_players_v6"
+}
